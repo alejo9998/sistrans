@@ -12,11 +12,11 @@ public interface VOProductoSucursal extends VOProducto {
 	
 	public double getPrecioUnidadMedida();
 	
-	public Bodega getBodega();
+	public long getBodega();
 	
-	public Estante getEstante();
+	public long getEstante();
 	
-	public Promocion getPromocion();
+	public long getPromocion();
 	
 	@Override
 	public String toString();

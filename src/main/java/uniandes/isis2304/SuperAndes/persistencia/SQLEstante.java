@@ -59,5 +59,11 @@ class SQLEstante {
 		q.setParameters(idSucursal);
 		return (long) q.execute();
 	}
+	
+	public List<Long> darIdBodegasPertenecenASucursal(PersistenceManager pm, long idSucursal){
+		Query q = pm.newQuery(SQL, "SELECT idBodega FROM " + pp.darTablaBodega() + " WHERE sucursal = ?");
+		q.setParameters(idSucursal);
+		return (List<Long>) q.executeList();
+	}
 
 }

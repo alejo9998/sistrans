@@ -12,7 +12,7 @@ public interface VOEstante {
 	
 	public int getNivelAprovisionamiento();
 	
-	public Sucursal getSucursal();
+	public long getSucursal();
 	
 	@Override
 	public String toString();

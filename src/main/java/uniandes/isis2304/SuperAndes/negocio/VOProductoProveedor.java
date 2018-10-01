@@ -10,6 +10,6 @@ public interface VOProductoProveedor extends VOProducto {
 	
 	public double getSumaCalificaciones();
 	
-	public Proveedor getProveedor();
+	public long getProveedor();
 
 }

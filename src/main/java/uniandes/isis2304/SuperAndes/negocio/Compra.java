@@ -8,23 +8,23 @@ public class Compra implements VOCompra{
 	
 	private int cantidad;
 	
-	private ProductoSucursal productoSucursal;
+	private long productoSucursal;
 	
-	private Cliente cliente;
+	private long cliente;
 	
-	private Factura factura;
+	private long factura;
 	
 	public Compra() {
 		this.idCompra = 0;
 		this.fecha = "";
 		this.cantidad = 0;
-		this.productoSucursal = null;
-		this.cliente = null;
-		this.factura = null;
+		this.productoSucursal = 0;
+		this.cliente = 0;
+		this.factura = 0;
 	}
 
-	public Compra(long idCompra, String fecha, int cantidad, ProductoSucursal productoSucursal, Cliente cliente,
-			Factura factura) {
+	public Compra(long idCompra, String fecha, int cantidad, long productoSucursal, long cliente,
+			long factura) {
 		this.idCompra = idCompra;
 		this.fecha = fecha;
 		this.cantidad = cantidad;
@@ -57,33 +57,33 @@ public class Compra implements VOCompra{
 		this.cantidad = cantidad;
 	}
 
-	public ProductoSucursal getProductoSucursal() {
+	public long getProductoSucursal() {
 		return productoSucursal;
 	}
 
-	public void setProductoSucursal(ProductoSucursal productoSucursal) {
+	public void setProductoSucursal(long productoSucursal) {
 		this.productoSucursal = productoSucursal;
 	}
 
-	public Cliente getCliente() {
+	public long getCliente() {
 		return cliente;
 	}
 
-	public void setCliente(Cliente cliente) {
+	public void setCliente(long cliente) {
 		this.cliente = cliente;
 	}
 
-	public Factura getFactura() {
+	public long getFactura() {
 		return factura;
 	}
 
-	public void setFactura(Factura factura) {
+	public void setFactura(long factura) {
 		this.factura = factura;
 	}
 	
 	@Override
 	public String toString() {
-		return "Compra [idCompra=" + idCompra + ", fecha=" + fecha + ", cantidad=" + cantidad + ", productoSucursal=" + productoSucursal.getIdProducto() + ", cliente=" + cliente.getIdentificacion() + ", factura=" + factura.getIdFactura() + 
+		return "Compra [idCompra=" + idCompra + ", fecha=" + fecha + ", cantidad=" + cantidad + ", productoSucursal=" + productoSucursal + ", cliente=" + cliente + ", factura=" + factura + 
 				"]";
 	} 
 

@@ -1,7 +1,5 @@
 package uniandes.isis2304.SuperAndes.negocio;
 
-import java.util.Calendar;
-
 public class OrdenPedido implements VOOrdenPedido{
 	
 	private long idOrdenPedido;
@@ -18,9 +16,9 @@ public class OrdenPedido implements VOOrdenPedido{
 	
 	private int cantidad;
 	
-	private ProductoProveedor productoProveedor;
+	private long productoProveedor;
 	
-	private Sucursal sucursal;
+	private long sucursal;
 	
 	public OrdenPedido() {
 		this.idOrdenPedido = 0;
@@ -30,12 +28,12 @@ public class OrdenPedido implements VOOrdenPedido{
 		this.calificacion = 0;
 		this.entregado = 0;
 		this.cantidad = 0;
-		this.productoProveedor = null;
-		this.sucursal = null;
+		this.productoProveedor = 0;
+		this.sucursal = 0;
 	}
 
 	public OrdenPedido(long idOrdenPedido, double precio, String fechaEntrega, String fechaEsperadaEntrega, double calificacion,
-			int entregado, int cantidad, ProductoProveedor productoProveedor, Sucursal sucursal) {
+			int entregado, int cantidad, long productoProveedor, long sucursal) {
 		this.idOrdenPedido = idOrdenPedido;
 		this.precio = precio;
 		this.fechaEntrega = fechaEntrega;
@@ -95,19 +93,19 @@ public class OrdenPedido implements VOOrdenPedido{
 		this.cantidad = cantidad;
 	}
 
-	public ProductoProveedor getProductoProveedor() {
+	public long getProductoProveedor() {
 		return productoProveedor;
 	}
 
-	public void setProductoProveedor(ProductoProveedor productoProveedor) {
+	public void setProductoProveedor(long productoProveedor) {
 		this.productoProveedor = productoProveedor;
 	}
 
-	public Sucursal getSucursal() {
+	public long getSucursal() {
 		return sucursal;
 	}
 
-	public void setSucursal(Sucursal sucursal) {
+	public void setSucursal(long sucursal) {
 		this.sucursal = sucursal;
 	}
 	
@@ -122,7 +120,7 @@ public class OrdenPedido implements VOOrdenPedido{
 	@Override
 	public String toString() {
 		return "OrdenPedido [idOrdenPedido=" + idOrdenPedido +", precio=" + precio + ", fechaEntrega=" + fechaEntrega + ", fechaEsperadaEntrega=" + fechaEsperadaEntrega + ", calificacion=" + calificacion +
-				", entregado=" + entregado + ", cantidad=" + cantidad + ", productoProveedor=" + productoProveedor.getIdProducto() + ", sucursal=" + sucursal.getIdSucursal() + 
+				", entregado=" + entregado + ", cantidad=" + cantidad + ", productoProveedor=" + productoProveedor + ", sucursal=" + sucursal + 
 				"]";
 	}
 	

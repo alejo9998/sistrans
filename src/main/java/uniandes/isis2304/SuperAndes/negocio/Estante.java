@@ -12,7 +12,7 @@ public class Estante implements VOEstante{
 	
 	private int nivelAprovisionamiento;
 	
-	private Sucursal sucursal;
+	private long sucursal;
 	
 	public Estante() {
 		this.idEstante = 0;
@@ -20,10 +20,10 @@ public class Estante implements VOEstante{
 		this.peso = 0;
 		this.tipo = "";
 		this.nivelAprovisionamiento = 0;
-		this.sucursal = null;
+		this.sucursal = 0;
 	}
 
-	public Estante(long idEstante, double volumen, double peso, String tipo, int nivelAprovisonamiento, Sucursal sucursal) {
+	public Estante(long idEstante, double volumen, double peso, String tipo, int nivelAprovisonamiento, long sucursal) {
 		this.idEstante = idEstante;
 		this.volumen = volumen;
 		this.peso = peso;
@@ -72,18 +72,18 @@ public class Estante implements VOEstante{
 		this.nivelAprovisionamiento = nivelAprovisonamiento;
 	}
 	
-	public Sucursal getSucursal() {
+	public long getSucursal() {
 		return sucursal;
 	}
 	
-	public void setSucursal(Sucursal sucursal) {
+	public void setSucursal(long sucursal) {
 		this.sucursal = sucursal;
 	}
 	
 	@Override
 	public String toString() {
 		return "Estante [idEstante=" + idEstante + ", volumen=" + volumen + ", peso=" + peso + ", tipo=" + tipo +
-				", nivelAprovisionamiento=" + nivelAprovisionamiento + ", sucursal=" + sucursal.getIdSucursal() +  "]";
+				", nivelAprovisionamiento=" + nivelAprovisionamiento + ", sucursal=" + sucursal +  "]";
 	}
 
 }

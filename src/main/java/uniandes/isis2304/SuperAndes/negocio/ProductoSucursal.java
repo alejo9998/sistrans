@@ -13,11 +13,11 @@ public class ProductoSucursal extends Producto implements VOProductoSucursal {
 	
 	private double precioUnidadMedida;
 	
-	private Bodega bodega;
+	private long bodega;
 	
-	private Estante estante;
+	private long estante;
 	
-	private Promocion promocion;
+	private long promocion;
 
 	public ProductoSucursal() {
 		super();
@@ -26,9 +26,9 @@ public class ProductoSucursal extends Producto implements VOProductoSucursal {
 		this.cantidadBodega = 0;
 		this.cantidadEstante = 0;
 		this.precioUnidadMedida = 0;
-		this.bodega = null;
-		this.estante = null;
-		this.promocion = null;
+		this.bodega = 0;
+		this.estante = 0;
+		this.promocion = 0;
 		// TODO Auto-generated constructor stub
 	}
 
@@ -37,7 +37,7 @@ public class ProductoSucursal extends Producto implements VOProductoSucursal {
 	public ProductoSucursal(long id, String nombre, String marca, String presentacion, double cantidadPresentacion,
 			String unidadMedida, double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria,
 			String tipo, String fechaVencimiento,int nivelReorden, double precioUnitario, int cantidadBodega, int cantidadEstante,
-			double precioUnidadMedida, Bodega bodega, Estante estante, Promocion promocion) {
+			double precioUnidadMedida, long bodega, long estante, long promocion) {
 		super(id, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras,
 				categoria, tipo, fechaVencimiento);
 		this.nivelReorden = nivelReorden;
@@ -110,27 +110,27 @@ public class ProductoSucursal extends Producto implements VOProductoSucursal {
 		this.precioUnidadMedida = precioUnidadMedida;
 	}
 	
-	public Bodega getBodega() {
+	public long getBodega() {
 		return bodega;
 	}
 	
-	public void setBodega(Bodega bodega) {
+	public void setBodega(long bodega) {
 		this.bodega = bodega;
 	}
 	
-	public Estante getEstante() {
+	public long getEstante() {
 		return estante;
 	}
 	
-	public void setEstante(Estante estante) {
+	public void setEstante(long estante) {
 		this.estante = estante;
 	}
 	
-	public Promocion getPromocion() {
+	public long getPromocion() {
 		return promocion;
 	}
 	
-	public void setPromocion(Promocion promocion) {
+	public void setPromocion(long promocion) {
 		this.promocion = promocion;
 	}
 	
@@ -138,8 +138,8 @@ public class ProductoSucursal extends Producto implements VOProductoSucursal {
 	public String toString() {
 		return "ProductoSucursal [idProductoSucursal=" + idProducto + ", nombre=" + nombre + ", marca=" + marca + ", presentacion="+ presentacion + ", cantidadPresentacion=" + cantidadPresentacion +
 				", unidadMedida=" + unidadMedida + ", volumenEmpaque=" + volumenEmpaque + ", pesoEmpaque=" + pesoEmpaque + ", codigoBarras=" + codigoBarras + ", categoria=" + categoria + ", tipo=" + tipo + ", fechaVencimiento=" + fechaVencimiento + 
-				", nivelReorden=" + nivelReorden + ", precioUnitario=" + precioUnitario + ", cantidadBodega=" + cantidadBodega + ", cantidadEstante=" + cantidadEstante + ", precioUnidadMedida=" + precioUnidadMedida + ", bodega=" + bodega.getIdBodega() +
-				", estante=" + estante.getIdEstante() + ", promocion=" + promocion.getIdPromocion() +"]";
+				", nivelReorden=" + nivelReorden + ", precioUnitario=" + precioUnitario + ", cantidadBodega=" + cantidadBodega + ", cantidadEstante=" + cantidadEstante + ", precioUnidadMedida=" + precioUnidadMedida + ", bodega=" + bodega +
+				", estante=" + estante + ", promocion=" + promocion +"]";
 	}
 	
 }

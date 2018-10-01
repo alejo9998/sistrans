@@ -10,17 +10,17 @@ public class Bodega implements VOBodega{
 	
 	private String tipo;
 	
-	private Sucursal sucursal;
+	private long sucursal;
 
 	public Bodega() {
 		this.idBodega = 0;
 		this.volumen = 0;
 		this.peso = 0;
 		this.tipo = "";
-		this.sucursal = null;
+		this.sucursal = 0;
 	}
 	
-	public Bodega(long idBodega, double volumen, double peso, String tipo, Sucursal sucursal) {
+	public Bodega(long idBodega, double volumen, double peso, String tipo, long sucursal) {
 		this.idBodega = idBodega;
 		this.volumen = volumen;
 		this.peso = peso;
@@ -60,17 +60,17 @@ public class Bodega implements VOBodega{
 		this.tipo = tipo;
 	}
 	
-	public Sucursal getSucursal() {
+	public long getSucursal() {
 		return sucursal;
 	}
 	
-	public void setSucursal(Sucursal sucursal) {
+	public void setSucursal(long sucursal) {
 		this.sucursal = sucursal;
 	}
 	
 	@Override
 	public String toString() {
-		return "Bodega [idBodega=" + idBodega + ", volumen=" + volumen + ", peso=" + peso+ ", tipo=" + tipo + ", sucursal=" + sucursal.getIdSucursal() +
+		return "Bodega [idBodega=" + idBodega + ", volumen=" + volumen + ", peso=" + peso+ ", tipo=" + tipo + ", sucursal=" + sucursal +
 				"]";
 	}
 	

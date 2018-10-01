@@ -14,7 +14,7 @@ public class ProductoProveedor extends Producto implements VOProductoProveedor {
 	
 	public double sumaCalificaciones;
 	
-	public Proveedor proveedor;
+	public long proveedor;
 
 	public ProductoProveedor() {
 		super();
@@ -22,13 +22,13 @@ public class ProductoProveedor extends Producto implements VOProductoProveedor {
 		this.precio = 0;
 		this.numeroCalificaciones = 0;
 		this.sumaCalificaciones = 0;
-		proveedor = null;
+		proveedor = 0;
 		// TODO Auto-generated constructor stub
 	}
 
 	public ProductoProveedor(long id, String nombre, String marca, String presentacion, double cantidadPresentacion,
 			String unidadMedida, double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria,
-			String tipo, String fechaVencimiento,double calidad, double precio, int numeroCalificaciones, double sumaCalificaciones, Proveedor proveedor) {
+			String tipo, String fechaVencimiento,double calidad, double precio, int numeroCalificaciones, double sumaCalificaciones, long proveedor) {
 		super(id, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras,
 				categoria, tipo, fechaVencimiento);
 		this.calidad = calidad;
@@ -70,11 +70,11 @@ public class ProductoProveedor extends Producto implements VOProductoProveedor {
 		this.sumaCalificaciones = sumaCalificaciones;
 	}
 	
-	public Proveedor getProveedor() {
+	public long getProveedor() {
 		return proveedor;
 	}
 	
-	public void setProveedor(Proveedor proveedor) {
+	public void setProveedor(long proveedor) {
 		this.proveedor = proveedor;
 	}
 	
@@ -83,7 +83,7 @@ public class ProductoProveedor extends Producto implements VOProductoProveedor {
 	{
 		return "ProductoProveedor [idProductoProveedor=" + idProducto + ", nombre=" + nombre + ", marca=" + marca + ", presentacion="+ presentacion + ", cantidadPresentacion=" + cantidadPresentacion +
 				", unidadMedida=" + unidadMedida + ", volumenEmpaque=" + volumenEmpaque + ", pesoEmpaque=" + pesoEmpaque + ", codigoBarras=" + codigoBarras + ", categoria=" + categoria + ", tipo=" + tipo + ", fechaVencimiento=" + fechaVencimiento + 
-				", calidad=" + calidad + ", precio=" + precio + ", numeroCalificaciones=" + numeroCalificaciones + ", sumaCalificaciones=" + sumaCalificaciones + ", proveedor=" + proveedor.getNit()
+				", calidad=" + calidad + ", precio=" + precio + ", numeroCalificaciones=" + numeroCalificaciones + ", sumaCalificaciones=" + sumaCalificaciones + ", proveedor=" + proveedor
 				+ "]";
 	}
 }

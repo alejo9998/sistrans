@@ -10,7 +10,7 @@ public interface VOBodega {
 	
 	public String getTipo();
 	
-	public Sucursal getSucursal();
+	public long getSucursal();
 	
 	@Override
 	public String toString();

@@ -8,11 +8,11 @@ public interface VOCompra {
 	
 	public int getCantidad();
 	
-	public ProductoSucursal getProductoSucursal();
+	public long getProductoSucursal();
 	
-	public Cliente getCliente();
+	public long getCliente();
 	
-	public Factura getFactura();
+	public long getFactura();
 	
 	@Override
 	public String toString();

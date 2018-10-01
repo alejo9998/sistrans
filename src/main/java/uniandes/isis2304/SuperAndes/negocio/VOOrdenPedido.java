@@ -16,9 +16,9 @@ public interface VOOrdenPedido {
 	
 	public int getCantidad();
 	
-	public ProductoProveedor getProductoProveedor();
+	public long getProductoProveedor();
 	
-	public Sucursal getSucursal();
+	public long getSucursal();
 	
 	@Override
 	public String toString();
