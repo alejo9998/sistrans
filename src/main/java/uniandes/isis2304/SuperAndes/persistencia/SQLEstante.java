@@ -53,5 +53,11 @@ class SQLEstante {
 		q.setResultClass(Estante.class);
 		return (List<Estante>) q.executeList();
 	}
+	
+	public long eliminarEstantesPorIdSucursal(PersistenceManager pm, long idSucursal) {
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaEstante() + " WHERE sucursal = ?");
+		q.setParameters(idSucursal);
+		return (long) q.execute();
+	}
 
 }

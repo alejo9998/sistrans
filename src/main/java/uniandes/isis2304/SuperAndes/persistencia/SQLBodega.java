@@ -55,6 +55,12 @@ class SQLBodega {
 		q.setResultClass(Bodega.class);
 		return (List<Bodega>) q.executeList();
 	}
+	
+	public long eliminarBodegasPorIdSucursal(PersistenceManager pm, long idSucursal) {
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaBodega() + " WHERE sucursal = ?");
+		q.setParameters(idSucursal);
+		return (long) q.execute();
+	}
 
 
 }

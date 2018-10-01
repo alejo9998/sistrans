@@ -18,7 +18,10 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+import uniandes.isis2304.SuperAndes.negocio.Cliente;
+import uniandes.isis2304.SuperAndes.negocio.Factura;
 import uniandes.isis2304.SuperAndes.negocio.Proveedor;
+import uniandes.isis2304.SuperAndes.negocio.Sucursal;
 
 public class PersistenciaSuperAndes {
 	
@@ -315,7 +318,276 @@ public class PersistenciaSuperAndes {
 		return (Proveedor) sqlProveedor.darProveedorPorNit (pmf.getPersistenceManager(), nit);
 	}
 	
+	public List<Proveedor> darProveedores() {
+		return sqlProveedor.darProveedores(pmf.getPersistenceManager());
+	}
 	
+	/* ****************************************************************
+	 * 			Métodos para manejar las Sucursales
+	 *****************************************************************/
+	
+	public Sucursal adicionarSucursal(String ciudad, String direccion, String nombre) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+        Transaction tx=pm.currentTransaction();
+        try
+        {
+            tx.begin();
+            long idSucursal = nextval ();
+            long tuplasInsertadas = sqlSucursal.adicionarSucursal(pm, idSucursal, ciudad, direccion, nombre);
+            tx.commit();
+            
+            log.trace ("Inserción de sucursal: " + nombre + ": " + tuplasInsertadas + " tuplas insertadas");
+            
+            return new Sucursal(idSucursal, ciudad, direccion, nombre);
+        }
+        catch (Exception e)
+        {
+//        	e.printStackTrace();
+        	log.error ("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+        	return null;
+        }
+        finally
+        {
+            if (tx.isActive())
+            {
+                tx.rollback();
+            }
+            pm.close();
+        }
+	}
+	
+	public long eliminarSucursalPorNombre (String nombre) 
+	{
+		PersistenceManager pm = pmf.getPersistenceManager();
+        Transaction tx=pm.currentTransaction();
+        try
+        {
+            tx.begin();
+            long resp = sqlSucursal.eliminarSucursalesPorNombre(pm, nombre);
+            tx.commit();
+            return resp;
+        }
+        catch (Exception e)
+        {
+//        	e.printStackTrace();
+        	log.error ("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+            return -1;
+        }
+        finally
+        {
+            if (tx.isActive())
+            {
+                tx.rollback();
+            }
+            pm.close();
+        }
+	}
+	
+	public long eliminarSucursalPorId (long idSucursal) 
+	{
+		PersistenceManager pm = pmf.getPersistenceManager();
+        Transaction tx=pm.currentTransaction();
+        try
+        {
+            tx.begin();
+            long resp = sqlSucursal.eliminarSucursalPorId(pm, idSucursal);
+            tx.commit();
+            return resp;
+        }
+        catch (Exception e)
+        {
+//        	e.printStackTrace();
+        	log.error ("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+            return -1;
+        }
+        finally
+        {
+            if (tx.isActive())
+            {
+                tx.rollback();
+            }
+            pm.close();
+        }
+	}
+	
+	public List<Sucursal> darSucursales ()
+	{
+		return sqlSucursal.darSucursales (pmf.getPersistenceManager());
+	}
+	
+	public Sucursal darSucursalPorId (long idSucursal)
+	{
+		return sqlSucursal.darSucursalPorId (pmf.getPersistenceManager(), idSucursal);
+	}
+	
+	/* ****************************************************************
+	 * 			Métodos para manejar las Cliente
+	 *****************************************************************/
+	
+	public Cliente adicionarClienteIndividuo(String nombre, String correo) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+        Transaction tx=pm.currentTransaction();
+        try
+        {
+            tx.begin();            
+            long identificacion = nextval ();
+            long tuplasInsertadas = sqlCliente.adicionarCliente(pm, identificacion, nombre, correo, null);
+            tx.commit();
+            
+            log.trace ("Inserción clienteIndividuo: " + nombre + ": " + tuplasInsertadas + " tuplas insertadas");
+            return new Cliente (identificacion,nombre, correo, null);
+        }
+        catch (Exception e)
+        {
+//        	e.printStackTrace();
+        	log.error ("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+        	return null;
+        }
+        finally
+        {
+            if (tx.isActive())
+            {
+                tx.rollback();
+            }
+            pm.close();
+        }
+	}
+	
+	public Cliente adicionarClienteEmpresa(String nombre, String correo, String direccion) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+        Transaction tx=pm.currentTransaction();
+        try
+        {
+            tx.begin();            
+            long identificacion = nextval ();
+            long tuplasInsertadas = sqlCliente.adicionarCliente(pm, identificacion, nombre, correo, direccion);
+            tx.commit();
+            
+            log.trace ("Inserción clienteEmpresa: " + nombre + ": " + tuplasInsertadas + " tuplas insertadas");
+            return new Cliente (identificacion,nombre, correo, direccion);
+        }
+        catch (Exception e)
+        {
+//        	e.printStackTrace();
+        	log.error ("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+        	return null;
+        }
+        finally
+        {
+            if (tx.isActive())
+            {
+                tx.rollback();
+            }
+            pm.close();
+        }
+	}
+	
+	public long eliminarClientePorIdentificacion (long identificacion) 
+	{
+		PersistenceManager pm = pmf.getPersistenceManager();
+        Transaction tx=pm.currentTransaction();
+        try
+        {
+            tx.begin();
+            long resp = sqlCliente.eliminarClientePorIdentificacion (pm, identificacion);
+            tx.commit();
+
+            return resp;
+        }
+        catch (Exception e)
+        {
+//        	e.printStackTrace();
+        	log.error ("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+            return -1;
+        }
+        finally
+        {
+            if (tx.isActive())
+            {
+                tx.rollback();
+            }
+            pm.close();
+        }
+	}
+	
+	public List<Cliente> darClientesIndividuos ()
+	{
+		return sqlCliente.darClientesIndividuos (pmf.getPersistenceManager());
+	}
+	
+	public List<Cliente> darClientesEmpresas(){
+		return sqlCliente.darClientesEmpresas (pmf.getPersistenceManager());
+	}
+	
+	public List<Cliente> darClientes(){
+		return sqlCliente.darClientes (pmf.getPersistenceManager());
+	}
+	
+	public Cliente darClientePorId (long identificacion)
+	{
+		return sqlCliente.darClientePorIdentificacion (pmf.getPersistenceManager(), identificacion);
+	}
+	
+	/* ****************************************************************
+	 * 			Métodos para manejar las FACTURA
+	 *****************************************************************/
+	public Factura adicionarTipoBebida(String descripcion)
+	{
+		PersistenceManager pm = pmf.getPersistenceManager();
+        Transaction tx=pm.currentTransaction();
+        try
+        {
+            tx.begin();
+            long idFactura = nextval ();
+            long tuplasInsertadas = sqlFactura.adicionarFactura(pm, idFactura, descripcion);
+            tx.commit();
+            
+            log.trace ("Inserción de Factura: " + idFactura + ": " + tuplasInsertadas + " tuplas insertadas");
+            
+            return new Factura(idFactura, descripcion);
+        }
+        catch (Exception e)
+        {
+//        	e.printStackTrace();
+        	log.error ("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+        	return null;
+        }
+        finally
+        {
+            if (tx.isActive())
+            {
+                tx.rollback();
+            }
+            pm.close();
+        }
+	}
+	
+	public long eliminarFacturaPorId (long idFactura) 
+	{
+		PersistenceManager pm = pmf.getPersistenceManager();
+        Transaction tx=pm.currentTransaction();
+        try
+        {
+            tx.begin();
+            long resp = sqlFactura.eliminarFacturaPorId(pm, idFactura);
+            tx.commit();
+            return resp;
+        }
+        catch (Exception e)
+        {
+//        	e.printStackTrace();
+        	log.error ("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+            return -1;
+        }
+        finally
+        {
+            if (tx.isActive())
+            {
+                tx.rollback();
+            }
+            pm.close();
+        }
+	}
 	
 	
 	
