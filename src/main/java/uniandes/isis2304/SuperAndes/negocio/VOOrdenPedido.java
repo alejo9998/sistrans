@@ -12,7 +12,7 @@ public interface VOOrdenPedido {
 	
 	public double getCalificacion();
 	
-	public boolean getEntregado();
+	public int getEntregado();
 	
 	public int getCantidad();
 	

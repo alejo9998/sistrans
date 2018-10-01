@@ -1,5 +1,7 @@
 package uniandes.isis2304.SuperAndes.negocio;
 
+import java.util.Calendar;
+
 public class OrdenPedido implements VOOrdenPedido{
 	
 	private long idOrdenPedido;
@@ -12,7 +14,7 @@ public class OrdenPedido implements VOOrdenPedido{
 	
 	private double calificacion;
 	
-	private boolean entregado;
+	private int entregado;
 	
 	private int cantidad;
 	
@@ -26,14 +28,14 @@ public class OrdenPedido implements VOOrdenPedido{
 		this.fechaEntrega = "";
 		this.fechaEsperadaEntrega = "";
 		this.calificacion = 0;
-		this.entregado = true;
+		this.entregado = 0;
 		this.cantidad = 0;
 		this.productoProveedor = null;
 		this.sucursal = null;
 	}
 
 	public OrdenPedido(long idOrdenPedido, double precio, String fechaEntrega, String fechaEsperadaEntrega, double calificacion,
-			boolean entregado, int cantidad, ProductoProveedor productoProveedor, Sucursal sucursal) {
+			int entregado, int cantidad, ProductoProveedor productoProveedor, Sucursal sucursal) {
 		this.idOrdenPedido = idOrdenPedido;
 		this.precio = precio;
 		this.fechaEntrega = fechaEntrega;
@@ -77,11 +79,11 @@ public class OrdenPedido implements VOOrdenPedido{
 		this.calificacion = calificacion;
 	}
 
-	public boolean getEntregado() {
+	public int getEntregado() {
 		return entregado;
 	}
 
-	public void setEntregado(boolean entregado) {
+	public void setEntregado(int entregado) {
 		this.entregado = entregado;
 	}
 
@@ -123,4 +125,5 @@ public class OrdenPedido implements VOOrdenPedido{
 				", entregado=" + entregado + ", cantidad=" + cantidad + ", productoProveedor=" + productoProveedor.getIdProducto() + ", sucursal=" + sucursal.getIdSucursal() + 
 				"]";
 	}
+	
 }

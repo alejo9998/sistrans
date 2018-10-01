@@ -1,5 +1,7 @@
 package uniandes.isis2304.SuperAndes.negocio;
 
+import java.util.Calendar;
+
 public class Sucursal implements VOSucursal{
 	
 	private long idSucursal;
@@ -61,5 +63,6 @@ public class Sucursal implements VOSucursal{
 		return "Sucursal [idSucursal=" + idSucursal + ", ciudad=" + ciudad + ", direccion=" + direccion + ", nombre=" + nombre + 
 				"]";
 	}
+	
 
 }

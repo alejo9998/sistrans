@@ -1,5 +1,8 @@
 package uniandes.isis2304.SuperAndes.negocio;
+import java.util.List;
 
+import javax.jdo.PersistenceManager;
+import javax.jdo.Query;
 
 public class ProductoProveedor extends Producto implements VOProductoProveedor {
 	
