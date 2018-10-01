@@ -12,6 +12,8 @@ public class Sucursal implements VOSucursal{
 	
 	private String nombre;
 	
+	
+	
 	public Sucursal() {
 		this.idSucursal = 0;
 		this.ciudad = "";
