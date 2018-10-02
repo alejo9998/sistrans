@@ -375,7 +375,7 @@ public class InterfazApp extends JFrame
 			}
 			catch (Exception e)
 			{
-//			superAndes.adicionarOrdenPedido(precio, fechaEntrega, fechaEsperadaEntrega, calificacion, entregado, cantidad, idProductoProveedor, idSucursal)
+				JOptionPane.showMessageDialog(null, "Introduzca Valores Validos", "SuperAndes",JOptionPane.ERROR_MESSAGE);
 			}
 		}
 
