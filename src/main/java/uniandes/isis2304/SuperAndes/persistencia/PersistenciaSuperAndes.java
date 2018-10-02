@@ -76,15 +76,15 @@ public class PersistenciaSuperAndes {
 		tablas.add("SuperAndes_sequence");
 		tablas.add("PROVEEDOR");
 		tablas.add("SUCURSAL");
+		tablas.add("CLIENTE");
+		tablas.add("PROMOCION");
 		tablas.add("FACURA");
 		tablas.add("BODEGA");
 		tablas.add("ESTANTE");
 		tablas.add("PRODUCTOPROVEEDOR");
 		tablas.add("PRODUCTOSUCURSAL");
 		tablas.add("ORDENPEDIDO");
-		tablas.add("COMPRA");
-		tablas.add("CLIENTE");
-		tablas.add("PROMOCION");		
+		tablas.add("COMPRA");	
 	}
 	
 	private PersistenciaSuperAndes (JsonObject tableConfig) {
@@ -165,41 +165,42 @@ public class PersistenciaSuperAndes {
 		return tablas.get(2);
 	}
 	
-	public String darTablaFactura() {
+	public String darTablaCliente() {
 		return tablas.get(3);
 	}
 	
-	public String darTablaBodega() {
+	public String darTablaPromocion() {
 		return tablas.get(4);
 	}
 	
-	public String darTablaEstante() {
+	public String darTablaFactura() {
 		return tablas.get(5);
 	}
 	
-	public String darTablaProductoProveedor() {
+	public String darTablaBodega() {
 		return tablas.get(6);
 	}
 	
-	public String darTablaProductoSucursal() {
+	public String darTablaEstante() {
 		return tablas.get(7);
 	}
 	
-	public String darTablaOrdenPedido() {
+	public String darTablaProductoProveedor() {
 		return tablas.get(8);
 	}
 	
-	public String darTablaCompra() {
+	public String darTablaProductoSucursal() {
 		return tablas.get(9);
 	}
 	
-	public String darTablaCliente() {
+	public String darTablaOrdenPedido() {
 		return tablas.get(10);
 	}
 	
-	public String darTablaPromocion() {
+	public String darTablaCompra() {
 		return tablas.get(11);
 	}
+	
 	
 	/**
 	 * Transacción para el generador de secuencia de SuperAndes
