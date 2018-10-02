@@ -45,7 +45,11 @@ class SQLProveedor {
 	public List<Proveedor> darProveedores (PersistenceManager pm){
 		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaProveedor());
 		q.setResultClass(Proveedor.class);
-		return (List<Proveedor>) q.executeList();
+		System.out.println("Super andes 0");
+		List<Proveedor> r = q.executeList();
+		System.out.println("Super andes 1");
+		return r;
+		//return (List<Proveedor>) q.executeList();
 	}
 	
 	public List<Proveedor> darProveedoresPorNombre (PersistenceManager pm, String nombre){
