@@ -18,9 +18,8 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 	
 private InterfazApp inte;
 	
-	private JTextField idProdSuc;
-
 	private JTextField nombre;
+	
 
 	private JTextField marca;
 
@@ -36,7 +35,7 @@ private InterfazApp inte;
 
 	private JTextField codigoDeBarras;
 
-	private JTextField categoria;
+	private JComboBox<String> categoria;
 	
 	private JTextField tipo;
 	
@@ -77,7 +76,6 @@ private InterfazApp inte;
         campos.setBorder( new EmptyBorder( 15, 15, 15, 15 ) );
         add( campos, BorderLayout.CENTER );
         
-        JLabel id = new JLabel("Id del producto: ");
         JLabel nom = new JLabel("Nombre del producto: ");
         JLabel marc= new JLabel("Marca: ");
         JLabel presen= new JLabel("Presentación: ");
@@ -96,10 +94,9 @@ private InterfazApp inte;
         JLabel precUnMed= new JLabel("Precio Unidad/Medida: ");
         JLabel prom = new JLabel("Id Promoción: ");
         JLabel bod = new JLabel("Id Bodega: ");
-        JLabel est = new JLabel("Id est: ");
+        JLabel est = new JLabel("Id Estante: ");
         
-        idProdSuc= new JTextField();
-
+        
     	nombre= new JTextField();
 
     	marca= new JTextField();
@@ -116,7 +113,8 @@ private InterfazApp inte;
 
     	codigoDeBarras= new JTextField();
 
-    	categoria= new JTextField();
+    	String [] categorias={"Albarrotes","Perecederos","Congelados","Medicamentos"};
+    	categoria= new JComboBox<>(categorias);
     	
     	tipo= new JTextField();
     	
@@ -147,10 +145,11 @@ private InterfazApp inte;
 		
 		JLabel vacio1 = new  JLabel();
 		JLabel vacio2 = new  JLabel();
+		JLabel vacio3 = new  JLabel();
+		JLabel vacio4 = new  JLabel();
 		
 
-		campos.add(id);
-		campos.add(idProdSuc);
+		
 		campos.add(nom);
 		campos.add(nombre);
 		campos.add(marc);
@@ -190,16 +189,47 @@ private InterfazApp inte;
 		campos.add(est);
 		campos.add(estante);
 		campos.add(vacio1);
+		campos.add(vacio3);
+		campos.add(vacio4);
 		campos.add(aceptar);
 		campos.add(cancelar);
 		campos.add(vacio2);
+		
 	}
 	
 	
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
-		
+		String mensaje = e.getActionCommand();
+		if(mensaje.equalsIgnoreCase(ACEPTAR))
+		{
+			String nom = nombre.getText();
+			String mar = marca.getText();
+			String pres = presentacion.getText();
+			String cantiPres = cantidadPresentacion.getText();
+			String unidMed = unidadMedida.getText();
+			String volEmp= volumenEmpaque.getText();
+			String pesoEmp = pesoEmpaque.getText();
+			String codBarr = codigoDeBarras.getText();
+			String cat = (String)categoria.getSelectedItem();
+			String tip = tipo.getText();
+			String fech = fechadeVencimiento.getText();
+			String nvlreord = nivelReorden.getText();
+			String prcUni = precioUnitario.getText();
+			String cantBod = cantidadBodega.getText();
+			String cantEst = cantidadEstante.getText();
+			String precUnMed = precioUnidadMedida.getText();
+			String idProm = promocion.getText();
+			String idBod = bodega.getText();
+			String  idest = estante.getText();
+
+			dispose();
+		}
+		else if(mensaje.equalsIgnoreCase(CANCELAR))
+		{
+			dispose();
+		}
 		
 	}
 

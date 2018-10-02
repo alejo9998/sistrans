@@ -5,6 +5,8 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 
+import uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes;
+
 public class InterfazApp extends JFrame
 {
 	private PanelDatos panelDatos;
@@ -13,8 +15,11 @@ public class InterfazApp extends JFrame
 	
 	private MenuBarra menu;
 	
+	private PersistenciaSuperAndes presistencia;
+	
 	public InterfazApp()
 	{
+		
 		setSize(800,430);
 		setLocationRelativeTo(null);
 		setTitle("SuperAndes");

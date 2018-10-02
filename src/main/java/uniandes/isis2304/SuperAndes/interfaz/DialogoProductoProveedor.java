@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -16,7 +17,7 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
 {
 	private InterfazApp inte;
 	
-	private JTextField idProdSuc;
+
 
 	private JTextField nombre;
 
@@ -34,13 +35,13 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
 
 	private JTextField codigoDeBarras;
 
-	private JTextField categoria;
+	private JComboBox<String> categoria;
 	
 	private JTextField tipo;
 	
 	private JTextField fechadeVencimiento;
 
-	private JTextField calidad;
+	private JComboBox<Integer> calidad;
 
 	private JTextField precio;
 	
@@ -62,7 +63,7 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
 		inte= inter;
 		setTitle("Agregar Producto Proveedor");
 		setLayout(new BorderLayout());
-		setSize(900,700);
+		setSize(800,600);
 		setLocationRelativeTo(null);
 		
         JPanel campos = new JPanel( );
@@ -70,7 +71,7 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
         campos.setBorder( new EmptyBorder( 15, 15, 15, 15 ) );
         add( campos, BorderLayout.CENTER );
         
-		JLabel id = new JLabel("Id del producto: ");
+		
         JLabel nom = new JLabel("Nombre del producto: ");
         JLabel marc= new JLabel("Marca: ");
         JLabel presen= new JLabel("Presentación: ");
@@ -88,7 +89,6 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
         JLabel sumCal = new JLabel("Suma de las calificaciones: ");
         JLabel prov = new JLabel("Proveedor");
         
-        idProdSuc= new JTextField();
 
     	nombre= new JTextField();
 
@@ -106,13 +106,16 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
 
     	codigoDeBarras= new JTextField();
 
-    	categoria= new JTextField();
+    	
+    	String [] categorias={"Albarrotes","Perecederos","Congelados","Medicamentos"};
+    	categoria= new JComboBox<>(categorias);
     	
     	tipo= new JTextField();
     	
     	fechadeVencimiento= new JTextField();
     	
-    	calidad = new JTextField();
+    	Integer[] calificacion ={1,2,3,4,5} ;
+    	calidad = new JComboBox<>(calificacion);
     	
     	precio = new JTextField();
     	
@@ -133,8 +136,7 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
 		JLabel vacio1 = new  JLabel();
 		JLabel vacio2 = new  JLabel();
 		
-		campos.add(id);
-		campos.add(idProdSuc);
+
 		campos.add(nom);
 		campos.add(nombre);
 		campos.add(marc);
@@ -167,10 +169,10 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
 		campos.add(SumaDeCalificaciones);
 		campos.add(prov);
 		campos.add(Proveedor);
-
+		campos.add(vacio1);
 		campos.add(aceptar);
 		campos.add(cancelar);
-
+		campos.add(vacio2);
 		
     	
         
@@ -178,7 +180,35 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+
+		String mensaje = e.getActionCommand();
+		if(mensaje.equalsIgnoreCase(ACEPTAR))
+		{
+			String nom = nombre.getText();
+			String mar = marca.getText();
+			String pres = presentacion.getText();
+			String cantiPres = cantidadPresentacion.getText();
+			String unidMed = unidadMedida.getText();
+			String volEmp= volumenEmpaque.getText();
+			String pesoEmp = pesoEmpaque.getText();
+			String codBarr = codigoDeBarras.getText();
+			String cat = (String)categoria.getSelectedItem();
+			String tip = tipo.getText();
+			String fech = fechadeVencimiento.getText();
+			Integer calid = (Integer)calidad.getSelectedItem();
+			String pr = precio.getText();
+			String numCal = numeroDeCalificaciones.getText();
+			String sumCal = SumaDeCalificaciones.getText();
+			String provee = Proveedor.getText();
+			
+
+			dispose();
+		}
+		else if(mensaje.equalsIgnoreCase(CANCELAR))
+		{
+			dispose();
+		}
+		
 		
 	}
 

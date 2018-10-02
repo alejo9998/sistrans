@@ -18,8 +18,6 @@ public class DialogoCliente extends JDialog implements ActionListener
 	
 	private JTextField txtnombre;
 	
-	private JTextField txtId;
-	
 	private JTextField txtCorreo;
 	
 	private JTextField txtDireccion;
@@ -40,7 +38,7 @@ public class DialogoCliente extends JDialog implements ActionListener
 		setLocationRelativeTo(null);
 		
         JPanel campos = new JPanel( );
-        campos.setLayout( new GridLayout( 5, 2, 3, 3 ) );
+        campos.setLayout( new GridLayout( 4, 2, 3, 3 ) );
         campos.setBorder( new EmptyBorder( 15, 15, 15, 15 ) );
         add( campos, BorderLayout.CENTER );
 		
@@ -50,7 +48,6 @@ public class DialogoCliente extends JDialog implements ActionListener
 		JLabel dir = new JLabel("Dirección: ");
 		
 		txtnombre = new JTextField();
-		txtId= new JTextField();
 		txtCorreo = new JTextField();
 		txtDireccion = new JTextField();
 		
@@ -63,8 +60,6 @@ public class DialogoCliente extends JDialog implements ActionListener
 		
 		campos.add(nombre);
 		campos.add(txtnombre);
-		campos.add(identi);
-		campos.add(txtId);
 		campos.add(correo);
 		campos.add(txtCorreo);
 		campos.add(dir);
@@ -74,8 +69,24 @@ public class DialogoCliente extends JDialog implements ActionListener
 	}
 	
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+	public void actionPerformed(ActionEvent e)
+	{
+		String mensaje = e.getActionCommand();
+		
+		if(mensaje.equalsIgnoreCase(ACEPTAR))
+		{
+
+			String nombre = txtnombre.getText();
+			String corr= txtCorreo.getText();
+			String direc= txtDireccion.getText();
+			
+			
+			dispose();
+		}
+		else if(mensaje.equalsIgnoreCase(CANCELAR))
+		{
+			dispose();
+		}
 		
 	}
 

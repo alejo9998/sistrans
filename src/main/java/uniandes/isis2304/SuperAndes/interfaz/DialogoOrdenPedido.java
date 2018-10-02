@@ -17,7 +17,6 @@ public class DialogoOrdenPedido extends JDialog implements ActionListener
 {
 private InterfazApp inte;
 	
-	private JTextField idPedido;
 
 	private JTextField precio;
 
@@ -50,20 +49,20 @@ private InterfazApp inte;
 		setLocationRelativeTo(null);
 		
         JPanel campos = new JPanel( );
-        campos.setLayout( new GridLayout( 9, 2, 3, 3 ) );
+        campos.setLayout( new GridLayout( 8, 2, 3, 3 ) );
         campos.setBorder( new EmptyBorder( 15, 15, 15, 15 ) );
         add( campos, BorderLayout.CENTER );
         
-        JLabel id = new JLabel("Id de la orden: ");
+        
         JLabel tipos = new JLabel("Fecha esperada: ");
         JLabel m1= new JLabel("Fecha de entrega: ");
         JLabel n1 = new JLabel("Calificacion: ");
         JLabel reap = new JLabel("Entregado: ");
         JLabel fechaCad = new JLabel("Cantidad: ");
-        JLabel prov = new JLabel("Proveedor: ");
-        JLabel suc = new JLabel("Sucursal: ");
+        JLabel prov = new JLabel("Id Proveedor: ");
+        JLabel suc = new JLabel("Id Sucursal: ");
         
-        idPedido = new JTextField();
+        
         fechaEsperada= new JTextField();
         fechaDeEntrega = new JTextField();
         Integer [] cal = {1,2,3,4,5};
@@ -81,8 +80,6 @@ private InterfazApp inte;
 		cancelar.setActionCommand(CANCELAR);
 		
 
-		campos.add(id);
-		campos.add(idPedido);
 		campos.add(tipos);
 		campos.add(fechaEsperada);
 		campos.add(m1);
@@ -102,8 +99,23 @@ private InterfazApp inte;
 
 	}
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+	public void actionPerformed(ActionEvent e)
+	{
+		String mensaje = e.getActionCommand();
+		if(mensaje.equalsIgnoreCase(ACEPTAR))
+		{
+			String fechEntr= fechaDeEntrega.getText();
+			String fechEsp = fechaEsperada.getText();
+			Integer cal = (Integer) calificacion.getSelectedItem();
+			String idProv = proveedor.getText();
+			String idSuc = sucursal.getText();
+			
+			dispose();
+		}
+		else if(mensaje.equalsIgnoreCase(CANCELAR))
+		{
+		 dispose();	
+		}
 		
 	}
 

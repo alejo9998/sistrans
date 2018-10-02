@@ -17,7 +17,6 @@ public class DialogoEstante extends JDialog implements ActionListener
 
 	private InterfazApp inte;
 	
-	private JTextField idBodega;
 
 	private JTextField tipo;
 
@@ -44,18 +43,17 @@ public class DialogoEstante extends JDialog implements ActionListener
 		setLocationRelativeTo(null);
 		
         JPanel campos = new JPanel( );
-        campos.setLayout( new GridLayout( 7, 2, 3, 3 ) );
+        campos.setLayout( new GridLayout( 6, 2, 3, 3 ) );
         campos.setBorder( new EmptyBorder( 15, 15, 15, 15 ) );
         add( campos, BorderLayout.CENTER );
         
-        JLabel id = new JLabel("Id del estante: ");
         JLabel tipos = new JLabel("Tipo de estante: ");
         JLabel m1= new JLabel("Peso: ");
         JLabel n1 = new JLabel("Volumen: ");
         JLabel reap = new JLabel("Nivel de reaprovisionamiento: ");
-        JLabel fechaCad = new JLabel("Sucursal: ");
+        JLabel fechaCad = new JLabel("Id Sucursal: ");
         
-        idBodega = new JTextField();
+        
         peso= new JTextField();
         volumen = new JTextField();
         nivelReaprovisionamiento = new JTextField();
@@ -70,8 +68,6 @@ public class DialogoEstante extends JDialog implements ActionListener
 		cancelar.setActionCommand(CANCELAR);
 		
 
-		campos.add(id);
-		campos.add(idBodega);
 		campos.add(tipos);
 		campos.add(tipo);
 		campos.add(m1);
@@ -87,8 +83,23 @@ public class DialogoEstante extends JDialog implements ActionListener
 
 	}
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
+	public void actionPerformed(ActionEvent e) 
+	{
+	  
+		String mensaje = e.getActionCommand();
+		if(mensaje.equalsIgnoreCase(ACEPTAR))
+		{
+			String pes = peso.getText();
+			String tip = tipo.getText();
+			String vol = volumen.getText();
+			String reapro= nivelReaprovisionamiento.getText();
+			String idSuc = Sucursal.getText();
+
+			dispose();
+		}
+		else if(mensaje.equalsIgnoreCase(CANCELAR))
+		{
+			dispose();
+		}	
 	}
 }

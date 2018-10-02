@@ -17,8 +17,6 @@ public class DialogoProveedor extends JDialog implements ActionListener
 
 	private InterfazApp interfaz;
 	
-	private JTextField txtNIT;
-	
 	private JTextField txtNombre;
 	
 	private JButton aceptar;
@@ -34,18 +32,18 @@ public class DialogoProveedor extends JDialog implements ActionListener
 		
 		setTitle("Agregar Proveedor");
 		setLayout(new BorderLayout());
-		setSize(300,200);
+		setSize(300,150);
 		setLocationRelativeTo(null);
 		
         JPanel campos = new JPanel( );
-        campos.setLayout( new GridLayout( 3, 2, 3, 3 ) );
+        campos.setLayout( new GridLayout( 2, 2, 3, 3 ) );
         campos.setBorder( new EmptyBorder( 15, 15, 15, 15 ) );
         add( campos, BorderLayout.CENTER );
 		
         JLabel nit = new JLabel("NIT: ");
         JLabel nomb = new JLabel("Nombre: ");
         
-        txtNIT = new JTextField();
+       
         txtNombre = new JTextField();
         
         aceptar = new JButton("Aceptar");
@@ -55,8 +53,7 @@ public class DialogoProveedor extends JDialog implements ActionListener
 		cancelar.addActionListener(this);
 		cancelar.setActionCommand(CANCELAR);
         
-		campos.add(nit);
-		campos.add(txtNIT);
+
 		campos.add(nomb);
 		campos.add(txtNombre);
 		campos.add(aceptar);
@@ -65,7 +62,21 @@ public class DialogoProveedor extends JDialog implements ActionListener
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+		
+		String mensaje = e.getActionCommand();
+		
+		if(mensaje.equalsIgnoreCase(ACEPTAR))
+		{
+
+			String nombre = txtNombre.getText();
+
+			
+			dispose();
+		}
+		else if(mensaje.equalsIgnoreCase(CANCELAR))
+		{
+			dispose();
+		}
 		
 	}
 

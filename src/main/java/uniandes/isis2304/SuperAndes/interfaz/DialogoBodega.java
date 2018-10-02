@@ -16,15 +16,13 @@ import javax.swing.border.EmptyBorder;
 public class DialogoBodega extends JDialog implements ActionListener
 {
 	private InterfazApp inte;
-	
-	private JTextField idBodega;
 
 	private JTextField tipo;
 
 	private JTextField peso;
 
 	private JTextField volumen;
-	
+
 	private JTextField Sucursal;
 
 	private JButton aceptar;
@@ -36,39 +34,36 @@ public class DialogoBodega extends JDialog implements ActionListener
 	public DialogoBodega(InterfazApp inter)
 	{
 		inte = inter;
-		
+
 		setTitle("Agregar Bodega");
 		setLayout(new BorderLayout());
-		setSize(300,300);
+		setSize(300,250);
 		setLocationRelativeTo(null);
-		
-        JPanel campos = new JPanel( );
-        campos.setLayout( new GridLayout( 6, 2, 3, 3 ) );
-        campos.setBorder( new EmptyBorder( 15, 15, 15, 15 ) );
-        add( campos, BorderLayout.CENTER );
-        
-        JLabel id = new JLabel("Id de la Bodega: ");
-        JLabel tipos = new JLabel("Tipo de Bodega: ");
-        JLabel m1= new JLabel("Peso: ");
-        JLabel n1 = new JLabel("Volumen: ");
-        JLabel fechaCad = new JLabel("Sucursal: ");
-        
-        idBodega = new JTextField();
-        peso= new JTextField();
-        volumen = new JTextField();
-        Sucursal = new JTextField();
-        tipo = new JTextField();
-        
-        aceptar = new JButton("Aceptar");
+
+		JPanel campos = new JPanel( );
+		campos.setLayout( new GridLayout( 5, 2, 3, 3 ) );
+		campos.setBorder( new EmptyBorder( 15, 15, 15, 15 ) );
+		add( campos, BorderLayout.CENTER );
+
+
+		JLabel tipos = new JLabel("Tipo de Bodega: ");
+		JLabel m1= new JLabel("Peso: ");
+		JLabel n1 = new JLabel("Volumen: ");
+		JLabel fechaCad = new JLabel("Id Sucursal: ");
+
+
+		peso= new JTextField();
+		volumen = new JTextField();
+		Sucursal = new JTextField();
+		tipo = new JTextField();
+
+		aceptar = new JButton("Aceptar");
 		aceptar.addActionListener(this);
 		aceptar.setActionCommand(ACEPTAR);
 		cancelar = new JButton("Cancelar");
 		cancelar.addActionListener(this);
 		cancelar.setActionCommand(CANCELAR);
-		
 
-		campos.add(id);
-		campos.add(idBodega);
 		campos.add(tipos);
 		campos.add(tipo);
 		campos.add(m1);
@@ -80,11 +75,25 @@ public class DialogoBodega extends JDialog implements ActionListener
 		campos.add(aceptar);
 		campos.add(cancelar);
 	}
-	
+
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
+	public void actionPerformed(ActionEvent e)
+	{
+		String mensaje = e.getActionCommand();
+		if(mensaje.equalsIgnoreCase(ACEPTAR))
+		{
+			String pes = peso.getText();
+			String tip = tipo.getText();
+			String vol = volumen.getText();
+			String idSuc = Sucursal.getText();
+
+			dispose();
+		}
+		else if(mensaje.equalsIgnoreCase(CANCELAR))
+		{
+			dispose();
+		}
+
 	}
 
 }

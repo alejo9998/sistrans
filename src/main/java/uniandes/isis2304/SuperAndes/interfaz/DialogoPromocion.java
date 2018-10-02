@@ -17,8 +17,6 @@ public class DialogoPromocion extends JDialog implements ActionListener
 {
 	private InterfazApp inte;
 
-	private JTextField idPromocion;
-
 	private JComboBox<String> tipo;
 
 	private JTextField m;
@@ -44,17 +42,17 @@ public class DialogoPromocion extends JDialog implements ActionListener
 		setLocationRelativeTo(null);
 		
         JPanel campos = new JPanel( );
-        campos.setLayout( new GridLayout( 6, 2, 3, 3 ) );
+        campos.setLayout( new GridLayout( 5, 2, 3, 3 ) );
         campos.setBorder( new EmptyBorder( 15, 15, 15, 15 ) );
         add( campos, BorderLayout.CENTER );
         
-        JLabel id = new JLabel("Id de la promoción: ");
+
         JLabel tipos = new JLabel("Tipo de la promocion: ");
         JLabel m1= new JLabel("Pague: ");
         JLabel n1 = new JLabel("Lleve: ");
         JLabel fechaCad = new JLabel("Fecha de caducidad");
         
-        idPromocion = new JTextField();
+
         m= new JTextField();
         n = new JTextField();
         fechaCaducidad = new JTextField();
@@ -69,8 +67,6 @@ public class DialogoPromocion extends JDialog implements ActionListener
 		cancelar.setActionCommand(CANCELAR);
 		
 
-		campos.add(id);
-		campos.add(idPromocion);
 		campos.add(tipos);
 		campos.add(tipo);
 		campos.add(m1);
@@ -86,9 +82,22 @@ public class DialogoPromocion extends JDialog implements ActionListener
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-
+	public void actionPerformed(ActionEvent e) 
+	{
+		String mensaje = e.getActionCommand();
+		if(mensaje.equalsIgnoreCase(ACEPTAR))
+		{
+			String tip =(String)tipo.getSelectedItem();
+			String pagu= m.getText();
+			String llev =n.getText();
+			String fechCad = fechaCaducidad.getText();
+			
+			dispose();
+		}
+		else if(mensaje.equalsIgnoreCase(ACEPTAR))
+		{
+			dispose();
+		}
 	}
 
 }
