@@ -151,6 +151,7 @@ public class PersistenciaSuperAndes {
 		sqlCompra = new SQLCompra(this);
 		sqlCliente = new SQLCliente(this);
 		sqlPromocion = new SQLPromocion(this);
+		sqlUtil = new SQLUtil(this);
 	}
 	
 	public String darSeqSuperAndes() {

@@ -1,0 +1,137 @@
+12:44:08,338 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+12:44:08,388 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+12:44:10,305 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+12:44:10,423 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:44:10,426 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : null
+
+12:44:10,429 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+14:24:45,020 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+14:24:45,067 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+14:24:46,992 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+14:24:47,114 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+14:24:47,117 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : null
+
+14:24:47,120 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+14:30:36,588 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+14:30:36,640 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+14:30:38,334 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+14:30:38,458 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+14:30:38,660 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "DELETE FROM A_ORDENPEDIDO".
+ORA-00942: la tabla o vista no existe
+
+14:30:38,684 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+14:45:26,876 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+14:45:26,917 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+14:45:28,847 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+14:45:28,973 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+14:45:29,165 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "DELETE FROM A_ORDENPEDIDO".
+ORA-00942: la tabla o vista no existe
+
+14:45:29,187 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+14:45:58,322 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+14:45:58,370 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+14:45:59,972 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+14:46:00,100 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+14:46:00,297 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "DELETE FROM A_ORDENPEDIDO".
+ORA-00942: la tabla o vista no existe
+
+14:46:00,319 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+14:46:46,564 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+14:46:46,618 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+14:46:48,364 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+14:46:48,484 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+14:46:48,690 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "DELETE FROM A_ORDENPEDIDO".
+ORA-00942: la tabla o vista no existe
+
+14:46:48,712 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+14:47:34,952 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+14:47:35,006 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+14:47:36,589 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+14:47:36,705 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+14:47:36,898 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "DELETE FROM A_ORDENPEDIDO".
+ORA-00942: la tabla o vista no existe
+
+14:47:36,921 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+14:50:22,639 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+14:50:22,692 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+14:50:24,411 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+14:50:24,529 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+14:50:24,721 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "DELETE FROM A_ORDENPEDIDO".
+ORA-00942: la tabla o vista no existe
+
+14:50:24,745 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+14:50:57,932 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+14:50:57,982 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+14:50:59,609 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+14:50:59,727 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+14:50:59,927 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "DELETE FROM A_ORDENPEDIDO".
+ORA-00942: la tabla o vista no existe
+
+14:50:59,950 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+14:53:21,939 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+14:53:21,992 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+14:53:23,642 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+14:53:23,769 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+14:53:23,971 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "DELETE FROM A_ORDENPEDIDO".
+ORA-00942: la tabla o vista no existe
+
+14:53:23,994 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+14:53:35,306 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+14:53:35,356 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+14:53:37,000 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+14:53:37,116 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+14:53:37,322 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "DELETE FROM A_ORDENPEDIDO".
+ORA-00942: la tabla o vista no existe
+
+14:53:37,344 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+14:56:31,480 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+14:56:31,588 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+14:57:03,312 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+14:57:03,401 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+14:57:36,424 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+14:57:46,582 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+14:58:28,238 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+14:58:28,326 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+14:58:34,915 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+14:58:49,477 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+14:59:01,797 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error de E/S: Se ha forzado la interrupción de una conexión existente por el host remoto, Authentication lapse 74601 ms.
+Error de E/S: Se ha forzado la interrupción de una conexión existente por el host remoto, Authentication lapse 74601 ms.
+14:59:01,837 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+14:59:29,372 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+14:59:29,435 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+14:59:31,171 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+14:59:35,250 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+15:18:17,606 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con datos de usuario correctos, pero sin crear el esquema
+15:18:17,662 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+15:18:19,292 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Proveedores
+15:18:19,413 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Prueba de tabla inexistente correcta. La excepción generada es: javax.jdo.JDODataStoreException
+15:18:19,414 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - La causa es: java.sql.SQLSyntaxErrorException: ORA-00942: la tabla o vista no existe
+
+15:18:19,414 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+15:18:19,625 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "DELETE FROM B_ORDENPEDIDO".
+ORA-00942: la tabla o vista no existe
+
+15:18:19,647 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+15:18:19,676 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con una base de datos que no existe
+15:18:19,677 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+15:18:19,770 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Prueba realizada exitosamente. La excepción generada es: javax.jdo.JDOFatalUserException
+15:18:19,770 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - La causa es: javax.jdo.JDOFatalDataStoreException: Listener refused the connection with the following error:
+ORA-12505, TNS:listener does not currently know of SID given in connect descriptor
+ 
+NestedThrowables:
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12505, TNS:listener does not currently know of SID given in connect descriptor
+ 
+15:18:19,770 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con datos de usuario incorrectos
+15:18:19,771 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+15:18:20,995 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Prueba realizada exitosamente. La excepción generada es: javax.jdo.JDOFatalUserException
+15:18:20,995 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - La causa es: javax.jdo.JDOFatalDataStoreException: ORA-01017: invalid username/password; logon denied
+
+NestedThrowables:
+java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+
+15:18:20,996 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con datos válidos (BD, credenciales, esquema
+15:18:20,996 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+15:18:21,371 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Conexión realizada correstamente
+15:18:21,371 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Cerrando la conexión
+15:18:21,382 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Conexión cerrada
