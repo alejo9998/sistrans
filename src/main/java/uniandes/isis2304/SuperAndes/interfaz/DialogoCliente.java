@@ -79,7 +79,7 @@ public class DialogoCliente extends JDialog implements ActionListener
 			String nombre = txtnombre.getText();
 			String corr= txtCorreo.getText();
 			String direc= txtDireccion.getText();
-			
+			inte.agregarCliente(nombre, corr, direc);
 			
 			dispose();
 		}

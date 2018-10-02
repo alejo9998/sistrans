@@ -96,7 +96,7 @@ public class DialogoCompra extends JDialog implements ActionListener
 			String prod = productoSucursal.getText();
 			String clie = cliente.getText();
 			String fac = factura.getText();
-
+			inte.agregarCompra(fechCom, canti, prod, clie, fac);
 			dispose();
 		}
 		else if (mensaje.equalsIgnoreCase(CANCELAR))

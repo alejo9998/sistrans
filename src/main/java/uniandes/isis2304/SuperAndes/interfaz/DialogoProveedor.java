@@ -69,8 +69,7 @@ public class DialogoProveedor extends JDialog implements ActionListener
 		{
 
 			String nombre = txtNombre.getText();
-
-			
+			interfaz.agregarProveedor(nombre);
 			dispose();
 		}
 		else if(mensaje.equalsIgnoreCase(CANCELAR))

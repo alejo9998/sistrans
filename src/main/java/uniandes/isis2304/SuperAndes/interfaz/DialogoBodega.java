@@ -86,7 +86,8 @@ public class DialogoBodega extends JDialog implements ActionListener
 			String tip = tipo.getText();
 			String vol = volumen.getText();
 			String idSuc = Sucursal.getText();
-
+			inte.agregarBodega(tip, vol, pes, idSuc);
+			System.out.println(tip);
 			dispose();
 		}
 		else if(mensaje.equalsIgnoreCase(CANCELAR))

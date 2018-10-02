@@ -17,7 +17,7 @@ public class DialogoPromocion extends JDialog implements ActionListener
 {
 	private InterfazApp inte;
 
-	private JComboBox<String> tipo;
+	private JComboBox<Integer> tipo;
 
 	private JTextField m;
 
@@ -56,8 +56,8 @@ public class DialogoPromocion extends JDialog implements ActionListener
         m= new JTextField();
         n = new JTextField();
         fechaCaducidad = new JTextField();
-        String [] a = {"TIPO 1","TIPO 2","TIPO 3","TIPO 4"};
-        tipo = new JComboBox<>(a);
+        Integer [] a = {1,2,3,4};
+        tipo = new JComboBox<Integer>(a);
         
         aceptar = new JButton("Aceptar");
 		aceptar.addActionListener(this);
@@ -87,11 +87,11 @@ public class DialogoPromocion extends JDialog implements ActionListener
 		String mensaje = e.getActionCommand();
 		if(mensaje.equalsIgnoreCase(ACEPTAR))
 		{
-			String tip =(String)tipo.getSelectedItem();
+			Integer tip =(Integer)tipo.getSelectedItem();
 			String pagu= m.getText();
 			String llev =n.getText();
 			String fechCad = fechaCaducidad.getText();
-			
+			inte.agregarPromocion(tip, pagu, llev, fechCad);
 			dispose();
 		}
 		else if(mensaje.equalsIgnoreCase(ACEPTAR))

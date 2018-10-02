@@ -67,7 +67,7 @@ public class DialogoFactura extends JDialog implements ActionListener
 			  if(mensaje.equalsIgnoreCase(ACEPTAR))
 			  {
 				  String descrip = txtDescripcion.getText();
-				  
+				  interfaz.agregarFactura(descrip);
 				  dispose();
 			  }
 			  else if ( mensaje.equalsIgnoreCase(CANCELAR))

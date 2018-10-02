@@ -41,7 +41,7 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
 	
 	private JTextField fechadeVencimiento;
 
-	private JComboBox<Integer> calidad;
+	private JComboBox<String> calidad;
 
 	private JTextField precio;
 	
@@ -114,7 +114,7 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
     	
     	fechadeVencimiento= new JTextField();
     	
-    	Integer[] calificacion ={1,2,3,4,5} ;
+    	String[] calificacion ={"1","2","3","4","5"} ;
     	calidad = new JComboBox<>(calificacion);
     	
     	precio = new JTextField();
@@ -195,12 +195,13 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
 			String cat = (String)categoria.getSelectedItem();
 			String tip = tipo.getText();
 			String fech = fechadeVencimiento.getText();
-			Integer calid = (Integer)calidad.getSelectedItem();
+			String calid = (String)calidad.getSelectedItem();
 			String pr = precio.getText();
 			String numCal = numeroDeCalificaciones.getText();
 			String sumCal = SumaDeCalificaciones.getText();
 			String provee = Proveedor.getText();
-			
+			inte.agergarProductoProveedor(nom, mar, pres, cantiPres, unidMed, volEmp, pesoEmp, codBarr, cat, tip, fech, calid, pr,
+					numCal, sumCal, provee);
 
 			dispose();
 		}

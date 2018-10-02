@@ -94,7 +94,7 @@ public class DialogoEstante extends JDialog implements ActionListener
 			String vol = volumen.getText();
 			String reapro= nivelReaprovisionamiento.getText();
 			String idSuc = Sucursal.getText();
-
+			inte.agregarEstante(tip, pes, vol, reapro, idSuc);
 			dispose();
 		}
 		else if(mensaje.equalsIgnoreCase(CANCELAR))

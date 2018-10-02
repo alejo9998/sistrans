@@ -81,7 +81,7 @@ public class DialogoSucursal extends JDialog implements ActionListener
 			String nomb = nombre.getText();
 			String ciu= ciudad.getText();
 			String direc= direccion.getText();
-			
+			inte.agregarSucursal(nomb, ciu, direc);
 			
 			dispose();
 		}

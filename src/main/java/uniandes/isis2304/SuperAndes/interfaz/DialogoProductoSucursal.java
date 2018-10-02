@@ -223,6 +223,9 @@ private InterfazApp inte;
 			String idProm = promocion.getText();
 			String idBod = bodega.getText();
 			String  idest = estante.getText();
+			inte.agregarProductoSucursal(nom, mar, pres, cantiPres, unidMed, volEmp, pesoEmp, codBarr, cat, tip, fech, 
+					nvlreord, prcUni, cantBod, cantEst, precUnMed, idProm, idest, idBod);
+			
 
 			dispose();
 		}

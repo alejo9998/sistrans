@@ -24,9 +24,9 @@ private InterfazApp inte;
 
 	private JTextField fechaEsperada;
 	
-	private JComboBox<Integer> calificacion;
+	private JComboBox<String> calificacion;
 	
-	private JTextField entregado;
+	private JComboBox<String> entregado;
 	
 	private JTextField cantidad;
 	
@@ -38,6 +38,9 @@ private InterfazApp inte;
 	private final static String ACEPTAR="ACEPTAR";
 
 	private JButton cancelar;
+	
+	public static final String ENTREGADO="Entregado";
+	public static final String NOENTREGADO="No Entregado";
 	private final static String CANCELAR="CANCELAR";
 	
 	public DialogoOrdenPedido(InterfazApp inter) 
@@ -49,7 +52,7 @@ private InterfazApp inte;
 		setLocationRelativeTo(null);
 		
         JPanel campos = new JPanel( );
-        campos.setLayout( new GridLayout( 8, 2, 3, 3 ) );
+        campos.setLayout( new GridLayout( 9, 2, 3, 3 ) );
         campos.setBorder( new EmptyBorder( 15, 15, 15, 15 ) );
         add( campos, BorderLayout.CENTER );
         
@@ -61,16 +64,18 @@ private InterfazApp inte;
         JLabel fechaCad = new JLabel("Cantidad: ");
         JLabel prov = new JLabel("Id Proveedor: ");
         JLabel suc = new JLabel("Id Sucursal: ");
-        
+        JLabel prec = new JLabel("precio: ");
         
         fechaEsperada= new JTextField();
         fechaDeEntrega = new JTextField();
-        Integer [] cal = {1,2,3,4,5};
+        String [] cal = {"1","2","3","4","5"};
         calificacion = new JComboBox<>(cal);
-        entregado = new JTextField();
+        String a[] ={ENTREGADO,NOENTREGADO};
+        entregado = new JComboBox<String>(a);
         sucursal = new JTextField();
         cantidad = new JTextField();
         proveedor = new JTextField();
+        precio= new JTextField();
         
         aceptar = new JButton("Aceptar");
 		aceptar.addActionListener(this);
@@ -84,6 +89,8 @@ private InterfazApp inte;
 		campos.add(fechaEsperada);
 		campos.add(m1);
 		campos.add(fechaDeEntrega);
+		campos.add(prec);
+		campos.add(precio);
 		campos.add(n1);
 		campos.add(calificacion);
 		campos.add(reap);
@@ -106,9 +113,13 @@ private InterfazApp inte;
 		{
 			String fechEntr= fechaDeEntrega.getText();
 			String fechEsp = fechaEsperada.getText();
-			Integer cal = (Integer) calificacion.getSelectedItem();
+			String cal = (String) calificacion.getSelectedItem();
 			String idProv = proveedor.getText();
+			String entre = (String)entregado.getSelectedItem();
 			String idSuc = sucursal.getText();
+			String prec = precio.getText();
+			String cant = cantidad.getText();
+			inte.agregarOrdenPedido(fechEntr, fechEsp, cal, idProv, idSuc,prec,entre,cant);
 			
 			dispose();
 		}
