@@ -8,6 +8,8 @@ public interface VOCompra {
 	
 	public int getCantidad();
 	
+	public double getTotalPagado();
+	
 	public long getProductoSucursal();
 	
 	public long getCliente();

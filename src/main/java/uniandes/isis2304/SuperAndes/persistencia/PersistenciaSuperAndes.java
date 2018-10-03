@@ -1061,7 +1061,7 @@ public class PersistenciaSuperAndes {
 	/* ****************************************************************
 	 * 			Métodos para manejar las VENTAS
 	 *****************************************************************/
-	public Compra adicionarCompra(String fecha, int cantidad, long idProductoSucursal, long idCliente, long idFactura) 
+	public Compra adicionarCompra(String fecha, int cantidad, double totalPagado, long idProductoSucursal, long idCliente, long idFactura) 
 	{
 		PersistenceManager pm = pmf.getPersistenceManager();
         Transaction tx=pm.currentTransaction();
@@ -1069,12 +1069,12 @@ public class PersistenciaSuperAndes {
         {
             tx.begin();
             long idCompra = nextval ();
-            long tuplasInsertadas = sqlCompra.adicionarCompra(pm, idCompra, fecha, cantidad, idProductoSucursal, idCliente, idFactura);
+            long tuplasInsertadas = sqlCompra.adicionarCompra(pm, idCompra, fecha, cantidad, totalPagado, idProductoSucursal, idCliente, idFactura);
             tx.commit();
 
             log.trace ("Inserción de Compra: " + idCompra + ": " + tuplasInsertadas + " tuplas insertadas");
 
-            return new Compra (idCompra, fecha, cantidad, idProductoSucursal, idCliente, idFactura);
+            return new Compra (idCompra, fecha, cantidad,totalPagado, idProductoSucursal, idCliente, idFactura);
         }
         catch (Exception e)
         {

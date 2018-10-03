@@ -8,6 +8,8 @@ public class Compra implements VOCompra{
 	
 	private int cantidad;
 	
+	private double totalPagado;
+	
 	private long productoSucursal;
 	
 	private long cliente;
@@ -18,16 +20,18 @@ public class Compra implements VOCompra{
 		this.idCompra = 0;
 		this.fecha = "";
 		this.cantidad = 0;
+		this.totalPagado = 0;
 		this.productoSucursal = 0;
 		this.cliente = 0;
 		this.factura = 0;
 	}
 
-	public Compra(long idCompra, String fecha, int cantidad, long productoSucursal, long cliente,
+	public Compra(long idCompra, String fecha, int cantidad, double totalPagado, long productoSucursal, long cliente,
 			long factura) {
 		this.idCompra = idCompra;
 		this.fecha = fecha;
 		this.cantidad = cantidad;
+		this.totalPagado = totalPagado;
 		this.productoSucursal = productoSucursal;
 		this.cliente = cliente;
 		this.factura = factura;
@@ -81,9 +85,17 @@ public class Compra implements VOCompra{
 		this.factura = factura;
 	}
 	
+	public double getTotalPagado() {
+		return totalPagado;
+	}
+	
+	public void setTotalPagado(double totalPagado) {
+		this.totalPagado = totalPagado;
+	}
+	
 	@Override
 	public String toString() {
-		return "Compra [idCompra=" + idCompra + ", fecha=" + fecha + ", cantidad=" + cantidad + ", productoSucursal=" + productoSucursal + ", cliente=" + cliente + ", factura=" + factura + 
+		return "Compra [idCompra=" + idCompra + ", fecha=" + fecha + ", cantidad=" + cantidad + ", totalPagado=" + totalPagado +", productoSucursal=" + productoSucursal + ", cliente=" + cliente + ", factura=" + factura + 
 				"]";
 	} 
 
