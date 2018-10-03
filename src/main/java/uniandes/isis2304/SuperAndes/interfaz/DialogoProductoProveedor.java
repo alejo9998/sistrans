@@ -37,7 +37,7 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
 
 	private JComboBox<String> categoria;
 	
-	private JTextField tipo;
+	private JComboBox<String> tipo;
 	
 	private JTextField fechadeVencimiento;
 
@@ -57,6 +57,8 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
 	private JButton cancelar;
 	private final static String CANCELAR="CANCELAR";
 	
+
+	private final static String actualiza="ACTUALIZAR";
 	
 	public DialogoProductoProveedor(InterfazApp inter) 
 	{
@@ -107,10 +109,12 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
     	codigoDeBarras= new JTextField();
 
     	
-    	String [] categorias={"Albarrotes","Perecederos","Congelados","Medicamentos"};
+    	String [] categorias={"Albarrotes","Perecederos","Aseo Personal"};
     	categoria= new JComboBox<>(categorias);
+    	categoria.addActionListener(this);
+		categoria.setActionCommand(actualiza);
     	
-    	tipo= new JTextField();
+    	tipo = new JComboBox<>();
     	
     	fechadeVencimiento= new JTextField();
     	
@@ -177,6 +181,38 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
     	
         
 	}
+	public void crearTipo()
+	{
+		if(((String)categoria.getSelectedItem()).equalsIgnoreCase("Albarrotes"))
+		{
+			tipo.removeAllItems();
+			tipo.addItem("Escoba");
+			tipo.addItem("Trapeador");
+			tipo.addItem("balde");
+			tipo.addItem("brillador");
+			
+		}
+		else if(((String)categoria.getSelectedItem()).equalsIgnoreCase("Aseo Personal"))
+		{
+		
+			tipo.removeAllItems();
+			tipo.addItem("Cepillo");
+			tipo.addItem("Desodorante");
+			tipo.addItem("Crema");
+			tipo.addItem("Cera");
+					
+		}
+		else if(((String)categoria.getSelectedItem()).equalsIgnoreCase("Perecederos"))
+		{
+			tipo.removeAllItems();
+			tipo.addItem("Carne");
+			tipo.addItem("Galleta");
+			tipo.addItem("Fruta");
+			tipo.addItem("Tuberculo");
+			
+			
+		}
+	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -193,7 +229,7 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
 			String pesoEmp = pesoEmpaque.getText();
 			String codBarr = codigoDeBarras.getText();
 			String cat = (String)categoria.getSelectedItem();
-			String tip = tipo.getText();
+			String tip = (String)tipo.getSelectedItem();
 			String fech = fechadeVencimiento.getText();
 			String calid = (String)calidad.getSelectedItem();
 			String pr = precio.getText();
@@ -209,7 +245,12 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
 		{
 			dispose();
 		}
+		else if ( mensaje.equals(actualiza))
+		{
+			
+			crearTipo();
 		
+		}
 		
 	}
 

@@ -30,12 +30,12 @@ public class InterfazApp extends JFrame
 
 	private JsonObject tableConfig;
 
-	private static final String CONFIG_TABLAS = "./src/main/resources/config/TablasBD_B.json"; 
+	private static final String CONFIG_TABLAS = "./src/main/resources/config/TablasBD_A.json"; 
 
 	public InterfazApp()
 	{
-		//				tableConfig = openConfig ("Tablas BD", CONFIG_TABLAS);
-		//		        superAndes = new SuperAndes (tableConfig);
+//						tableConfig = openConfig ("Tablas BD", CONFIG_TABLAS);
+//				        superAndes = new SuperAndes (tableConfig);
 
 		setSize(800,430);
 		setLocationRelativeTo(null);

@@ -15,20 +15,20 @@ import javax.swing.border.EmptyBorder;
 
 public class DialogoProductoSucursal extends JDialog implements ActionListener
 {
-	
-private InterfazApp inte;
-	
+
+	private InterfazApp inte;
+
 	private JTextField nombre;
-	
+
 
 	private JTextField marca;
 
 	private JTextField presentacion;
-	
+
 	private JTextField cantidadPresentacion;
-	
+
 	private JTextField unidadMedida;
-	
+
 	private JTextField volumenEmpaque;
 
 	private JTextField pesoEmpaque;
@@ -36,11 +36,11 @@ private InterfazApp inte;
 	private JTextField codigoDeBarras;
 
 	private JComboBox<String> categoria;
-	
-	private JTextField tipo;
-	
+
+	private JComboBox<String> tipo;
+
 	private JTextField fechadeVencimiento;
-	
+
 	private JTextField nivelReorden;
 
 	private JTextField precioUnitario;
@@ -48,13 +48,13 @@ private InterfazApp inte;
 	private JTextField cantidadBodega;
 
 	private JTextField cantidadEstante;
-	
+
 	private JTextField precioUnidadMedida;
-	
+
 	private JTextField promocion;
-	
+
 	private JTextField bodega;
-	
+
 	private JTextField estante;
 
 	private JButton aceptar;
@@ -62,7 +62,10 @@ private InterfazApp inte;
 
 	private JButton cancelar;
 	private final static String CANCELAR="CANCELAR";
-	
+
+
+	private final static String actualiza="ACTUALIZAR";
+
 	public DialogoProductoSucursal(InterfazApp inter) 
 	{
 		inte= inter;
@@ -70,86 +73,89 @@ private InterfazApp inte;
 		setLayout(new BorderLayout());
 		setSize(900,700);
 		setLocationRelativeTo(null);
+
+		JPanel campos = new JPanel( );
+		campos.setLayout( new GridLayout( 11, 4, 3, 3 ) );
+		campos.setBorder( new EmptyBorder( 15, 15, 15, 15 ) );
+		add( campos, BorderLayout.CENTER );
+
+		JLabel nom = new JLabel("Nombre del producto: ");
+		JLabel marc= new JLabel("Marca: ");
+		JLabel presen= new JLabel("Presentación: ");
+		JLabel cantPresen = new JLabel("Cantidad de presentacion: ");
+		JLabel unMed = new JLabel("Unidad de medida: ");
+		JLabel volEmp = new JLabel("Volumen del Empaque: ");
+		JLabel pesEmp = new JLabel("Peso del Empaque: ");
+		JLabel codBar= new JLabel("Codigo de Barras: ");
+		JLabel cat= new JLabel("Categoria: ");
+		JLabel tip = new JLabel("Tipo: ");
+		JLabel fechaVen = new JLabel("Fecha de Vencimiento: ");
+		JLabel nivRe = new JLabel("Nivel de Reorden: ");
+		JLabel precUni = new JLabel("Precio Unitario: ");
+		JLabel cantBod = new JLabel("Cantidad en Bodega: ");
+		JLabel cantEst= new JLabel("Cantidad en Estante: ");
+		JLabel precUnMed= new JLabel("Precio Unidad/Medida: ");
+		JLabel prom = new JLabel("Id Promoción: ");
+		JLabel bod = new JLabel("Id Bodega: ");
+		JLabel est = new JLabel("Id Estante: ");
+
+
+		nombre= new JTextField();
+
+		marca= new JTextField();
+
+		presentacion= new JTextField();
+
+		cantidadPresentacion= new JTextField();
+
+		unidadMedida= new JTextField();
+
+		volumenEmpaque= new JTextField();
+
+		pesoEmpaque= new JTextField();
+
+		codigoDeBarras= new JTextField();
+
+		String [] categorias={"Albarrotes","Perecederos","Aseo Personal"};
+		categoria= new JComboBox<>(categorias);
+		categoria.addActionListener(this);
+		categoria.setActionCommand(actualiza);
+
+		fechadeVencimiento = new JTextField();
+
+		tipo = new JComboBox<>();
 		
-        JPanel campos = new JPanel( );
-        campos.setLayout( new GridLayout( 11, 4, 3, 3 ) );
-        campos.setBorder( new EmptyBorder( 15, 15, 15, 15 ) );
-        add( campos, BorderLayout.CENTER );
-        
-        JLabel nom = new JLabel("Nombre del producto: ");
-        JLabel marc= new JLabel("Marca: ");
-        JLabel presen= new JLabel("Presentación: ");
-        JLabel cantPresen = new JLabel("Cantidad de presentacion: ");
-        JLabel unMed = new JLabel("Unidad de medida: ");
-        JLabel volEmp = new JLabel("Volumen del Empaque: ");
-        JLabel pesEmp = new JLabel("Peso del Empaque: ");
-        JLabel codBar= new JLabel("Codigo de Barras: ");
-        JLabel cat= new JLabel("Categoria: ");
-        JLabel tip = new JLabel("Tipo: ");
-        JLabel fechaVen = new JLabel("Fecha de Vencimiento: ");
-        JLabel nivRe = new JLabel("Nivel de Reorden: ");
-        JLabel precUni = new JLabel("Precio Unitario: ");
-        JLabel cantBod = new JLabel("Cantidad en Bodega: ");
-        JLabel cantEst= new JLabel("Cantidad en Estante: ");
-        JLabel precUnMed= new JLabel("Precio Unidad/Medida: ");
-        JLabel prom = new JLabel("Id Promoción: ");
-        JLabel bod = new JLabel("Id Bodega: ");
-        JLabel est = new JLabel("Id Estante: ");
-        
-        
-    	nombre= new JTextField();
+				
+		nivelReorden= new JTextField();
 
-    	marca= new JTextField();
+		precioUnitario= new JTextField();
 
-    	presentacion= new JTextField();
-    	
-    	cantidadPresentacion= new JTextField();
-    	
-    	unidadMedida= new JTextField();
-    	
-    	volumenEmpaque= new JTextField();
+		cantidadBodega= new JTextField();
 
-    	pesoEmpaque= new JTextField();
+		cantidadEstante= new JTextField();
 
-    	codigoDeBarras= new JTextField();
+		precioUnidadMedida= new JTextField();
 
-    	String [] categorias={"Albarrotes","Perecederos","Congelados","Medicamentos"};
-    	categoria= new JComboBox<>(categorias);
-    	
-    	tipo= new JTextField();
-    	
-    	fechadeVencimiento= new JTextField();
-    	
-    	nivelReorden= new JTextField();
+		promocion= new JTextField();
 
-    	precioUnitario= new JTextField();
+		bodega= new JTextField();
 
-    	cantidadBodega= new JTextField();
+		estante = new JTextField();
 
-    	cantidadEstante= new JTextField();
-    	
-    	precioUnidadMedida= new JTextField();
-    	
-    	promocion= new JTextField();
-    	
-    	bodega= new JTextField();
-    	
-    	estante = new JTextField();
-        
-        aceptar = new JButton("Aceptar");
+		aceptar = new JButton("Aceptar");
 		aceptar.addActionListener(this);
 		aceptar.setActionCommand(ACEPTAR);
 		cancelar = new JButton("Cancelar");
 		cancelar.addActionListener(this);
 		cancelar.setActionCommand(CANCELAR);
-		
+
 		JLabel vacio1 = new  JLabel();
 		JLabel vacio2 = new  JLabel();
 		JLabel vacio3 = new  JLabel();
 		JLabel vacio4 = new  JLabel();
-		
 
-		
+
+
 		campos.add(nom);
 		campos.add(nombre);
 		campos.add(marc);
@@ -194,10 +200,42 @@ private InterfazApp inte;
 		campos.add(aceptar);
 		campos.add(cancelar);
 		campos.add(vacio2);
-		
+
 	}
 	
-	
+	public void crearTipo()
+	{
+		if(((String)categoria.getSelectedItem()).equalsIgnoreCase("Albarrotes"))
+		{
+			tipo.removeAllItems();
+			tipo.addItem("Escoba");
+			tipo.addItem("Trapeador");
+			tipo.addItem("balde");
+			tipo.addItem("brillador");
+			
+		}
+		else if(((String)categoria.getSelectedItem()).equalsIgnoreCase("Aseo Personal"))
+		{
+		
+			tipo.removeAllItems();
+			tipo.addItem("Cepillo");
+			tipo.addItem("Desodorante");
+			tipo.addItem("Crema");
+			tipo.addItem("Cera");
+					
+		}
+		else if(((String)categoria.getSelectedItem()).equalsIgnoreCase("Perecederos"))
+		{
+			tipo.removeAllItems();
+			tipo.addItem("Carne");
+			tipo.addItem("Galleta");
+			tipo.addItem("Fruta");
+			tipo.addItem("Tuberculo");
+			
+			
+		}
+	}
+
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
@@ -213,8 +251,8 @@ private InterfazApp inte;
 			String pesoEmp = pesoEmpaque.getText();
 			String codBarr = codigoDeBarras.getText();
 			String cat = (String)categoria.getSelectedItem();
-			String tip = tipo.getText();
 			String fech = fechadeVencimiento.getText();
+			String tip = (String)tipo.getSelectedItem();
 			String nvlreord = nivelReorden.getText();
 			String prcUni = precioUnitario.getText();
 			String cantBod = cantidadBodega.getText();
@@ -225,7 +263,7 @@ private InterfazApp inte;
 			String  idest = estante.getText();
 			inte.agregarProductoSucursal(nom, mar, pres, cantiPres, unidMed, volEmp, pesoEmp, codBarr, cat, tip, fech, 
 					nvlreord, prcUni, cantBod, cantEst, precUnMed, idProm, idest, idBod);
-			
+
 
 			dispose();
 		}
@@ -233,7 +271,13 @@ private InterfazApp inte;
 		{
 			dispose();
 		}
+		else if ( mensaje.equals(actualiza))
+		{
+			
+			crearTipo();
 		
+		}
+
 	}
 
 }
