@@ -849,9 +849,9 @@ public class SuperAndes {
 	 * 			Métodos para manejar las VENTAS
 	 *****************************************************************/
 
-	public Compra adicionarCompra(String fecha, int cantidad, long idProductoSucursal, long idCliente, long idFactura) {
+	public Compra adicionarCompra(String fecha, int cantidad, double totalPagado, long idProductoSucursal, long idCliente, long idFactura) {
 		log.info("Adicionando compra: " + idProductoSucursal );
-		Compra compra = pp.adicionarCompra(fecha, cantidad, idProductoSucursal, idCliente, idFactura);
+		Compra compra = pp.adicionarCompra(fecha, cantidad, totalPagado, idProductoSucursal, idCliente, idFactura);
 		log.info("Adicionando compra: " + compra);
 		return compra;
 	}
