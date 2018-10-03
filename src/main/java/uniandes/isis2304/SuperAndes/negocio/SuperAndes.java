@@ -12,6 +12,25 @@ import uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes;
 
 public class SuperAndes {
 	
+	public static final String CATEGORIA_PERECEDERO = "perecedero";
+	public static final String TIPO_CARNE = "carne";
+	public static final String TIPO_GALLETA = "galleta";
+	public static final String TIPO_FRUTA = "fruta";
+	public static final String TIPO_TUBERCULO = "tuberculo";
+	
+	public static final String CATEGORA_ALBARROTE = "albarrote";
+	public static final String TIPO_ESCOBA = "escoba";
+	public static final String TIPO_BALDE = "balde";
+	public static final String TIPO_BRILLADOR = "brillador";
+	public static final String TIPO_TRAPEADOR = "trapeador";
+	
+	public static final String CATEGORIA_ASEOPERSONAL = "aseo personal";
+	public static final String TIPO_CEPILLO = "cepillo";
+	public static final String TIPO_DESODORANTE = "desodorante";
+	public static final String TIPO_CREMA = "crema";
+	public static final String TIPO_CERA = "cera";
+	
+	
 	private static Logger log = Logger.getLogger(SuperAndes.class.getName());
 	
 	private PersistenciaSuperAndes pp;
@@ -27,6 +46,120 @@ public class SuperAndes {
 	public void cerrarUnidadPersistencia() {
 		pp.cerrarUnidadPersistencia();
 	}
+	
+	/* ****************************************************************
+	 * 			Métodos para manejar los REQUERIMIENTOS FUNCIONALES
+	 *****************************************************************/
+	public Proveedor req1RegistrarProveedores(String nombre) {
+		return this.adicionarProveedor(nombre);
+	}
+	
+	public ProductoSucursal req2RegistrarProductoSucursal(String nombre, String marca, String presentacion, double cantidadPresentacion, String unidadMedida,
+			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , int nivelReorden, double precioUnitario, int cantidadBodega, int cantidadEstante, double precioUnidadMedida
+			, long idBodega, long idEstante, long idPromocion) {
+		if (categoria.equalsIgnoreCase(CATEGORIA_PERECEDERO)) {
+			if(tipo.equalsIgnoreCase(TIPO_CARNE) || tipo.equalsIgnoreCase(TIPO_FRUTA) || tipo.equalsIgnoreCase(TIPO_GALLETA) || tipo.equals(TIPO_TUBERCULO)) {
+				return this.adicionarProductoSucursal(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, idBodega, idEstante, idPromocion);
+			}
+		}
+		else if (categoria.equalsIgnoreCase(CATEGORA_ALBARROTE)) {
+			if(tipo.equalsIgnoreCase(TIPO_ESCOBA) || tipo.equalsIgnoreCase(TIPO_TRAPEADOR) || tipo.equalsIgnoreCase(TIPO_BALDE) || tipo.equals(TIPO_BRILLADOR)) {
+				return this.adicionarProductoSucursal(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, idBodega, idEstante, idPromocion);
+			}
+		}
+		else if (categoria.equalsIgnoreCase(CATEGORIA_ASEOPERSONAL)) {
+			if(tipo.equalsIgnoreCase(TIPO_CEPILLO) || tipo.equalsIgnoreCase(TIPO_DESODORANTE) || tipo.equalsIgnoreCase(TIPO_CREMA) || tipo.equals(TIPO_CERA)) {
+				return this.adicionarProductoSucursal(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, idBodega, idEstante, idPromocion);
+			}
+		}
+		return null;
+	}
+	
+	public ProductoProveedor req2RegistrarProductoProveedor(String nombre, String marca, String presentacion, double cantidadPresentacion, String unidadMedida,
+			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , double calidad, double precio, int numeroCalificaciones, double sumaCalificaciones, long idProveedor) {
+		if (categoria.equalsIgnoreCase(CATEGORIA_PERECEDERO)) {
+			if(tipo.equalsIgnoreCase(TIPO_CARNE) || tipo.equalsIgnoreCase(TIPO_FRUTA) || tipo.equalsIgnoreCase(TIPO_GALLETA) || tipo.equals(TIPO_TUBERCULO)) {
+				return this.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
+			}
+		}
+		else if (categoria.equalsIgnoreCase(CATEGORA_ALBARROTE)) {
+			if(tipo.equalsIgnoreCase(TIPO_ESCOBA) || tipo.equalsIgnoreCase(TIPO_TRAPEADOR) || tipo.equalsIgnoreCase(TIPO_BALDE) || tipo.equals(TIPO_BRILLADOR)) {
+				return this.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
+			}
+		}
+		else if (categoria.equalsIgnoreCase(CATEGORIA_ASEOPERSONAL)) {
+			if(tipo.equalsIgnoreCase(TIPO_CEPILLO) || tipo.equalsIgnoreCase(TIPO_DESODORANTE) || tipo.equalsIgnoreCase(TIPO_CREMA) || tipo.equals(TIPO_CERA)) {
+				return this.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
+			}
+		}
+		return null;
+	}
+	
+	public Cliente req3RegistrarClienteIndividuo(String nombre, String correo) {
+		return this.adicionarClienteIndividuo(nombre, correo);
+	}
+	
+	public Cliente req3RegistrarClienteEmpresa(String nombre, String correo, String direccion) {
+		return this.adicionarClienteEmpresa(nombre, correo, direccion);
+	}
+	
+	public Sucursal req4RegistrarSucursal(String ciudad, String direccion, String nombre) {
+		return this.adicionarSucursal(ciudad, direccion, nombre);
+	}
+	
+	public Bodega req5RegistrarBodegaASucursal (double volumen, double peso, String tipo, long sucursal) {
+		if (tipo.equalsIgnoreCase(TIPO_BALDE) || tipo.equalsIgnoreCase(TIPO_BRILLADOR) || tipo.equalsIgnoreCase(TIPO_CARNE) || tipo.equalsIgnoreCase(TIPO_CEPILLO) || tipo.equalsIgnoreCase(TIPO_CERA) || tipo.equalsIgnoreCase(TIPO_CREMA) || tipo.equalsIgnoreCase(TIPO_DESODORANTE) || tipo.equalsIgnoreCase(TIPO_ESCOBA) || tipo.equalsIgnoreCase(TIPO_FRUTA) || tipo.equalsIgnoreCase(TIPO_GALLETA) || tipo.equalsIgnoreCase(TIPO_TRAPEADOR) || tipo.equalsIgnoreCase(TIPO_TUBERCULO) ) {
+			return this.adicionarBodega(volumen, peso, tipo, sucursal);
+		}
+		else {
+			return null;
+		}
+	}
+	
+	public Estante req6RegistrarEstanteASucursal(double volumen, double peso, String tipo,int nivelAprovisionamiento, long sucursal) {
+		if (tipo.equalsIgnoreCase(TIPO_BALDE) || tipo.equalsIgnoreCase(TIPO_BRILLADOR) || tipo.equalsIgnoreCase(TIPO_CARNE) || tipo.equalsIgnoreCase(TIPO_CEPILLO) || tipo.equalsIgnoreCase(TIPO_CERA) || tipo.equalsIgnoreCase(TIPO_CREMA) || tipo.equalsIgnoreCase(TIPO_DESODORANTE) || tipo.equalsIgnoreCase(TIPO_ESCOBA) || tipo.equalsIgnoreCase(TIPO_FRUTA) || tipo.equalsIgnoreCase(TIPO_GALLETA) || tipo.equalsIgnoreCase(TIPO_TRAPEADOR) || tipo.equalsIgnoreCase(TIPO_TUBERCULO) ) {
+			return this.adicionarEstante(volumen, peso, tipo, nivelAprovisionamiento, sucursal);
+		}
+		else {
+			return null;
+		}
+	}
+	
+	public Promocion req7RegistrarPromocion(int tipo, double n, double m, String fechaCaducidad) {
+		if (tipo ==1 || tipo==2 || tipo==3 || tipo==4) {
+			return this.adicionarPromocion(tipo, n, m, fechaCaducidad);
+		}
+		else {
+			return null;
+		}
+	}
+	
+	//REQ 8 HACE FALTA
+	
+	public OrdenPedido req9RegistrarPedidoDeUnProductoAProveedorParaSucursal ( String fechaEsperadaEntrega, int cantidad, long idProductoProveedor, long idSucursal) {
+		ProductoProveedor p = this.darProductoProveedorPorId(idProductoProveedor);
+		double precioPorUnidad = p.getPrecio();
+		double precioTotal = precioPorUnidad * cantidad;
+		return this.adicionarOrdenPedido(precioTotal, null, fechaEsperadaEntrega, 0, 0, cantidad, idProductoProveedor, idSucursal);
+	}
+	
+	public void req10RegistrarLlegadaOrdenPedido(long idOrdenPedido, double calificacion) {
+		OrdenPedido orden = this.darOrdenPedidoPorId(idOrdenPedido);
+		long idProductoACalificar = orden.getProductoProveedor();
+		this.aumentarNumeroCalificaciones(idProductoACalificar);
+		this.aumentarSumaCalificaciones(idProductoACalificar, calificacion);
+		ProductoProveedor producto = this.darProductoProveedorPorId(idProductoACalificar);
+		double nuevaCalificacion = producto.getSumaCalificaciones()/producto.getNumeroCalificaciones();
+		this.modificarCalidadProductoProveedor(idProductoACalificar, nuevaCalificacion);
+		this.calificarOrdenPedido(idOrdenPedido, calificacion);
+		this.recibirFechaOrdenPedido(idOrdenPedido);
+		this.recibirEntregadoOrdenPedido(idOrdenPedido);
+	}
+	
+	public Compra req11RegistrarUnaVentaDeUnProducto(String fecha, int cantidad, long idProductoSucursal, long idCliente, long idFactura) {
+		return null;
+	}
+	
 	
 	/* ****************************************************************
 	 * 			Métodos para manejar los Proveedores

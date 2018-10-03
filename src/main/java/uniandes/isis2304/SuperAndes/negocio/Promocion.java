@@ -2,6 +2,11 @@ package uniandes.isis2304.SuperAndes.negocio;
 
 public class Promocion implements VOPromocion{
 	
+	public static final int TIPO_L = 1;
+	public static final int TIPO_ll = 2;
+	public static final int TIPO_lLL = 3;
+	public static final int TIPO_lV = 4;
+	
 	private long idPromocion;
 	
 	private int tipo;
