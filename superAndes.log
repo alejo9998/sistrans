@@ -409,3 +409,4 @@ java.sql.SQLRecoverableException: Error de E/S: The Network Adapter could not es
 NestedThrowables:
 java.sql.SQLRecoverableException: Error de E/S: The Network Adapter could not establish the connection
 20:05:44,976 (main) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazApp] - Se encontró un archivo de configuración válido: Tablas BD
+11:00:20,814 (main) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazApp] - Se encontró un archivo de configuración válido: Tablas BD

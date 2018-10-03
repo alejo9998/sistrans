@@ -14,6 +14,13 @@ import com.google.gson.JsonObject;
 import com.google.gson.stream.JsonReader;
 
 import uniandes.isis2304.SuperAndes.negocio.SuperAndes;
+import uniandes.isis2304.SuperAndes.negocio.VOBodega;
+import uniandes.isis2304.SuperAndes.negocio.VOCompra;
+import uniandes.isis2304.SuperAndes.negocio.VOEstante;
+import uniandes.isis2304.SuperAndes.negocio.VOOrdenPedido;
+import uniandes.isis2304.SuperAndes.negocio.VOProductoProveedor;
+import uniandes.isis2304.SuperAndes.negocio.VOProductoSucursal;
+import uniandes.isis2304.SuperAndes.negocio.VOPromocion;
 import uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes;
 
 public class InterfazApp extends JFrame
@@ -34,8 +41,8 @@ public class InterfazApp extends JFrame
 
 	public InterfazApp()
 	{
-//						tableConfig = openConfig ("Tablas BD", CONFIG_TABLAS);
-//				        superAndes = new SuperAndes (tableConfig);
+		//		tableConfig = openConfig ("Tablas BD", CONFIG_TABLAS);
+		//		superAndes = new SuperAndes (tableConfig);
 
 		setSize(800,430);
 		setLocationRelativeTo(null);
@@ -144,7 +151,36 @@ public class InterfazApp extends JFrame
 				pague = Double.parseDouble(p); 
 				llev = Double.parseDouble(lleve);
 
-				superAndes.adicionarPromocion(ptipo, pague, llev, fechaCad);
+				if(ptipo==1 && pague>llev)
+				{
+					JOptionPane.showMessageDialog(null, "No puede llevar menos cantidad de la que paga", "SuperAndes",JOptionPane.ERROR_MESSAGE);
+				}
+				if(ptipo==2 && p.equalsIgnoreCase(lleve))
+				{
+					VOPromocion a = superAndes.adicionarPromocion(ptipo, pague, llev, fechaCad);
+					String mensaje =a.toString();
+					panelDatos.actualizarInterfaz(mensaje);
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "Lleve y pague tiene que ser iguales para aplicar descuento", "SuperAndes",JOptionPane.ERROR_MESSAGE);
+				}
+
+				if(ptipo==3 && pague>llev)
+				{
+					JOptionPane.showMessageDialog(null, "No puede llevar menos cantidad de la que paga", "SuperAndes",JOptionPane.ERROR_MESSAGE);
+				}
+				else if(ptipo==4 && pague>llev)
+				{
+					JOptionPane.showMessageDialog(null, "No puede llevar menos cantidad de la que paga", "SuperAndes",JOptionPane.ERROR_MESSAGE);
+				}
+				else
+				{
+					VOPromocion a = superAndes.adicionarPromocion(ptipo, pague, llev, fechaCad);
+					String mensaje =a.toString();
+					panelDatos.actualizarInterfaz(mensaje);
+				}
+
 			}
 			catch(Exception e)
 			{
@@ -175,7 +211,10 @@ public class InterfazApp extends JFrame
 
 				idSucu = Long.parseLong(idSuc);
 
-				superAndes.adicionarBodega(volum, peso, pTipo, idSucu);
+				VOBodega a =superAndes.adicionarBodega(volum, peso, pTipo, idSucu);
+				String mensaje =a.toString();
+				panelDatos.actualizarInterfaz(mensaje);
+
 			}
 			catch(Exception e)
 			{
@@ -204,7 +243,10 @@ public class InterfazApp extends JFrame
 				peso = Double.parseDouble(pPeso);
 				niveApr = Integer.parseInt(nivAprovi);
 				idSucu =Long.parseLong(idSuc);
-				superAndes.adicionarEstante(volumen, peso, pTipo, niveApr, idSucu);
+				VOEstante a=superAndes.adicionarEstante(volumen, peso, pTipo, niveApr, idSucu);
+				String mensaje =a.toString();
+				panelDatos.actualizarInterfaz(mensaje);
+
 			}
 			catch(Exception e)
 			{
@@ -254,9 +296,12 @@ public class InterfazApp extends JFrame
 				idEst=Long.parseLong(idEstante);
 				idPromocion=Long.parseLong(idProm);
 
-				superAndes.adicionarProductoSucursal(pNombre, pMarca, pPresentacion, cantPresentacion, unidadmedida, volEmpaque, pesoEmpaque,
+				VOProductoSucursal a=superAndes.adicionarProductoSucursal(pNombre, pMarca, pPresentacion, cantPresentacion, unidadmedida, volEmpaque, pesoEmpaque,
 						codigoBarras, pCategoria, pTipo, pFechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida,
 						idBod, idEst, idPromocion);
+				String mensaje =a.toString();
+				panelDatos.actualizarInterfaz(mensaje);
+
 			}
 			catch (Exception e)
 			{
@@ -288,7 +333,10 @@ public class InterfazApp extends JFrame
 				idClie=Long.parseLong(pIdCliente);
 				idFac=Long.parseLong(pidFactura);
 
-				superAndes.adicionarCompra(pFecha, cant, idProd, idClie, idFac);
+				VOCompra a =superAndes.adicionarCompra(pFecha, cant, idProd, idClie, idFac);
+				String mensaje =a.toString();
+				panelDatos.actualizarInterfaz(mensaje);
+
 			}
 			catch(Exception e)
 			{
@@ -335,9 +383,12 @@ public class InterfazApp extends JFrame
 				idProveedor= Long.parseLong(pIdprovee);
 
 
-				superAndes.adicionarProductoProveedor(pNombre, pMarca, pPresentacion, cantPresentacion,
+				VOProductoProveedor a= superAndes.adicionarProductoProveedor(pNombre, pMarca, pPresentacion, cantPresentacion,
 						unidadmedida, volEmpaque, pesoEmpaque, codigoBarras, pCategoria, pTipo, pFechaVencimiento,
 						calidad, precio, numeroDeCalificiaciones, sumaCalificaciones, idProveedor);
+				String mensaje =a.toString();
+				panelDatos.actualizarInterfaz(mensaje);
+
 			}
 			catch(Exception e)
 			{
@@ -365,13 +416,15 @@ public class InterfazApp extends JFrame
 				{
 					entergado=1;
 				}
-				
+
 				idsuc=Long.parseLong(idSucu);
 				idPro=Long.parseLong(idProv);
 				cant = Integer.parseInt(cantid);
 				preci = Double.parseDouble(prec);
-				
-				superAndes.adicionarOrdenPedido(preci, fechEntrega, fechEsp, calif, entergado, cant, idPro, idsuc);
+
+				VOOrdenPedido a = superAndes.adicionarOrdenPedido(preci, fechEntrega, fechEsp, calif, entergado, cant, idPro, idsuc);
+				String mensaje =a.toString();
+				panelDatos.actualizarInterfaz(mensaje);
 			}
 			catch (Exception e)
 			{

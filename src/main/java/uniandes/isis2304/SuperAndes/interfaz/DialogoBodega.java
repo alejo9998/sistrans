@@ -17,7 +17,7 @@ public class DialogoBodega extends JDialog implements ActionListener
 {
 	private InterfazApp inte;
 
-	private JTextField tipo;
+	private JComboBox<String> tipo;
 
 	private JTextField peso;
 
@@ -55,7 +55,8 @@ public class DialogoBodega extends JDialog implements ActionListener
 		peso= new JTextField();
 		volumen = new JTextField();
 		Sucursal = new JTextField();
-		tipo = new JTextField();
+		String [] g ={"Albarrotes","Perecederos","Aseo Personal"};
+		tipo = new JComboBox<>(g);
 
 		aceptar = new JButton("Aceptar");
 		aceptar.addActionListener(this);
@@ -83,7 +84,7 @@ public class DialogoBodega extends JDialog implements ActionListener
 		if(mensaje.equalsIgnoreCase(ACEPTAR))
 		{
 			String pes = peso.getText();
-			String tip = tipo.getText();
+			String tip = (String)tipo.getSelectedItem();
 			String vol = volumen.getText();
 			String idSuc = Sucursal.getText();
 			inte.agregarBodega(tip, vol, pes, idSuc);
