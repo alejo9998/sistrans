@@ -23,7 +23,7 @@ class SQLEstante {
 	}
 	
 	public long eliminarEstantesPorTipo (PersistenceManager pm, String tipo) {
-		Query q = pm.newQuery(SQL, "DELEETE FROM " + pp.darTablaEstante() + " WHERE tipo = ?");
+		Query q = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaEstante() + " WHERE tipo = ?");
 		q.setParameters(tipo);
 		return (long) q.executeUnique();
 	}
@@ -60,8 +60,8 @@ class SQLEstante {
 		return (long) q.execute();
 	}
 	
-	public List<Long> darIdBodegasPertenecenASucursal(PersistenceManager pm, long idSucursal){
-		Query q = pm.newQuery(SQL, "SELECT idBodega FROM " + pp.darTablaBodega() + " WHERE sucursal = ?");
+	public List<Long> darIdEstantesPertenecenASucursal(PersistenceManager pm, long idSucursal){
+		Query q = pm.newQuery(SQL, "SELECT idEstante FROM " + pp.darTablaEstante() + " WHERE sucursal = ?");
 		q.setParameters(idSucursal);
 		return (List<Long>) q.executeList();
 	}

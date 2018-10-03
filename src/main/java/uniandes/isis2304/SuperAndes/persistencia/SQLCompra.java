@@ -37,7 +37,7 @@ class SQLCompra {
 	}
 	
 	public List<Compra> darComprasPorCliente (PersistenceManager pm, long idCliente){
-		Query q = pm.newQuery(SQL, "SELECt * FROM " + pp.darTablaCompra() + " WHERE cliente = ?");
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaCompra() + " WHERE cliente = ?");
 		q.setResultClass(Compra.class);
 		q.setParameters(idCliente);
 		return (List<Compra>) q.executeList();	

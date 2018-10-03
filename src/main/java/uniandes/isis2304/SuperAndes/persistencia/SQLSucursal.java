@@ -35,7 +35,7 @@ class SQLSucursal {
 	}
 	
 	public Sucursal darSucursalPorId(PersistenceManager pm, long idSucursal) {
-		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaSucursal() + " WHERE id = ?");
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaSucursal() + " WHERE idSucursal = ?");
 		q.setResultClass(Sucursal.class);
 		q.setParameters(idSucursal);
 		return (Sucursal) q.executeUnique();

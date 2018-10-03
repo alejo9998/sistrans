@@ -37,6 +37,11 @@ public class Proveedor implements VOProveedor{
 		return "Proveedor [nit=" + nit + ", nombre=" + nombre + "]";
 	}
 	
+	public boolean equals(Object proveedor) {
+		Proveedor p = (Proveedor) proveedor;
+		return nit == p.getNit() && nombre.equalsIgnoreCase(p.getNombre());
+	}
+	
 	
 
 }

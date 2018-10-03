@@ -4,16 +4,16 @@
 	"tablas":
 	[
 		"SuperAndes_sequence",
-		"X_PROVEEDOR",
-		"X_SUCURSAL",
 		"X_CLIENTE",
-		"X_PROMOCION",
 		"X_FACTURA",
+		"X_SUCURSAL",
+		"X_PROVEEDOR",
+		"X_PROMOCION",
 		"X_BODEGA",
 		"X_ESTANTE",
-		"X_PRODUCTOPROVEEDOR",
 		"X_PRODUCTOSUCURSAL",
-		"X_ORDENPEDIDO",
-		"X_COMPRA"
+		"X_COMPRA",
+		"X_PRODUCTOPROVEEDOR",
+		"X_ORDENPEDIDO"
 	]
 }

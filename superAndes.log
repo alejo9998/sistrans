@@ -1,1 +1,378 @@
 12:52:23,473 (main) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazApp] - Se encontrÃ³ un archivo de configuraciÃ³n vÃ¡lido: Tablas BD
+17:20:00,111 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con datos de usuario correctos, pero sin crear el esquema
+17:20:00,188 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+17:20:42,876 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Prueba de tabla inexistente incompleta. No se pudo conectar a la base de datos !!. La excepción generada es: javax.jdo.JDOFatalUserException
+17:20:42,877 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - La causa es: javax.jdo.JDOFatalDataStoreException: Error de E/S: The Network Adapter could not establish the connection
+NestedThrowables:
+java.sql.SQLRecoverableException: Error de E/S: The Network Adapter could not establish the connection
+17:20:42,881 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con una base de datos que no existe
+17:20:42,882 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+17:53:44,298 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con datos de usuario correctos, pero sin crear el esquema
+17:53:44,357 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+17:53:45,997 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Proveedores
+17:53:46,124 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Prueba de tabla inexistente correcta. La excepción generada es: javax.jdo.JDODataStoreException
+17:53:46,124 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - La causa es: java.sql.SQLSyntaxErrorException: ORA-00942: la tabla o vista no existe
+
+17:53:46,124 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:53:46,317 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "DELETE FROM B_ORDENPEDIDO".
+ORA-00942: la tabla o vista no existe
+
+17:53:46,339 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:53:46,362 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con una base de datos que no existe
+17:53:46,363 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+17:53:46,463 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Prueba realizada exitosamente. La excepción generada es: javax.jdo.JDOFatalUserException
+17:53:46,463 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - La causa es: javax.jdo.JDOFatalDataStoreException: Listener refused the connection with the following error:
+ORA-12505, TNS:listener does not currently know of SID given in connect descriptor
+ 
+NestedThrowables:
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12505, TNS:listener does not currently know of SID given in connect descriptor
+ 
+17:53:46,464 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con datos de usuario incorrectos
+17:53:46,465 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+17:53:47,645 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Prueba realizada exitosamente. La excepción generada es: javax.jdo.JDOFatalUserException
+17:53:47,645 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - La causa es: javax.jdo.JDOFatalDataStoreException: ORA-01017: invalid username/password; logon denied
+
+NestedThrowables:
+java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+
+17:53:47,645 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con datos válidos (BD, credenciales, esquema
+17:53:47,646 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+17:53:47,987 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Conexión realizada correstamente
+17:53:47,987 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Cerrando la conexión
+17:53:47,997 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Conexión cerrada
+17:54:00,142 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+17:54:00,196 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+17:54:01,897 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+17:54:02,014 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:54:02,212 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "DELETE FROM A_ORDENPEDIDO".
+ORA-00942: la tabla o vista no existe
+
+17:54:02,234 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:04:43,660 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con datos de usuario correctos, pero sin crear el esquema
+18:04:43,726 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+18:04:46,469 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Proveedores
+18:04:46,591 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Prueba de tabla inexistente correcta. La excepción generada es: javax.jdo.JDODataStoreException
+18:04:46,592 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - La causa es: java.sql.SQLSyntaxErrorException: ORA-00942: la tabla o vista no existe
+
+18:04:46,592 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:04:46,792 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "DELETE FROM B_ORDENPEDIDO".
+ORA-00942: la tabla o vista no existe
+
+18:04:46,815 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:04:46,838 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con una base de datos que no existe
+18:04:46,838 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+18:04:46,946 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Prueba realizada exitosamente. La excepción generada es: javax.jdo.JDOFatalUserException
+18:04:46,946 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - La causa es: javax.jdo.JDOFatalDataStoreException: Listener refused the connection with the following error:
+ORA-12505, TNS:listener does not currently know of SID given in connect descriptor
+ 
+NestedThrowables:
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12505, TNS:listener does not currently know of SID given in connect descriptor
+ 
+18:04:46,946 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con datos de usuario incorrectos
+18:04:46,947 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+18:04:48,129 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Prueba realizada exitosamente. La excepción generada es: javax.jdo.JDOFatalUserException
+18:04:48,129 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - La causa es: javax.jdo.JDOFatalDataStoreException: ORA-01017: invalid username/password; logon denied
+
+NestedThrowables:
+java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+
+18:04:48,129 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con datos válidos (BD, credenciales, esquema
+18:04:48,129 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+18:04:48,461 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Conexión realizada correstamente
+18:04:48,461 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Cerrando la conexión
+18:04:48,472 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Conexión cerrada
+18:04:54,047 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+18:04:54,107 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+18:04:56,573 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:04:56,773 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+18:04:56,774 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+18:04:56,965 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "SELECT SuperAndes_sequence.nextval FROM DUAL".
+ORA-02289: no existe la secuencia
+
+18:04:56,967 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: null
+18:04:56,967 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:04:57,086 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+18:04:57,086 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:04:57,543 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:04:57,544 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:06:55,942 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+18:06:55,995 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+18:06:58,687 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:06:58,894 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+18:06:58,894 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+18:06:59,015 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "SELECT SuperAndes_sequence.nextval FROM DUAL".
+ORA-02289: no existe la secuencia
+
+18:06:59,017 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: null
+18:06:59,017 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:06:59,098 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+18:06:59,098 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:06:59,506 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:06:59,507 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:15:51,021 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con datos de usuario correctos, pero sin crear el esquema
+18:15:51,089 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+18:15:53,502 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Proveedores
+18:15:53,623 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Prueba de tabla inexistente correcta. La excepción generada es: javax.jdo.JDODataStoreException
+18:15:53,624 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - La causa es: java.sql.SQLSyntaxErrorException: ORA-00942: la tabla o vista no existe
+
+18:15:53,624 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:15:53,818 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "DELETE FROM B_ORDENPEDIDO".
+ORA-00942: la tabla o vista no existe
+
+18:15:53,839 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:15:54,414 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con una base de datos que no existe
+18:15:54,415 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+18:15:54,534 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Prueba realizada exitosamente. La excepción generada es: javax.jdo.JDOFatalUserException
+18:15:54,534 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - La causa es: javax.jdo.JDOFatalDataStoreException: Listener refused the connection with the following error:
+ORA-12505, TNS:listener does not currently know of SID given in connect descriptor
+ 
+NestedThrowables:
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12505, TNS:listener does not currently know of SID given in connect descriptor
+ 
+18:15:54,535 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con datos de usuario incorrectos
+18:15:54,535 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+18:15:55,726 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Prueba realizada exitosamente. La excepción generada es: javax.jdo.JDOFatalUserException
+18:15:55,726 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - La causa es: javax.jdo.JDOFatalDataStoreException: ORA-01017: invalid username/password; logon denied
+
+NestedThrowables:
+java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+
+18:15:55,727 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con datos válidos (BD, credenciales, esquema
+18:15:55,727 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+18:15:56,066 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Conexión realizada correstamente
+18:15:56,066 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Cerrando la conexión
+18:15:56,077 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Conexión cerrada
+18:16:01,817 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+18:16:01,872 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+18:16:03,970 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:16:04,088 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+18:16:04,088 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+18:16:04,173 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=1, nombre=Oreo]
+18:16:04,173 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:16:04,208 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 1 proveedores existentes
+18:16:04,209 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:16:05,035 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:16:05,035 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:19:23,667 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+18:19:23,710 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+18:19:25,362 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:19:25,470 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+18:19:25,470 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+18:19:25,550 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=2, nombre=Oreo]
+18:19:25,550 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:19:25,592 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 1 proveedores existentes
+18:19:25,592 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:19:25,922 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:19:25,923 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:25:24,419 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+18:25:24,472 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+18:25:26,123 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:25:26,236 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+18:25:26,236 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+18:25:26,313 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=3, nombre=Oreo]
+18:25:26,313 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:25:26,346 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 1 proveedores existentes
+18:25:26,346 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Babaria
+18:25:26,413 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=4, nombre=Babaria]
+18:25:26,413 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:25:26,445 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 2 proveedores existentes
+18:25:26,445 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un ProductoProveedor por id : 3
+18:25:26,483 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+18:25:26,484 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un ProductoProveedor por id : 4
+18:25:26,516 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+18:25:26,516 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:25:26,856 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:25:26,856 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:26:23,359 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+18:26:23,412 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+18:26:25,336 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:26:25,443 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+18:26:25,443 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+18:26:25,520 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=5, nombre=Oreo]
+18:26:25,520 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:26:25,553 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 1 proveedores existentes
+18:26:25,553 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Babaria
+18:26:25,617 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=6, nombre=Babaria]
+18:26:25,617 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:26:25,651 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 2 proveedores existentes
+18:26:25,651 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un ProductoProveedor por id : 5
+18:26:25,684 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+18:26:25,684 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un ProductoProveedor por id : 6
+18:26:25,717 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+18:26:25,717 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:26:26,029 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:26:26,029 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:26:56,254 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+18:26:56,301 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+18:26:57,929 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:26:58,139 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+18:26:58,139 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+18:26:58,269 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=7, nombre=Oreo]
+18:26:58,270 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:26:58,302 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 1 proveedores existentes
+18:26:58,303 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Babaria
+18:26:58,368 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=8, nombre=Babaria]
+18:26:58,368 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:26:58,400 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 2 proveedores existentes
+18:26:58,400 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un ProductoProveedor por id : 7
+18:26:58,436 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+18:26:58,436 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un ProductoProveedor por id : 8
+18:26:58,469 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+18:26:58,469 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:26:58,780 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:26:58,780 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:27:28,350 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+18:27:28,397 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+18:27:29,978 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:27:30,086 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+18:27:30,086 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+18:27:30,162 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=9, nombre=Oreo]
+18:27:30,162 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:27:30,195 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 1 proveedores existentes
+18:27:30,195 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Babaria
+18:27:30,261 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=10, nombre=Babaria]
+18:27:30,261 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:27:30,294 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 2 proveedores existentes
+18:27:30,294 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un ProductoProveedor por id : 9
+18:27:30,331 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+18:27:30,331 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un ProductoProveedor por id : 10
+18:27:30,364 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+18:27:30,365 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:27:30,736 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:27:30,736 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:29:40,747 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+18:29:40,792 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+18:29:42,472 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:29:42,582 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+18:29:42,582 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+18:29:42,658 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=11, nombre=Oreo]
+18:29:42,659 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:29:42,692 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 1 proveedores existentes
+18:29:42,692 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Babaria
+18:29:42,758 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=12, nombre=Babaria]
+18:29:42,758 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:29:42,791 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 2 proveedores existentes
+18:29:42,791 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un ProductoProveedor por id : 11
+18:29:42,828 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+18:29:42,828 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un ProductoProveedor por id : 12
+18:29:42,862 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+18:29:42,862 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:29:43,172 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:29:43,172 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:34:38,385 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+18:34:38,454 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+18:34:40,188 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:34:40,296 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+18:34:40,296 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+18:34:40,426 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=13, nombre=Oreo]
+18:34:40,426 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:34:40,460 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 1 proveedores existentes
+18:34:40,460 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Babaria
+18:34:40,533 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=14, nombre=Babaria]
+18:34:40,533 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:34:40,566 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 2 proveedores existentes
+18:34:40,566 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un ProductoProveedor por id : 13
+18:34:40,603 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+18:34:40,603 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un ProductoProveedor por id : 14
+18:34:40,637 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+18:34:40,637 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:34:40,952 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:34:40,952 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:35:45,891 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+18:35:45,932 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+18:35:47,566 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:35:47,674 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+18:35:47,674 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+18:35:47,757 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=15, nombre=Oreo]
+18:35:47,757 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:35:47,793 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 1 proveedores existentes
+18:35:47,793 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Babaria
+18:35:47,863 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=16, nombre=Babaria]
+18:35:47,863 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:35:47,896 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 2 proveedores existentes
+18:35:47,896 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un ProductoProveedor por id : 15
+18:35:47,932 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+18:35:47,933 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un ProductoProveedor por id : 16
+18:35:47,967 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+18:35:47,967 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:35:48,280 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:35:48,280 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:39:44,903 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+18:39:44,960 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+18:39:46,895 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:39:47,005 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+18:39:47,006 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+18:39:47,082 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=17, nombre=Oreo]
+18:39:47,082 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:39:47,116 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 1 proveedores existentes
+18:39:47,116 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Babaria
+18:39:47,183 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=18, nombre=Babaria]
+18:39:47,183 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:39:47,216 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 2 proveedores existentes
+18:39:47,216 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un ProductoProveedor por id : 17
+18:39:47,251 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+18:39:47,252 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un ProductoProveedor por id : 18
+18:39:47,285 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+18:39:47,285 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:39:47,662 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:39:47,663 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:40:18,847 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+18:40:18,889 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+18:40:20,658 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:40:20,767 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+18:40:20,767 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+18:40:20,843 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=19, nombre=Oreo]
+18:40:20,844 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:40:20,876 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 1 proveedores existentes
+18:40:20,877 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Babaria
+18:40:20,942 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=20, nombre=Babaria]
+18:40:20,942 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:40:20,974 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 2 proveedores existentes
+18:40:20,974 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un ProductoProveedor por id : 19
+18:40:21,010 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+18:40:21,010 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un ProductoProveedor por id : 20
+18:40:21,043 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+18:40:21,043 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:40:21,360 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:40:21,360 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:41:34,636 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+18:41:34,678 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+18:41:36,993 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:41:37,104 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+18:41:37,104 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+18:41:37,179 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=21, nombre=Oreo]
+18:41:37,179 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:41:37,212 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 1 proveedores existentes
+18:41:37,212 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Babaria
+18:41:37,278 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=22, nombre=Babaria]
+18:41:37,278 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:41:37,311 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 2 proveedores existentes
+18:41:37,311 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un ProductoProveedor por id : 21
+18:41:37,347 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+18:41:37,347 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un ProductoProveedor por id : 22
+18:41:37,379 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+18:41:37,380 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:41:37,692 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:41:37,692 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:43:06,875 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+18:43:06,922 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+18:43:08,584 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:43:08,693 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+18:43:08,693 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+18:43:08,881 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=23, nombre=Oreo]
+18:43:08,881 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:43:08,996 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 1 proveedores existentes
+18:43:08,997 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Babaria
+18:43:09,247 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=24, nombre=Babaria]
+18:43:09,247 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+18:43:09,305 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 2 proveedores existentes
+18:43:09,305 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un proveedor por nit: 23
+18:43:09,340 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Proveedor [nit=23, nombre=Oreo]
+18:43:09,340 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un proveedor por nit: 24
+18:43:09,372 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Proveedor [nit=24, nombre=Babaria]
+18:43:09,372 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:43:09,680 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:43:09,680 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!

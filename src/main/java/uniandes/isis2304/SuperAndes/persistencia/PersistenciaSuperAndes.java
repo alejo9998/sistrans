@@ -74,17 +74,17 @@ public class PersistenciaSuperAndes {
 		
 		tablas = new LinkedList<String>();
 		tablas.add("SuperAndes_sequence");
-		tablas.add("PROVEEDOR");
-		tablas.add("SUCURSAL");
 		tablas.add("CLIENTE");
+		tablas.add("FACTURA");
+		tablas.add("SUCURSAL");
+		tablas.add("PROVEEDOR");
 		tablas.add("PROMOCION");
-		tablas.add("FACURA");
 		tablas.add("BODEGA");
 		tablas.add("ESTANTE");
-		tablas.add("PRODUCTOPROVEEDOR");
 		tablas.add("PRODUCTOSUCURSAL");
-		tablas.add("ORDENPEDIDO");
-		tablas.add("COMPRA");	
+		tablas.add("COMPRA");
+		tablas.add("PRODUCTOPROVEEDOR");
+		tablas.add("ORDENPEDIDO");	
 	}
 	
 	private PersistenciaSuperAndes (JsonObject tableConfig) {
@@ -158,23 +158,23 @@ public class PersistenciaSuperAndes {
 		return tablas.get(0);
 	}
 	
-	public String darTablaProveedor() {
+	public String darTablaCliente() {
 		return tablas.get(1);
 	}
 	
-	public String darTablaSucursal() {
+	public String darTablaFactura() {
 		return tablas.get(2);
 	}
 	
-	public String darTablaCliente() {
+	public String darTablaSucursal() {
 		return tablas.get(3);
 	}
 	
-	public String darTablaPromocion() {
+	public String darTablaProveedor() {
 		return tablas.get(4);
 	}
 	
-	public String darTablaFactura() {
+	public String darTablaPromocion() {
 		return tablas.get(5);
 	}
 	
@@ -186,23 +186,23 @@ public class PersistenciaSuperAndes {
 		return tablas.get(7);
 	}
 	
-	public String darTablaProductoProveedor() {
+	public String darTablaProductoSucursal() {
 		return tablas.get(8);
 	}
-	
-	public String darTablaProductoSucursal() {
+
+	public String darTablaCompra() {
 		return tablas.get(9);
 	}
-	
-	public String darTablaOrdenPedido() {
+
+	public String darTablaProductoProveedor() {
 		return tablas.get(10);
 	}
-	
-	public String darTablaCompra() {
+
+	public String darTablaOrdenPedido() {
 		return tablas.get(11);
 	}
-	
-	
+
+
 	/**
 	 * Transacción para el generador de secuencia de SuperAndes
 	 * Adiciona entradas al log de la aplicación
@@ -270,7 +270,7 @@ public class PersistenciaSuperAndes {
 	
 	public Proveedor darProveedorPorNit (long nit) 
 	{
-		return (Proveedor) sqlProveedor.darProveedorPorNit (pmf.getPersistenceManager(), nit);
+		return sqlProveedor.darProveedorPorNit (pmf.getPersistenceManager(), nit);
 	}
 	
 	public List<Proveedor> darProveedores() {

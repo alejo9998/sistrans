@@ -71,11 +71,8 @@ public class ProveedorTest {
     	try
 		{
 			// Lectura de los tipos de bebida con la tabla vacía
-    		System.out.println("LLEGA 0");
 			List <VOProveedor> lista = superAndes.darVOProveedores();
-			System.out.println("LLEGA 0,1");
 			assertEquals ("No debe haber proveedores creados!!", 0, lista.size ());
-			System.out.println("LLEGA 1");
 
 			// Lectura de los tipos de bebida con un tipo de bebida adicionado
 			String nombreProveedor1 = "Oreo";
@@ -83,7 +80,6 @@ public class ProveedorTest {
 			lista = superAndes.darVOProveedores();
 			assertEquals ("Debe haber un proveedor creado !!", 1, lista.size ());
 			assertEquals ("El objeto creado y el traido de la BD deben ser iguales !!", proveedor1, lista.get (0));
-			System.out.println("LLEGA 2");
 
 			// Lectura de los tipos de bebida con dos tipos de bebida adicionados
 			String nombreProveedor2 = "Babaria";
@@ -95,8 +91,8 @@ public class ProveedorTest {
 			
 			long idProveedor1 = proveedor1.getNit();
 			long idProveedor2 = proveedor2.getNit();
-			VOProveedor pruebaProveedor1 = (VOProveedor) superAndes.darProductoProveedorPorId(idProveedor1);
-			VOProveedor pruebaProveedor2 = (VOProveedor) superAndes.darProductoProveedorPorId(idProveedor2);
+			VOProveedor pruebaProveedor1 = (VOProveedor) superAndes.darProveedorPorNit(idProveedor1);
+			VOProveedor pruebaProveedor2 = (VOProveedor) superAndes.darProveedorPorNit(idProveedor2);
 			assertEquals("Los dos objetos deberian ser iguales 1", proveedor1, pruebaProveedor1);
 			assertEquals("Los dos objetos deberian ser iguales 2", proveedor2, pruebaProveedor2);
 
