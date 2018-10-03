@@ -25,6 +25,8 @@ public class DialogoCompra extends JDialog implements ActionListener
 
 	private JTextField cliente;
 
+	private JTextField totalPagado;
+	
 	private JTextField factura;
 
 	private JButton aceptar;
@@ -42,7 +44,7 @@ public class DialogoCompra extends JDialog implements ActionListener
 		setLocationRelativeTo(null);
 
 		JPanel campos = new JPanel( );
-		campos.setLayout( new GridLayout( 6, 2, 3, 3 ) );
+		campos.setLayout( new GridLayout( 7, 2, 3, 3 ) );
 		campos.setBorder( new EmptyBorder( 15, 15, 15, 15 ) );
 		add( campos, BorderLayout.CENTER );
 
@@ -52,6 +54,7 @@ public class DialogoCompra extends JDialog implements ActionListener
 		JLabel n1 = new JLabel("Producto: ");
 		JLabel reap = new JLabel("Cliente: ");
 		JLabel fechaCad = new JLabel("Factura: ");
+		JLabel total = new JLabel("Total: ");
 
 
 		fecha= new JTextField();
@@ -59,7 +62,7 @@ public class DialogoCompra extends JDialog implements ActionListener
 		productoSucursal = new JTextField();
 		cliente = new JTextField();
 		factura = new JTextField();
-
+		totalPagado = new JTextField();
 		aceptar = new JButton("Aceptar");
 		aceptar.addActionListener(this);
 		aceptar.setActionCommand(ACEPTAR);
@@ -76,6 +79,8 @@ public class DialogoCompra extends JDialog implements ActionListener
 		campos.add(productoSucursal);
 		campos.add(reap);
 		campos.add(cliente);
+		campos.add(total);
+		campos.add(totalPagado);
 		campos.add(fechaCad);
 		campos.add(factura);
 		campos.add(aceptar);
@@ -96,7 +101,8 @@ public class DialogoCompra extends JDialog implements ActionListener
 			String prod = productoSucursal.getText();
 			String clie = cliente.getText();
 			String fac = factura.getText();
-			inte.agregarCompra(fechCom, canti, prod, clie, fac);
+			String total = totalPagado.getText();
+			inte.agregarCompra(fechCom, canti, prod, clie, fac,total);
 			dispose();
 		}
 		else if (mensaje.equalsIgnoreCase(CANCELAR))

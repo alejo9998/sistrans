@@ -41,8 +41,8 @@ public class InterfazApp extends JFrame
 
 	public InterfazApp()
 	{
-		//		tableConfig = openConfig ("Tablas BD", CONFIG_TABLAS);
-		//		superAndes = new SuperAndes (tableConfig);
+//		tableConfig = openConfig ("Tablas BD", CONFIG_TABLAS);
+//		superAndes = new SuperAndes (tableConfig);
 
 		setSize(800,430);
 		setLocationRelativeTo(null);
@@ -311,9 +311,9 @@ public class InterfazApp extends JFrame
 
 	}
 
-	public void agregarCompra(String pFecha, String pCantidad, String pIdProduSucu, String pIdCliente, String pidFactura )
+	public void agregarCompra(String pFecha, String pCantidad, String pIdProduSucu, String pIdCliente, String pidFactura, String pTotal  )
 	{
-		if(pFecha.equalsIgnoreCase("")|| pCantidad.equalsIgnoreCase("")|| pIdProduSucu.equalsIgnoreCase("")||pIdCliente.equalsIgnoreCase("") || pidFactura.equalsIgnoreCase(""))
+		if(pFecha.equalsIgnoreCase("")|| pCantidad.equalsIgnoreCase("")|| pIdProduSucu.equalsIgnoreCase("")||pIdCliente.equalsIgnoreCase("") || pidFactura.equalsIgnoreCase("")|| pTotal.equalsIgnoreCase(""))
 		{
 			JOptionPane.showMessageDialog(null, "Los campos no pueden ser vacios", "SuperAndes",JOptionPane.ERROR_MESSAGE);
 		}
@@ -327,16 +327,23 @@ public class InterfazApp extends JFrame
 				Long idProd =0L;
 				Long idClie=0L;
 				Long idFac=0L;
-
+				Double tot=0.0;
 				cant=Integer.parseInt(pCantidad);
 				idProd=Long.parseLong(pIdProduSucu);
 				idClie=Long.parseLong(pIdCliente);
 				idFac=Long.parseLong(pidFactura);
-
-				VOCompra a =superAndes.adicionarCompra(pFecha, cant, idProd, idClie, idFac);
+				tot= Double.parseDouble(pTotal);
+				
+				if(tot<=0)
+				{
+					JOptionPane.showMessageDialog(null, "El precio no puede ser menor o igual a 0", "SuperAndes",JOptionPane.ERROR_MESSAGE);
+				}
+				else
+				{
+				VOCompra a =superAndes.adicionarCompra(pFecha, cant, idProd, idClie, idFac,tot);
 				String mensaje =a.toString();
 				panelDatos.actualizarInterfaz(mensaje);
-
+				}
 			}
 			catch(Exception e)
 			{
