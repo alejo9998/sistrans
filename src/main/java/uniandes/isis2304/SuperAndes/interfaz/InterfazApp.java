@@ -41,8 +41,8 @@ public class InterfazApp extends JFrame
 
 	public InterfazApp()
 	{
-//		tableConfig = openConfig ("Tablas BD", CONFIG_TABLAS);
-//		superAndes = new SuperAndes (tableConfig);
+		//		tableConfig = openConfig ("Tablas BD", CONFIG_TABLAS);
+		//		superAndes = new SuperAndes (tableConfig);
 
 		setSize(800,430);
 		setLocationRelativeTo(null);
@@ -204,17 +204,23 @@ public class InterfazApp extends JFrame
 			Long idSucu= 0L;
 			try
 			{
-				System.out.println(pTipo);
+
 				peso = Double.parseDouble(pPeso); 
 
 				volum = Double.parseDouble(pVol);
 
 				idSucu = Long.parseLong(idSuc);
 
-				VOBodega a =superAndes.adicionarBodega(volum, peso, pTipo, idSucu);
-				String mensaje =a.toString();
-				panelDatos.actualizarInterfaz(mensaje);
+				if(peso<0||volum<0||idSucu<0)
+				{
 
+				}
+				else
+				{
+					VOBodega a =superAndes.adicionarBodega(volum, peso, pTipo, idSucu);
+					String mensaje =a.toString();
+					panelDatos.actualizarInterfaz(mensaje);
+				}
 			}
 			catch(Exception e)
 			{
@@ -239,14 +245,21 @@ public class InterfazApp extends JFrame
 			Long idSucu = 0L;
 			try
 			{
+
 				volumen = Double.parseDouble(volum);
 				peso = Double.parseDouble(pPeso);
 				niveApr = Integer.parseInt(nivAprovi);
 				idSucu =Long.parseLong(idSuc);
-				VOEstante a=superAndes.adicionarEstante(volumen, peso, pTipo, niveApr, idSucu);
-				String mensaje =a.toString();
-				panelDatos.actualizarInterfaz(mensaje);
-
+				if(volumen<0|| peso<0||niveApr<0||idSucu<0)
+				{
+					JOptionPane.showMessageDialog(null, "Los valores deben ser mayor a 0", "SuperAndes",JOptionPane.ERROR_MESSAGE);
+				}
+				else
+				{
+					VOEstante a=superAndes.adicionarEstante(volumen, peso, pTipo, niveApr, idSucu);
+					String mensaje =a.toString();
+					panelDatos.actualizarInterfaz(mensaje);
+				}
 			}
 			catch(Exception e)
 			{
@@ -295,13 +308,19 @@ public class InterfazApp extends JFrame
 				idBod= Long.parseLong(idBodega);
 				idEst=Long.parseLong(idEstante);
 				idPromocion=Long.parseLong(idProm);
-
-				VOProductoSucursal a=superAndes.adicionarProductoSucursal(pNombre, pMarca, pPresentacion, cantPresentacion, unidadmedida, volEmpaque, pesoEmpaque,
-						codigoBarras, pCategoria, pTipo, pFechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida,
-						idBod, idEst, idPromocion);
-				String mensaje =a.toString();
-				panelDatos.actualizarInterfaz(mensaje);
-
+				if(cantPresentacion<0||volEmpaque<0||pesoEmpaque<0||codigoBarras<0||nivelReorden<0||precioUnitario<0||cantidadBodega<0
+						||cantidadEstante<0||precioUnidadMedida<0||idBod<0||idEst<0||idPromocion<0)
+				{
+					JOptionPane.showMessageDialog(null, "Los valores tienen que ser mayor a 0", "SuperAndes",JOptionPane.ERROR_MESSAGE);
+				}
+				else
+				{
+					VOProductoSucursal a=superAndes.adicionarProductoSucursal(pNombre, pMarca, pPresentacion, cantPresentacion, unidadmedida, volEmpaque, pesoEmpaque,
+							codigoBarras, pCategoria, pTipo, pFechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida,
+							idBod, idEst, idPromocion);
+					String mensaje =a.toString();
+					panelDatos.actualizarInterfaz(mensaje);
+				}
 			}
 			catch (Exception e)
 			{
@@ -333,16 +352,16 @@ public class InterfazApp extends JFrame
 				idClie=Long.parseLong(pIdCliente);
 				idFac=Long.parseLong(pidFactura);
 				tot= Double.parseDouble(pTotal);
-				
-				if(tot<=0)
+
+				if(tot<=0||cant<0||idProd<0||idClie<0||idFac<0)
 				{
 					JOptionPane.showMessageDialog(null, "El precio no puede ser menor o igual a 0", "SuperAndes",JOptionPane.ERROR_MESSAGE);
 				}
 				else
 				{
-				VOCompra a =superAndes.adicionarCompra(pFecha, cant, idProd, idClie, idFac,tot);
-				String mensaje =a.toString();
-				panelDatos.actualizarInterfaz(mensaje);
+					VOCompra a =superAndes.adicionarCompra(pFecha, cant,tot, idProd, idClie, idFac);
+					String mensaje =a.toString();
+					panelDatos.actualizarInterfaz(mensaje);
 				}
 			}
 			catch(Exception e)
@@ -389,12 +408,19 @@ public class InterfazApp extends JFrame
 				sumaCalificaciones= Double.parseDouble(sumCal);
 				idProveedor= Long.parseLong(pIdprovee);
 
-
-				VOProductoProveedor a= superAndes.adicionarProductoProveedor(pNombre, pMarca, pPresentacion, cantPresentacion,
-						unidadmedida, volEmpaque, pesoEmpaque, codigoBarras, pCategoria, pTipo, pFechaVencimiento,
-						calidad, precio, numeroDeCalificiaciones, sumaCalificaciones, idProveedor);
-				String mensaje =a.toString();
-				panelDatos.actualizarInterfaz(mensaje);
+				if(cantPresentacion<0||volEmpaque<0||pesoEmpaque<0||codigoBarras<0||calidad<0||precio<0||numeroDeCalificiaciones<0||sumaCalificaciones<0
+						||idProveedor<0)
+				{
+					JOptionPane.showMessageDialog(null, "Los valores deben ser mayores a 0", "SuperAndes",JOptionPane.ERROR_MESSAGE);
+				}
+				else
+				{
+					VOProductoProveedor a= superAndes.adicionarProductoProveedor(pNombre, pMarca, pPresentacion, cantPresentacion,
+							unidadmedida, volEmpaque, pesoEmpaque, codigoBarras, pCategoria, pTipo, pFechaVencimiento,
+							calidad, precio, numeroDeCalificiaciones, sumaCalificaciones, idProveedor);
+					String mensaje =a.toString();
+					panelDatos.actualizarInterfaz(mensaje);
+				}
 
 			}
 			catch(Exception e)
@@ -423,15 +449,23 @@ public class InterfazApp extends JFrame
 				{
 					entergado=1;
 				}
-
+				
 				idsuc=Long.parseLong(idSucu);
 				idPro=Long.parseLong(idProv);
 				cant = Integer.parseInt(cantid);
 				preci = Double.parseDouble(prec);
 
+				if(idsuc<0||idPro<0||cant<0||preci<0)
+				{
+					JOptionPane.showMessageDialog(null, "Introduzca Valores Validos", "SuperAndes",JOptionPane.ERROR_MESSAGE);
+				}
+				else
+				{
 				VOOrdenPedido a = superAndes.adicionarOrdenPedido(preci, fechEntrega, fechEsp, calif, entergado, cant, idPro, idsuc);
 				String mensaje =a.toString();
 				panelDatos.actualizarInterfaz(mensaje);
+		
+				}
 			}
 			catch (Exception e)
 			{

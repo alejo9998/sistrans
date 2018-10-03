@@ -48,6 +48,18 @@ public class MenuBarra extends JMenuBar implements ActionListener
 	
 	private JMenu requerimientos;
 	
+	private JMenuItem requerimiento1;
+	private final static String REQUERIMIENTO1="REQUERIMIENTO1";
+	
+	private JMenuItem requerimiento2;
+	private final static String REQUERIMIENTO2="REQUERIMIENTO2";
+	
+	private JMenuItem requerimiento3;
+	private final static String REQUERIMIENTO3="REQUERIMIENTO3";
+	
+	private JMenuItem requerimiento4;
+	private final static String REQUERIMIENTO4="REQUERIMIENTO4";
+	
 	private JMenu mantenimiento;
 	
 	public MenuBarra(InterfazApp inter)
@@ -114,6 +126,23 @@ public class MenuBarra extends JMenuBar implements ActionListener
 		agregar.add(agregarOrdenPedido);
 		
 		requerimientos = new JMenu("Requerimientos");
+		requerimiento1 = new JMenuItem("Requerimiento 1");
+		requerimiento1.addActionListener(this);
+		requerimiento1.setActionCommand(REQUERIMIENTO1);
+		requerimiento2 = new JMenuItem("Requerimiento 2");
+		requerimiento2.addActionListener(this);
+		requerimiento2.setActionCommand(REQUERIMIENTO2);
+		requerimiento3 = new JMenuItem("Requerimiento 3");
+		requerimiento3.addActionListener(this);
+		requerimiento3.setActionCommand(REQUERIMIENTO3);
+		requerimiento4 = new JMenuItem("Requerimiento 4");
+		requerimiento4.addActionListener(this);
+		requerimiento4.setActionCommand(REQUERIMIENTO4);
+		
+		requerimientos.add(requerimiento1);
+		requerimientos.add(requerimiento2);
+		requerimientos.add(requerimiento3);
+		requerimientos.add(requerimiento4);
 		add(requerimientos);
 		
 		mantenimiento = new JMenu("Mantenimiento");
