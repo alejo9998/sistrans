@@ -41,8 +41,8 @@ public class InterfazApp extends JFrame
 
 	public InterfazApp()
 	{
-		//		tableConfig = openConfig ("Tablas BD", CONFIG_TABLAS);
-		//		superAndes = new SuperAndes (tableConfig);
+				tableConfig = openConfig ("Tablas BD", CONFIG_TABLAS);
+				superAndes = new SuperAndes (tableConfig);
 
 		setSize(800,430);
 		setLocationRelativeTo(null);

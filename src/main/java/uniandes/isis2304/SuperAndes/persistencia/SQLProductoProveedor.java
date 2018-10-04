@@ -50,6 +50,13 @@ class SQLProductoProveedor {
 		return (List<ProductoProveedor>) q.executeList();
 	}
 	
+	public List<ProductoProveedor> darProductosProveedorPorCodigoBarras(PersistenceManager pm, long barras){
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaProductoProveedor() + "WHERE codigoBarras = ?");
+		q.setResultClass(ProductoProveedor.class);
+		q.setParameters(barras);
+		return (List<ProductoProveedor>) q.executeList();
+	}
+	
 	public List<ProductoProveedor> darProductosProveedor(PersistenceManager pm){
 		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaProductoProveedor());
 		q.setResultClass(ProductoProveedor.class);

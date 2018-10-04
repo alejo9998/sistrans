@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
+
+import uniandes.isis2304.SuperAndes.negocio.ProductoProveedor;
 import uniandes.isis2304.SuperAndes.negocio.ProductoSucursal;
 
 class SQLProductoSucursal {
@@ -41,6 +43,13 @@ class SQLProductoSucursal {
 		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaProductoSucursal() + " WHERE categoria = ?");
 		q.setResultClass(ProductoSucursal.class);
 		q.setParameters(categoria);
+		return (List<ProductoSucursal>) q.executeList();
+	}
+	
+	public List<ProductoSucursal> darProductosSucursalPorCodigoBarras(PersistenceManager pm, long barras){
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaProductoSucursal() + "WHERE codigoBarras = ?");
+		q.setResultClass(ProductoSucursal.class);
+		q.setParameters(barras);
 		return (List<ProductoSucursal>) q.executeList();
 	}
 	
