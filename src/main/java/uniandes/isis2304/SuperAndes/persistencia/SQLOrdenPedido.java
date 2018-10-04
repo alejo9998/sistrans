@@ -64,6 +64,7 @@ class SQLOrdenPedido {
 		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaOrdenPedido() + " SET fechaEsperadaEntrega = " + fecha + " WHERE idOrdenPedido = ?");
 		q.setParameters(idOrdenPedido);
 		return (long) q.executeUnique();
+		
 	}
 	
 	
