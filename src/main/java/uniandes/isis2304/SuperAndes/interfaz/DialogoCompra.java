@@ -14,27 +14,62 @@ import javax.swing.border.EmptyBorder;
 
 public class DialogoCompra extends JDialog implements ActionListener
 {
+	/**
+	 * Clase principal de la interfaz
+	 */
 	private InterfazApp inte;
 
-
+	/**
+	 * fecha
+	 */
 	private JTextField fecha;
 
+	/**
+	 * cantidad
+	 */
 	private JTextField cantidad;
 
+	/**
+	 * identificacion producto sucursal
+	 */
 	private JTextField productoSucursal;
 
+	/**
+	 * identificacion del cliente
+	 */
 	private JTextField cliente;
-
+	/**
+	 * total pagado
+	 */
 	private JTextField totalPagado;
-	
+
+	/**
+	 * identificacion de la factura
+	 */
 	private JTextField factura;
 
+	/**
+	 * Boton aceptar
+	 */
 	private JButton aceptar;
+	/**
+	 * constante de aceptar
+	 */
 	private final static String ACEPTAR="ACEPTAR";
 
+	/**
+	 * boton cancelar
+	 */
 	private JButton cancelar;
+	/**
+	 * constante de aceptar
+	 */
 	private final static String CANCELAR="CANCELAR";
 
+	/**
+	 * Dialogo de comprar
+	 * @param inter interfaz
+	 */
 	public DialogoCompra(InterfazApp inter) 
 	{
 		inte= inter;
@@ -88,7 +123,9 @@ public class DialogoCompra extends JDialog implements ActionListener
 
 	}
 
-
+	/**
+	 * manejo de eventos del usuario
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{

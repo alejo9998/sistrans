@@ -15,12 +15,16 @@ import com.google.gson.stream.JsonReader;
 
 import uniandes.isis2304.SuperAndes.negocio.SuperAndes;
 import uniandes.isis2304.SuperAndes.negocio.VOBodega;
+import uniandes.isis2304.SuperAndes.negocio.VOCliente;
 import uniandes.isis2304.SuperAndes.negocio.VOCompra;
 import uniandes.isis2304.SuperAndes.negocio.VOEstante;
+import uniandes.isis2304.SuperAndes.negocio.VOFactura;
 import uniandes.isis2304.SuperAndes.negocio.VOOrdenPedido;
 import uniandes.isis2304.SuperAndes.negocio.VOProductoProveedor;
 import uniandes.isis2304.SuperAndes.negocio.VOProductoSucursal;
 import uniandes.isis2304.SuperAndes.negocio.VOPromocion;
+import uniandes.isis2304.SuperAndes.negocio.VOProveedor;
+import uniandes.isis2304.SuperAndes.negocio.VOSucursal;
 import uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes;
 
 public class InterfazApp extends JFrame
@@ -41,8 +45,8 @@ public class InterfazApp extends JFrame
 
 	public InterfazApp()
 	{
-				tableConfig = openConfig ("Tablas BD", CONFIG_TABLAS);
-				superAndes = new SuperAndes (tableConfig);
+//				tableConfig = openConfig ("Tablas BD", CONFIG_TABLAS);
+//				superAndes = new SuperAndes (tableConfig);
 
 		setSize(800,430);
 		setLocationRelativeTo(null);
@@ -91,12 +95,17 @@ public class InterfazApp extends JFrame
 		{
 			if(pDireccion.equalsIgnoreCase(""))
 			{
-				superAndes.adicionarClienteIndividuo(pNombre, pCorreo);
+				VOCliente a =superAndes.adicionarClienteIndividuo(pNombre, pCorreo);
+				String mensaje =a.toString();
+				panelDatos.actualizarInterfaz(mensaje);
 			}
 			else
 			{
-				superAndes.adicionarClienteEmpresa(pNombre, pCorreo, pDireccion);
+				VOCliente a = superAndes.adicionarClienteEmpresa(pNombre, pCorreo, pDireccion);
+				String mensaje =a.toString();
+				panelDatos.actualizarInterfaz(mensaje);
 			}
+			
 		}
 	}
 
@@ -108,7 +117,9 @@ public class InterfazApp extends JFrame
 		}
 		else
 		{
-			superAndes.adicionarFactura(pDescripcion);
+			VOFactura a = superAndes.adicionarFactura(pDescripcion);
+			String mensaje =a.toString();
+			panelDatos.actualizarInterfaz(mensaje);
 		}
 	}
 
@@ -120,7 +131,10 @@ public class InterfazApp extends JFrame
 		}
 		else
 		{
-			superAndes.adicionarSucursal(pCiudad, pDireccion, pnombre);
+			VOSucursal a =superAndes.adicionarSucursal(pCiudad, pDireccion, pnombre);
+			
+			String mensaje =a.toString();
+			panelDatos.actualizarInterfaz(mensaje);
 		}
 	}
 
@@ -132,7 +146,9 @@ public class InterfazApp extends JFrame
 		}
 		else
 		{
-			superAndes.adicionarProveedor(pnombre);
+			VOProveedor a =superAndes.adicionarProveedor(pnombre);
+			String mensaje =a.toString();
+			panelDatos.actualizarInterfaz(mensaje);
 		}
 	}
 

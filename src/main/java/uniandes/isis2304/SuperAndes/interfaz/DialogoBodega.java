@@ -15,22 +15,55 @@ import javax.swing.border.EmptyBorder;
 
 public class DialogoBodega extends JDialog implements ActionListener
 {
+	/**
+	 * atributo de la clase principal de la interfaz
+	 */
 	private InterfazApp inte;
 
+	/**
+	 * Combo con los diferentes tipos de bodega
+	 */
 	private JComboBox<String> tipo;
 
+	/*
+	 * Peso de la bodega
+	 */
 	private JTextField peso;
 
+	/**
+	 * volumen de la bodega
+	 */
 	private JTextField volumen;
 
+	/**
+	 * id de la sucursal
+	 */
 	private JTextField Sucursal;
 
+	/**
+	 * Boton de aceptar
+	 */
 	private JButton aceptar;
+
+	/**
+	 * Constante con aceptar
+	 */
 	private final static String ACEPTAR="ACEPTAR";
 
+	/**
+	 * Boton de cancelar
+	 */
 	private JButton cancelar;
+	
+	/**
+	 * constante con cancelar
+	 */
 	private final static String CANCELAR="CANCELAR";
 
+	/**
+	 * Clase principal de dialogo 
+	 * @param inter interfaz
+	 */
 	public DialogoBodega(InterfazApp inter)
 	{
 		inte = inter;
@@ -78,6 +111,9 @@ public class DialogoBodega extends JDialog implements ActionListener
 	}
 
 	@Override
+	/**
+	 * Manejo de envetos de usuario
+	 */
 	public void actionPerformed(ActionEvent e)
 	{
 		String mensaje = e.getActionCommand();

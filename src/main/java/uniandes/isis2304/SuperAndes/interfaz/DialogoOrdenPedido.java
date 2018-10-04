@@ -14,10 +14,14 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 public class DialogoOrdenPedido extends JDialog implements ActionListener
-{
-private InterfazApp inte;
-	
-
+{	
+	/**
+	 * Interfaz principal
+	 */
+	private InterfazApp inte;
+/**
+ * precio de la orden
+ */
 	private JTextField precio;
 
 	private JTextField fechaDeEntrega;

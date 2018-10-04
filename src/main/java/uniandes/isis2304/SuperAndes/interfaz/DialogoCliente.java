@@ -14,20 +14,48 @@ import javax.swing.border.EmptyBorder;
 
 public class DialogoCliente extends JDialog implements ActionListener
 {
+	/**
+	 * Atributo con la interfaz
+	 */
 	private InterfazApp inte; 
 	
+	/**
+	 * nombre del cliente
+	 */
 	private JTextField txtnombre;
 	
+	/**
+	 * Correo del cliente
+	 */
 	private JTextField txtCorreo;
-	
+	/**
+	 * direccion del cliente
+	 */
 	private JTextField txtDireccion;
 	
+	/**
+	 * boton de aceptar
+	 */
 	private JButton aceptar;
+	/**
+	 * constante con aceptar
+	 */
 	private final static String ACEPTAR="ACEPTAR";
 	
+	/**
+	 * boton de cancelar
+	 */
 	private JButton cancelar;
+	
+	/**
+	 * constante con cancelar
+	 */
 	private final static String CANCELAR="CANCELAR";
 	
+	/**
+	 * Interfaz del dialogo
+	 * @param inter
+	 */
 	public DialogoCliente(InterfazApp inter)
 	{
 		inte = inter;
@@ -69,6 +97,9 @@ public class DialogoCliente extends JDialog implements ActionListener
 	}
 	
 	@Override
+	/**
+	 * Manejo de eventos del usuario
+	 */
 	public void actionPerformed(ActionEvent e)
 	{
 		String mensaje = e.getActionCommand();
