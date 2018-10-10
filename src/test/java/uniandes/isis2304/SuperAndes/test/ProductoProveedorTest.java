@@ -92,14 +92,15 @@ public class ProductoProveedorTest {
 			long idProveedor = proveedor1.getNit();
 			
 			VOProductoProveedor productoProveedor1 = superAndes.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
+			System.out.println(productoProveedor1);
 			lista = superAndes.darVOProductosProveedor();
 			assertEquals ("Debe haber un ProductoProveedor creada!!", 1, lista.size ());
 
-			VOProductoProveedor productoProveedor2 = superAndes.adicionarProductoProveedor2(productoProveedor1.getIdProducto(),nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
+			VOProductoProveedor productoProveedor2 = superAndes.adicionarProductoProveedor2(productoProveedor1.getIdProductoProveedor(),nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
 			assertNull ("No puede adicionar dos productosProveedor con el mismo id !!", productoProveedor2);
 			
 			VOProductoProveedor productoProveedor3 = superAndes.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor + 3);
-			assertNull ("No se puede adicionar productos con in idProveedor que no exista en la tabla Proveedor !!", productoProveedor3);
+			assertNull ("No se puede adicionar productos con un NIT que no exista en la tabla Proveedor !!", productoProveedor3);
 		}
 		catch (Exception e)
 		{
@@ -116,22 +117,22 @@ public class ProductoProveedorTest {
 			superAndes.cerrarUnidadPersistencia ();    		
 		}
 	}
-	/**
+	
 	@Test
-	public void restriccionesChequeoEstanteTest() {
+	public void restriccionesChequeoProductoProveedorTest() {
 		try
 		{
-			log.info ("Probando RESTRICCIONES DE CHEQUEO sobre Estante");
+			log.info ("Probando RESTRICCIONES DE CHEQUEO sobre ProductoProveedor");
 			superAndes = new SuperAndes (openConfig (CONFIG_TABLAS_A));
 			superAndes.limpiarSuperAndes();
 		}
 		catch (Exception e)
 		{
 			//				e.printStackTrace();
-			log.info ("Prueba de chequeo de Estante incompleta. No se pudo conectar a la base de datos !!. La excepción generada es: " + e.getClass ().getName ());
+			log.info ("Prueba de chequeo de ProductoProveedor incompleta. No se pudo conectar a la base de datos !!. La excepción generada es: " + e.getClass ().getName ());
 			log.info ("La causa es: " + e.getCause ().toString ());
 
-			String msg = "Prueba de chequeo de Estante incompleta. No se pudo conectar a la base de datos !!.\n";
+			String msg = "Prueba de chequeo de ProductoProveedor incompleta. No se pudo conectar a la base de datos !!.\n";
 			msg += "Revise el log de superAndes y el de datanucleus para conocer el detalle de la excepción";
 			System.out.println (msg);
 			fail (msg);
@@ -139,44 +140,88 @@ public class ProductoProveedorTest {
 		try
 		{
 			// Lectura de los tipos de bebida con la tabla vacía
-			List <VOEstante> lista = superAndes.darVOEstantes();
-			assertEquals ("No debe haber estantes creadas!!", 0, lista.size ());
+			List <VOProductoProveedor> lista = superAndes.darVOProductosProveedor();
+			assertEquals ("No debe haber productosProveedor creadas!!", 0, lista.size ());
 			
-			String ciudad1 = "Zipaquira";
-			String direccion1 = "cra 6 #1-39";
-			String nombre1 = "SuperAndino";
-			VOSucursal sucursal1 = superAndes.adicionarSucursal(ciudad1, direccion1, nombre1);
+			String nombreProveedor1 = "SuperAndino";
+			VOProveedor proveedor1 = superAndes.adicionarProveedor(nombreProveedor1);
 
 			// Lectura de los tipos de bebida con un tipo de bebida adicionado
-			String tipo1 = "CARNE";
-			double peso1 = 1;
-			double volumen1 = 2.6;
-			int nivelAprovisionamiento1 = 50;
-			VOEstante estante1 = superAndes.adicionarEstante(volumen1, peso1, tipo1, nivelAprovisionamiento1 ,sucursal1.getIdSucursal());
-			lista = superAndes.darVOEstantes();
-			assertEquals ("Debe haber una estante creada!!", 1, lista.size ());
+			String nombre = "Papas fritas";
+			String marca = "SuperRicas";
+			String presentacion = "paqueton de 5 paquetes de 200 gr. cada uno";
+			double cantidadPresentacion = 1000;
+			String unidadMedida = "gramos";
+			double volumenEmpaque = 300.5;
+			double pesoEmpaque = 1000;
+			long codigoBarras = 13515;
+			String categoria = "PERECEDERO";
+			String tipo = "PAQUETE";
+			String fechaVencimiento = "15/12/2018";
+			double calidad = 3;
+			double precio = 8000;
+			int numeroCalificaciones =5 ;
+			double sumaCalificaciones = 15;
+			long idProveedor = proveedor1.getNit();
+			
+			VOProductoProveedor productoProveedor1 = superAndes.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
+			System.out.println(productoProveedor1);
+			lista = superAndes.darVOProductosProveedor();
+			assertEquals ("Debe haber un ProductoProveedor creada!!", 1, lista.size ());
 
-			VOEstante estante2 = superAndes.adicionarEstante(0, peso1, tipo1, nivelAprovisionamiento1 ,sucursal1.getIdSucursal());
-			assertNull ("El el volumen del estante debe ser mayor a 0 !!", estante2);
+			VOProductoProveedor productoProveedor2 = superAndes.adicionarProductoProveedor(null, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
+			assertNull ("El nombre del producto no puede ser null!!", productoProveedor2);
 			
-			VOEstante estante3 = superAndes.adicionarEstante(volumen1, 0, tipo1, nivelAprovisionamiento1 ,sucursal1.getIdSucursal());
-			assertNull ("El el peso del estante debe ser mayor a 0 !!", estante3);
+			VOProductoProveedor productoProveedor3 = superAndes.adicionarProductoProveedor(nombre, null, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
+			assertNull ("El marca del producto no puede ser null!!", productoProveedor3);
 			
-			VOEstante estante4 = superAndes.adicionarEstante(volumen1, peso1, null, nivelAprovisionamiento1 ,sucursal1.getIdSucursal());
-			assertNull ("El tipo del estante no puede ser null !!", estante4);
+			VOProductoProveedor productoProveedor4 = superAndes.adicionarProductoProveedor(nombre, marca, null, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
+			assertNull ("El presentacion del producto no puede ser null!!", productoProveedor4);
 			
-			VOEstante estante5 = superAndes.adicionarEstante(volumen1, peso1, tipo1, 0 ,sucursal1.getIdSucursal());
-			assertNull ("El nivelAprovisionamiento debe ser mayor a 0 !!", estante5);
+			VOProductoProveedor productoProveedor5 = superAndes.adicionarProductoProveedor(nombre, marca, presentacion, 0, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
+			assertNull ("la cantidad de la presentacion debe ser mayor a cero!!", productoProveedor5);
 			
+			VOProductoProveedor productoProveedor6 = superAndes.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, null, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
+			assertNull ("El unidad de medida del producto no puede ser null!!", productoProveedor6);
+			
+			VOProductoProveedor productoProveedor7 = superAndes.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, null, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
+			assertNull ("El cateogira del producto no puede ser null!!", productoProveedor7);
+			
+			VOProductoProveedor productoProveedor8 = superAndes.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, null, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
+			assertNull ("El tipo del producto no puede ser null!!", productoProveedor8);
+			
+			VOProductoProveedor productoProveedor9 = superAndes.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, null, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
+			assertNull ("El fechaVencimiento del producto no puede ser null!!", productoProveedor9);
+			
+			VOProductoProveedor productoProveedor10 = superAndes.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, -1, sumaCalificaciones, idProveedor);
+			assertNull ("El numero de calificaciones debe ser mayor o igual a cero!!", productoProveedor10);
+			
+			VOProductoProveedor productoProveedor11 = superAndes.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, -1, idProveedor);
+			assertNull ("La suma de calificaciones del prodcutoProveedor dever ser mayor o igual a 0!!", productoProveedor11);
+			
+			VOProductoProveedor productoProveedor12 = superAndes.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, 0, numeroCalificaciones, sumaCalificaciones, idProveedor);
+			assertNull ("EL precio del productoProveedor debe ser mayor a cero!!", productoProveedor12);
+			
+			VOProductoProveedor productoProveedor13 = superAndes.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, 0, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
+			assertNull ("EL volumenEmpaque del productoProveedor debe ser mayor a cero!!", productoProveedor13);
+			
+			VOProductoProveedor productoProveedor14 = superAndes.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, 0, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
+			assertNull ("EL pesoEmpaque del productoProveedor debe ser mayor a cero!!", productoProveedor14);
+			
+			VOProductoProveedor productoProveedor15 = superAndes.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, -1, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
+			assertNull ("La calidad del producto debe ser mayor a cero!!", productoProveedor15);
+			
+			VOProductoProveedor productoProveedor16 = superAndes.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, 6, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
+			assertNull ("La calidad del producto debe estar entre 0 y 5!!", productoProveedor16);
 		}
 		catch (Exception e)
 		{
 			//				e.printStackTrace();
-			String msg = "Error en la ejecución de las pruebas de CHEQUEO sobre la tabla Estante.\n";
+			String msg = "Error en la ejecución de las pruebas de CHEQUEO sobre la tabla ProductoProveedor.\n";
 			msg += "Revise el log de superAndes y el de datanucleus para conocer el detalle de la excepción";
 			System.out.println (msg);
 
-			fail ("Error en las pruebas de CHEQUEO sobre la tabla Estante");
+			fail ("Error en las pruebas de CHEQUEO sobre la tabla ProductoProveedor");
 		}    			
 		finally
 		{
@@ -186,11 +231,6 @@ public class ProductoProveedorTest {
 		
 
 	}
-	*/
-	
-	
-	
-	
 	/* ****************************************************************
 	 * 			Métodos de configuración
 	 *****************************************************************/

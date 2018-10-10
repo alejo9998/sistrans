@@ -4277,3 +4277,1161 @@ ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_BODE
 19:50:24,775 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
 19:50:24,848 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=576, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=575]
 19:50:24,848 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+12:19:12,877 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con datos de usuario correctos, pero sin crear el esquema
+12:19:13,035 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+12:19:14,730 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Proveedores
+12:19:14,839 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Prueba de tabla inexistente correcta. La excepción generada es: javax.jdo.JDODataStoreException
+12:19:14,839 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - La causa es: java.sql.SQLSyntaxErrorException: ORA-00942: la tabla o vista no existe
+
+12:19:14,839 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:14,930 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "DELETE FROM B_ORDENPEDIDO".
+ORA-00942: la tabla o vista no existe
+
+12:19:14,943 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:14,954 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con una base de datos que no existe
+12:19:14,954 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+12:19:15,157 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Prueba realizada exitosamente. La excepción generada es: javax.jdo.JDOFatalUserException
+12:19:15,157 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - La causa es: javax.jdo.JDOFatalDataStoreException: Listener refused the connection with the following error:
+ORA-12505, TNS:listener does not currently know of SID given in connect descriptor
+ 
+NestedThrowables:
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12505, TNS:listener does not currently know of SID given in connect descriptor
+ 
+12:19:15,158 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con datos de usuario incorrectos
+12:19:15,162 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+12:19:17,447 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Prueba realizada exitosamente. La excepción generada es: javax.jdo.JDOFatalUserException
+12:19:17,448 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - La causa es: javax.jdo.JDOFatalDataStoreException: ORA-01017: invalid username/password; logon denied
+
+NestedThrowables:
+java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+
+12:19:17,448 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con datos válidos (BD, credenciales, esquema
+12:19:17,448 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+12:19:17,872 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Conexión realizada correstamente
+12:19:17,872 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Cerrando la conexión
+12:19:17,880 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Conexión cerrada
+12:19:17,880 (main) INFO  [uniandes.isis2304.SuperAndes.test.ClienteTest] - Probando la unicidad sobre Cliente
+12:19:17,881 (main) INFO  [uniandes.isis2304.SuperAndes.test.ClienteTest] - Se encontró un archivo de configuración de tablas válido
+12:19:18,342 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:18,680 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:18,680 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:18,680 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de clientes
+12:19:18,817 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Clientes: 0 clientes existentes
+12:19:18,817 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+12:19:18,889 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=601, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+12:19:18,889 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de clientesIndividuos
+12:19:18,908 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ClientesIndividuo: 1 clientesIndividuo existentes
+12:19:18,908 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+12:19:18,916 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_CLIENTE) violada
+
+12:19:18,921 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: null
+12:19:18,921 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : Alejandro
+12:19:18,943 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : Cliente [identificacion=602, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=Cra6#1-39]
+12:19:18,943 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de clientesEmpresa
+12:19:18,957 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ClientesEmpresa: 1 clientesEmpresa existentes
+12:19:18,958 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : Gran via
+12:19:18,966 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_CLIENTE) violada
+
+12:19:18,978 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : null
+12:19:18,978 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:19,047 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:19,047 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:19,056 (main) INFO  [uniandes.isis2304.SuperAndes.test.ClienteTest] - Probando RESTRICCIONES DE CHEQUEO sobre Cliente
+12:19:19,057 (main) INFO  [uniandes.isis2304.SuperAndes.test.ClienteTest] - Se encontró un archivo de configuración de tablas válido
+12:19:19,261 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:19,447 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:19,447 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:19,447 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de clientes
+12:19:19,463 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Clientes: 0 clientes existentes
+12:19:19,463 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+12:19:19,496 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=603, nombre=Alejandro, correo=chonal@hotmail.com, direccion=null]
+12:19:19,496 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de clientesIndividuos
+12:19:19,514 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ClientesIndividuo: 1 clientesIndividuo existentes
+12:19:19,514 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : null
+12:19:19,530 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_CLIENTE"."NOMBRE")
+
+12:19:19,542 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: null
+12:19:19,542 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : melaPela
+12:19:19,566 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_CLIENTE"."CORREO")
+
+12:19:19,579 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: null
+12:19:19,579 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : null
+12:19:19,599 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_CLIENTE"."NOMBRE")
+
+12:19:19,609 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : null
+12:19:19,609 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : melaPela
+12:19:19,638 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_CLIENTE"."CORREO")
+
+12:19:19,697 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : null
+12:19:19,697 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:19,853 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:19,853 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:19,860 (main) INFO  [uniandes.isis2304.SuperAndes.test.FacturaTest] - Probando la unicidad sobre Factura
+12:19:19,860 (main) INFO  [uniandes.isis2304.SuperAndes.test.FacturaTest] - Se encontró un archivo de configuración de tablas válido
+12:19:20,002 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:20,152 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:20,153 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:20,153 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Factura
+12:19:20,163 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Facturas: 0 facturas existentes
+12:19:20,163 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: 3 paquetes de papas de 1000 pesos
+12:19:20,185 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: Factura [idFactura=608, descripcion=3 paquetes de papas de 1000 pesos]
+12:19:20,185 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Factura
+12:19:20,207 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Facturas: 1 facturas existentes
+12:19:20,207 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: 3 paquetes de papas de 1000 pesos
+12:19:20,213 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_FACTURA(idFactura, descripcion) values (?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_FACTURA) violada
+
+12:19:20,219 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: null
+12:19:20,219 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:20,285 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:20,285 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:20,292 (main) INFO  [uniandes.isis2304.SuperAndes.test.FacturaTest] - Probando RESTRICCIONES DE CHEQUEO sobre Factura
+12:19:20,300 (main) INFO  [uniandes.isis2304.SuperAndes.test.FacturaTest] - Se encontró un archivo de configuración de tablas válido
+12:19:20,477 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:20,614 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:20,614 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:20,614 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Factura
+12:19:20,666 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Facturas: 0 facturas existentes
+12:19:20,666 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: 3 Pollos, total: 10000
+12:19:20,692 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: Factura [idFactura=609, descripcion=3 Pollos, total: 10000]
+12:19:20,692 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Factura
+12:19:20,701 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Facturas: 1 facturas existentes
+12:19:20,701 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: null
+12:19:20,723 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_FACTURA(idFactura, descripcion) values (?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_FACTURA"."DESCRIPCION")
+
+12:19:20,728 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: null
+12:19:20,728 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:20,825 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:20,825 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:20,831 (main) INFO  [uniandes.isis2304.SuperAndes.test.EstanteTest] - Probando RESTRICCIONES DE CHEQUEO sobre Estante
+12:19:20,832 (main) INFO  [uniandes.isis2304.SuperAndes.test.EstanteTest] - Se encontró un archivo de configuración de tablas válido
+12:19:21,001 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:21,186 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:21,186 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:21,186 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando VO de Estantes
+12:19:21,201 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Estantes: 0 Estantes existentes
+12:19:21,201 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : SuperAndino
+12:19:21,226 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=611, ciudad=Zipaquira, direccion=cra 6 #1-39, nombre=SuperAndino]
+12:19:21,226 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: CARNE
+12:19:21,259 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=612, volumen=2.6, peso=1.0, tipo=CARNE, nivelAprovisionamiento=50, sucursal=611]
+12:19:21,259 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando VO de Estantes
+12:19:21,273 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Estantes: 1 Estantes existentes
+12:19:21,273 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: CARNE
+12:19:21,297 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ESTANTE(idEstante, volumen, peso, tipo, nivelAprovisionamiento, sucursal) values (?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_VOLUMENESTANTE) violada
+
+12:19:21,303 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: null
+12:19:21,303 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: CARNE
+12:19:21,326 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ESTANTE(idEstante, volumen, peso, tipo, nivelAprovisionamiento, sucursal) values (?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PESOESTANTE) violada
+
+12:19:21,332 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: null
+12:19:21,332 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: null
+12:19:21,347 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ESTANTE(idEstante, volumen, peso, tipo, nivelAprovisionamiento, sucursal) values (?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_ESTANTE"."TIPO")
+
+12:19:21,355 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: null
+12:19:21,355 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: CARNE
+12:19:21,373 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ESTANTE(idEstante, volumen, peso, tipo, nivelAprovisionamiento, sucursal) values (?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_NIVELAPROVISIONAMIENTO) violada
+
+12:19:21,379 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: null
+12:19:21,379 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:21,429 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:21,429 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:21,443 (main) INFO  [uniandes.isis2304.SuperAndes.test.EstanteTest] - Probando la unicidad e integridad sobre Estante
+12:19:21,443 (main) INFO  [uniandes.isis2304.SuperAndes.test.EstanteTest] - Se encontró un archivo de configuración de tablas válido
+12:19:21,641 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:21,935 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:21,935 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:21,935 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando VO de Estantes
+12:19:21,961 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Estantes: 0 Estantes existentes
+12:19:21,961 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : SuperAndino
+12:19:22,036 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=617, ciudad=Zipaquira, direccion=cra 6 #1-39, nombre=SuperAndino]
+12:19:22,036 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: CARNE
+12:19:22,090 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=618, volumen=2.6, peso=1.0, tipo=CARNE, nivelAprovisionamiento=50, sucursal=617]
+12:19:22,090 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando VO de Estantes
+12:19:22,121 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Estantes: 1 Estantes existentes
+12:19:22,121 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: CARNE
+12:19:22,133 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ESTANTE(idEstante, volumen, peso, tipo, nivelAprovisionamiento, sucursal) values (?, ?, ?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_ESTANTE) violada
+
+12:19:22,154 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: null
+12:19:22,154 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: CARNE
+12:19:22,192 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ESTANTE(idEstante, volumen, peso, tipo, nivelAprovisionamiento, sucursal) values (?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_SUCURSALESTANTE) violada - clave principal no encontrada
+
+12:19:22,204 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: null
+12:19:22,204 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:22,566 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:22,567 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:22,599 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando la unicidad sobre Sucursal
+12:19:22,600 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+12:19:22,955 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:23,659 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:23,659 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:23,659 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales
+12:19:23,741 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales: 0 sucursales existentes
+12:19:23,741 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : SuperAndino
+12:19:23,869 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=620, ciudad=Zipaquira, direccion=cra 6 #1-39, nombre=SuperAndino]
+12:19:23,869 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales
+12:19:23,916 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales: 1 sucursales existentes
+12:19:23,916 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : SuperAndino
+12:19:23,956 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_SUCURSAL(idSucursal, ciudad, direccion, nombre) values (?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_SUCURSAL) violada
+
+12:19:23,988 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: null
+12:19:23,988 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:24,173 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:24,173 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:24,192 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando RESTRICCIONES DE CHEQUEO sobre Sucursal
+12:19:24,192 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+12:19:24,433 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:24,722 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:24,722 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:24,722 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales
+12:19:24,740 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales: 0 sucursales existentes
+12:19:24,740 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : SuperAndino
+12:19:24,787 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=621, ciudad=Zipaquira, direccion=cra 6 #1-39, nombre=SuperAndino]
+12:19:24,787 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales
+12:19:24,804 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales: 1 sucursales existentes
+12:19:24,804 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : null
+12:19:24,849 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_SUCURSAL(idSucursal, ciudad, direccion, nombre) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_SUCURSAL"."NOMBRE")
+
+12:19:24,908 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: null
+12:19:24,908 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : El castigo
+12:19:24,965 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_SUCURSAL(idSucursal, ciudad, direccion, nombre) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_SUCURSAL"."DIRECCION")
+
+12:19:24,983 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: null
+12:19:24,983 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : El castigo
+12:19:25,009 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_SUCURSAL(idSucursal, ciudad, direccion, nombre) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_SUCURSAL"."CIUDAD")
+
+12:19:25,029 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: null
+12:19:25,029 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:25,117 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:25,117 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:25,155 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre ProductoProveedor
+12:19:25,156 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+12:19:25,410 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:25,693 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:25,693 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:25,693 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+12:19:25,726 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+12:19:25,726 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+12:19:25,757 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=625, nombre=SuperAndino]
+12:19:25,757 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+12:19:25,788 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=626, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=625]
+12:19:25,788 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+12:19:52,118 (main) INFO  [uniandes.isis2304.SuperAndes.test.PromocionTest] - Probando la unicidad sobre Promocion
+12:19:52,171 (main) INFO  [uniandes.isis2304.SuperAndes.test.PromocionTest] - Se encontró un archivo de configuración de tablas válido
+12:19:53,747 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:53,967 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:53,968 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:53,968 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Promociones
+12:19:53,995 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de promociones: 0 promociones existentes
+12:19:53,995 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 1
+12:19:54,023 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: Promocion [idPromocion=627, tipo=1, n=1.0, m=2.0, fechaCaducidad=15/12/2018]
+12:19:54,023 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Promociones
+12:19:54,039 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de promociones: 1 promociones existentes
+12:19:54,039 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 1
+12:19:54,061 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PROMOCION(idPromocion, tipo, n, m, fechaCaducidad) values (?, ?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_PROMOCION) violada
+
+12:19:54,082 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: null
+12:19:54,082 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:54,203 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:54,203 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:54,220 (main) INFO  [uniandes.isis2304.SuperAndes.test.PromocionTest] - Probando RESTRICCIONES DE CHEQUEO sobre Promocion
+12:19:54,220 (main) INFO  [uniandes.isis2304.SuperAndes.test.PromocionTest] - Se encontró un archivo de configuración de tablas válido
+12:19:54,432 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:54,644 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:54,644 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:19:54,644 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Promociones
+12:19:54,661 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de promociones: 0 promociones existentes
+12:19:54,661 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 1
+12:19:54,768 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: Promocion [idPromocion=628, tipo=1, n=1.0, m=2.0, fechaCaducidad=15/12/2018]
+12:19:54,768 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Promociones
+12:19:54,797 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de promociones: 1 promociones existentes
+12:19:54,797 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 5
+12:19:54,928 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PROMOCION(idPromocion, tipo, n, m, fechaCaducidad) values (?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_TIPO) violada
+
+12:19:54,937 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: null
+12:19:54,937 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 3
+12:19:55,059 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PROMOCION(idPromocion, tipo, n, m, fechaCaducidad) values (?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_N) violada
+
+12:19:55,138 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: null
+12:19:55,138 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 3
+12:19:55,161 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PROMOCION(idPromocion, tipo, n, m, fechaCaducidad) values (?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_M) violada
+
+12:19:55,175 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: null
+12:19:55,175 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 3
+12:19:55,216 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PROMOCION(idPromocion, tipo, n, m, fechaCaducidad) values (?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PROMOCION"."FECHACADUCIDAD")
+
+12:19:55,371 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: null
+12:19:55,371 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:19:55,435 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:19:55,435 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:20:00,696 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+12:20:00,757 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+12:20:02,239 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:20:02,520 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:20:02,521 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:20:02,521 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+12:20:02,547 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+12:20:02,547 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+12:20:02,601 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=633, nombre=Oreo]
+12:20:02,601 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+12:20:02,614 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 1 proveedores existentes
+12:20:02,614 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Babaria
+12:20:02,635 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=634, nombre=Babaria]
+12:20:02,635 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+12:20:02,643 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 2 proveedores existentes
+12:20:02,643 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un proveedor por nit: 633
+12:20:02,653 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Proveedor [nit=633, nombre=Oreo]
+12:20:02,653 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un proveedor por nit: 634
+12:20:02,683 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Proveedor [nit=634, nombre=Babaria]
+12:20:02,683 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:20:02,775 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:20:02,776 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:20:02,799 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando la unicidad sobre Proveedor
+12:20:02,800 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+12:20:02,989 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:20:03,139 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:20:03,139 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:20:03,139 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+12:20:03,173 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+12:20:03,173 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+12:20:03,315 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=635, nombre=Oreo]
+12:20:03,315 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+12:20:03,382 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 1 proveedores existentes
+12:20:03,382 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+12:20:03,544 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PROVEEDOR(nit, nombre) values (?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_PROVEEDOR_PK) violada
+
+12:20:03,545 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: null
+12:20:03,545 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:20:03,704 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:20:03,705 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:20:03,717 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando RESTRICCIONES DE CHEQUEO sobre Proveedor
+12:20:03,717 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+12:20:03,949 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:20:04,132 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:20:04,132 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:20:04,132 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+12:20:04,144 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+12:20:04,144 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+12:20:04,183 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=636, nombre=Oreo]
+12:20:04,183 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+12:20:04,205 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 1 proveedores existentes
+12:20:04,205 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: null
+12:20:04,239 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PROVEEDOR(nit, nombre) values (?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PROVEEDOR"."NOMBRE")
+
+12:20:04,239 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: null
+12:20:04,239 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:20:04,301 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:20:04,301 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:20:10,235 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando la unicidad sobre Sucursal
+12:20:10,290 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+12:20:11,857 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:20:12,072 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:20:12,072 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:20:12,072 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales
+12:20:12,113 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales: 0 sucursales existentes
+12:20:12,113 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : SuperAndino
+12:20:12,132 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=638, ciudad=Zipaquira, direccion=cra 6 #1-39, nombre=SuperAndino]
+12:20:12,132 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales
+12:20:12,146 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales: 1 sucursales existentes
+12:20:12,146 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : SuperAndino
+12:20:12,158 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_SUCURSAL(idSucursal, ciudad, direccion, nombre) values (?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_SUCURSAL) violada
+
+12:20:12,164 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: null
+12:20:12,164 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:20:12,217 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:20:12,217 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:20:12,235 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando RESTRICCIONES DE CHEQUEO sobre Sucursal
+12:20:12,236 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+12:20:12,386 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:20:12,541 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:20:12,541 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:20:12,541 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales
+12:20:12,559 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales: 0 sucursales existentes
+12:20:12,559 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : SuperAndino
+12:20:12,594 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=639, ciudad=Zipaquira, direccion=cra 6 #1-39, nombre=SuperAndino]
+12:20:12,594 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales
+12:20:12,609 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales: 1 sucursales existentes
+12:20:12,609 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : null
+12:20:12,626 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_SUCURSAL(idSucursal, ciudad, direccion, nombre) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_SUCURSAL"."NOMBRE")
+
+12:20:12,633 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: null
+12:20:12,634 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : El castigo
+12:20:12,650 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_SUCURSAL(idSucursal, ciudad, direccion, nombre) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_SUCURSAL"."DIRECCION")
+
+12:20:12,653 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: null
+12:20:12,653 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : El castigo
+12:20:12,671 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_SUCURSAL(idSucursal, ciudad, direccion, nombre) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_SUCURSAL"."CIUDAD")
+
+12:20:12,676 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: null
+12:20:12,676 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:20:12,737 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:20:12,737 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:31:06,341 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre ProductoProveedor
+12:31:06,402 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+12:31:07,980 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:31:08,207 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:31:08,208 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:31:08,208 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+12:31:08,249 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+12:31:08,249 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+12:31:08,286 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=661, nombre=SuperAndino]
+12:31:08,286 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+12:31:08,323 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=662, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=661]
+12:31:08,323 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+12:31:41,465 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre ProductoProveedor
+12:31:41,512 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+12:31:42,921 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:31:43,136 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:31:43,137 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:31:43,137 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+12:31:43,200 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+12:31:43,200 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+12:31:43,221 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=663, nombre=SuperAndino]
+12:31:43,221 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+12:31:43,285 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=664, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=663]
+12:31:43,286 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+12:37:24,147 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre ProductoProveedor
+12:37:24,214 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+12:37:25,750 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:37:26,107 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:37:26,108 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:37:26,108 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+12:37:26,159 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+12:37:26,159 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+12:37:26,191 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=665, nombre=SuperAndino]
+12:37:26,191 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+12:37:26,231 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=666, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=665]
+12:37:26,231 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+12:43:01,690 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre ProductoProveedor
+12:43:01,739 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+12:43:03,200 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:43:03,580 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:43:03,580 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:43:03,581 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+12:43:03,618 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+12:43:03,618 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+12:43:03,653 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=667, nombre=SuperAndino]
+12:43:03,653 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+12:43:03,698 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=668, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=667]
+12:43:03,698 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+12:48:26,516 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre ProductoProveedor
+12:48:26,567 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+12:48:28,360 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:48:28,567 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:48:28,568 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:48:28,568 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+12:48:28,648 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+12:48:28,648 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+12:48:28,693 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=669, nombre=SuperAndino]
+12:48:28,693 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+12:48:28,743 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=670, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=669]
+12:48:28,743 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+12:48:28,795 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 1 ProductosProveedor existentes
+12:48:28,795 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+12:48:28,825 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_PRODUCTOPROVEEDOR) violada
+
+12:48:28,826 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+12:48:28,826 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+12:48:28,851 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_PROVEEDORPRODUCTOPROVEEDOR) violada - clave principal no encontrada
+
+12:48:28,852 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+12:48:28,852 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:48:28,926 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:48:28,926 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:55:42,441 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre ProductoProveedor
+12:55:42,510 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+12:55:44,784 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:55:45,111 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:55:45,112 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:55:45,112 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+12:55:45,192 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+12:55:45,192 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+12:55:45,298 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=672, nombre=SuperAndino]
+12:55:45,298 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+12:55:45,362 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=673, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=672]
+12:55:45,363 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+12:57:30,031 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre ProductoProveedor
+12:57:30,082 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+12:57:31,477 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:57:31,738 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:57:31,738 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+12:57:31,738 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+12:57:31,785 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+12:57:31,785 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+12:57:31,842 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=674, nombre=SuperAndino]
+12:57:31,842 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+12:57:31,874 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=675, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=674]
+12:57:31,874 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+12:57:31,930 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 1 ProductosProveedor existentes
+12:57:31,930 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+12:57:31,972 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_PRODUCTOPROVEEDOR) violada
+
+12:57:31,973 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+12:57:31,973 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+12:57:32,080 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_PROVEEDORPRODUCTOPROVEEDOR) violada - clave principal no encontrada
+
+12:57:32,080 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+12:57:32,080 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+12:57:32,150 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+12:57:32,150 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+13:18:18,662 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre ProductoProveedor
+13:18:18,714 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+13:18:20,692 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+13:18:21,775 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+13:18:21,776 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+13:18:21,776 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+13:18:21,988 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+13:18:21,988 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+13:18:22,081 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=681, nombre=SuperAndino]
+13:18:22,081 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:18:22,139 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=682, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=681]
+13:18:22,139 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+13:18:22,245 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 1 ProductosProveedor existentes
+13:18:22,245 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:18:22,533 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_PRODUCTOPROVEEDOR) violada
+
+13:18:22,534 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:18:22,534 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:18:22,600 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_PROVEEDORPRODUCTOPROVEEDOR) violada - clave principal no encontrada
+
+13:18:22,601 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:18:22,601 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+13:18:22,755 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+13:18:22,755 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+13:18:22,777 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando RESTRICCIONES DE CHEQUEO sobre ProductoProveedor
+13:18:22,778 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+13:18:23,059 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+13:18:24,006 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+13:18:24,006 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+13:18:24,006 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+13:18:24,065 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+13:18:24,065 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+13:18:24,119 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=684, nombre=SuperAndino]
+13:18:24,120 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:18:24,182 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=685, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=684]
+13:18:24,182 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+13:18:24,256 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 1 ProductosProveedor existentes
+13:18:24,256 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: null
+13:18:24,340 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."NOMBRE")
+
+13:18:24,340 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:18:24,340 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:18:24,400 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."MARCA")
+
+13:18:24,400 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:18:24,400 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:18:24,461 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."PRESENTACION")
+
+13:18:24,462 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:18:24,462 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:18:24,533 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_CANTIDAPRESENTACION) violada
+
+13:18:24,534 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:18:24,534 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:18:24,614 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."UNIDADMEDIDA")
+
+13:18:24,614 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:18:24,614 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:18:24,703 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."CATEGORIA")
+
+13:18:24,703 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:18:24,703 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:18:24,766 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."TIPO")
+
+13:18:24,766 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:18:24,766 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:18:24,826 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."FECHAVENCIMIENTO")
+
+13:18:24,826 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:18:24,826 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+13:18:25,022 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+13:18:25,022 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+13:29:34,227 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre ProductoProveedor
+13:29:34,277 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+13:29:35,667 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+13:29:35,994 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+13:29:35,995 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+13:29:35,995 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+13:29:36,071 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+13:29:36,071 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+13:29:36,097 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=694, nombre=SuperAndino]
+13:29:36,097 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:29:36,156 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=695, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=694]
+13:29:36,157 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+13:29:36,189 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 1 ProductosProveedor existentes
+13:29:36,189 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:29:36,218 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_PRODUCTOPROVEEDOR) violada
+
+13:29:36,219 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:29:36,219 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:29:36,280 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_PROVEEDORPRODUCTOPROVEEDOR) violada - clave principal no encontrada
+
+13:29:36,280 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:29:36,280 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+13:29:36,319 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+13:29:36,320 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+13:29:36,329 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando RESTRICCIONES DE CHEQUEO sobre ProductoProveedor
+13:29:36,329 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+13:29:36,539 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+13:29:36,682 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+13:29:36,682 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+13:29:36,682 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+13:29:36,709 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+13:29:36,709 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+13:29:36,738 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=697, nombre=SuperAndino]
+13:29:36,738 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:29:36,762 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=698, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=697]
+13:29:36,762 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+13:29:36,795 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 1 ProductosProveedor existentes
+13:29:36,795 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: null
+13:29:36,825 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."NOMBRE")
+
+13:29:36,825 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:29:36,825 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:29:36,863 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."MARCA")
+
+13:29:36,864 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:29:36,864 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:29:36,889 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."PRESENTACION")
+
+13:29:36,889 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:29:36,889 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:29:36,914 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_CANTIDAPRESENTACION) violada
+
+13:29:36,915 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:29:36,915 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:29:36,938 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."UNIDADMEDIDA")
+
+13:29:36,938 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:29:36,938 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:29:36,988 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."CATEGORIA")
+
+13:29:36,988 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:29:36,988 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:29:37,011 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."TIPO")
+
+13:29:37,011 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:29:37,011 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:29:37,038 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."FECHAVENCIMIENTO")
+
+13:29:37,039 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:29:37,039 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:29:37,067 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_NUMEROCALIFICACIONES) violada
+
+13:29:37,068 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:29:37,068 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:29:37,091 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_SUMACALIFICACIONES) violada
+
+13:29:37,092 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:29:37,092 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:29:37,163 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRECIOPRODUCTOPROVEEDOR) violada
+
+13:29:37,163 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:29:37,163 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+13:29:37,233 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+13:29:37,233 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+13:46:25,085 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre ProductoProveedor
+13:46:25,136 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+13:46:26,653 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+13:46:26,970 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+13:46:26,971 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+13:46:26,971 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+13:46:27,052 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+13:46:27,052 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+13:46:27,082 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=721, nombre=SuperAndino]
+13:46:27,082 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:46:27,115 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=722, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=721]
+13:46:27,115 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+13:46:27,151 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 1 ProductosProveedor existentes
+13:46:27,151 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:46:27,177 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_PRODUCTOPROVEEDOR) violada
+
+13:46:27,178 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:46:27,178 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:46:27,219 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_PROVEEDORPRODUCTOPROVEEDOR) violada - clave principal no encontrada
+
+13:46:27,220 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:46:27,220 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+13:46:27,268 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+13:46:27,268 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+13:46:27,278 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando RESTRICCIONES DE CHEQUEO sobre ProductoProveedor
+13:46:27,279 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+13:46:27,603 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+13:46:27,917 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+13:46:27,917 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+13:46:27,917 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+13:46:27,954 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+13:46:27,954 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+13:46:27,980 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=724, nombre=SuperAndino]
+13:46:27,980 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:46:28,011 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=725, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=724]
+13:46:28,012 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+13:46:28,038 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 1 ProductosProveedor existentes
+13:46:28,038 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: null
+13:46:28,069 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."NOMBRE")
+
+13:46:28,069 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:46:28,069 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:46:28,095 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."MARCA")
+
+13:46:28,095 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:46:28,095 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:46:28,115 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."PRESENTACION")
+
+13:46:28,115 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:46:28,115 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:46:28,137 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_CANTIDAPRESENTACION) violada
+
+13:46:28,137 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:46:28,137 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:46:28,157 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."UNIDADMEDIDA")
+
+13:46:28,157 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:46:28,157 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:46:28,177 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."CATEGORIA")
+
+13:46:28,177 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:46:28,177 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:46:28,201 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."TIPO")
+
+13:46:28,202 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:46:28,202 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:46:28,219 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."FECHAVENCIMIENTO")
+
+13:46:28,220 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:46:28,220 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:46:28,234 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_NUMEROCALIFICACIONES) violada
+
+13:46:28,235 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:46:28,235 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:46:28,290 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_SUMACALIFICACIONES) violada
+
+13:46:28,291 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:46:28,291 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:46:28,326 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRECIOPRODUCTOPROVEEDOR) violada
+
+13:46:28,326 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:46:28,326 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:46:28,373 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=737, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=0.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=724]
+13:46:28,374 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+13:46:28,409 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+13:46:28,409 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+13:52:55,951 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre ProductoProveedor
+13:52:56,000 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+13:52:57,661 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+13:52:58,182 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+13:52:58,183 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+13:52:58,183 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+13:52:58,253 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+13:52:58,253 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+13:52:58,333 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=741, nombre=SuperAndino]
+13:52:58,333 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:52:58,423 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=742, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=741]
+13:52:58,423 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+13:52:58,496 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 1 ProductosProveedor existentes
+13:52:58,496 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:52:58,562 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_PRODUCTOPROVEEDOR) violada
+
+13:52:58,562 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:52:58,562 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:52:58,620 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_PROVEEDORPRODUCTOPROVEEDOR) violada - clave principal no encontrada
+
+13:52:58,620 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:52:58,620 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+13:52:58,707 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+13:52:58,707 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+13:52:58,724 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando RESTRICCIONES DE CHEQUEO sobre ProductoProveedor
+13:52:58,725 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+13:52:58,889 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+13:52:59,023 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+13:52:59,023 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+13:52:59,023 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+13:52:59,079 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+13:52:59,079 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+13:52:59,174 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=744, nombre=SuperAndino]
+13:52:59,174 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:52:59,233 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=745, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=744]
+13:52:59,233 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+13:52:59,286 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 1 ProductosProveedor existentes
+13:52:59,286 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: null
+13:52:59,355 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."NOMBRE")
+
+13:52:59,356 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:52:59,356 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:52:59,398 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."MARCA")
+
+13:52:59,398 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:52:59,398 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:52:59,432 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."PRESENTACION")
+
+13:52:59,432 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:52:59,432 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:52:59,455 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_CANTIDAPRESENTACION) violada
+
+13:52:59,456 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:52:59,456 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:52:59,476 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."UNIDADMEDIDA")
+
+13:52:59,476 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:52:59,476 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:52:59,600 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."CATEGORIA")
+
+13:52:59,600 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:52:59,600 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:52:59,641 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."TIPO")
+
+13:52:59,641 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:52:59,641 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:52:59,710 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."FECHAVENCIMIENTO")
+
+13:52:59,710 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:52:59,710 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:52:59,869 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_NUMEROCALIFICACIONES) violada
+
+13:52:59,869 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:52:59,869 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:52:59,963 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_SUMACALIFICACIONES) violada
+
+13:52:59,963 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:52:59,963 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:53:00,080 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRECIOPRODUCTOPROVEEDOR) violada
+
+13:53:00,080 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:53:00,080 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:53:00,142 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRODUCPROVEVOLEMPAQUE) violada
+
+13:53:00,142 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:53:00,142 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:53:00,278 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRODUCPROVEPESOEMPAQUE) violada
+
+13:53:00,278 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:53:00,278 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:53:00,557 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRODUCTOPROVEEDORCALIDAD) violada
+
+13:53:00,558 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:53:00,558 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:53:00,715 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRODUCTOPROVEEDORCALIDAD) violada
+
+13:53:00,715 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:53:00,715 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+13:53:00,910 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+13:53:00,910 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+13:55:08,921 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre ProductoProveedor
+13:55:08,984 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+13:55:10,737 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+13:55:11,190 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+13:55:11,191 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+13:55:11,191 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+13:55:11,326 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+13:55:11,326 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+13:55:11,419 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=761, nombre=SuperAndino]
+13:55:11,419 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:55:11,464 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=762, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=761]
+13:55:11,464 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+13:55:11,501 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 1 ProductosProveedor existentes
+13:55:11,501 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:55:11,531 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_PRODUCTOPROVEEDOR) violada
+
+13:55:11,533 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:55:11,533 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:55:11,628 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_PROVEEDORPRODUCTOPROVEEDOR) violada - clave principal no encontrada
+
+13:55:11,628 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:55:11,629 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+13:55:11,718 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+13:55:11,718 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+13:55:11,729 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando RESTRICCIONES DE CHEQUEO sobre ProductoProveedor
+13:55:11,729 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+13:55:11,988 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+13:55:12,169 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+13:55:12,169 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+13:55:12,169 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+13:55:12,206 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+13:55:12,206 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+13:55:12,251 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=764, nombre=SuperAndino]
+13:55:12,251 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:55:12,280 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=765, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=764]
+13:55:12,280 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+13:55:12,317 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 1 ProductosProveedor existentes
+13:55:12,317 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: null
+13:55:12,340 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."NOMBRE")
+
+13:55:12,340 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:55:12,340 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:55:12,372 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."MARCA")
+
+13:55:12,372 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:55:12,373 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:55:12,399 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."PRESENTACION")
+
+13:55:12,399 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:55:12,399 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:55:12,429 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_CANTIDAPRESENTACION) violada
+
+13:55:12,430 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:55:12,430 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:55:12,454 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."UNIDADMEDIDA")
+
+13:55:12,454 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:55:12,454 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:55:12,471 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."CATEGORIA")
+
+13:55:12,472 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:55:12,472 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:55:12,494 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."TIPO")
+
+13:55:12,494 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:55:12,494 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:55:12,559 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."FECHAVENCIMIENTO")
+
+13:55:12,559 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:55:12,559 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:55:12,638 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_NUMEROCALIFICACIONES) violada
+
+13:55:12,638 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:55:12,638 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:55:12,715 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_SUMACALIFICACIONES) violada
+
+13:55:12,715 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:55:12,715 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:55:12,790 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRECIOPRODUCTOPROVEEDOR) violada
+
+13:55:12,790 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:55:12,790 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:55:12,854 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRODUCPROVEVOLEMPAQUE) violada
+
+13:55:12,854 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:55:12,854 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:55:12,880 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRODUCPROVEPESOEMPAQUE) violada
+
+13:55:12,880 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:55:12,880 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:55:12,953 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRODUCTOPROVEEDORCALIDAD) violada
+
+13:55:12,954 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:55:12,954 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+13:55:12,985 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRODUCTOPROVEEDORCALIDAD) violada
+
+13:55:12,985 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+13:55:12,985 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+13:55:13,137 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+13:55:13,137 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+14:00:06,467 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre ProductoProveedor
+14:00:06,526 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+14:00:07,985 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+14:00:08,354 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+14:00:08,355 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+14:00:08,355 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+14:00:08,426 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+14:00:08,427 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+14:00:08,472 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=781, nombre=SuperAndino]
+14:00:08,472 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+14:00:08,504 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=782, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=781]
+14:00:08,504 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+14:00:08,564 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 1 ProductosProveedor existentes
+14:00:08,564 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+14:00:08,623 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_PRODUCTOPROVEEDOR) violada
+
+14:00:08,625 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+14:00:08,625 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+14:00:08,685 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_PROVEEDORPRODUCTOPROVEEDOR) violada - clave principal no encontrada
+
+14:00:08,685 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+14:00:08,685 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+14:00:08,805 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+14:00:08,805 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+14:00:08,813 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando RESTRICCIONES DE CHEQUEO sobre ProductoProveedor
+14:00:08,813 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+14:00:08,974 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+14:00:09,176 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+14:00:09,176 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+14:00:09,176 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+14:00:09,195 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+14:00:09,195 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+14:00:09,261 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=784, nombre=SuperAndino]
+14:00:09,261 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+14:00:09,289 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=785, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=784]
+14:00:09,289 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+14:00:09,316 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 1 ProductosProveedor existentes
+14:00:09,316 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: null
+14:00:09,346 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."NOMBRE")
+
+14:00:09,346 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+14:00:09,346 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+14:00:09,373 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."MARCA")
+
+14:00:09,373 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+14:00:09,373 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+14:00:09,418 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."PRESENTACION")
+
+14:00:09,418 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+14:00:09,418 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+14:00:09,490 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_CANTIDAPRESENTACION) violada
+
+14:00:09,491 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+14:00:09,491 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+14:00:09,622 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."UNIDADMEDIDA")
+
+14:00:09,623 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+14:00:09,623 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+14:00:09,791 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."CATEGORIA")
+
+14:00:09,791 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+14:00:09,791 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+14:00:09,871 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."TIPO")
+
+14:00:09,872 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+14:00:09,872 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+14:00:10,041 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."FECHAVENCIMIENTO")
+
+14:00:10,041 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+14:00:10,041 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+14:00:10,313 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_NUMEROCALIFICACIONES) violada
+
+14:00:10,313 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+14:00:10,313 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+14:00:10,585 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_SUMACALIFICACIONES) violada
+
+14:00:10,585 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+14:00:10,585 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+14:00:10,727 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRECIOPRODUCTOPROVEEDOR) violada
+
+14:00:10,727 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+14:00:10,727 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+14:00:10,761 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRODUCPROVEVOLEMPAQUE) violada
+
+14:00:10,762 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+14:00:10,762 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+14:00:10,842 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRODUCPROVEPESOEMPAQUE) violada
+
+14:00:10,842 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+14:00:10,842 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+14:00:10,878 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRODUCTOPROVEEDORCALIDAD) violada
+
+14:00:10,878 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+14:00:10,878 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+14:00:10,916 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRODUCTOPROVEEDORCALIDAD) violada
+
+14:00:10,916 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+14:00:10,916 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+14:00:10,999 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+14:00:10,999 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
