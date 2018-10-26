@@ -40,7 +40,7 @@ public interface VOProductoSucursal {
 	
 	public long getEstante();
 	
-	public long getPromocion();
+	public Long getPromocion();
 	
 	@Override
 	public String toString();

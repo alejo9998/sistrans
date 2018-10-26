@@ -459,7 +459,7 @@ public class InterfazApp extends JFrame
 				Long idPro =0L;
 				int cant =0;
 				double preci = 0.0;
-				int calif= Integer.parseInt(cali);
+				Double calif= Double.parseDouble(cali);
 				int entergado = 0;
 				if(entre.equalsIgnoreCase(DialogoOrdenPedido.ENTREGADO))
 				{

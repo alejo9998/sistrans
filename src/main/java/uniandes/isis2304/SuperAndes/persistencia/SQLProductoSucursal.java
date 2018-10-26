@@ -1,11 +1,11 @@
 package uniandes.isis2304.SuperAndes.persistencia;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 
-import uniandes.isis2304.SuperAndes.negocio.ProductoProveedor;
 import uniandes.isis2304.SuperAndes.negocio.ProductoSucursal;
 
 class SQLProductoSucursal {
@@ -19,7 +19,7 @@ class SQLProductoSucursal {
 	}
 	
 	public long adicionarProductoSucursal (PersistenceManager pm , long idProductoSucursal, String nombre, String marca, String presentacion, double cantidadPresentacion, String unidadMedida,
-			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , int nivelReorden, double precioUnitario, int cantidadBodega, int cantidadEstante, double precioUnidadMedida, long idBodega, long idEstante, long idPromocion)
+			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , int nivelReorden, double precioUnitario, int cantidadBodega, int cantidadEstante, double precioUnidadMedida, long idBodega, long idEstante, Long idPromocion)
 	{
 		Query q = pm.newQuery(SQL, "INSERT INTO " + pp.darTablaProductoSucursal() + " (idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, bodega, estante, promocion) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 		q.setParameters(idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, idBodega, idEstante, idPromocion);
@@ -63,7 +63,8 @@ class SQLProductoSucursal {
 	public List<ProductoSucursal> darProductosSucursal(PersistenceManager pm){
 		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaProductoSucursal());
 		q.setResultClass(ProductoSucursal.class);
-		return (List<ProductoSucursal>) q.executeList();
+		List<ProductoSucursal> retor =  (List<ProductoSucursal>) q.executeList();
+		return retor;
 	}
 	
 	public long aumentarCantidadBodegaProductoSucursal (PersistenceManager pm, long idProductoSucursal, int cantidad) {

@@ -1,20 +1,6 @@
 package uniandes.isis2304.SuperAndes.negocio;
 
-
 public class ProductoSucursal implements VOProductoSucursal {
-
-	private long idProductoSucursal;
-	private String nombre;
-	private String marca;
-	private String presentacion;
-	private double cantidadPresentacion;
-	private String unidadMedida;
-	private double volumenEmpaque;
-	private double pesoEmpaque;
-	private long codigoBarras;
-	private String categoria;
-	private String tipo;
-	private String fechaVencimiento;
 
 	private int nivelReorden;
 
@@ -30,9 +16,22 @@ public class ProductoSucursal implements VOProductoSucursal {
 
 	private long estante;
 
-	private long promocion;
+	private Long promocion;
 
-	public ProductoSucursal() {
+	private long idProductoSucursal;
+	private String nombre;
+	private String marca;
+	private String presentacion;
+	private double cantidadPresentacion;
+	private String unidadMedida;
+	private double volumenEmpaque;
+	private double pesoEmpaque;
+	private long codigoBarras;
+	private String categoria;
+	private String tipo;
+	private String fechaVencimiento;
+
+	public ProductoSucursal() {		
 		this.idProductoSucursal = 0;
 		this.nombre = "";
 		this.marca = "";
@@ -50,19 +49,17 @@ public class ProductoSucursal implements VOProductoSucursal {
 		this.cantidadBodega = 0;
 		this.cantidadEstante = 0;
 		this.precioUnidadMedida = 0;
-		this.bodega = 0;
-		this.estante = 0;
-		this.promocion = 0;
+		bodega = 0;
+		estante = 0;
+		promocion = null;
 		// TODO Auto-generated constructor stub
 	}
 
-
-
-	public ProductoSucursal(long id, String nombre, String marca, String presentacion, double cantidadPresentacion,
+	public ProductoSucursal(long idProductoSucursal, String nombre, String marca, String presentacion, double cantidadPresentacion,
 			String unidadMedida, double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria,
 			String tipo, String fechaVencimiento,int nivelReorden, double precioUnitario, int cantidadBodega, int cantidadEstante,
-			double precioUnidadMedida, long bodega, long estante, long promocion) {
-		this.idProductoSucursal = id;
+			double precioUnidadMedida, long bodega, long estante, Long promocion) {
+		this.idProductoSucursal = idProductoSucursal;
 		this.nombre = nombre;
 		this.marca = marca;
 		this.presentacion = presentacion;
@@ -81,6 +78,71 @@ public class ProductoSucursal implements VOProductoSucursal {
 		this.precioUnidadMedida = precioUnidadMedida;
 		this.bodega = bodega;
 		this.estante = estante;
+		this.promocion = promocion;
+	}
+	
+
+	public int getNivelReorden() {
+		return nivelReorden;
+	}
+
+	public void setNivelReorden(int nivelReorden) {
+		this.nivelReorden = nivelReorden;
+	}
+
+	public double getPrecioUnitario() {
+		return precioUnitario;
+	}
+
+	public void setPrecioUnitario(double precioUnitario) {
+		this.precioUnitario = precioUnitario;
+	}
+
+	public int getCantidadBodega() {
+		return cantidadBodega;
+	}
+
+	public void setCantidadBodega(int cantidadBodega) {
+		this.cantidadBodega = cantidadBodega;
+	}
+
+	public int getCantidadEstante() {
+		return cantidadEstante;
+	}
+
+	public void setCantidadEstante(int cantidadEstante) {
+		this.cantidadEstante = cantidadEstante;
+	}
+
+	public double getPrecioUnidadMedida() {
+		return precioUnidadMedida;
+	}
+
+	public void setPrecioUnidadMedida(double precioUnidadMedida) {
+		this.precioUnidadMedida = precioUnidadMedida;
+	}
+
+	public long getBodega() {
+		return bodega;
+	}
+
+	public void setBodega(long bodega) {
+		this.bodega = bodega;
+	}
+
+	public long getEstante() {
+		return estante;
+	}
+
+	public void setEstante(long estante) {
+		this.estante = estante;
+	}
+
+	public Long getPromocion() {
+		return promocion;
+	}
+
+	public void setPromocion(Long promocion) {
 		this.promocion = promocion;
 	}
 
@@ -180,70 +242,6 @@ public class ProductoSucursal implements VOProductoSucursal {
 		this.fechaVencimiento = fechaVencimiento;
 	}
 
-	public int getNivelReorden() {
-		return nivelReorden;
-	}
-
-	public void setNivelReorden(int nivelReorden) {
-		this.nivelReorden = nivelReorden;
-	}
-
-	public double getPrecioUnitario() {
-		return precioUnitario;
-	}
-
-	public void setPrecioUnitario(double precioUnitario) {
-		this.precioUnitario = precioUnitario;
-	}
-
-	public int getCantidadBodega() {
-		return cantidadBodega;
-	}
-
-	public void setCantidadBodega(int cantidadBodega) {
-		this.cantidadBodega = cantidadBodega;
-	}
-
-	public int getCantidadEstante() {
-		return cantidadEstante;
-	}
-
-	public void setCantidadEstante(int cantidadEstante) {
-		this.cantidadEstante = cantidadEstante;
-	}
-
-	public double getPrecioUnidadMedida() {
-		return precioUnidadMedida;
-	}
-
-	public void setPrecioUnidadMedida(double precioUnidadMedida) {
-		this.precioUnidadMedida = precioUnidadMedida;
-	}
-
-	public long getBodega() {
-		return bodega;
-	}
-
-	public void setBodega(long bodega) {
-		this.bodega = bodega;
-	}
-
-	public long getEstante() {
-		return estante;
-	}
-
-	public void setEstante(long estante) {
-		this.estante = estante;
-	}
-
-	public long getPromocion() {
-		return promocion;
-	}
-
-	public void setPromocion(long promocion) {
-		this.promocion = promocion;
-	}
-
 	@Override
 	public String toString() {
 		return "ProductoSucursal [idProductoSucursal=" + idProductoSucursal + ", nombre=" + nombre + ", marca=" + marca + ", presentacion="+ presentacion + ", cantidadPresentacion=" + cantidadPresentacion +
@@ -251,5 +249,7 @@ public class ProductoSucursal implements VOProductoSucursal {
 				", nivelReorden=" + nivelReorden + ", precioUnitario=" + precioUnitario + ", cantidadBodega=" + cantidadBodega + ", cantidadEstante=" + cantidadEstante + ", precioUnidadMedida=" + precioUnidadMedida + ", bodega=" + bodega +
 				", estante=" + estante + ", promocion=" + promocion +"]";
 	}
-
 }
+
+
+

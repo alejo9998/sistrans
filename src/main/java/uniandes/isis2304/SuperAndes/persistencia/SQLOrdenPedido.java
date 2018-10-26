@@ -18,7 +18,7 @@ class SQLOrdenPedido {
 		this.pp = pp;
 	}
 	
-	public long adicionarOrdenPedido (PersistenceManager pm, long idOrdenPedido, double precio, String fechaEntrega, String fechaEsperadaEntrega, double calificacion, int entregado, int cantidad, long idProductoProveedor, long idSucursal) {
+	public long adicionarOrdenPedido (PersistenceManager pm, long idOrdenPedido, double precio, String fechaEntrega, String fechaEsperadaEntrega, Double calificacion, int entregado, int cantidad, long idProductoProveedor, long idSucursal) {
 		Query q = pm.newQuery(SQL ,"INSERT INTO " + pp.darTablaOrdenPedido() + "(idOrdenPedido, precio, fechaEntrega, fechaEsperadaEntrega, calificacion, entregado, cantidad, productoProveedor, sucursal) values (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 		q.setParameters(idOrdenPedido, precio, fechaEntrega, fechaEsperadaEntrega, calificacion, entregado, cantidad, idProductoProveedor, idSucursal);
 		return (long) q.executeUnique();

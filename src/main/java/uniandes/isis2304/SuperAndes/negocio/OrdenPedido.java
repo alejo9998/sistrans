@@ -10,7 +10,7 @@ public class OrdenPedido implements VOOrdenPedido{
 	
 	private String fechaEsperadaEntrega;
 	
-	private double calificacion;
+	private Double calificacion;
 	
 	private int entregado;
 	
@@ -25,14 +25,14 @@ public class OrdenPedido implements VOOrdenPedido{
 		this.precio = 0;
 		this.fechaEntrega = "";
 		this.fechaEsperadaEntrega = "";
-		this.calificacion = 0;
+		this.calificacion = 0D;
 		this.entregado = 0;
 		this.cantidad = 0;
 		this.productoProveedor = 0;
 		this.sucursal = 0;
 	}
 
-	public OrdenPedido(long idOrdenPedido, double precio, String fechaEntrega, String fechaEsperadaEntrega, double calificacion,
+	public OrdenPedido(long idOrdenPedido, double precio, String fechaEntrega, String fechaEsperadaEntrega, Double calificacion,
 			int entregado, int cantidad, long productoProveedor, long sucursal) {
 		this.idOrdenPedido = idOrdenPedido;
 		this.precio = precio;
@@ -69,11 +69,11 @@ public class OrdenPedido implements VOOrdenPedido{
 		this.fechaEsperadaEntrega = fechaEsperadaEntrega;
 	}
 
-	public double getCalificacion() {
+	public Double getCalificacion() {
 		return calificacion;
 	}
 
-	public void setCalificacion(double calificacion) {
+	public void setCalificacion(Double calificacion) {
 		this.calificacion = calificacion;
 	}
 

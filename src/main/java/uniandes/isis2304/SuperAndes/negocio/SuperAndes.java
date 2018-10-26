@@ -202,7 +202,7 @@ public class SuperAndes {
 			ProductoProveedor p = this.darProductoProveedorPorId(idProductoProveedor);
 			double precioPorUnidad = p.getPrecio();
 			double precioTotal = precioPorUnidad * cantidad;
-			return this.adicionarOrdenPedido(precioTotal, null, fechaEsperadaEntrega, 0, 0, cantidad, idProductoProveedor, idSucursal);
+			return this.adicionarOrdenPedido(precioTotal, null, fechaEsperadaEntrega, 0D, 0, cantidad, idProductoProveedor, idSucursal);
 		}
 	}
 
@@ -521,7 +521,7 @@ public class SuperAndes {
 		List<VOProductoProveedor> voProductosProveedor = new LinkedList<VOProductoProveedor>();
 		System.out.println(pp.darProductosProveedor().size());
 		for (ProductoProveedor productoProveedor : pp.darProductosProveedor()) {
-			//System.out.println(productoProveedor);
+			//System.out.println("PRUEBA DEF "+productoProveedor);
 			voProductosProveedor.add(productoProveedor); 
 			//System.out.println("re");
 		}
@@ -615,14 +615,14 @@ public class SuperAndes {
 	 * 			Métodos para manejar el OrdenPedido
 	 *****************************************************************/
 
-	public OrdenPedido adicionarOrdenPedido(double precio, String fechaEntrega, String fechaEsperadaEntrega,double calificacion, int entregado, int cantidad, long idProductoProveedor, long idSucursal) {
+	public OrdenPedido adicionarOrdenPedido(double precio, String fechaEntrega, String fechaEsperadaEntrega,Double calificacion, int entregado, int cantidad, long idProductoProveedor, long idSucursal) {
 		log.info("Adicionando OrdenPedido: " + idProductoProveedor);
 		OrdenPedido ordenPedido = pp.adicionarOrdenPedido(precio, fechaEntrega, fechaEsperadaEntrega, calificacion, entregado, cantidad, idProductoProveedor, idSucursal);
 		log.info("Adicionando OrdenPedido: " + ordenPedido);
 		return ordenPedido;
 	}
 	
-	public OrdenPedido adicionarOrdenPedido2(long idOrdenPedido, double precio, String fechaEntrega, String fechaEsperadaEntrega,double calificacion, int entregado, int cantidad, long idProductoProveedor, long idSucursal) {
+	public OrdenPedido adicionarOrdenPedido2(long idOrdenPedido, double precio, String fechaEntrega, String fechaEsperadaEntrega,Double calificacion, int entregado, int cantidad, long idProductoProveedor, long idSucursal) {
 		log.info("Adicionando OrdenPedido: " + idProductoProveedor);
 		OrdenPedido ordenPedido = pp.adicionarOrdenPedido2(idOrdenPedido ,precio, fechaEntrega, fechaEsperadaEntrega, calificacion, entregado, cantidad, idProductoProveedor, idSucursal);
 		log.info("Adicionando OrdenPedido: " + ordenPedido);
@@ -795,7 +795,7 @@ public class SuperAndes {
 
 	public ProductoSucursal adicionarProductoSucursal(String nombre, String marca, String presentacion, double cantidadPresentacion, String unidadMedida,
 			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , int nivelReorden, double precioUnitario, int cantidadBodega, int cantidadEstante, double precioUnidadMedida
-			, long idBodega, long idEstante, long idPromocion) {
+			, long idBodega, long idEstante, Long idPromocion) {
 		log.info("Adicionando ProductoSucursal: " + nombre);
 		ProductoSucursal productoSucursal = pp.adicionarProductoSucursal(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, idBodega, idEstante, idPromocion);
 		log.info("Adicionando productoSucursal: " + productoSucursal);
@@ -804,7 +804,7 @@ public class SuperAndes {
 	
 	public ProductoSucursal adicionarProductoSucursal2(long idProductoSucursal, String nombre, String marca, String presentacion, double cantidadPresentacion, String unidadMedida,
 			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , int nivelReorden, double precioUnitario, int cantidadBodega, int cantidadEstante, double precioUnidadMedida
-			, long idBodega, long idEstante, long idPromocion) {
+			, long idBodega, long idEstante, Long idPromocion) {
 		log.info("Adicionando ProductoSucursal: " + nombre);
 		ProductoSucursal productoSucursal = pp.adicionarProductoSucursal2(idProductoSucursal,nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, idBodega, idEstante, idPromocion);
 		log.info("Adicionando productoSucursal: " + productoSucursal);

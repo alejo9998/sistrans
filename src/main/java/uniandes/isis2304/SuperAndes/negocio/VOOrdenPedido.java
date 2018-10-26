@@ -10,7 +10,7 @@ public interface VOOrdenPedido {
 	
 	public String getFechaEsperadaEntrega();
 	
-	public double getCalificacion();
+	public Double getCalificacion();
 	
 	public int getEntregado();
 	

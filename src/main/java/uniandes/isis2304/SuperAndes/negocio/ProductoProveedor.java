@@ -30,6 +30,7 @@ public class ProductoProveedor implements VOProductoProveedor {
 	private String fechaVencimiento;
 
 	public ProductoProveedor() {
+		
 		this.idProductoProveedor = 0;
 		this.nombre = "";
 		this.marca = "";
@@ -47,8 +48,10 @@ public class ProductoProveedor implements VOProductoProveedor {
 		this.numeroCalificaciones = 0;
 		this.sumaCalificaciones = 0;
 		proveedor = 0;
+		
 		// TODO Auto-generated constructor stub
 	}
+	
 
 	public ProductoProveedor(long id, String nombre, String marca, String presentacion, double cantidadPresentacion,
 			String unidadMedida, double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria,

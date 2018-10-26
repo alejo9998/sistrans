@@ -35,5 +35,8 @@ public interface VOProductoProveedor {
 	public double getSumaCalificaciones();
 
 	public long getProveedor();
+	
+	@Override
+	public String toString();
 
 }
