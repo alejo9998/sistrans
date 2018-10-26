@@ -18,7 +18,7 @@ public class DialogoOrdenPedido extends JDialog implements ActionListener
 	/**
 	 * Interfaz principal
 	 */
-	private InterfazApp inte;
+	private InterfazAdministrador inte;
 /**
  * precio de la orden
  */
@@ -47,7 +47,7 @@ public class DialogoOrdenPedido extends JDialog implements ActionListener
 	public static final String NOENTREGADO="No Entregado";
 	private final static String CANCELAR="CANCELAR";
 	
-	public DialogoOrdenPedido(InterfazApp inter) 
+	public DialogoOrdenPedido(InterfazAdministrador inter) 
 	{
 		inte= inter;
 		setTitle("Agregar Orden Pedido");

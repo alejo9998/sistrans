@@ -19,7 +19,7 @@ public class DialogoBodega extends JDialog implements ActionListener
 	/**
 	 * atributo de la clase principal de la interfaz
 	 */
-	private InterfazApp inte;
+	private interfazSucursal inte;
 
 	/**
 	 * Combo con los diferentes tipos de bodega
@@ -60,12 +60,14 @@ public class DialogoBodega extends JDialog implements ActionListener
 	 * constante con cancelar
 	 */
 	private final static String CANCELAR="CANCELAR";
+	
+	private interfazSucursal interfaz;
 
 	/**
 	 * Clase principal de dialogo 
 	 * @param inter interfaz
 	 */
-	public DialogoBodega(InterfazApp inter)
+	public DialogoBodega(interfazSucursal inter)
 	{
 		inte = inter;
 
@@ -124,7 +126,7 @@ public class DialogoBodega extends JDialog implements ActionListener
 			String tip = (String)tipo.getSelectedItem();
 			String vol = volumen.getText();
 			String idSuc = Sucursal.getText();
-			inte.agregarBodega(tip, vol, pes, idSuc);
+			inte.agregarBodega(tip, vol, pes);
 			System.out.println(tip);
 			dispose();
 		}

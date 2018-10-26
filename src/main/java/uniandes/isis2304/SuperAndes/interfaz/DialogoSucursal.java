@@ -15,7 +15,7 @@ import javax.swing.border.EmptyBorder;
 public class DialogoSucursal extends JDialog implements ActionListener
 {
 
-	private InterfazApp inte;
+	private InterfazAdministrador inte;
 	
 	
 	private JTextField nombre;
@@ -30,7 +30,7 @@ public class DialogoSucursal extends JDialog implements ActionListener
 	private JButton cancelar;
 	private final static String CANCELAR="CANCELAR";
 	
-	public DialogoSucursal(InterfazApp inter) 
+	public DialogoSucursal(InterfazAdministrador inter) 
 	{
 		inte = inter;
 		

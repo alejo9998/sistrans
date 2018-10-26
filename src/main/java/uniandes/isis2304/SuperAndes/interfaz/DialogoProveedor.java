@@ -15,7 +15,7 @@ import javax.swing.border.EmptyBorder;
 public class DialogoProveedor extends JDialog implements ActionListener
 {
 
-	private InterfazApp interfaz;
+	private InterfazAdministrador interfaz;
 	
 	private JTextField txtNombre;
 	
@@ -25,7 +25,7 @@ public class DialogoProveedor extends JDialog implements ActionListener
 	private JButton cancelar;
 	private final static String CANCELAR="CANCELAR";
 	
-	public DialogoProveedor(InterfazApp inter)
+	public DialogoProveedor(InterfazAdministrador inter)
 	{
 		
 		interfaz= inter;

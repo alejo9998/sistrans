@@ -16,7 +16,7 @@ import javax.swing.border.EmptyBorder;
 public class DialogoProductoSucursal extends JDialog implements ActionListener
 {
 
-	private InterfazApp inte;
+	private InterfazAdministrador inte;
 
 	private JTextField nombre;
 
@@ -66,7 +66,7 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 
 	private final static String actualiza="ACTUALIZAR";
 
-	public DialogoProductoSucursal(InterfazApp inter) 
+	public DialogoProductoSucursal(InterfazAdministrador inter) 
 	{
 		inte= inter;
 		setTitle("Agregar Producto Sucursal");

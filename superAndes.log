@@ -8447,3 +8447,8 @@ ORA-02290: restricci�n de control (ISIS2304C281820.CK_CANTIDADORDENPEDIDO) viola
 12:41:04,095 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
 12:41:04,295 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
 12:41:04,295 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+16:40:06,667 (main) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+16:40:36,626 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+16:41:24,271 (main) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+16:41:31,066 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+16:45:24,176 (main) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD

@@ -15,7 +15,7 @@ import javax.swing.border.EmptyBorder;
 public class DialogoEstante extends JDialog implements ActionListener
 {
 
-	private InterfazApp inte;
+	private InterfazAdministrador inte;
 	
 
 	private JTextField tipo;
@@ -34,7 +34,7 @@ public class DialogoEstante extends JDialog implements ActionListener
 	private JButton cancelar;
 	private final static String CANCELAR="CANCELAR";
 	
-	public DialogoEstante(InterfazApp inter) 
+	public DialogoEstante(InterfazAdministrador inter) 
 	{
 		inte= inter;
 		setTitle("Agregar Estante");

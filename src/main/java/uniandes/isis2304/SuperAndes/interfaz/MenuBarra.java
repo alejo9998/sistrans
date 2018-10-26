@@ -9,7 +9,7 @@ import javax.swing.JMenuItem;
 
 public class MenuBarra extends JMenuBar implements ActionListener
 {
-	private InterfazApp prinCipal;
+	private InterfazAdministrador prinCipal;
 	
 	private JMenu agregar;
 	
@@ -62,7 +62,7 @@ public class MenuBarra extends JMenuBar implements ActionListener
 	
 	private JMenu mantenimiento;
 	
-	public MenuBarra(InterfazApp inter)
+	public MenuBarra(InterfazAdministrador inter)
 	{
 	
 		prinCipal= inter;
@@ -181,12 +181,7 @@ public class MenuBarra extends JMenuBar implements ActionListener
 			dialogo.setVisible(true);
 		}
 		
-		else if (mensaje.equalsIgnoreCase(ADDBODEGA))
-		{
-			DialogoBodega dialogo= new DialogoBodega(prinCipal);
-			dialogo.setVisible(true);
-		}
-		
+
 		else if (mensaje.equalsIgnoreCase(ADDESTANTE))
 		{
 			DialogoEstante dialogo= new DialogoEstante(prinCipal);

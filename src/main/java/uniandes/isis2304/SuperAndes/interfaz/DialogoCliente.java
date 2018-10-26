@@ -17,7 +17,7 @@ public class DialogoCliente extends JDialog implements ActionListener
 	/**
 	 * Atributo con la interfaz
 	 */
-	private InterfazApp inte; 
+	private InterfazAdministrador inte; 
 	
 	/**
 	 * nombre del cliente
@@ -56,7 +56,7 @@ public class DialogoCliente extends JDialog implements ActionListener
 	 * Interfaz del dialogo
 	 * @param inter
 	 */
-	public DialogoCliente(InterfazApp inter)
+	public DialogoCliente(InterfazAdministrador inter)
 	{
 		inte = inter;
 		

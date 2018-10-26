@@ -27,7 +27,7 @@ import uniandes.isis2304.SuperAndes.negocio.VOProveedor;
 import uniandes.isis2304.SuperAndes.negocio.VOSucursal;
 import uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes;
 
-public class InterfazApp extends JFrame
+public class InterfazAdministrador extends JFrame
 {
 	private PanelDatos panelDatos;
 
@@ -35,7 +35,7 @@ public class InterfazApp extends JFrame
 
 	private MenuBarra menu;
 
-	private static Logger log = Logger.getLogger(InterfazApp.class.getName());
+	private static Logger log = Logger.getLogger(InterfazAdministrador.class.getName());
 
 	private SuperAndes superAndes;
 
@@ -43,10 +43,10 @@ public class InterfazApp extends JFrame
 
 	private static final String CONFIG_TABLAS = "./src/main/resources/config/TablasBD_A.json"; 
 
-	public InterfazApp()
+	public InterfazAdministrador()
 	{
-//				tableConfig = openConfig ("Tablas BD", CONFIG_TABLAS);
-//				superAndes = new SuperAndes (tableConfig);
+				tableConfig = openConfig ("Tablas BD", CONFIG_TABLAS);
+				superAndes = new SuperAndes (tableConfig);
 
 		setSize(800,430);
 		setLocationRelativeTo(null);
@@ -226,6 +226,7 @@ public class InterfazApp extends JFrame
 				volum = Double.parseDouble(pVol);
 
 				idSucu = Long.parseLong(idSuc);
+				
 
 				if(peso<0||volum<0||idSucu<0)
 				{
@@ -233,6 +234,7 @@ public class InterfazApp extends JFrame
 				}
 				else
 				{
+					System.out.println("entro");
 					VOBodega a =superAndes.adicionarBodega(volum, peso, pTipo, idSucu);
 					String mensaje =a.toString();
 					panelDatos.actualizarInterfaz(mensaje);
@@ -240,7 +242,7 @@ public class InterfazApp extends JFrame
 			}
 			catch(Exception e)
 			{
-
+				
 				JOptionPane.showMessageDialog(null, "Introduzca Valores Validos", "SuperAndes",JOptionPane.ERROR_MESSAGE);
 			}
 
@@ -492,7 +494,7 @@ public class InterfazApp extends JFrame
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		InterfazApp inter = new InterfazApp();
+		InterfazAdministrador inter = new InterfazAdministrador();
 		inter.setVisible(true);
 	}
 

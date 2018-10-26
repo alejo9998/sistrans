@@ -17,7 +17,7 @@ public class DialogoCompra extends JDialog implements ActionListener
 	/**
 	 * Clase principal de la interfaz
 	 */
-	private InterfazApp inte;
+	private InterfazAdministrador inte;
 
 	/**
 	 * fecha
@@ -70,7 +70,7 @@ public class DialogoCompra extends JDialog implements ActionListener
 	 * Dialogo de comprar
 	 * @param inter interfaz
 	 */
-	public DialogoCompra(InterfazApp inter) 
+	public DialogoCompra(InterfazAdministrador inter) 
 	{
 		inte= inter;
 		setTitle("Agregar Compra");

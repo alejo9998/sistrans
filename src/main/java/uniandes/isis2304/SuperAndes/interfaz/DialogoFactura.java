@@ -16,7 +16,7 @@ import javax.swing.border.EmptyBorder;
 
 public class DialogoFactura extends JDialog implements ActionListener
 {
-	private InterfazApp interfaz;
+	private InterfazAdministrador interfaz;
 	
 	private JTextArea txtDescripcion;
 	
@@ -26,7 +26,7 @@ public class DialogoFactura extends JDialog implements ActionListener
 	private JButton cancelar;
 	private final static String CANCELAR="CANCELAR";
 	
-	public DialogoFactura(InterfazApp inter) 
+	public DialogoFactura(InterfazAdministrador inter) 
 	{
 		interfaz= inter;
 		
