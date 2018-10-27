@@ -3,6 +3,7 @@ package uniandes.isis2304.SuperAndes.interfaz;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -24,11 +25,13 @@ public class interfazSucursal extends JFrame
 	
 	public String id;
 	
+
+	
 	public interfazSucursal(String pId)
 	{
 		inter = new InterfazAdministrador();
 		inter.setVisible(true);
-		
+	
 		id=pId;
 
 		setTitle("Sucursal " + id );
@@ -90,6 +93,5 @@ public class interfazSucursal extends JFrame
 	{
 		inter.agregarPromocion(ptipo, p, lleve, fechaCad);
 	}
-
 
 }
