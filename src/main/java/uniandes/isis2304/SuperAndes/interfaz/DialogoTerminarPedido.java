@@ -99,7 +99,7 @@ public class DialogoTerminarPedido extends JDialog implements ActionListener
 			String cali = (String)calificacion.getSelectedItem();
 			String entr = (String)entrega.getSelectedItem();
 			
-//			inter.agregarOrdenPedido(fechLleg, FechaEsp, cali, prov, precio, entr, cantidad);
+			inter.agregarOrdenPedido(fechLleg, FechaEsp, cali, prov, precio, entr, cantidad);
 			drp.eliminarEle();
 			dispose();
 			

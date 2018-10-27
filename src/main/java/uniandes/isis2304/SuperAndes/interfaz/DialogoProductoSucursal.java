@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -12,6 +13,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+
+import com.toedter.calendar.JDateChooser;
 
 public class DialogoProductoSucursal extends JDialog implements ActionListener
 {
@@ -39,7 +42,7 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 
 	private JComboBox<String> tipo;
 
-	private JTextField fechadeVencimiento;
+	private JDateChooser fechadeVencimiento;
 
 	private JTextField nivelReorden;
 
@@ -121,7 +124,7 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 		categoria.addActionListener(this);
 		categoria.setActionCommand(actualiza);
 
-		fechadeVencimiento = new JTextField();
+		fechadeVencimiento = new JDateChooser();
 
 		tipo = new JComboBox<>();
 		
@@ -251,7 +254,9 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 			String pesoEmp = pesoEmpaque.getText();
 			String codBarr = codigoDeBarras.getText();
 			String cat = (String)categoria.getSelectedItem();
-			String fech = fechadeVencimiento.getText();
+			SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yy");
+			String fech = formato.format(fechadeVencimiento.getDate());
+			
 			String tip = (String)tipo.getSelectedItem();
 			String nvlreord = nivelReorden.getText();
 			String prcUni = precioUnitario.getText();

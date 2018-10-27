@@ -1,7 +1,9 @@
 package uniandes.isis2304.SuperAndes.interfaz;
 
 import java.awt.BorderLayout;
+import java.awt.List;
 import java.io.FileReader;
+import java.util.ArrayList;
 
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -13,6 +15,9 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.stream.JsonReader;
 
+import uniandes.isis2304.SuperAndes.negocio.Bodega;
+import uniandes.isis2304.SuperAndes.negocio.Estante;
+import uniandes.isis2304.SuperAndes.negocio.Sucursal;
 import uniandes.isis2304.SuperAndes.negocio.SuperAndes;
 import uniandes.isis2304.SuperAndes.negocio.VOBodega;
 import uniandes.isis2304.SuperAndes.negocio.VOCliente;
@@ -25,7 +30,7 @@ import uniandes.isis2304.SuperAndes.negocio.VOProductoSucursal;
 import uniandes.isis2304.SuperAndes.negocio.VOPromocion;
 import uniandes.isis2304.SuperAndes.negocio.VOProveedor;
 import uniandes.isis2304.SuperAndes.negocio.VOSucursal;
-import uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes;
+
 
 public class InterfazAdministrador extends JFrame
 {
@@ -86,7 +91,7 @@ public class InterfazAdministrador extends JFrame
 
 	public void agregarCliente(String pNombre, String pCorreo, String pDireccion)
 	{
-
+		
 		if(pNombre.equalsIgnoreCase("")|| pCorreo.equalsIgnoreCase(""))
 		{
 			JOptionPane.showMessageDialog(null, "Los campos nombre y correo no pueden ser vacios", "SuperAndes",JOptionPane.ERROR_MESSAGE);
@@ -137,7 +142,30 @@ public class InterfazAdministrador extends JFrame
 			panelDatos.actualizarInterfaz(mensaje);
 		}
 	}
-
+	
+	public void verificarSucursal(String id) throws Exception
+	{
+		System.out.println(id);
+		Long idV =0L;
+		idV= Long.parseLong(id);
+		Sucursal esta = superAndes.darSucursalPorId(idV);
+		
+		
+		
+		if(esta == null)
+		{
+			throw new Exception("No hay una sucursal con ese id");
+		}
+		
+	}
+	public Object[] darPorudctos()
+	{
+		return superAndes.darProductosSucursal().toArray();
+	}
+	public Estante darEstante(Long idEstante)
+	{
+		return superAndes.darEstantePorId(idEstante);
+	}
 	public void agregarProveedor(String pnombre)
 	{
 		if(pnombre.equalsIgnoreCase(""))
@@ -146,6 +174,7 @@ public class InterfazAdministrador extends JFrame
 		}
 		else
 		{
+			
 			VOProveedor a =superAndes.adicionarProveedor(pnombre);
 			String mensaje =a.toString();
 			panelDatos.actualizarInterfaz(mensaje);
@@ -493,6 +522,39 @@ public class InterfazAdministrador extends JFrame
 			}
 		}
 
+	}
+	
+	public void estantes()
+	{
+		 String nombre = JOptionPane.showInputDialog( this, "Introduzca el id de la sucursal", "Dar los estantes de una sucursal", JOptionPane.INFORMATION_MESSAGE );
+		 Long idS= Long.parseLong(nombre);
+		 Object[]a =superAndes.darEstantes().toArray();
+		 String mensaje = "Los estantes son:";
+		 for(int i=0;i<a.length;i++)
+		 {
+			 Estante d = (Estante)a[i];
+			 if(idS==d.getSucursal())
+			 {
+				 mensaje= mensaje +"\n"+ d.getIdEstante();
+			 }
+		 }
+		 JOptionPane.showMessageDialog( this, mensaje, "Dar los estantes de una sucursal", JOptionPane.INFORMATION_MESSAGE);
+	}
+	public void bodegas()
+	{
+		 String nombre = JOptionPane.showInputDialog( this, "Introduzca el id de la sucursal", "Dar las Bodegas de una sucursal", JOptionPane.INFORMATION_MESSAGE );
+		 Long idS= Long.parseLong(nombre);
+		 Object[]a =superAndes.darBodegas().toArray();
+		 String mensaje = "Las Bodegas son:";
+		 for(int i=0;i<a.length;i++)
+		 {
+			 Bodega d = (Bodega)a[i];
+			 if(idS==d.getSucursal())
+			 {
+				 mensaje= mensaje +"\n"+ d.getIdBodega();
+			 }
+		 }
+		 JOptionPane.showMessageDialog( this, mensaje, "Dar las Bodegas de una sucursal", JOptionPane.INFORMATION_MESSAGE);
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

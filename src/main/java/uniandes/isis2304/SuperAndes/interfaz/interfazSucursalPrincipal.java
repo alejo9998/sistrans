@@ -45,6 +45,7 @@ public class interfazSucursalPrincipal extends JFrame implements ActionListener{
 
 	}
 
+	
 	public void actionPerformed(ActionEvent e) 
 	{
 		String m = e.getActionCommand();
@@ -52,9 +53,8 @@ public class interfazSucursalPrincipal extends JFrame implements ActionListener{
 		{
 			try
 			{
-				System.out.println("entra");
 				
-				inter= new interfazSucursal(text.getText());
+				inter= new interfazSucursal(idSuc.getText());
 
 				inter.verificar(idSuc.getText());
 

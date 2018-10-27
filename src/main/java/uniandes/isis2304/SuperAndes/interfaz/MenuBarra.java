@@ -7,14 +7,15 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
+import com.sun.corba.se.impl.ior.JIDLObjectKeyTemplate;
+
+import uniandes.isis2304.SuperAndes.negocio.Estante;
+
 public class MenuBarra extends JMenuBar implements ActionListener
 {
 	private InterfazAdministrador prinCipal;
 	
 	private JMenu agregar;
-	
-	private JMenuItem agregarCliente;
-	private final static String ADDCLIENTE="AGREGARCLIENTE";
 	
 	private JMenuItem agregarFactura;
 	private final static String ADDFACTURA="AGREGARFACTURA";
@@ -25,26 +26,8 @@ public class MenuBarra extends JMenuBar implements ActionListener
 	private JMenuItem agregarProveedor;
 	private final static String ADDPROVEEDOR="AGREGARPROVEEDOR";
 	
-	private JMenuItem agregarPromocion;
-	private final static String ADDPROMOCION ="AGERGARPROMOCION";
-	
-	private JMenuItem agregarBodega;
-	private final static String ADDBODEGA="AGREGARBODEGA";
-	
-	private JMenuItem agregarEstante;
-	private final static String ADDESTANTE ="AGREGARESTANTE";
-	
-	private JMenuItem agregarProductoSucursal;
-	private final static String ADDPRODUCTOSUCURSAL = "AGREGARPRODUCTOSUCURSAL";
-	
-	private JMenuItem agregarCompra;
-	private final static String ADDCOMPRA="AGERGARCOMPRA";
-	
 	private JMenuItem agregarProductoProveedor;
-	private final static String ADDPRODUCTOPROVEEDOR="AGREGARPRODUCTOPROVEEDOR";
-	
-	private JMenuItem agregarOrdenPedido;
-	private final static String  ADDORDENPEDIDO="AGREGARORDENPEDIDO";
+	private final static String ADDPPRODUCTOROVEEDOR="AGREGARPRODUCTOPROVEEDOR";	
 	
 	private JMenu requerimientos;
 	
@@ -62,6 +45,11 @@ public class MenuBarra extends JMenuBar implements ActionListener
 	
 	private JMenu mantenimiento;
 	
+	private JMenuItem darEstantesPorSucursal;
+	private final static String DARESTANTES="DARESTANTES";
+	
+	private JMenuItem darBodegasPorSucursal;
+	private final static String DARBODEGAS="DARBODEGAS";
 	public MenuBarra(InterfazAdministrador inter)
 	{
 	
@@ -83,10 +71,11 @@ public class MenuBarra extends JMenuBar implements ActionListener
 		agregarProveedor.addActionListener(this);
 		
 		agregarProductoProveedor = new JMenuItem("Agergar Producto Proveedor");
-		agregarProductoProveedor.setActionCommand(ADDPRODUCTOPROVEEDOR);
+		agregarProductoProveedor.setActionCommand(ADDPPRODUCTOROVEEDOR);
 		agregarProductoProveedor.addActionListener(this);
 		
-	
+		
+		agregar.add(agregarProveedor);
 		agregar.add(agregarFactura);
 		agregar.add(agregarSucursal);
 		agregar.add(agregarProductoProveedor);
@@ -114,6 +103,17 @@ public class MenuBarra extends JMenuBar implements ActionListener
 		
 		mantenimiento = new JMenu("Mantenimiento");
 		add(mantenimiento);
+		
+		darBodegasPorSucursal= new JMenuItem("Bodegas de una sucursal");
+		darBodegasPorSucursal.addActionListener(this);
+		darBodegasPorSucursal.setActionCommand(DARBODEGAS);
+		
+		darEstantesPorSucursal= new JMenuItem("Estantes por sucursal");
+		darEstantesPorSucursal.addActionListener(this);
+		darEstantesPorSucursal.setActionCommand(DARESTANTES);
+		
+		mantenimiento.add(darBodegasPorSucursal);
+		mantenimiento.add(darEstantesPorSucursal);
 	
 	}
 
@@ -137,11 +137,20 @@ public class MenuBarra extends JMenuBar implements ActionListener
 			dialogo.setVisible(true);
 		}
 				
-		else if ( mensaje.equalsIgnoreCase(ADDPRODUCTOPROVEEDOR))
+		else if ( mensaje.equalsIgnoreCase(ADDPPRODUCTOROVEEDOR))
 		{
 			DialogoProductoProveedor dialogo = new DialogoProductoProveedor(prinCipal);
 			dialogo.setVisible(true);
 		}
+		else if( mensaje.equalsIgnoreCase(DARESTANTES))
+		{
+			prinCipal.estantes();
+		}
+		else if(mensaje.equalsIgnoreCase(DARBODEGAS))
+		{
+			prinCipal.bodegas();
+		}
+	
 
 	}
 

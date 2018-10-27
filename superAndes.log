@@ -8604,3 +8604,136 @@ ORA-02291: restricción de integridad (ISIS2304C281820.FK_SUCURSAL) violada - cl
 19:00:43,247 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
 19:00:44,548 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
 21:41:33,057 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+14:17:33,093 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+14:17:34,376 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+14:19:09,139 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+14:19:10,433 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+14:19:21,096 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: hola
+14:19:21,260 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=1541, nombre=hola]
+14:23:00,310 (main) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+14:23:08,505 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+14:23:09,855 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+14:23:24,739 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: 12
+14:23:24,970 (AWT-EventQueue-0) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ORDENPEDIDO(idOrdenPedido, precio, fechaEntrega, fechaEsperadaEntrega, calificacion, entregado, cantidad, productoProveedor, sucursal) values (?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_SUCURSALORDENPEDIDO) violada - clave principal no encontrada
+
+14:23:24,973 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: null
+14:24:26,520 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: 1541
+14:24:26,527 (AWT-EventQueue-0) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ORDENPEDIDO(idOrdenPedido, precio, fechaEntrega, fechaEsperadaEntrega, calificacion, entregado, cantidad, productoProveedor, sucursal) values (?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_SUCURSALORDENPEDIDO) violada - clave principal no encontrada
+
+14:24:26,528 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: null
+14:24:53,198 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: 1
+14:24:53,204 (AWT-EventQueue-0) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ORDENPEDIDO(idOrdenPedido, precio, fechaEntrega, fechaEsperadaEntrega, calificacion, entregado, cantidad, productoProveedor, sucursal) values (?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_SUCURSALORDENPEDIDO) violada - clave principal no encontrada
+
+14:24:53,205 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: null
+14:25:20,890 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: 1541
+14:25:20,896 (AWT-EventQueue-0) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ORDENPEDIDO(idOrdenPedido, precio, fechaEntrega, fechaEsperadaEntrega, calificacion, entregado, cantidad, productoProveedor, sucursal) values (?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_SUCURSALORDENPEDIDO) violada - clave principal no encontrada
+
+14:25:20,898 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: null
+14:51:17,585 (main) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+14:51:25,594 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : a
+14:51:25,826 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1546, ciudad=a, direccion=a, nombre=a]
+14:51:25,828 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando sucursales
+14:51:25,835 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando sucursales: 2 sucursales existentes
+15:01:23,575 (main) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:01:46,531 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:01:47,882 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:02:02,068 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:02:02,085 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:02:12,408 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:02:12,422 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:03:41,152 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:03:42,464 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:03:55,324 (main) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:04:06,333 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:04:07,641 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:05:08,756 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:07:00,617 (main) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:07:12,008 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:08:21,341 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:08:22,622 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando sucursales
+15:08:22,748 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando sucursales: 2 sucursales existentes
+15:12:27,655 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:12:29,003 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1538
+15:12:29,113 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1538, ciudad=asd, direccion=asd, nombre=asd]
+15:12:29,128 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:12:29,141 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1538
+15:12:29,145 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1538, ciudad=asd, direccion=asd, nombre=asd]
+15:13:10,708 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:13:11,995 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1539
+15:13:12,101 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - 
+15:14:00,733 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:14:02,017 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1538
+15:14:02,134 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1538, ciudad=asd, direccion=asd, nombre=asd]
+15:14:02,146 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:14:02,159 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1538
+15:14:02,163 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1538, ciudad=asd, direccion=asd, nombre=asd]
+15:50:55,316 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:50:56,651 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1538
+15:50:56,761 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1538, ciudad=asd, direccion=asd, nombre=asd]
+15:50:56,774 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+15:50:56,789 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 0 productosSucursal existentes
+15:50:56,791 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:50:56,804 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1538
+15:50:56,808 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1538, ciudad=asd, direccion=asd, nombre=asd]
+15:50:56,809 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+15:50:56,815 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 0 productosSucursal existentes
+15:52:47,163 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:52:48,512 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1538
+15:52:48,618 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1538, ciudad=asd, direccion=asd, nombre=asd]
+15:52:48,631 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+15:52:48,635 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 0 productosSucursal existentes
+15:52:48,638 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:52:48,654 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1538
+15:52:48,658 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1538, ciudad=asd, direccion=asd, nombre=asd]
+15:52:48,659 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+15:52:48,662 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 0 productosSucursal existentes
+15:53:15,212 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+15:53:15,216 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 0 productosSucursal existentes
+15:53:29,868 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Albarrotes
+15:53:29,995 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1547, volumen=12.0, peso=12.0, tipo=Albarrotes, sucursal=1538]
+15:57:04,005 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Albarrotes
+15:57:04,027 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1548, volumen=123.0, peso=123.0, tipo=Albarrotes, nivelAprovisionamiento=123, sucursal=1538]
+15:57:16,707 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+15:57:16,711 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 0 productosSucursal existentes
+15:58:45,072 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+15:58:45,075 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 0 productosSucursal existentes
+16:47:15,589 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+16:47:16,879 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1538
+16:47:16,987 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1538, ciudad=asd, direccion=asd, nombre=asd]
+16:47:16,998 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+16:47:17,002 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 0 productosSucursal existentes
+16:47:17,004 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+16:47:17,017 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1538
+16:47:17,020 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1538, ciudad=asd, direccion=asd, nombre=asd]
+16:47:17,022 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+16:47:17,025 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 0 productosSucursal existentes
+16:47:34,100 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+16:47:34,104 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 0 productosSucursal existentes
+17:27:33,975 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+17:27:35,268 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1538
+17:27:35,380 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1538, ciudad=asd, direccion=asd, nombre=asd]
+17:27:35,391 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+17:27:35,396 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 0 productosSucursal existentes
+17:27:35,398 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+17:27:35,412 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1538
+17:27:35,416 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1538, ciudad=asd, direccion=asd, nombre=asd]
+17:27:35,418 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+17:27:35,423 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 0 productosSucursal existentes
+17:28:48,309 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+17:28:49,669 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1538
+17:28:49,778 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1538, ciudad=asd, direccion=asd, nombre=asd]
+17:28:49,792 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+17:28:49,796 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 0 productosSucursal existentes
+17:28:49,798 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+17:28:49,812 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1538
+17:28:49,816 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1538, ciudad=asd, direccion=asd, nombre=asd]
+17:28:49,818 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+17:28:49,821 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 0 productosSucursal existentes
+17:29:02,544 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Bodegas
+17:29:02,552 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Bodegas: 3 bodegas existentes
+17:29:17,676 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Estantes
+17:29:17,682 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Estantes: 1 Estantes existentes

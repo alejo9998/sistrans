@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 import javax.swing.border.TitledBorder;
 
 import javafx.scene.layout.Border;
+import uniandes.isis2304.SuperAndes.negocio.Estante;
 
 public class interfazSucursal extends JFrame 
 {
@@ -27,13 +28,13 @@ public class interfazSucursal extends JFrame
 	
 
 	
-	public interfazSucursal(String pId)
+	public interfazSucursal(String pId) throws Exception
 	{
 		inter = new InterfazAdministrador();
 		inter.setVisible(true);
-	
+		inter.verificarSucursal(pId);
 		id=pId;
-
+		
 		setTitle("Sucursal " + id );
 		baner = new bannerSucursal();
 		
@@ -50,17 +51,25 @@ public class interfazSucursal extends JFrame
 		add(botonesDerecha,BorderLayout.EAST);
 		add(btonProductos,BorderLayout.CENTER);
 	}
-	
+	public InterfazAdministrador darInterfazAdministrados()
+	{
+		return inter;
+	}
+	public Long daridSucursal()
+	{
+		return Long.parseLong(id);
+	}
 	public void verificar( String idSuc) throws Exception
 	{
-		if(idSuc.equalsIgnoreCase("2"))
+		try
 		{
-			interfazSucursal inter = new interfazSucursal(idSuc);
-			inter.setVisible(true);	
+			
+			interfazSucursal interf = new interfazSucursal(idSuc);
+			interf.setVisible(true);	
 		}
-		else
+		catch(Exception e)
 		{
-			throw new Exception("No existe una sucursal con ese Id");
+			throw new Exception(e.getMessage());
 		}
 	}
 

@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -12,6 +13,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+
+import com.toedter.calendar.JDateChooser;
 
 public class DialogoPromocion extends JDialog implements ActionListener
 {
@@ -23,7 +26,7 @@ public class DialogoPromocion extends JDialog implements ActionListener
 
 	private JTextField n;
 	
-	private JTextField fechaCaducidad;
+	private JDateChooser fechaCaducidad;
 
 	private JButton aceptar;
 	private final static String ACEPTAR="ACEPTAR";
@@ -55,7 +58,7 @@ public class DialogoPromocion extends JDialog implements ActionListener
 
         m= new JTextField();
         n = new JTextField();
-        fechaCaducidad = new JTextField();
+        fechaCaducidad = new JDateChooser();
         Integer [] a = {1,2,3,4};
         tipo = new JComboBox<Integer>(a);
         
@@ -90,7 +93,8 @@ public class DialogoPromocion extends JDialog implements ActionListener
 			Integer tip =(Integer)tipo.getSelectedItem();
 			String pagu= m.getText();
 			String llev =n.getText();
-			String fechCad = fechaCaducidad.getText();
+			SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yy");
+			String fechCad = formato.format(fechaCaducidad.getDate());
 			inte.agregarPromocion(tip, pagu, llev, fechCad);
 			dispose();
 		}

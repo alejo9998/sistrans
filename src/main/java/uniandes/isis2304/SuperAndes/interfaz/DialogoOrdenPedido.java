@@ -63,7 +63,7 @@ public class DialogoOrdenPedido extends JDialog implements ActionListener
         
         JLabel tipos = new JLabel("Fecha esperada: ");
         JLabel fechaCad = new JLabel("Cantidad: ");
-        JLabel prov = new JLabel("Id Proveedor: ");
+        JLabel prov = new JLabel("Id ProductoProveedor: ");
         JLabel prec = new JLabel("precio: ");
         
         fechaEsperada= new JDateChooser();
