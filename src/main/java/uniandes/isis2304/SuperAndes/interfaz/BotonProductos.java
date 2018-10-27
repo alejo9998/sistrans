@@ -22,9 +22,16 @@ public class BotonProductos extends JPanel implements ActionListener
 	private JScrollPane scrollLista;
 
 	private JButton agregarProducto;
+	private final static String PRODUCTOS ="PRODUCTOS";
+	
+	private DialogoProductoSucursal dp;
+	
+	private interfazSucursal inter;
 
-	public BotonProductos()
+	public BotonProductos(interfazSucursal pInter)
 	{
+		inter=pInter;
+		
 		setBorder(new TitledBorder("Productos"));
 		setLayout(new BorderLayout());
 		lista = new JList<String>();
@@ -34,13 +41,22 @@ public class BotonProductos extends JPanel implements ActionListener
 		lista.setListData(a);
 
 		agregarProducto = new JButton("Agergar Producto");
+		agregarProducto.addActionListener(this);
+		agregarProducto.setActionCommand(PRODUCTOS);
+		
 		add(scrollLista,BorderLayout.CENTER);
 		add(agregarProducto,BorderLayout.SOUTH);
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+	public void actionPerformed(ActionEvent e) 
+	{
+		String a = e.getActionCommand();
+		if(a.equals(PRODUCTOS))
+		{
+			dp= new DialogoProductoSucursal(inter);
+			dp.setVisible(true);
+		}
 
 	}
 

@@ -15,7 +15,7 @@ import javax.swing.border.EmptyBorder;
 
 public class DialogoPromocion extends JDialog implements ActionListener
 {
-	private InterfazAdministrador inte;
+	private interfazSucursal inte;
 
 	private JComboBox<Integer> tipo;
 
@@ -32,7 +32,7 @@ public class DialogoPromocion extends JDialog implements ActionListener
 	private final static String CANCELAR="CANCELAR";
 
 
-	public DialogoPromocion(InterfazAdministrador inter) 
+	public DialogoPromocion(interfazSucursal inter) 
 	{
 		inte= inter;
 

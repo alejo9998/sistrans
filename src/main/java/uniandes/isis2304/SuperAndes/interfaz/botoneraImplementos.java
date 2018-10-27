@@ -27,6 +27,8 @@ public class botoneraImplementos extends JPanel implements ActionListener
 
 	private DialogoBodega db;
 	private DialogoCliente dc;	
+	private DialogoEstante de;
+	private DialogoCompra dv;
 	
 	private interfazSucursal inter;
 	
@@ -75,6 +77,16 @@ public class botoneraImplementos extends JPanel implements ActionListener
 		{
 			dc=new DialogoCliente(inter);
 			dc.setVisible(true);
+		}
+		else if (d.equals(AA_ESTANTE))
+		{
+			de = new DialogoEstante(inter);
+			de.setVisible(true);
+		}
+		else if (d.equals(AA_VENTA))
+		{
+			dv = new DialogoCompra(inter);
+			dv.setVisible(true);
 		}
 		// TODO Auto-generated method stub
 		

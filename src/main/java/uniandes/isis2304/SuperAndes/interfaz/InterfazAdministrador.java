@@ -45,8 +45,8 @@ public class InterfazAdministrador extends JFrame
 
 	public InterfazAdministrador()
 	{
-		tableConfig = openConfig ("Tablas BD", CONFIG_TABLAS);
-		superAndes = new SuperAndes (tableConfig);
+//		tableConfig = openConfig ("Tablas BD", CONFIG_TABLAS);
+//		superAndes = new SuperAndes (tableConfig);
 
 		setSize(800,430);
 		setLocationRelativeTo(null);
@@ -350,9 +350,9 @@ public class InterfazAdministrador extends JFrame
 
 	}
 
-	public void agregarCompra(String pFecha, String pCantidad, String pIdProduSucu, String pIdCliente, String pidFactura, String pTotal  )
+	public void agregarCompra( String pCantidad, String pIdProduSucu, String pIdCliente, String pidFactura, String pTotal  )
 	{
-		if(pFecha.equalsIgnoreCase("")|| pCantidad.equalsIgnoreCase("")|| pIdProduSucu.equalsIgnoreCase("")||pIdCliente.equalsIgnoreCase("") || pidFactura.equalsIgnoreCase("")|| pTotal.equalsIgnoreCase(""))
+		if( pCantidad.equalsIgnoreCase("")|| pIdProduSucu.equalsIgnoreCase("")||pIdCliente.equalsIgnoreCase("") || pidFactura.equalsIgnoreCase("")|| pTotal.equalsIgnoreCase(""))
 		{
 			JOptionPane.showMessageDialog(null, "Los campos no pueden ser vacios", "SuperAndes",JOptionPane.ERROR_MESSAGE);
 		}
@@ -379,7 +379,7 @@ public class InterfazAdministrador extends JFrame
 				}
 				else
 				{
-					VOCompra a =superAndes.adicionarCompra(pFecha, cant,tot, idProd, idClie, idFac);
+					VOCompra a =superAndes.adicionarCompra("(Select current_date from dual)", cant,tot, idProd, idClie, idFac);
 					String mensaje =a.toString();
 					panelDatos.actualizarInterfaz(mensaje);
 				}

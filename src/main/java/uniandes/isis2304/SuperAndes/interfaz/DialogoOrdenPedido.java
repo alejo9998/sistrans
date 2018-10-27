@@ -18,7 +18,7 @@ public class DialogoOrdenPedido extends JDialog implements ActionListener
 	/**
 	 * Interfaz principal
 	 */
-	private InterfazAdministrador inte;
+	private interfazSucursal inte;
 /**
  * precio de la orden
  */
@@ -36,8 +36,7 @@ public class DialogoOrdenPedido extends JDialog implements ActionListener
 	
 	private JTextField proveedor;
 	
-	private JTextField sucursal;
-
+	
 	private JButton aceptar;
 	private final static String ACEPTAR="ACEPTAR";
 
@@ -47,7 +46,7 @@ public class DialogoOrdenPedido extends JDialog implements ActionListener
 	public static final String NOENTREGADO="No Entregado";
 	private final static String CANCELAR="CANCELAR";
 	
-	public DialogoOrdenPedido(InterfazAdministrador inter) 
+	public DialogoOrdenPedido(interfazSucursal inter) 
 	{
 		inte= inter;
 		setTitle("Agregar Orden Pedido");
@@ -67,7 +66,6 @@ public class DialogoOrdenPedido extends JDialog implements ActionListener
         JLabel reap = new JLabel("Entregado: ");
         JLabel fechaCad = new JLabel("Cantidad: ");
         JLabel prov = new JLabel("Id Proveedor: ");
-        JLabel suc = new JLabel("Id Sucursal: ");
         JLabel prec = new JLabel("precio: ");
         
         fechaEsperada= new JTextField();
@@ -76,7 +74,6 @@ public class DialogoOrdenPedido extends JDialog implements ActionListener
         calificacion = new JComboBox<>(cal);
         String a[] ={ENTREGADO,NOENTREGADO};
         entregado = new JComboBox<String>(a);
-        sucursal = new JTextField();
         cantidad = new JTextField();
         proveedor = new JTextField();
         precio= new JTextField();
@@ -103,8 +100,6 @@ public class DialogoOrdenPedido extends JDialog implements ActionListener
 		campos.add(cantidad);
 		campos.add(prov);
 		campos.add(proveedor);
-		campos.add(suc);
-		campos.add(sucursal);
 		campos.add(aceptar);
 		campos.add(cancelar);
 
@@ -120,10 +115,9 @@ public class DialogoOrdenPedido extends JDialog implements ActionListener
 			String cal = (String) calificacion.getSelectedItem();
 			String idProv = proveedor.getText();
 			String entre = (String)entregado.getSelectedItem();
-			String idSuc = sucursal.getText();
 			String prec = precio.getText();
 			String cant = cantidad.getText();
-			inte.agregarOrdenPedido(fechEntr, fechEsp, cal, idProv, idSuc,prec,entre,cant);
+			inte.agregarOrdenPedido(fechEntr, fechEsp, cal, idProv,prec,entre,cant);
 			
 			dispose();
 		}

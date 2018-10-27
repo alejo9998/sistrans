@@ -17,12 +17,7 @@ public class DialogoCompra extends JDialog implements ActionListener
 	/**
 	 * Clase principal de la interfaz
 	 */
-	private InterfazAdministrador inte;
-
-	/**
-	 * fecha
-	 */
-	private JTextField fecha;
+	private interfazSucursal inte;
 
 	/**
 	 * cantidad
@@ -70,7 +65,7 @@ public class DialogoCompra extends JDialog implements ActionListener
 	 * Dialogo de comprar
 	 * @param inter interfaz
 	 */
-	public DialogoCompra(InterfazAdministrador inter) 
+	public DialogoCompra(interfazSucursal inter) 
 	{
 		inte= inter;
 		setTitle("Agregar Compra");
@@ -79,12 +74,11 @@ public class DialogoCompra extends JDialog implements ActionListener
 		setLocationRelativeTo(null);
 
 		JPanel campos = new JPanel( );
-		campos.setLayout( new GridLayout( 7, 2, 3, 3 ) );
+		campos.setLayout( new GridLayout( 6, 2, 3, 3 ) );
 		campos.setBorder( new EmptyBorder( 15, 15, 15, 15 ) );
 		add( campos, BorderLayout.CENTER );
 
 
-		JLabel tipos = new JLabel("Fecha de la compra: ");
 		JLabel m1= new JLabel("Cantidad: ");
 		JLabel n1 = new JLabel("Producto: ");
 		JLabel reap = new JLabel("Cliente: ");
@@ -92,7 +86,7 @@ public class DialogoCompra extends JDialog implements ActionListener
 		JLabel total = new JLabel("Total: ");
 
 
-		fecha= new JTextField();
+	
 		cantidad = new JTextField();
 		productoSucursal = new JTextField();
 		cliente = new JTextField();
@@ -106,8 +100,6 @@ public class DialogoCompra extends JDialog implements ActionListener
 		cancelar.setActionCommand(CANCELAR);
 
 
-		campos.add(tipos);
-		campos.add(fecha);
 		campos.add(m1);
 		campos.add(cantidad);
 		campos.add(n1);
@@ -133,13 +125,12 @@ public class DialogoCompra extends JDialog implements ActionListener
 
 		if(mensaje.equalsIgnoreCase(ACEPTAR))
 		{
-			String fechCom = fecha.getText();
 			String canti = cantidad.getText();
 			String prod = productoSucursal.getText();
 			String clie = cliente.getText();
 			String fac = factura.getText();
 			String total = totalPagado.getText();
-			inte.agregarCompra(fechCom, canti, prod, clie, fac,total);
+			inte.agregarCompra(canti, prod, clie, fac, total);
 			dispose();
 		}
 		else if (mensaje.equalsIgnoreCase(CANCELAR))

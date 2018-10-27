@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -15,10 +16,9 @@ import javax.swing.border.EmptyBorder;
 public class DialogoEstante extends JDialog implements ActionListener
 {
 
-	private InterfazAdministrador inte;
+	private interfazSucursal inte;
 	
-
-	private JTextField tipo;
+	private JComboBox<String> tipo;
 
 	private JTextField peso;
 
@@ -26,15 +26,13 @@ public class DialogoEstante extends JDialog implements ActionListener
 	
 	private JTextField nivelReaprovisionamiento;
 	
-	private JTextField Sucursal;
-
 	private JButton aceptar;
 	private final static String ACEPTAR="ACEPTAR";
 
 	private JButton cancelar;
 	private final static String CANCELAR="CANCELAR";
 	
-	public DialogoEstante(InterfazAdministrador inter) 
+	public DialogoEstante(interfazSucursal inter) 
 	{
 		inte= inter;
 		setTitle("Agregar Estante");
@@ -43,7 +41,7 @@ public class DialogoEstante extends JDialog implements ActionListener
 		setLocationRelativeTo(null);
 		
         JPanel campos = new JPanel( );
-        campos.setLayout( new GridLayout( 6, 2, 3, 3 ) );
+        campos.setLayout( new GridLayout( 5, 2, 3, 3 ) );
         campos.setBorder( new EmptyBorder( 15, 15, 15, 15 ) );
         add( campos, BorderLayout.CENTER );
         
@@ -51,14 +49,13 @@ public class DialogoEstante extends JDialog implements ActionListener
         JLabel m1= new JLabel("Peso: ");
         JLabel n1 = new JLabel("Volumen: ");
         JLabel reap = new JLabel("Nivel de reaprovisionamiento: ");
-        JLabel fechaCad = new JLabel("Id Sucursal: ");
-        
+               
         
         peso= new JTextField();
         volumen = new JTextField();
         nivelReaprovisionamiento = new JTextField();
-        Sucursal = new JTextField();
-        tipo = new JTextField();
+        String [] g ={"Albarrotes","Perecederos","Aseo Personal"};
+        tipo = new JComboBox<String>(g);
         
         aceptar = new JButton("Aceptar");
 		aceptar.addActionListener(this);
@@ -76,8 +73,6 @@ public class DialogoEstante extends JDialog implements ActionListener
 		campos.add(volumen);
 		campos.add(reap);
 		campos.add(nivelReaprovisionamiento);
-		campos.add(fechaCad);
-		campos.add(Sucursal);
 		campos.add(aceptar);
 		campos.add(cancelar);
 
@@ -90,11 +85,10 @@ public class DialogoEstante extends JDialog implements ActionListener
 		if(mensaje.equalsIgnoreCase(ACEPTAR))
 		{
 			String pes = peso.getText();
-			String tip = tipo.getText();
+			String tip = (String)tipo.getSelectedItem();
 			String vol = volumen.getText();
 			String reapro= nivelReaprovisionamiento.getText();
-			String idSuc = Sucursal.getText();
-			inte.agregarEstante(tip, pes, vol, reapro, idSuc);
+			inte.agregarEstante(tip, pes, vol, reapro);
 			dispose();
 		}
 		else if(mensaje.equalsIgnoreCase(CANCELAR))
