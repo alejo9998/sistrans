@@ -33,7 +33,7 @@ public class DialogoSucursal extends JDialog implements ActionListener
 	public DialogoSucursal(InterfazAdministrador inter) 
 	{
 		inte = inter;
-		
+		inte.setVisible(true);
 		setTitle("Agregar Sucursal");
 		setLayout(new BorderLayout());
 		setSize(350,200);

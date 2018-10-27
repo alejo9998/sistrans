@@ -19,6 +19,7 @@ class SQLBodega {
 	}
 	
 	public long adicionarBodega (PersistenceManager pm , long idBodega, double volumen, double peso, String tipo, long idSucursal) {
+		System.out.println(idBodega+" " + volumen+" "+peso +" "+tipo +idSucursal );
 		Query q = pm.newQuery(SQL, "INSERT INTO " + pp.darTablaBodega() + "(idBodega, volumen, peso, tipo, sucursal) values (?, ?, ?, ?, ?)");
 		q.setParameters(idBodega, volumen, peso, tipo, idSucursal);
 		return (long) q.executeUnique();

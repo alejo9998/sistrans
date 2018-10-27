@@ -24,13 +24,15 @@ public class botoneraImplementos extends JPanel implements ActionListener
 	private JButton agregarVenta;
 	private final static String AA_VENTA="AGREGARVENTA";
 	
-	private String id;
+
 	private DialogoBodega db;
+	private DialogoCliente dc;	
+	
 	private interfazSucursal inter;
 	
 	public botoneraImplementos(String pId,interfazSucursal r)
 	{
-		id = pId;
+		
 		inter=r;
 		
 		setBorder(new TitledBorder("Implementos"));
@@ -68,6 +70,11 @@ public class botoneraImplementos extends JPanel implements ActionListener
 		{
 			db = new DialogoBodega(inter);
 			db.setVisible(true);	
+		}
+		else if(d.equals(AA_CLIENTE))
+		{
+			dc=new DialogoCliente(inter);
+			dc.setVisible(true);
 		}
 		// TODO Auto-generated method stub
 		

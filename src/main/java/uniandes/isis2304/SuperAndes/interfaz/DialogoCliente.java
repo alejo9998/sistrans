@@ -17,7 +17,7 @@ public class DialogoCliente extends JDialog implements ActionListener
 	/**
 	 * Atributo con la interfaz
 	 */
-	private InterfazAdministrador inte; 
+	private interfazSucursal inte; 
 	
 	/**
 	 * nombre del cliente
@@ -32,6 +32,8 @@ public class DialogoCliente extends JDialog implements ActionListener
 	 * direccion del cliente
 	 */
 	private JTextField txtDireccion;
+	
+	private JTextField txtIdetificacion;
 	
 	/**
 	 * boton de aceptar
@@ -56,7 +58,7 @@ public class DialogoCliente extends JDialog implements ActionListener
 	 * Interfaz del dialogo
 	 * @param inter
 	 */
-	public DialogoCliente(InterfazAdministrador inter)
+	public DialogoCliente(interfazSucursal inter)
 	{
 		inte = inter;
 		
@@ -66,7 +68,7 @@ public class DialogoCliente extends JDialog implements ActionListener
 		setLocationRelativeTo(null);
 		
         JPanel campos = new JPanel( );
-        campos.setLayout( new GridLayout( 4, 2, 3, 3 ) );
+        campos.setLayout( new GridLayout( 5, 2, 3, 3 ) );
         campos.setBorder( new EmptyBorder( 15, 15, 15, 15 ) );
         add( campos, BorderLayout.CENTER );
 		
@@ -78,6 +80,7 @@ public class DialogoCliente extends JDialog implements ActionListener
 		txtnombre = new JTextField();
 		txtCorreo = new JTextField();
 		txtDireccion = new JTextField();
+		txtIdetificacion= new JTextField();
 		
 		aceptar = new JButton("Aceptar");
 		aceptar.addActionListener(this);
@@ -92,6 +95,8 @@ public class DialogoCliente extends JDialog implements ActionListener
 		campos.add(txtCorreo);
 		campos.add(dir);
 		campos.add(txtDireccion);
+		campos.add(identi);
+		campos.add(txtIdetificacion);
 		campos.add(aceptar);
 		campos.add(cancelar);
 	}
@@ -110,7 +115,8 @@ public class DialogoCliente extends JDialog implements ActionListener
 			String nombre = txtnombre.getText();
 			String corr= txtCorreo.getText();
 			String direc= txtDireccion.getText();
-			inte.agregarCliente(nombre, corr, direc);
+			String identif= txtIdetificacion.getText();
+//			inte.agregarCliente(nombre, corr, direc);
 			
 			dispose();
 		}

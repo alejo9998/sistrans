@@ -45,8 +45,8 @@ public class InterfazAdministrador extends JFrame
 
 	public InterfazAdministrador()
 	{
-				tableConfig = openConfig ("Tablas BD", CONFIG_TABLAS);
-				superAndes = new SuperAndes (tableConfig);
+		tableConfig = openConfig ("Tablas BD", CONFIG_TABLAS);
+		superAndes = new SuperAndes (tableConfig);
 
 		setSize(800,430);
 		setLocationRelativeTo(null);
@@ -225,7 +225,7 @@ public class InterfazAdministrador extends JFrame
 
 				volum = Double.parseDouble(pVol);
 
-				idSucu = Long.parseLong(idSuc);
+				idSucu = Long.parseLong("1538");
 				
 
 				if(peso<0||volum<0||idSucu<0)
@@ -234,14 +234,16 @@ public class InterfazAdministrador extends JFrame
 				}
 				else
 				{
-					System.out.println("entro");
+					
 					VOBodega a =superAndes.adicionarBodega(volum, peso, pTipo, idSucu);
 					String mensaje =a.toString();
 					panelDatos.actualizarInterfaz(mensaje);
+					
 				}
 			}
 			catch(Exception e)
 			{
+				System.out.println(e.getMessage());
 				
 				JOptionPane.showMessageDialog(null, "Introduzca Valores Validos", "SuperAndes",JOptionPane.ERROR_MESSAGE);
 			}
@@ -267,7 +269,7 @@ public class InterfazAdministrador extends JFrame
 				volumen = Double.parseDouble(volum);
 				peso = Double.parseDouble(pPeso);
 				niveApr = Integer.parseInt(nivAprovi);
-				idSucu =Long.parseLong(idSuc);
+				idSucu =Long.parseLong("1538");
 				if(volumen<0|| peso<0||niveApr<0||idSucu<0)
 				{
 					JOptionPane.showMessageDialog(null, "Los valores deben ser mayor a 0", "SuperAndes",JOptionPane.ERROR_MESSAGE);

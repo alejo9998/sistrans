@@ -27,6 +27,7 @@ public class interfazSucursal extends JFrame
 	public interfazSucursal(String pId)
 	{
 		inter = new InterfazAdministrador();
+		inter.setVisible(true);
 		id=pId;
 		setTitle("Sucursal " + id );
 		baner = new bannerSucursal();
@@ -47,7 +48,6 @@ public class interfazSucursal extends JFrame
 		if(idSuc.equalsIgnoreCase("2"))
 		{
 			interfazSucursal inter = new interfazSucursal(idSuc);
-			
 			inter.setVisible(true);	
 		}
 		else
@@ -59,6 +59,11 @@ public class interfazSucursal extends JFrame
 	public void agregarBodega(String pTipo,String pVol,String pPeso)
 	{
 		inter.agregarBodega(pTipo, pVol, pPeso, id);
+	}
+	
+	public void agregarCliente(String pNombre,String pCorreo,String pDireccion,String identificacion)
+	{
+		inter.agregarCliente(pNombre, pCorreo, pDireccion);
 	}
 
 

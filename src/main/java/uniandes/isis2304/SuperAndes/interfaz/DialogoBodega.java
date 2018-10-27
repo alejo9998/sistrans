@@ -36,10 +36,7 @@ public class DialogoBodega extends JDialog implements ActionListener
 	 */
 	private JTextField volumen;
 
-	/**
-	 * id de la sucursal
-	 */
-	private JTextField Sucursal;
+
 
 	/**
 	 * Boton de aceptar
@@ -77,7 +74,7 @@ public class DialogoBodega extends JDialog implements ActionListener
 		setLocationRelativeTo(null);
 
 		JPanel campos = new JPanel( );
-		campos.setLayout( new GridLayout( 5, 2, 3, 3 ) );
+		campos.setLayout( new GridLayout( 4, 2, 3, 3 ) );
 		campos.setBorder( new EmptyBorder( 15, 15, 15, 15 ) );
 		add( campos, BorderLayout.CENTER );
 
@@ -85,12 +82,12 @@ public class DialogoBodega extends JDialog implements ActionListener
 		JLabel tipos = new JLabel("Tipo de Bodega: ");
 		JLabel m1= new JLabel("Peso: ");
 		JLabel n1 = new JLabel("Volumen: ");
-		JLabel fechaCad = new JLabel("Id Sucursal: ");
+		
 
 
 		peso= new JTextField();
 		volumen = new JTextField();
-		Sucursal = new JTextField();
+	
 		String [] g ={"Albarrotes","Perecederos","Aseo Personal"};
 		tipo = new JComboBox<>(g);
 
@@ -107,8 +104,8 @@ public class DialogoBodega extends JDialog implements ActionListener
 		campos.add(peso);
 		campos.add(n1);
 		campos.add(volumen);
-		campos.add(fechaCad);
-		campos.add(Sucursal);
+		
+		
 		campos.add(aceptar);
 		campos.add(cancelar);
 	}
@@ -125,9 +122,9 @@ public class DialogoBodega extends JDialog implements ActionListener
 			String pes = peso.getText();
 			String tip = (String)tipo.getSelectedItem();
 			String vol = volumen.getText();
-			String idSuc = Sucursal.getText();
+		
 			inte.agregarBodega(tip, vol, pes);
-			System.out.println(tip);
+			
 			dispose();
 		}
 		else if(mensaje.equalsIgnoreCase(CANCELAR))
