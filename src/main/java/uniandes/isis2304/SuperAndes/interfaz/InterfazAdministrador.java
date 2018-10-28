@@ -162,6 +162,11 @@ public class InterfazAdministrador extends JFrame
 	{
 		return superAndes.darProductosSucursal().toArray();
 	}
+	
+	public Object[] darCliente()
+	{
+		return superAndes.darClientes().toArray();
+	}
 	public Estante darEstante(Long idEstante)
 	{
 		return superAndes.darEstantePorId(idEstante);

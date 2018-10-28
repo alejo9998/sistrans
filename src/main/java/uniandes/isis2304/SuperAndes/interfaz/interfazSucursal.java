@@ -59,6 +59,12 @@ public class interfazSucursal extends JFrame
 	{
 		return Long.parseLong(id);
 	}
+	
+	public Object[] darCliente()
+	{
+		return inter.darCliente();
+	}
+	
 	public void verificar( String idSuc) throws Exception
 	{
 		try

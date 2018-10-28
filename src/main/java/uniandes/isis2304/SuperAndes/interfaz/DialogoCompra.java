@@ -6,11 +6,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+
+import uniandes.isis2304.SuperAndes.negocio.Cliente;
 
 public class DialogoCompra extends JDialog implements ActionListener
 {
@@ -61,6 +64,10 @@ public class DialogoCompra extends JDialog implements ActionListener
 	 */
 	private final static String CANCELAR="CANCELAR";
 
+	private JComboBox<String> clientes;
+	
+	private String [] items;
+	
 	/**
 	 * Dialogo de comprar
 	 * @param inter interfaz
@@ -70,51 +77,46 @@ public class DialogoCompra extends JDialog implements ActionListener
 		inte= inter;
 		setTitle("Agregar Compra");
 		setLayout(new BorderLayout());
-		setSize(300,300);
+		setSize(200,150);
 		setLocationRelativeTo(null);
+		setLayout(new GridLayout(3, 1));
 
 		JPanel campos = new JPanel( );
-		campos.setLayout( new GridLayout( 6, 2, 3, 3 ) );
-		campos.setBorder( new EmptyBorder( 15, 15, 15, 15 ) );
-		add( campos, BorderLayout.CENTER );
-
-
-		JLabel m1= new JLabel("Cantidad: ");
-		JLabel n1 = new JLabel("Producto: ");
-		JLabel reap = new JLabel("Cliente: ");
-		JLabel fechaCad = new JLabel("Factura: ");
-		JLabel total = new JLabel("Total: ");
-
-
-	
-		cantidad = new JTextField();
-		productoSucursal = new JTextField();
-		cliente = new JTextField();
-		factura = new JTextField();
-		totalPagado = new JTextField();
+		campos.setLayout(new GridLayout(1, 2));
 		aceptar = new JButton("Aceptar");
 		aceptar.addActionListener(this);
 		aceptar.setActionCommand(ACEPTAR);
 		cancelar = new JButton("Cancelar");
 		cancelar.addActionListener(this);
 		cancelar.setActionCommand(CANCELAR);
-
-
-		campos.add(m1);
-		campos.add(cantidad);
-		campos.add(n1);
-		campos.add(productoSucursal);
-		campos.add(reap);
-		campos.add(cliente);
-		campos.add(total);
-		campos.add(totalPagado);
-		campos.add(fechaCad);
-		campos.add(factura);
+		
 		campos.add(aceptar);
 		campos.add(cancelar);
-
+		
+		JLabel aux = new JLabel("Seleccione Cliente");
+		aux.setHorizontalAlignment(JLabel.CENTER);
+		datos();
+		clientes = new JComboBox<>(items);
+		add(aux);
+		add(clientes);
+		add(campos);
 	}
+	
 
+	public void datos()
+	{
+		Object[] a =inte.darCliente();
+		items= new String [a.length];
+		for(int i=0;i<a.length;i++)
+		{
+			
+			Cliente aux= (Cliente)a[i];
+//			
+			items[i]=(String)aux.getNombre();
+		}
+		
+	}
+	
 	/**
 	 * manejo de eventos del usuario
 	 */
@@ -125,12 +127,10 @@ public class DialogoCompra extends JDialog implements ActionListener
 
 		if(mensaje.equalsIgnoreCase(ACEPTAR))
 		{
-			String canti = cantidad.getText();
-			String prod = productoSucursal.getText();
-			String clie = cliente.getText();
-			String fac = factura.getText();
-			String total = totalPagado.getText();
-			inte.agregarCompra(canti, prod, clie, fac, total);
+			int a = clientes.getSelectedIndex();
+			Cliente aux =(Cliente) inte.darCliente()[a];
+			InterfazCliente interf= new InterfazCliente(aux);
+			interf.setVisible(true);
 			dispose();
 		}
 		else if (mensaje.equalsIgnoreCase(CANCELAR))

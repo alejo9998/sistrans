@@ -13,7 +13,9 @@ import javax.swing.border.TitledBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-public class Cliente extends JFrame implements ActionListener,ListSelectionListener
+import uniandes.isis2304.SuperAndes.negocio.Cliente;
+
+public class InterfazCliente extends JFrame implements ActionListener,ListSelectionListener
 {
 	private JList<String> carrito;
 	private JList<String> productos;
@@ -43,20 +45,33 @@ public class Cliente extends JFrame implements ActionListener,ListSelectionListe
 	private ArrayList<String> car;
 
 	private String [] f;
+	
+	private long id;
 
-	public Cliente() 
+	public InterfazCliente(Cliente clie) 
 	{
 		car= new ArrayList<String>();
-
+		id = clie.getIdentificacion();
 		setSize(620,600);
 		setLocationRelativeTo(null);
 		setLayout(new BorderLayout());
+		setTitle("Carrito del cliente");
 
 		JPanel aux = new JPanel();
-		JLabel Encabezado = new JLabel("Cliente numero: "+"123");
+		aux.setLayout(new GridLayout(2, 2));
+		JLabel Encabezado = new JLabel("Cliente numero: "+id);
+		Encabezado.setHorizontalAlignment(JLabel.CENTER);
+		JLabel Nom = new JLabel("Nombre: "+clie.getNombre());
+		Nom.setHorizontalAlignment(JLabel.CENTER);
+		JLabel cor= new JLabel("Correo: " + clie.getCorreo());
+		cor.setHorizontalAlignment(JLabel.CENTER);
+		JLabel dir = new JLabel("Direccion: "+ clie.getDireccion());
+		dir.setHorizontalAlignment(JLabel.CENTER);
+		aux.add( Nom);
+		aux.add(cor);
+		aux.add(dir);
 		aux.add(Encabezado);
 
-		Encabezado.setFont(new Font("Courier",Font.BOLD,36));
 		add(aux,BorderLayout.NORTH);
 
 		JPanel productosPanel = new JPanel();
@@ -208,11 +223,6 @@ public class Cliente extends JFrame implements ActionListener,ListSelectionListe
 		}
 
 	}
-	public static void main(String[] args) 
-	{
-		// TODO Auto-generated method stub
-		Cliente inter = new Cliente();
-		inter.setVisible(true);
-	}
+
 
 }

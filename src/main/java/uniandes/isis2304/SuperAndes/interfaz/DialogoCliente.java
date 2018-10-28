@@ -116,7 +116,7 @@ public class DialogoCliente extends JDialog implements ActionListener
 			String corr= txtCorreo.getText();
 			String direc= txtDireccion.getText();
 			String identif= txtIdetificacion.getText();
-//			inte.agregarCliente(nombre, corr, direc);
+			inte.agregarCliente(nombre, corr, direc, identif);
 			
 			dispose();
 		}
