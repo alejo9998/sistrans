@@ -519,7 +519,7 @@ public class SuperAndes {
 	public List<VOProductoProveedor> darVOProductosProveedor(){
 		log.info("Generando los VO de ProductosProveedor");
 		List<VOProductoProveedor> voProductosProveedor = new LinkedList<VOProductoProveedor>();
-		System.out.println(pp.darProductosProveedor().size());
+		//System.out.println(pp.darProductosProveedor().size());
 		for (ProductoProveedor productoProveedor : pp.darProductosProveedor()) {
 			//System.out.println("PRUEBA DEF "+productoProveedor);
 			voProductosProveedor.add(productoProveedor); 

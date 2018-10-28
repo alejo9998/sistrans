@@ -9011,3 +9011,1225 @@ ORA-02291: restricciÃ³n de integridad (ISIS2304C281820.FK_SUCURSALORDENPEDIDO) v
 00:46:13,905 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando clientes 3 clientes existentes
 00:46:17,299 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando clientes
 00:46:17,304 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando clientes 3 clientes existentes
+17:23:44,705 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando la unicidad sobre Compra
+17:23:44,769 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+17:23:46,915 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:23:47,303 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:23:47,304 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:23:47,304 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+17:23:47,356 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 0 compras existentes
+17:23:47,356 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+17:23:47,427 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1664, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+17:23:47,427 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Carne
+17:23:47,496 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1665, volumen=5000.0, peso=5000.0, tipo=Carne, sucursal=1664]
+17:23:47,496 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Carne
+17:23:47,565 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1666, volumen=2500.0, peso=2500.0, tipo=Carne, nivelAprovisionamiento=1000, sucursal=1664]
+17:23:47,565 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:23:47,639 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=1667, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=CARNE, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=1665, estante=1666, promocion=null]
+17:23:47,640 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+17:23:47,717 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1668, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+17:23:47,717 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: 
+17:23:47,785 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_FACTURA(idFactura, descripcion) values (?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_FACTURA"."DESCRIPCION")
+
+17:23:47,805 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: null
+17:23:47,805 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:23:47,961 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:23:47,961 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:43,288 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con datos de usuario correctos, pero sin crear el esquema
+17:24:43,342 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+17:24:45,056 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Proveedores
+17:24:45,179 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Prueba de tabla inexistente correcta. La excepción generada es: javax.jdo.JDODataStoreException
+17:24:45,179 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - La causa es: java.sql.SQLSyntaxErrorException: ORA-00942: la tabla o vista no existe
+
+17:24:45,179 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:45,372 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "DELETE FROM B_ORDENPEDIDO".
+ORA-00942: la tabla o vista no existe
+
+17:24:45,394 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:45,420 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con una base de datos que no existe
+17:24:45,420 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+17:24:45,507 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Prueba realizada exitosamente. La excepción generada es: javax.jdo.JDOFatalUserException
+17:24:45,507 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - La causa es: javax.jdo.JDOFatalDataStoreException: Listener refused the connection with the following error:
+ORA-12505, TNS:listener does not currently know of SID given in connect descriptor
+ 
+NestedThrowables:
+java.sql.SQLException: Listener refused the connection with the following error:
+ORA-12505, TNS:listener does not currently know of SID given in connect descriptor
+ 
+17:24:45,508 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con datos de usuario incorrectos
+17:24:45,508 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+17:24:46,679 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Prueba realizada exitosamente. La excepción generada es: javax.jdo.JDOFatalUserException
+17:24:46,679 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - La causa es: javax.jdo.JDOFatalDataStoreException: ORA-01017: invalid username/password; logon denied
+
+NestedThrowables:
+java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+
+17:24:46,680 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Probando el acceso a la base de datos con datos válidos (BD, credenciales, esquema
+17:24:46,680 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Se encontró un archivo de configuración de tablas válido
+17:24:47,022 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Conexión realizada correstamente
+17:24:47,022 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Cerrando la conexión
+17:24:47,034 (main) INFO  [uniandes.isis2304.SuperAndes.test.ConexionTest] - Conexión cerrada
+17:24:47,035 (main) INFO  [uniandes.isis2304.SuperAndes.test.ClienteTest] - Probando la unicidad sobre Cliente
+17:24:47,035 (main) INFO  [uniandes.isis2304.SuperAndes.test.ClienteTest] - Se encontró un archivo de configuración de tablas válido
+17:24:47,400 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:47,724 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:24:47,725 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:47,725 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de clientes
+17:24:47,767 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Clientes: 0 clientes existentes
+17:24:47,767 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+17:24:47,838 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1670, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+17:24:47,838 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de clientesIndividuos
+17:24:47,873 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ClientesIndividuo: 1 clientesIndividuo existentes
+17:24:47,873 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+17:24:47,899 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_CLIENTE) violada
+
+17:24:47,920 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: null
+17:24:47,920 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : Alejandro
+17:24:47,988 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : Cliente [identificacion=1671, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=Cra6#1-39]
+17:24:47,989 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de clientesEmpresa
+17:24:48,023 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ClientesEmpresa: 1 clientesEmpresa existentes
+17:24:48,023 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : Gran via
+17:24:48,049 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_CLIENTE) violada
+
+17:24:48,069 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : null
+17:24:48,069 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:48,219 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:24:48,219 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:48,243 (main) INFO  [uniandes.isis2304.SuperAndes.test.ClienteTest] - Probando RESTRICCIONES DE CHEQUEO sobre Cliente
+17:24:48,243 (main) INFO  [uniandes.isis2304.SuperAndes.test.ClienteTest] - Se encontró un archivo de configuración de tablas válido
+17:24:48,580 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:48,896 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:24:48,896 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:48,896 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de clientes
+17:24:48,930 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Clientes: 0 clientes existentes
+17:24:48,930 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+17:24:49,000 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1672, nombre=Alejandro, correo=chonal@hotmail.com, direccion=null]
+17:24:49,000 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de clientesIndividuos
+17:24:49,033 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ClientesIndividuo: 1 clientesIndividuo existentes
+17:24:49,033 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : null
+17:24:49,090 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_CLIENTE"."NOMBRE")
+
+17:24:49,111 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: null
+17:24:49,111 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : melaPela
+17:24:49,168 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_CLIENTE"."CORREO")
+
+17:24:49,190 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: null
+17:24:49,190 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : null
+17:24:49,247 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_CLIENTE"."NOMBRE")
+
+17:24:49,268 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : null
+17:24:49,268 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : melaPela
+17:24:49,326 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_CLIENTE"."CORREO")
+
+17:24:49,347 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : null
+17:24:49,347 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:49,499 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:24:49,499 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:49,523 (main) INFO  [uniandes.isis2304.SuperAndes.test.FacturaTest] - Probando la unicidad sobre Factura
+17:24:49,523 (main) INFO  [uniandes.isis2304.SuperAndes.test.FacturaTest] - Se encontró un archivo de configuración de tablas válido
+17:24:49,849 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:50,162 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:24:50,162 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:50,162 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Factura
+17:24:50,195 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Facturas: 0 facturas existentes
+17:24:50,195 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: 3 paquetes de papas de 1000 pesos
+17:24:50,261 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: Factura [idFactura=1677, descripcion=3 paquetes de papas de 1000 pesos]
+17:24:50,261 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Factura
+17:24:50,293 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Facturas: 1 facturas existentes
+17:24:50,293 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: 3 paquetes de papas de 1000 pesos
+17:24:50,319 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_FACTURA(idFactura, descripcion) values (?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_FACTURA) violada
+
+17:24:50,340 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: null
+17:24:50,340 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:50,482 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:24:50,483 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:50,505 (main) INFO  [uniandes.isis2304.SuperAndes.test.FacturaTest] - Probando RESTRICCIONES DE CHEQUEO sobre Factura
+17:24:50,505 (main) INFO  [uniandes.isis2304.SuperAndes.test.FacturaTest] - Se encontró un archivo de configuración de tablas válido
+17:24:50,843 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:51,156 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:24:51,156 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:51,156 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Factura
+17:24:51,189 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Facturas: 0 facturas existentes
+17:24:51,189 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: 3 Pollos, total: 10000
+17:24:51,257 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: Factura [idFactura=1678, descripcion=3 Pollos, total: 10000]
+17:24:51,257 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Factura
+17:24:51,289 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Facturas: 1 facturas existentes
+17:24:51,289 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: null
+17:24:51,344 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_FACTURA(idFactura, descripcion) values (?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_FACTURA"."DESCRIPCION")
+
+17:24:51,365 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: null
+17:24:51,365 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:51,512 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:24:51,512 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:51,534 (main) INFO  [uniandes.isis2304.SuperAndes.test.EstanteTest] - Probando RESTRICCIONES DE CHEQUEO sobre Estante
+17:24:51,534 (main) INFO  [uniandes.isis2304.SuperAndes.test.EstanteTest] - Se encontró un archivo de configuración de tablas válido
+17:24:51,856 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:52,167 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:24:52,167 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:52,167 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando VO de Estantes
+17:24:52,201 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Estantes: 0 Estantes existentes
+17:24:52,201 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : SuperAndino
+17:24:52,270 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1680, ciudad=Zipaquira, direccion=cra 6 #1-39, nombre=SuperAndino]
+17:24:52,270 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: CARNE
+17:24:52,338 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1681, volumen=2.6, peso=1.0, tipo=CARNE, nivelAprovisionamiento=50, sucursal=1680]
+17:24:52,338 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando VO de Estantes
+17:24:52,370 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Estantes: 1 Estantes existentes
+17:24:52,370 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: CARNE
+17:24:52,425 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ESTANTE(idEstante, volumen, peso, tipo, nivelAprovisionamiento, sucursal) values (?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_VOLUMENESTANTE) violada
+
+17:24:52,446 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: null
+17:24:52,446 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: CARNE
+17:24:52,504 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ESTANTE(idEstante, volumen, peso, tipo, nivelAprovisionamiento, sucursal) values (?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PESOESTANTE) violada
+
+17:24:52,525 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: null
+17:24:52,525 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: null
+17:24:52,580 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ESTANTE(idEstante, volumen, peso, tipo, nivelAprovisionamiento, sucursal) values (?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_ESTANTE"."TIPO")
+
+17:24:52,601 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: null
+17:24:52,601 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: CARNE
+17:24:52,655 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ESTANTE(idEstante, volumen, peso, tipo, nivelAprovisionamiento, sucursal) values (?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_NIVELAPROVISIONAMIENTO) violada
+
+17:24:52,676 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: null
+17:24:52,676 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:52,820 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:24:52,820 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:52,843 (main) INFO  [uniandes.isis2304.SuperAndes.test.EstanteTest] - Probando la unicidad e integridad sobre Estante
+17:24:52,843 (main) INFO  [uniandes.isis2304.SuperAndes.test.EstanteTest] - Se encontró un archivo de configuración de tablas válido
+17:24:53,168 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:53,487 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:24:53,487 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:53,487 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando VO de Estantes
+17:24:53,520 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Estantes: 0 Estantes existentes
+17:24:53,520 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : SuperAndino
+17:24:53,587 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1686, ciudad=Zipaquira, direccion=cra 6 #1-39, nombre=SuperAndino]
+17:24:53,587 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: CARNE
+17:24:53,657 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1687, volumen=2.6, peso=1.0, tipo=CARNE, nivelAprovisionamiento=50, sucursal=1686]
+17:24:53,657 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando VO de Estantes
+17:24:53,690 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Estantes: 1 Estantes existentes
+17:24:53,690 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: CARNE
+17:24:53,715 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ESTANTE(idEstante, volumen, peso, tipo, nivelAprovisionamiento, sucursal) values (?, ?, ?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_ESTANTE) violada
+
+17:24:53,736 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: null
+17:24:53,736 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: CARNE
+17:24:53,794 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ESTANTE(idEstante, volumen, peso, tipo, nivelAprovisionamiento, sucursal) values (?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_SUCURSALESTANTE) violada - clave principal no encontrada
+
+17:24:53,815 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: null
+17:24:53,815 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:53,966 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:24:53,966 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:53,990 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando la unicidad sobre Sucursal
+17:24:53,990 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+17:24:54,320 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:54,634 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:24:54,634 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:54,634 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales
+17:24:54,665 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales: 0 sucursales existentes
+17:24:54,665 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : SuperAndino
+17:24:54,733 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1689, ciudad=Zipaquira, direccion=cra 6 #1-39, nombre=SuperAndino]
+17:24:54,733 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales
+17:24:54,766 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales: 1 sucursales existentes
+17:24:54,766 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : SuperAndino
+17:24:54,791 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_SUCURSAL(idSucursal, ciudad, direccion, nombre) values (?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_SUCURSAL) violada
+
+17:24:54,811 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: null
+17:24:54,811 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:54,961 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:24:54,961 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:54,983 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando RESTRICCIONES DE CHEQUEO sobre Sucursal
+17:24:54,984 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+17:24:55,311 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:55,622 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:24:55,622 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:55,622 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales
+17:24:55,656 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales: 0 sucursales existentes
+17:24:55,656 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : SuperAndino
+17:24:55,724 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1690, ciudad=Zipaquira, direccion=cra 6 #1-39, nombre=SuperAndino]
+17:24:55,724 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales
+17:24:55,758 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Sucursales: 1 sucursales existentes
+17:24:55,758 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : null
+17:24:55,815 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_SUCURSAL(idSucursal, ciudad, direccion, nombre) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_SUCURSAL"."NOMBRE")
+
+17:24:55,835 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: null
+17:24:55,835 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : El castigo
+17:24:55,893 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_SUCURSAL(idSucursal, ciudad, direccion, nombre) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_SUCURSAL"."DIRECCION")
+
+17:24:55,914 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: null
+17:24:55,914 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : El castigo
+17:24:55,972 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_SUCURSAL(idSucursal, ciudad, direccion, nombre) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_SUCURSAL"."CIUDAD")
+
+17:24:55,993 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: null
+17:24:55,993 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:56,141 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:24:56,141 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:56,164 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre ProductoProveedor
+17:24:56,164 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+17:24:56,481 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:56,794 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:24:56,794 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:56,794 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+17:24:56,863 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+17:24:56,863 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+17:24:56,931 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=1694, nombre=SuperAndino]
+17:24:56,931 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+17:24:57,003 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=1695, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=1694]
+17:24:57,003 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+17:24:57,071 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 1 ProductosProveedor existentes
+17:24:57,071 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+17:24:57,120 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_PRODUCTOPROVEEDOR) violada
+
+17:24:57,121 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+17:24:57,121 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+17:24:57,201 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_PROVEEDORPRODUCTOPROVEEDOR) violada - clave principal no encontrada
+
+17:24:57,201 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+17:24:57,201 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:57,346 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:24:57,346 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:57,370 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando RESTRICCIONES DE CHEQUEO sobre ProductoProveedor
+17:24:57,370 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+17:24:57,686 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:57,996 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:24:57,996 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:57,996 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+17:24:58,060 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 0 ProductosProveedor existentes
+17:24:58,060 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+17:24:58,128 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=1697, nombre=SuperAndino]
+17:24:58,128 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+17:24:58,198 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=1698, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=1697]
+17:24:58,199 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor
+17:24:58,267 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosProveedor: 1 ProductosProveedor existentes
+17:24:58,267 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: null
+17:24:58,347 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."NOMBRE")
+
+17:24:58,347 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+17:24:58,347 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+17:24:58,426 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."MARCA")
+
+17:24:58,426 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+17:24:58,426 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+17:24:58,508 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."PRESENTACION")
+
+17:24:58,508 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+17:24:58,508 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+17:24:58,602 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_CANTIDAPRESENTACION) violada
+
+17:24:58,602 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+17:24:58,602 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+17:24:58,682 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."UNIDADMEDIDA")
+
+17:24:58,682 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+17:24:58,682 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+17:24:58,763 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."CATEGORIA")
+
+17:24:58,763 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+17:24:58,763 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+17:24:58,845 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."TIPO")
+
+17:24:58,845 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+17:24:58,845 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+17:24:58,928 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOPROVEEDOR"."FECHAVENCIMIENTO")
+
+17:24:58,928 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+17:24:58,928 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+17:24:59,010 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_NUMEROCALIFICACIONES) violada
+
+17:24:59,010 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+17:24:59,010 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+17:24:59,091 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_SUMACALIFICACIONES) violada
+
+17:24:59,091 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+17:24:59,091 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+17:24:59,170 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRECIOPRODUCTOPROVEEDOR) violada
+
+17:24:59,170 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+17:24:59,170 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+17:24:59,251 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRODUCPROVEVOLEMPAQUE) violada
+
+17:24:59,251 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+17:24:59,251 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+17:24:59,332 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRODUCPROVEPESOEMPAQUE) violada
+
+17:24:59,332 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+17:24:59,332 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+17:24:59,413 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRODUCTOPROVEEDORCALIDAD) violada
+
+17:24:59,413 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+17:24:59,413 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+17:24:59,491 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOPROVEEDOR (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRODUCTOPROVEEDORCALIDAD) violada
+
+17:24:59,492 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: null
+17:24:59,492 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:24:59,636 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:24:59,636 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:24:59,660 (main) INFO  [uniandes.isis2304.SuperAndes.test.PromocionTest] - Probando la unicidad sobre Promocion
+17:24:59,660 (main) INFO  [uniandes.isis2304.SuperAndes.test.PromocionTest] - Se encontró un archivo de configuración de tablas válido
+17:24:59,978 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:00,285 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:00,286 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:00,286 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Promociones
+17:25:00,320 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de promociones: 0 promociones existentes
+17:25:00,320 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 1
+17:25:00,387 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: Promocion [idPromocion=1714, tipo=1, n=1.0, m=2.0, fechaCaducidad=15/12/2018]
+17:25:00,387 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Promociones
+17:25:00,420 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de promociones: 1 promociones existentes
+17:25:00,420 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 1
+17:25:00,445 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PROMOCION(idPromocion, tipo, n, m, fechaCaducidad) values (?, ?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_PROMOCION) violada
+
+17:25:00,466 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: null
+17:25:00,466 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:00,612 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:00,612 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:00,635 (main) INFO  [uniandes.isis2304.SuperAndes.test.PromocionTest] - Probando RESTRICCIONES DE CHEQUEO sobre Promocion
+17:25:00,635 (main) INFO  [uniandes.isis2304.SuperAndes.test.PromocionTest] - Se encontró un archivo de configuración de tablas válido
+17:25:00,956 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:01,258 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:01,258 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:01,258 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Promociones
+17:25:01,290 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de promociones: 0 promociones existentes
+17:25:01,290 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 1
+17:25:01,356 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: Promocion [idPromocion=1715, tipo=1, n=1.0, m=2.0, fechaCaducidad=15/12/2018]
+17:25:01,356 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Promociones
+17:25:01,389 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de promociones: 1 promociones existentes
+17:25:01,389 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 5
+17:25:01,445 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PROMOCION(idPromocion, tipo, n, m, fechaCaducidad) values (?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_TIPO) violada
+
+17:25:01,466 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: null
+17:25:01,466 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 3
+17:25:01,522 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PROMOCION(idPromocion, tipo, n, m, fechaCaducidad) values (?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_N) violada
+
+17:25:01,541 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: null
+17:25:01,541 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 3
+17:25:01,596 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PROMOCION(idPromocion, tipo, n, m, fechaCaducidad) values (?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_M) violada
+
+17:25:01,617 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: null
+17:25:01,617 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 3
+17:25:01,672 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PROMOCION(idPromocion, tipo, n, m, fechaCaducidad) values (?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PROMOCION"."FECHACADUCIDAD")
+
+17:25:01,693 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: null
+17:25:01,693 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:01,835 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:01,835 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:01,858 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando las operaciones CRD sobre Proveedor
+17:25:01,859 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+17:25:02,176 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:02,488 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:02,488 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:02,488 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+17:25:02,521 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+17:25:02,521 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+17:25:02,587 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=1720, nombre=Oreo]
+17:25:02,587 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+17:25:02,620 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 1 proveedores existentes
+17:25:02,620 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Babaria
+17:25:02,686 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=1721, nombre=Babaria]
+17:25:02,686 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+17:25:02,719 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 2 proveedores existentes
+17:25:02,719 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un proveedor por nit: 1720
+17:25:02,752 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Proveedor [nit=1720, nombre=Oreo]
+17:25:02,752 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de un proveedor por nit: 1721
+17:25:02,784 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Proveedor [nit=1721, nombre=Babaria]
+17:25:02,784 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:02,929 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:02,929 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:02,953 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando la unicidad sobre Proveedor
+17:25:02,953 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+17:25:03,269 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:03,573 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:03,573 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:03,573 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+17:25:03,605 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+17:25:03,605 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+17:25:03,670 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=1722, nombre=Oreo]
+17:25:03,670 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+17:25:03,702 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 1 proveedores existentes
+17:25:03,702 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+17:25:03,746 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PROVEEDOR(nit, nombre) values (?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_PROVEEDOR_PK) violada
+
+17:25:03,746 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: null
+17:25:03,746 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:03,890 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:03,890 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:03,912 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Probando RESTRICCIONES DE CHEQUEO sobre Proveedor
+17:25:03,912 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProveedorTest] - Se encontró un archivo de configuración de tablas válido
+17:25:04,232 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:04,537 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:04,537 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:04,537 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+17:25:04,570 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 0 proveedores existentes
+17:25:04,570 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Oreo
+17:25:04,636 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=1723, nombre=Oreo]
+17:25:04,636 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores
+17:25:04,670 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Proveedores: 1 proveedores existentes
+17:25:04,670 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: null
+17:25:04,746 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PROVEEDOR(nit, nombre) values (?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PROVEEDOR"."NOMBRE")
+
+17:25:04,746 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: null
+17:25:04,746 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:04,890 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:04,890 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:04,912 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre OrdenPedido
+17:25:04,913 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+17:25:05,239 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:05,546 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:05,546 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:05,546 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de las OrdenesPedio
+17:25:05,581 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de OrdenesPedido 0 ordenesPedido exixstentes
+17:25:05,581 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+17:25:05,648 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=1725, nombre=SuperAndino]
+17:25:05,648 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+17:25:05,720 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=1726, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=1725]
+17:25:05,720 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : Extoto
+17:25:05,786 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1727, ciudad=Zipaquira, direccion=cra 6 #1-39, nombre=Extoto]
+17:25:05,786 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: 1726
+17:25:05,854 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: OrdenPedido [idOrdenPedido=1728, precio=80000.0, fechaEntrega=null, fechaEsperadaEntrega=11/12/2018, calificacion=null, entregado=0, cantidad=10, productoProveedor=1726, sucursal=1727]
+17:25:05,854 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de las OrdenesPedio
+17:25:05,888 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de OrdenesPedido 1 ordenesPedido exixstentes
+17:25:05,888 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: 1726
+17:25:05,913 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ORDENPEDIDO(idOrdenPedido, precio, fechaEntrega, fechaEsperadaEntrega, calificacion, entregado, cantidad, productoProveedor, sucursal) values (?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_ORDENPEDIDO) violada
+
+17:25:05,934 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: null
+17:25:05,934 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: 1747
+17:25:05,992 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ORDENPEDIDO(idOrdenPedido, precio, fechaEntrega, fechaEsperadaEntrega, calificacion, entregado, cantidad, productoProveedor, sucursal) values (?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_PRODUCTOPROVEEDOR) violada - clave principal no encontrada
+
+17:25:06,013 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: null
+17:25:06,013 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: 1726
+17:25:06,071 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ORDENPEDIDO(idOrdenPedido, precio, fechaEntrega, fechaEsperadaEntrega, calificacion, entregado, cantidad, productoProveedor, sucursal) values (?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_SUCURSALORDENPEDIDO) violada - clave principal no encontrada
+
+17:25:06,092 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: null
+17:25:06,092 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:06,235 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:06,235 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:06,258 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando RESTRICCIONES DE CHEQUEO sobre OrdenPedido
+17:25:06,258 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+17:25:06,577 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:06,892 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:06,892 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:06,892 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de las OrdenesPedio
+17:25:06,924 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de OrdenesPedido 0 ordenesPedido exixstentes
+17:25:06,924 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: SuperAndino
+17:25:06,991 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Proveedor: Proveedor [nit=1731, nombre=SuperAndino]
+17:25:06,991 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoProveedor: Papas fritas
+17:25:07,064 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoProveedor: ProductoProveedor [idProductoProveedor=1732, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=300.5, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=PAQUETE, fechaVencimiento=15/12/2018, calidad=3.0, precio=8000.0, numeroCalificaciones=5, sumaCalificaciones=15.0, proveedor=1731]
+17:25:07,064 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : Extoto
+17:25:07,132 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1733, ciudad=Zipaquira, direccion=cra 6 #1-39, nombre=Extoto]
+17:25:07,132 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: 1732
+17:25:07,201 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: OrdenPedido [idOrdenPedido=1734, precio=80000.0, fechaEntrega=null, fechaEsperadaEntrega=11/12/2018, calificacion=null, entregado=0, cantidad=10, productoProveedor=1732, sucursal=1733]
+17:25:07,201 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de las OrdenesPedio
+17:25:07,234 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de OrdenesPedido 1 ordenesPedido exixstentes
+17:25:07,235 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: 1732
+17:25:07,291 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ORDENPEDIDO(idOrdenPedido, precio, fechaEntrega, fechaEsperadaEntrega, calificacion, entregado, cantidad, productoProveedor, sucursal) values (?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRECIO) violada
+
+17:25:07,311 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: null
+17:25:07,311 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: 1732
+17:25:07,368 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ORDENPEDIDO(idOrdenPedido, precio, fechaEntrega, fechaEsperadaEntrega, calificacion, entregado, cantidad, productoProveedor, sucursal) values (?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_ORDENPEDIDO"."FECHAESPERADAENTREGA")
+
+17:25:07,390 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: null
+17:25:07,390 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: 1732
+17:25:07,449 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ORDENPEDIDO(idOrdenPedido, precio, fechaEntrega, fechaEsperadaEntrega, calificacion, entregado, cantidad, productoProveedor, sucursal) values (?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_ENTEGADOPEDIDO) violada
+
+17:25:07,470 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: null
+17:25:07,470 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: 1732
+17:25:07,529 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_ORDENPEDIDO(idOrdenPedido, precio, fechaEntrega, fechaEsperadaEntrega, calificacion, entregado, cantidad, productoProveedor, sucursal) values (?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_CANTIDADORDENPEDIDO) violada
+
+17:25:07,549 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando OrdenPedido: null
+17:25:07,549 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:07,697 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:07,697 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:07,719 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre ProductoProveedor
+17:25:07,720 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+17:25:08,036 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:08,343 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:08,344 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:08,344 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosSucursal
+17:25:08,378 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosSucursal: 0 ProductosSucursal existentes
+17:25:08,378 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+17:25:08,443 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1739, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+17:25:08,443 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Carne
+17:25:08,510 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1740, volumen=5000.0, peso=5000.0, tipo=Carne, sucursal=1739]
+17:25:08,510 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Carne
+17:25:08,576 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1741, volumen=2500.0, peso=2500.0, tipo=Carne, nivelAprovisionamiento=1000, sucursal=1739]
+17:25:08,576 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 2
+17:25:08,645 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: Promocion [idPromocion=1742, tipo=2, n=20.0, m=20.0, fechaCaducidad=12/12/2018]
+17:25:08,645 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:25:08,717 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=1743, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=CARNE, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=1740, estante=1741, promocion=null]
+17:25:08,717 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosSucursal
+17:25:08,751 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosSucursal: 1 ProductosSucursal existentes
+17:25:08,751 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:25:08,801 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOSUCURSAL (idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, bodega, estante, promocion) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_PRODUCTOSUCURSAL) violada
+
+17:25:08,801 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: null
+17:25:08,801 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:25:08,882 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOSUCURSAL (idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, bodega, estante, promocion) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_BODEGA) violada - clave principal no encontrada
+
+17:25:08,883 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: null
+17:25:08,883 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:25:08,964 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOSUCURSAL (idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, bodega, estante, promocion) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_ESTANTE) violada - clave principal no encontrada
+
+17:25:08,964 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: null
+17:25:08,964 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:25:09,045 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOSUCURSAL (idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, bodega, estante, promocion) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_PROMOCION) violada - clave principal no encontrada
+
+17:25:09,045 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: null
+17:25:09,045 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:09,189 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:09,189 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:09,212 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando RESTRICCIONES DE CHEQUEO sobre ProductoSucursal
+17:25:09,212 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+17:25:09,533 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:09,848 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:09,848 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:09,848 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosSucursal
+17:25:09,881 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosSucursal: 0 ProductosSucursal existentes
+17:25:09,881 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+17:25:09,947 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1747, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+17:25:09,947 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Carne
+17:25:10,014 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1748, volumen=5000.0, peso=5000.0, tipo=Carne, sucursal=1747]
+17:25:10,014 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Carne
+17:25:10,083 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1749, volumen=2500.0, peso=2500.0, tipo=Carne, nivelAprovisionamiento=1000, sucursal=1747]
+17:25:10,083 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 2
+17:25:10,148 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: Promocion [idPromocion=1750, tipo=2, n=20.0, m=20.0, fechaCaducidad=12/12/2018]
+17:25:10,148 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:25:10,221 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=1751, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=CARNE, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=1748, estante=1749, promocion=null]
+17:25:10,221 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosSucursal
+17:25:10,255 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ProductosSucursal: 1 ProductosSucursal existentes
+17:25:10,255 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: null
+17:25:10,336 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOSUCURSAL (idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, bodega, estante, promocion) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOSUCURSAL"."NOMBRE")
+
+17:25:10,336 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: null
+17:25:10,336 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:25:10,416 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOSUCURSAL (idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, bodega, estante, promocion) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOSUCURSAL"."MARCA")
+
+17:25:10,416 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: null
+17:25:10,416 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:25:10,497 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOSUCURSAL (idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, bodega, estante, promocion) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOSUCURSAL"."PRESENTACION")
+
+17:25:10,497 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: null
+17:25:10,497 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:25:10,577 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOSUCURSAL (idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, bodega, estante, promocion) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_CANTIDADPRESENTACION) violada
+
+17:25:10,577 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: null
+17:25:10,577 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:25:10,659 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOSUCURSAL (idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, bodega, estante, promocion) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOSUCURSAL"."UNIDADMEDIDA")
+
+17:25:10,659 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: null
+17:25:10,659 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:25:10,740 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOSUCURSAL (idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, bodega, estante, promocion) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOSUCURSAL"."CATEGORIA")
+
+17:25:10,740 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: null
+17:25:10,740 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:25:10,821 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOSUCURSAL (idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, bodega, estante, promocion) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOSUCURSAL"."TIPO")
+
+17:25:10,821 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: null
+17:25:10,821 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:25:10,902 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOSUCURSAL (idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, bodega, estante, promocion) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_PRODUCTOSUCURSAL"."FECHAVENCIMIENTO")
+
+17:25:10,902 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: null
+17:25:10,902 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:25:10,983 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOSUCURSAL (idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, bodega, estante, promocion) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_NIVELREORDEN) violada
+
+17:25:10,983 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: null
+17:25:10,983 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:25:11,068 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOSUCURSAL (idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, bodega, estante, promocion) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRECIOUNITARIO) violada
+
+17:25:11,068 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: null
+17:25:11,068 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:25:11,149 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOSUCURSAL (idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, bodega, estante, promocion) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_CANTIDADBODEGA) violada
+
+17:25:11,149 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: null
+17:25:11,149 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:25:11,230 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOSUCURSAL (idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, bodega, estante, promocion) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_CANTIDADESTANTE) violada
+
+17:25:11,230 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: null
+17:25:11,230 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:25:11,311 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_PRODUCTOSUCURSAL (idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, bodega, estante, promocion) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PRECIOUNIDADMEDIDA) violada
+
+17:25:11,312 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: null
+17:25:11,312 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:11,456 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:11,456 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:11,479 (main) INFO  [uniandes.isis2304.SuperAndes.test.BodegaTest] - Probando la unicidad e integridad sobre Bodega
+17:25:11,479 (main) INFO  [uniandes.isis2304.SuperAndes.test.BodegaTest] - Se encontró un archivo de configuración de tablas válido
+17:25:11,804 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:12,112 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:12,112 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:12,112 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando VO de bodegas
+17:25:12,146 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Bodegas: 0 bodegas existentes
+17:25:12,146 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : SuperAndino
+17:25:12,214 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1765, ciudad=Zipaquira, direccion=cra 6 #1-39, nombre=SuperAndino]
+17:25:12,214 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: CARNE
+17:25:12,281 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1766, volumen=2.6, peso=1.0, tipo=CARNE, sucursal=1765]
+17:25:12,281 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando VO de bodegas
+17:25:12,316 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Bodegas: 1 bodegas existentes
+17:25:12,316 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: CARNE
+17:25:12,340 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_BODEGA(idBodega, volumen, peso, tipo, sucursal) values (?, ?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_BODEGA) violada
+
+17:25:12,360 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: null
+17:25:12,360 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: CARNE
+17:25:12,419 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_BODEGA(idBodega, volumen, peso, tipo, sucursal) values (?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_SUCURSAL) violada - clave principal no encontrada
+
+17:25:12,439 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: null
+17:25:12,439 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:12,584 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:12,584 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:12,607 (main) INFO  [uniandes.isis2304.SuperAndes.test.BodegaTest] - Probando RESTRICCIONES DE CHEQUEO sobre Bodega
+17:25:12,607 (main) INFO  [uniandes.isis2304.SuperAndes.test.BodegaTest] - Se encontró un archivo de configuración de tablas válido
+17:25:12,923 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:13,235 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:13,235 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:13,235 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando VO de bodegas
+17:25:13,267 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Bodegas: 0 bodegas existentes
+17:25:13,267 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : SuperAndino
+17:25:13,334 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1768, ciudad=Zipaquira, direccion=cra 6 #1-39, nombre=SuperAndino]
+17:25:13,334 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: CARNE
+17:25:13,402 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1769, volumen=2.6, peso=1.0, tipo=CARNE, sucursal=1768]
+17:25:13,402 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando VO de bodegas
+17:25:13,436 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Bodegas: 1 bodegas existentes
+17:25:13,436 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: CARNE
+17:25:13,492 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_BODEGA(idBodega, volumen, peso, tipo, sucursal) values (?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_VOLUMEN) violada
+
+17:25:13,513 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: null
+17:25:13,513 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: CARNE
+17:25:13,569 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_BODEGA(idBodega, volumen, peso, tipo, sucursal) values (?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_PESO) violada
+
+17:25:13,590 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: null
+17:25:13,590 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: null
+17:25:13,645 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_BODEGA(idBodega, volumen, peso, tipo, sucursal) values (?, ?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_BODEGA"."TIPO")
+
+17:25:13,666 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: null
+17:25:13,666 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:13,813 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:13,813 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:13,836 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando la unicidad sobre Compra
+17:25:13,837 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+17:25:14,151 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:14,498 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:14,498 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:25:14,498 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+17:25:14,530 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 0 compras existentes
+17:25:14,530 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+17:25:14,597 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1773, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+17:25:14,597 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Carne
+17:25:14,663 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1774, volumen=5000.0, peso=5000.0, tipo=Carne, sucursal=1773]
+17:25:14,663 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Carne
+17:25:14,729 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1775, volumen=2500.0, peso=2500.0, tipo=Carne, nivelAprovisionamiento=1000, sucursal=1773]
+17:25:14,729 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:25:14,800 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=1776, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=CARNE, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=1774, estante=1775, promocion=null]
+17:25:14,800 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+17:25:14,867 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1777, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+17:25:14,867 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: 
+17:25:14,922 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_FACTURA(idFactura, descripcion) values (?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_FACTURA"."DESCRIPCION")
+
+17:25:14,942 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: null
+17:25:14,942 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:25:15,086 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:25:15,086 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:27:37,936 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando la unicidad sobre Compra
+17:27:37,977 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+17:27:39,603 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:27:39,994 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:27:39,994 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:27:39,994 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+17:27:40,045 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 0 compras existentes
+17:27:40,045 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+17:27:40,118 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1780, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+17:27:40,118 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Carne
+17:27:40,190 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1781, volumen=5000.0, peso=5000.0, tipo=Carne, sucursal=1780]
+17:27:40,190 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Carne
+17:27:40,261 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1782, volumen=2500.0, peso=2500.0, tipo=Carne, nivelAprovisionamiento=1000, sucursal=1780]
+17:27:40,261 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:27:40,346 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=1783, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=CARNE, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=1781, estante=1782, promocion=null]
+17:27:40,346 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+17:27:40,418 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1784, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+17:27:40,418 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: 
+17:27:40,482 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_FACTURA(idFactura, descripcion) values (?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_FACTURA"."DESCRIPCION")
+
+17:27:40,504 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: null
+17:27:40,504 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:27:40,654 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:27:40,654 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:31:04,210 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando la unicidad sobre Compra
+17:31:04,321 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+17:31:06,149 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:31:06,534 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:31:06,535 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:31:06,535 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+17:31:06,586 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 0 compras existentes
+17:31:06,586 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+17:31:06,656 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1787, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+17:31:06,656 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Carne
+17:31:06,726 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1788, volumen=5000.0, peso=5000.0, tipo=Carne, sucursal=1787]
+17:31:06,726 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Carne
+17:31:06,797 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1789, volumen=2500.0, peso=2500.0, tipo=Carne, nivelAprovisionamiento=1000, sucursal=1787]
+17:31:06,797 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:31:06,873 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=1790, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=CARNE, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=1788, estante=1789, promocion=null]
+17:31:06,873 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+17:31:06,943 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1791, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+17:31:06,943 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: 
+17:31:07,006 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_FACTURA(idFactura, descripcion) values (?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_FACTURA"."DESCRIPCION")
+
+17:31:07,028 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: null
+17:31:07,028 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:31:07,178 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:31:07,178 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:31:31,490 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando la unicidad sobre Compra
+17:31:31,529 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+17:31:33,080 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:31:33,470 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:31:33,471 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:31:33,471 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+17:31:33,522 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 0 compras existentes
+17:31:33,522 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+17:31:33,595 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1794, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+17:31:33,595 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Carne
+17:31:33,667 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1795, volumen=5000.0, peso=5000.0, tipo=Carne, sucursal=1794]
+17:31:33,667 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Carne
+17:31:33,740 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1796, volumen=2500.0, peso=2500.0, tipo=Carne, nivelAprovisionamiento=1000, sucursal=1794]
+17:31:33,740 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:31:33,819 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=1797, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=CARNE, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=1795, estante=1796, promocion=null]
+17:31:33,819 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+17:31:33,888 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1798, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+17:31:33,889 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: a
+17:31:33,959 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: Factura [idFactura=1799, descripcion=a]
+17:31:33,959 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1797
+17:31:34,024 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_COMPRA(idCompra, fecha, cantidad, totalPagado, productoSucursal, cliente, factura) values (?, ?, ?, ?, ?, ?)".
+ORA-00947: no hay suficientes valores
+
+17:31:34,046 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: null
+17:31:34,046 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:31:34,200 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:31:34,200 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:32:07,866 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando la unicidad sobre Compra
+17:32:07,906 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+17:32:09,496 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:32:09,903 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:32:09,904 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:32:09,904 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+17:32:09,958 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 0 compras existentes
+17:32:09,958 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+17:32:10,032 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1801, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+17:32:10,033 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Carne
+17:32:10,104 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1802, volumen=5000.0, peso=5000.0, tipo=Carne, sucursal=1801]
+17:32:10,104 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Carne
+17:32:10,174 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1803, volumen=2500.0, peso=2500.0, tipo=Carne, nivelAprovisionamiento=1000, sucursal=1801]
+17:32:10,174 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:32:10,251 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=1804, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=CARNE, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=1802, estante=1803, promocion=null]
+17:32:10,251 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+17:32:10,325 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1805, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+17:32:10,325 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: a
+17:32:10,394 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: Factura [idFactura=1806, descripcion=a]
+17:32:10,394 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1804
+17:32:10,460 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_COMPRA(idCompra, fecha, cantidad, totalPagado, productoSucursal, cliente, factura) values (?, ?, ?, ?, ?, ?)".
+ORA-00947: no hay suficientes valores
+
+17:32:10,501 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: null
+17:32:10,502 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:32:10,654 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:32:10,654 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:33:48,184 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando la unicidad sobre Compra
+17:33:48,224 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+17:33:50,148 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:33:50,552 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:33:50,553 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:33:50,553 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+17:33:50,605 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 0 compras existentes
+17:33:50,605 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+17:33:50,677 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1808, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+17:33:50,678 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Carne
+17:33:50,750 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1809, volumen=5000.0, peso=5000.0, tipo=Carne, sucursal=1808]
+17:33:50,750 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Carne
+17:33:50,822 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1810, volumen=2500.0, peso=2500.0, tipo=Carne, nivelAprovisionamiento=1000, sucursal=1808]
+17:33:50,822 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:33:50,897 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=1811, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=CARNE, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=1809, estante=1810, promocion=null]
+17:33:50,897 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+17:33:50,970 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1812, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+17:33:50,970 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: a
+17:33:51,038 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: Factura [idFactura=1813, descripcion=a]
+17:33:51,038 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1811
+17:33:51,104 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_COMPRA(idCompra, fecha, cantidad, totalPagado, productoSucursal, cliente, factura) values (?, ?, ?, ?, ?, ?)".
+ORA-00947: no hay suficientes valores
+
+17:33:51,125 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: null
+17:33:51,126 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:33:51,280 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:33:51,281 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:37:13,014 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando la unicidad sobre Compra
+17:37:13,054 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+17:37:14,686 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:37:15,077 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:37:15,077 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:37:15,077 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+17:37:15,127 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 0 compras existentes
+17:37:15,127 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+17:37:15,199 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1817, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+17:37:15,199 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Carne
+17:37:15,271 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1818, volumen=5000.0, peso=5000.0, tipo=Carne, sucursal=1817]
+17:37:15,271 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Carne
+17:37:15,341 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1819, volumen=2500.0, peso=2500.0, tipo=Carne, nivelAprovisionamiento=1000, sucursal=1817]
+17:37:15,341 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:37:15,417 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=1820, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=CARNE, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=1818, estante=1819, promocion=null]
+17:37:15,417 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+17:37:15,486 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1821, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+17:37:15,487 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: a
+17:37:15,555 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: Factura [idFactura=1822, descripcion=a]
+17:37:15,555 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1820
+17:37:15,630 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: Compra [idCompra=1823, fecha=12/12/2018, cantidad=5, totalPagado=25000.0, productoSucursal=1820, cliente=1821, factura=1822]
+17:37:15,631 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:37:15,832 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:37:15,832 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:37:54,821 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando la unicidad sobre Compra
+17:37:54,859 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+17:37:56,416 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:37:56,805 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:37:56,806 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:37:56,806 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+17:37:56,858 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 0 compras existentes
+17:37:56,858 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+17:37:56,942 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1824, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+17:37:56,943 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Carne
+17:37:57,013 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1825, volumen=5000.0, peso=5000.0, tipo=Carne, sucursal=1824]
+17:37:57,013 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Carne
+17:37:57,081 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1826, volumen=2500.0, peso=2500.0, tipo=Carne, nivelAprovisionamiento=1000, sucursal=1824]
+17:37:57,081 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:37:57,158 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=1827, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=CARNE, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=1825, estante=1826, promocion=null]
+17:37:57,158 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+17:37:57,230 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1828, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+17:37:57,231 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: a
+17:37:57,301 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: Factura [idFactura=1829, descripcion=a]
+17:37:57,301 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1827
+17:37:57,374 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: Compra [idCompra=1830, fecha=12/12/2018, cantidad=5, totalPagado=25000.0, productoSucursal=1827, cliente=1828, factura=1829]
+17:37:57,374 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:37:57,525 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:37:57,525 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:38:04,978 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando la unicidad sobre Compra
+17:38:05,020 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+17:38:06,715 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:38:07,102 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:38:07,103 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:38:07,103 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+17:38:07,151 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 0 compras existentes
+17:38:07,152 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+17:38:07,250 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1831, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+17:38:07,250 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Carne
+17:38:07,321 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1832, volumen=5000.0, peso=5000.0, tipo=Carne, sucursal=1831]
+17:38:07,321 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Carne
+17:38:07,394 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1833, volumen=2500.0, peso=2500.0, tipo=Carne, nivelAprovisionamiento=1000, sucursal=1831]
+17:38:07,395 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:38:07,475 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=1834, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=CARNE, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=1832, estante=1833, promocion=null]
+17:38:07,475 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+17:38:07,543 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1835, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+17:38:07,543 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: a
+17:38:07,612 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: Factura [idFactura=1836, descripcion=a]
+17:38:07,612 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1834
+17:38:07,682 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: Compra [idCompra=1837, fecha=12/12/2018, cantidad=5, totalPagado=25000.0, productoSucursal=1834, cliente=1835, factura=1836]
+17:38:07,683 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:38:07,839 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:38:07,839 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:42:08,124 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando la unicidad sobre Compra
+17:42:08,181 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+17:42:09,874 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:42:10,269 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:42:10,269 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:42:10,269 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+17:42:10,354 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 0 compras existentes
+17:42:10,355 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+17:42:10,428 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1838, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+17:42:10,428 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Carne
+17:42:10,499 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1839, volumen=5000.0, peso=5000.0, tipo=Carne, sucursal=1838]
+17:42:10,499 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Carne
+17:42:10,573 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1840, volumen=2500.0, peso=2500.0, tipo=Carne, nivelAprovisionamiento=1000, sucursal=1838]
+17:42:10,573 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:42:10,653 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=1841, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=CARNE, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=1839, estante=1840, promocion=null]
+17:42:10,653 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+17:42:10,723 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1842, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+17:42:10,723 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: a
+17:42:10,792 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: Factura [idFactura=1843, descripcion=a]
+17:42:10,792 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1841
+17:42:10,862 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: Compra [idCompra=1844, fecha=12/12/2018, cantidad=5, totalPagado=25000.0, productoSucursal=1841, cliente=1842, factura=1843]
+17:42:10,862 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:42:11,016 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:42:11,016 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:43:18,398 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando la unicidad sobre Compra
+17:43:18,437 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+17:43:20,083 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:43:20,471 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:43:20,472 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:43:20,472 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+17:43:20,555 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 0 compras existentes
+17:43:20,555 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+17:43:20,629 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1845, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+17:43:20,630 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Carne
+17:43:20,701 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1846, volumen=5000.0, peso=5000.0, tipo=Carne, sucursal=1845]
+17:43:20,701 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Carne
+17:43:20,772 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1847, volumen=2500.0, peso=2500.0, tipo=Carne, nivelAprovisionamiento=1000, sucursal=1845]
+17:43:20,772 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:43:20,849 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=1848, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=CARNE, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=1846, estante=1847, promocion=null]
+17:43:20,849 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+17:43:20,919 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1849, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+17:43:20,920 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: a
+17:43:20,987 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: Factura [idFactura=1850, descripcion=a]
+17:43:20,987 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1848
+17:43:21,056 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: Compra [idCompra=1851, fecha=12/12/2018, cantidad=5, totalPagado=25000.0, productoSucursal=1848, cliente=1849, factura=1850]
+17:43:21,056 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:43:21,211 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:43:21,211 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:43:39,095 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando la unicidad sobre Compra
+17:43:39,135 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+17:43:40,742 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:43:41,136 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:43:41,137 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:43:41,137 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+17:43:41,224 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 0 compras existentes
+17:43:41,224 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+17:43:41,295 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1852, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+17:43:41,295 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Carne
+17:43:41,366 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1853, volumen=5000.0, peso=5000.0, tipo=Carne, sucursal=1852]
+17:43:41,366 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Carne
+17:43:41,437 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1854, volumen=2500.0, peso=2500.0, tipo=Carne, nivelAprovisionamiento=1000, sucursal=1852]
+17:43:41,437 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:43:41,514 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=1855, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=CARNE, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=1853, estante=1854, promocion=null]
+17:43:41,514 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+17:43:41,583 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1856, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+17:43:41,584 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: a
+17:43:41,651 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: Factura [idFactura=1857, descripcion=a]
+17:43:41,651 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1855
+17:43:41,722 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: Compra [idCompra=1858, fecha=12/12/2018, cantidad=5, totalPagado=25000.0, productoSucursal=1855, cliente=1856, factura=1857]
+17:43:41,722 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:43:41,873 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:43:41,873 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:44:36,055 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando la unicidad sobre Compra
+17:44:36,105 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+17:44:38,038 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:44:38,429 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:44:38,429 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+17:44:38,429 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+17:44:38,513 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 0 compras existentes
+17:44:38,513 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+17:44:38,586 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1859, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+17:44:38,586 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Carne
+17:44:38,656 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1860, volumen=5000.0, peso=5000.0, tipo=Carne, sucursal=1859]
+17:44:38,656 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Carne
+17:44:38,726 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1861, volumen=2500.0, peso=2500.0, tipo=Carne, nivelAprovisionamiento=1000, sucursal=1859]
+17:44:38,726 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+17:44:38,803 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=1862, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=CARNE, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=1860, estante=1861, promocion=null]
+17:44:38,803 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+17:44:38,871 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1863, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+17:44:38,871 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: a
+17:44:38,941 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: Factura [idFactura=1864, descripcion=a]
+17:44:38,941 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1862
+17:44:39,011 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: Compra [idCompra=1865, fecha=12/12/2018, cantidad=5, totalPagado=25000.0, productoSucursal=1862, cliente=1863, factura=1864]
+17:44:39,012 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+17:44:39,081 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 1 compras existentes
+17:44:39,081 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1862
+17:44:39,115 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_COMPRA(idCompra, fecha, cantidad, totalPagado, productoSucursal, cliente, factura) values (?, ?, ?, ?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_COMPRA) violada
+
+17:44:39,136 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: null
+17:44:39,136 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+17:44:39,289 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+17:44:39,289 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:08:05,417 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando la unicidad sobre Compra
+18:08:05,458 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+18:08:07,427 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:08:07,818 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:08:07,819 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:08:07,819 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+18:08:07,869 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 0 compras existentes
+18:08:07,869 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+18:08:07,943 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1866, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+18:08:07,943 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Carne
+18:08:08,012 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1867, volumen=5000.0, peso=5000.0, tipo=Carne, sucursal=1866]
+18:08:08,012 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Carne
+18:08:08,081 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1868, volumen=2500.0, peso=2500.0, tipo=Carne, nivelAprovisionamiento=1000, sucursal=1866]
+18:08:08,081 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+18:08:08,156 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=1869, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=CARNE, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=1867, estante=1868, promocion=null]
+18:08:08,156 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+18:08:08,223 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1870, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+18:08:08,223 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: a
+18:08:08,292 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: Factura [idFactura=1871, descripcion=a]
+18:08:08,292 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1869
+18:08:08,369 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: Compra [idCompra=1872, fecha=12/12/2018, cantidad=5, totalPagado=25000.0, productoSucursal=1869, cliente=1870, factura=1871]
+18:08:08,369 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+18:08:08,404 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 1 compras existentes
+18:08:08,404 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1869
+18:08:08,438 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_COMPRA(idCompra, fecha, cantidad, totalPagado, productoSucursal, cliente, factura) values (?, ?, ?, ?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_COMPRA) violada
+
+18:08:08,460 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: null
+18:08:08,460 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:08:08,613 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:08:08,613 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:08:08,638 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando RESTRICCIONES DE CHEQUEO sobre Compra
+18:08:08,638 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+18:08:08,987 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:08:09,307 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:08:09,307 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:08:09,307 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+18:08:09,341 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 0 compras existentes
+18:08:09,341 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+18:08:09,409 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1873, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+18:08:09,409 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Carne
+18:08:09,477 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1874, volumen=5000.0, peso=5000.0, tipo=Carne, sucursal=1873]
+18:08:09,477 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Carne
+18:08:09,544 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1875, volumen=2500.0, peso=2500.0, tipo=Carne, nivelAprovisionamiento=1000, sucursal=1873]
+18:08:09,544 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+18:08:09,617 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=1876, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=CARNE, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=1874, estante=1875, promocion=null]
+18:08:09,617 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+18:08:09,685 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1877, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+18:08:09,685 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: a
+18:08:09,752 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: Factura [idFactura=1878, descripcion=a]
+18:08:09,752 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1876
+18:08:09,822 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: Compra [idCompra=1879, fecha=12/12/2018, cantidad=5, totalPagado=25000.0, productoSucursal=1876, cliente=1877, factura=1878]
+18:08:09,822 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+18:08:09,855 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 1 compras existentes
+18:08:09,855 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1876
+18:08:09,913 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_COMPRA(idCompra, fecha, cantidad, totalPagado, productoSucursal, cliente, factura) values (?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_CANTIDAD) violada
+
+18:08:09,935 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: null
+18:08:09,935 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1876
+18:08:10,005 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: Compra [idCompra=1881, fecha=12/12/2018, cantidad=5, totalPagado=25000.0, productoSucursal=1876, cliente=1877, factura=1878]
+18:08:10,005 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:08:10,155 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:08:10,155 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:08:32,810 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando la unicidad sobre Compra
+18:08:32,850 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+18:08:34,457 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:08:34,845 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:08:34,846 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:08:34,846 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+18:08:34,897 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 0 compras existentes
+18:08:34,897 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+18:08:34,969 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1882, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+18:08:34,969 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Carne
+18:08:35,042 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1883, volumen=5000.0, peso=5000.0, tipo=Carne, sucursal=1882]
+18:08:35,042 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Carne
+18:08:35,115 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1884, volumen=2500.0, peso=2500.0, tipo=Carne, nivelAprovisionamiento=1000, sucursal=1882]
+18:08:35,115 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+18:08:35,193 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=1885, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=CARNE, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=1883, estante=1884, promocion=null]
+18:08:35,193 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+18:08:35,265 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1886, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+18:08:35,265 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: a
+18:08:35,336 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: Factura [idFactura=1887, descripcion=a]
+18:08:35,336 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1885
+18:08:35,406 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: Compra [idCompra=1888, fecha=12/12/2018, cantidad=5, totalPagado=25000.0, productoSucursal=1885, cliente=1886, factura=1887]
+18:08:35,406 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+18:08:35,442 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 1 compras existentes
+18:08:35,442 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1885
+18:08:35,476 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_COMPRA(idCompra, fecha, cantidad, totalPagado, productoSucursal, cliente, factura) values (?, ?, ?, ?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_COMPRA) violada
+
+18:08:35,497 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: null
+18:08:35,498 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:08:35,653 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:08:35,653 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:08:35,677 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Probando RESTRICCIONES DE CHEQUEO sobre Compra
+18:08:35,678 (main) INFO  [uniandes.isis2304.SuperAndes.test.SucursalTest] - Se encontró un archivo de configuración de tablas válido
+18:08:36,022 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:08:36,339 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:08:36,339 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:08:36,339 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+18:08:36,373 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 0 compras existentes
+18:08:36,373 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+18:08:36,442 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1889, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+18:08:36,442 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: Carne
+18:08:36,511 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=1890, volumen=5000.0, peso=5000.0, tipo=Carne, sucursal=1889]
+18:08:36,511 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Carne
+18:08:36,580 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=1891, volumen=2500.0, peso=2500.0, tipo=Carne, nivelAprovisionamiento=1000, sucursal=1889]
+18:08:36,580 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+18:08:36,655 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=1892, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=PERECEDERO, tipo=CARNE, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=1890, estante=1891, promocion=null]
+18:08:36,655 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+18:08:36,723 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1893, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+18:08:36,723 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Factura: a
+18:08:36,791 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando factura: Factura [idFactura=1894, descripcion=a]
+18:08:36,791 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1892
+18:08:36,861 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: Compra [idCompra=1895, fecha=12/12/2018, cantidad=5, totalPagado=25000.0, productoSucursal=1892, cliente=1893, factura=1894]
+18:08:36,861 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras
+18:08:36,895 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Compras: 1 compras existentes
+18:08:36,895 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1892
+18:08:36,953 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_COMPRA(idCompra, fecha, cantidad, totalPagado, productoSucursal, cliente, factura) values (?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_CANTIDAD) violada
+
+18:08:36,973 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: null
+18:08:36,973 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 1892
+18:08:37,032 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_COMPRA(idCompra, fecha, cantidad, totalPagado, productoSucursal, cliente, factura) values (?, ?, ?, ?, ?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_TOTALPAGADO) violada
+
+18:08:37,052 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: null
+18:08:37,052 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:08:37,200 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:08:37,200 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
