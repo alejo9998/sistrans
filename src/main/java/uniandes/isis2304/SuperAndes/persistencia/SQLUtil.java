@@ -32,6 +32,8 @@ class SQLUtil {
 		Query qCompra = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaCompra());
 		Query qCliente = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaCliente());
 		Query qFactura = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaFactura());
+		Query qDentroCarrito = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaDentroCarrito());
+		Query qCarrito = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaCarrito());
 		Query qProductoSucursal = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaProductoSucursal());
 		Query qBodega = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaBodega());
 		Query qEstante = pm.newQuery(SQL, "DELETE FROM " + pp.darTablaEstante());
@@ -44,13 +46,15 @@ class SQLUtil {
 		long compraEliminado = (long) qCompra.executeUnique();
 		long clienteEliminado = (long) qCliente.executeUnique();
 		long facturaEliminado = (long) qFactura.executeUnique();
+		long dentroCarritoEliminado = (long) qDentroCarrito.executeUnique();
+		long carritoEliminado = (long) qCarrito.executeUnique();
 		long productoSucursalEliminado = (long) qProductoSucursal.executeUnique();
 		long bodegaEliminado = (long) qBodega.executeUnique();
 		long estanteEliminado = (long) qEstante.executeUnique();
 		long promocionEliminado = (long) qPromocion.executeUnique();
 		long sucursalEliminado = (long) qSucursal.executeUnique();
 		return new long[] {ordenPedidoEliminado, productoProveedorEliminado, proveedorEliminado,
-				compraEliminado, clienteEliminado, facturaEliminado, productoSucursalEliminado,
+				compraEliminado, clienteEliminado, facturaEliminado,dentroCarritoEliminado, carritoEliminado, productoSucursalEliminado,
 				bodegaEliminado, estanteEliminado, promocionEliminado, sucursalEliminado};
 		}
 

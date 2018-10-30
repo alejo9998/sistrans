@@ -11179,6 +11179,7 @@ ORA-02290: restricci�n de control (ISIS2304C281820.CK_TOTALPAGADO) violada
 18:08:37,052 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
 18:08:37,200 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
 18:08:37,200 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+<<<<<<< HEAD
 >>>>>>> c5ef34ce747d49fb9ca594d2a4e29141a6fa0a0d
 12:33:29,601 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
 12:33:30,966 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1921
@@ -11295,3 +11296,394 @@ ORA-02290: restricci�n de control (ISIS2304C281820.CK_TOTALPAGADO) violada
 12:42:55,208 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Bodegas: 4 bodegas existentes
 12:43:02,406 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Estantes
 12:43:02,412 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Estantes: 2 Estantes existentes
+=======
+18:21:47,319 (main) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+18:22:13,041 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : Rojas
+18:22:13,379 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1898, ciudad=Zipaquira, direccion=Cra 6 # 1-39, nombre=Rojas]
+18:24:25,643 (main) INFO  [uniandes.isis2304.SuperAndes.test.ClienteTest] - Probando la unicidad sobre Cliente
+18:24:25,697 (main) INFO  [uniandes.isis2304.SuperAndes.test.ClienteTest] - Se encontr� un archivo de configuraci�n de tablas v�lido
+18:24:27,506 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:24:27,913 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:24:27,915 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:24:27,915 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de clientes
+18:24:27,968 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Clientes: 0 clientes existentes
+18:24:27,968 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+18:24:28,046 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1899, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+18:24:28,046 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de clientesIndividuos
+18:24:28,085 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ClientesIndividuo: 1 clientesIndividuo existentes
+18:24:28,085 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+18:24:28,120 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-00001: restricci�n �nica (ISIS2304C281820.A_CLIENTE) violada
+
+18:24:28,143 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: null
+18:24:28,143 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : Alejandro
+18:24:28,217 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : Cliente [identificacion=1900, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=Cra6#1-39]
+18:24:28,217 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de clientesEmpresa
+18:24:28,255 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ClientesEmpresa: 1 clientesEmpresa existentes
+18:24:28,255 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : Gran via
+18:24:28,280 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-00001: restricci�n �nica (ISIS2304C281820.A_CLIENTE) violada
+
+18:24:28,301 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : null
+18:24:28,301 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:24:28,462 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:24:28,462 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:24:28,488 (main) INFO  [uniandes.isis2304.SuperAndes.test.ClienteTest] - Probando RESTRICCIONES DE CHEQUEO sobre Cliente
+18:24:28,489 (main) INFO  [uniandes.isis2304.SuperAndes.test.ClienteTest] - Se encontr� un archivo de configuraci�n de tablas v�lido
+18:24:28,839 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:24:29,161 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:24:29,161 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:24:29,161 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de clientes
+18:24:29,195 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Clientes: 0 clientes existentes
+18:24:29,195 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+18:24:29,267 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1901, nombre=Alejandro, correo=chonal@hotmail.com, direccion=null]
+18:24:29,267 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de clientesIndividuos
+18:24:29,302 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ClientesIndividuo: 1 clientesIndividuo existentes
+18:24:29,302 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : null
+18:24:29,361 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserci�n NULL en ("ISIS2304C281820"."A_CLIENTE"."NOMBRE")
+
+18:24:29,382 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: null
+18:24:29,382 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : melaPela
+18:24:29,442 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserci�n NULL en ("ISIS2304C281820"."A_CLIENTE"."CORREO")
+
+18:24:29,463 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: null
+18:24:29,463 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : null
+18:24:29,520 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserci�n NULL en ("ISIS2304C281820"."A_CLIENTE"."NOMBRE")
+
+18:24:29,541 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : null
+18:24:29,541 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : melaPela
+18:24:29,598 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserci�n NULL en ("ISIS2304C281820"."A_CLIENTE"."CORREO")
+
+18:24:29,618 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : null
+18:24:29,618 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:24:29,768 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:24:29,768 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+>>>>>>> 414fb7c3351b1124baac56ae0767d8087cfa6e89
+12:56:25,604 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+12:56:26,903 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1921
+12:56:27,011 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1921, ciudad=bogota, direccion=aqui, nombre=hola]
+12:56:27,021 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+12:56:27,041 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+12:56:27,041 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+12:56:27,045 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+12:56:27,045 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+12:56:27,049 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+12:56:27,049 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+12:56:27,052 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+12:56:27,052 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+12:56:27,056 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+12:56:27,059 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+12:56:27,072 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1921
+12:56:27,075 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1921, ciudad=bogota, direccion=aqui, nombre=hola]
+12:56:27,077 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+12:56:27,092 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+12:56:27,092 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+12:56:27,095 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+12:56:27,095 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+12:56:27,099 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+12:56:27,099 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+12:56:27,102 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+12:56:27,102 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+12:56:27,105 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+12:57:45,867 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando clientes
+12:57:45,873 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando clientes 3 clientes existentes
+12:58:25,366 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+12:58:26,672 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1932
+12:58:26,783 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1932, ciudad=aqui, direccion=aqui, nombre=pepito]
+12:58:26,797 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+12:58:26,817 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+12:58:26,817 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+12:58:26,822 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+12:58:26,822 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+12:58:26,825 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+12:58:26,825 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+12:58:26,829 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+12:58:26,829 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+12:58:26,833 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+12:58:26,835 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+12:58:26,849 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1932
+12:58:26,853 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1932, ciudad=aqui, direccion=aqui, nombre=pepito]
+12:58:26,854 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+12:58:26,870 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+12:58:26,870 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+12:58:26,874 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+12:58:26,874 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+12:58:26,877 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+12:58:26,877 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+12:58:26,881 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+12:58:26,881 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+12:58:26,884 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+12:58:29,195 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando clientes
+12:58:29,201 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando clientes 3 clientes existentes
+12:58:51,358 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Bodegas
+12:58:51,392 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Bodegas: 4 bodegas existentes
+12:58:51,394 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Estantes
+12:58:51,399 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Estantes: 2 Estantes existentes
+12:58:51,413 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+12:58:51,424 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+12:58:51,424 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+12:58:51,427 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+12:58:51,427 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+12:58:51,431 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+12:58:51,431 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+12:58:51,434 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+12:58:51,434 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+12:58:51,437 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+12:58:55,158 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Bodegas
+12:58:55,163 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Bodegas: 4 bodegas existentes
+12:58:55,165 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Estantes
+12:58:55,169 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Estantes: 2 Estantes existentes
+12:58:55,186 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+12:58:55,197 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+12:58:55,197 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+12:58:55,200 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+12:58:55,200 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+12:58:55,203 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+12:58:55,203 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+12:58:55,206 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+12:58:55,206 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+12:58:55,209 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:01:40,654 (main) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+13:01:48,209 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+13:01:49,504 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1921
+13:01:49,614 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1921, ciudad=bogota, direccion=aqui, nombre=hola]
+13:01:49,624 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+13:01:49,642 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+13:01:49,643 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:01:49,647 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:01:49,647 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:01:49,651 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:01:49,651 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+13:01:49,655 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+13:01:49,655 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:01:49,659 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:01:49,661 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+13:01:49,675 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1921
+13:01:49,678 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1921, ciudad=bogota, direccion=aqui, nombre=hola]
+13:01:49,679 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+13:01:49,694 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+13:01:49,694 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:01:49,698 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:01:49,698 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:01:49,701 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:01:49,702 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+13:01:49,705 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+13:01:49,705 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:01:49,708 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:01:53,625 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando clientes
+13:01:53,630 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando clientes 3 clientes existentes
+13:01:55,209 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando clientes
+13:01:55,213 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando clientes 3 clientes existentes
+13:01:55,216 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+13:01:55,227 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+13:01:55,227 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:01:55,231 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:01:55,231 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:01:55,235 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:01:55,235 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+13:01:55,238 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+13:01:55,239 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:01:55,242 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:07:14,919 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+13:07:16,237 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1921
+13:07:16,348 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1921, ciudad=bogota, direccion=aqui, nombre=hola]
+13:07:16,358 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+13:07:16,377 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+13:07:16,377 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:07:16,381 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:07:16,381 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:07:16,385 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:07:16,385 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+13:07:16,388 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+13:07:16,388 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:07:16,392 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:07:16,394 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+13:07:16,408 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1921
+13:07:16,411 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1921, ciudad=bogota, direccion=aqui, nombre=hola]
+13:07:16,412 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+13:07:16,428 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+13:07:16,428 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:07:16,431 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:07:16,431 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:07:16,435 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:07:16,435 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+13:07:16,438 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+13:07:16,439 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:07:16,442 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:07:42,616 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+13:07:43,897 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1921
+13:07:44,007 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1921, ciudad=bogota, direccion=aqui, nombre=hola]
+13:07:44,016 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+13:07:44,036 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+13:07:44,036 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:07:44,040 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:07:44,040 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:07:44,044 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:07:44,044 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+13:07:44,047 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+13:07:44,047 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:07:44,051 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:07:44,053 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+13:07:44,067 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1921
+13:07:44,070 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1921, ciudad=bogota, direccion=aqui, nombre=hola]
+13:07:44,072 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+13:07:44,087 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+13:07:44,087 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:07:44,090 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:07:44,090 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:07:44,093 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:07:44,093 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+13:07:44,096 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+13:07:44,097 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:07:44,100 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:28:57,770 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+13:28:59,109 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1921
+13:28:59,230 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1921, ciudad=bogota, direccion=aqui, nombre=hola]
+13:28:59,241 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+13:28:59,261 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+13:28:59,262 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:28:59,266 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:28:59,267 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:28:59,272 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:28:59,272 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+13:28:59,275 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+13:28:59,275 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:28:59,279 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:28:59,281 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 123
+13:28:59,403 (AWT-EventQueue-0) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_COMPRA(idCompra, fecha, cantidad, totalPagado, productoSucursal, cliente, factura) values (?, ?, ?, ?, ?, ?, ?)".
+ORA-01858: se ha encontrado un carácter no numérico donde se esperaba uno numérico
+
+13:28:59,406 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: null
+13:29:02,105 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+13:29:02,120 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1921
+13:29:02,124 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1921, ciudad=bogota, direccion=aqui, nombre=hola]
+13:29:02,126 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+13:29:02,137 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+13:29:02,137 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:29:02,141 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:29:02,141 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:29:02,144 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:29:02,144 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+13:29:02,148 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+13:29:02,148 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:29:02,151 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:29:02,152 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 123
+13:29:02,157 (AWT-EventQueue-0) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_COMPRA(idCompra, fecha, cantidad, totalPagado, productoSucursal, cliente, factura) values (?, ?, ?, ?, ?, ?, ?)".
+ORA-01858: se ha encontrado un carácter no numérico donde se esperaba uno numérico
+
+13:29:02,158 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: null
+13:30:04,280 (main) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+13:30:13,071 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+13:30:14,363 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1921
+13:30:14,472 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1921, ciudad=bogota, direccion=aqui, nombre=hola]
+13:30:14,482 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+13:30:14,500 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+13:30:14,500 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:30:14,504 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:30:14,505 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:30:14,508 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:30:14,508 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+13:30:14,512 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+13:30:14,512 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:30:14,515 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:30:14,517 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 123
+13:30:14,635 (AWT-EventQueue-0) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_COMPRA(idCompra, fecha, cantidad, totalPagado, productoSucursal, cliente, factura) values (?, ?, ?, ?, ?, ?, ?)".
+ORA-01858: se ha encontrado un carácter no numérico donde se esperaba uno numérico
+
+13:30:14,639 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: null
+13:30:16,475 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+13:30:16,491 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1921
+13:30:16,495 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1921, ciudad=bogota, direccion=aqui, nombre=hola]
+13:30:16,497 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+13:30:16,508 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+13:30:16,508 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:30:16,511 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:30:16,511 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:30:16,514 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:30:16,514 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+13:30:16,517 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+13:30:16,518 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:30:16,521 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:30:16,521 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 123
+13:30:16,526 (AWT-EventQueue-0) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_COMPRA(idCompra, fecha, cantidad, totalPagado, productoSucursal, cliente, factura) values (?, ?, ?, ?, ?, ?, ?)".
+ORA-01858: se ha encontrado un carácter no numérico donde se esperaba uno numérico
+
+13:30:16,527 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: null
+13:31:01,902 (main) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+13:31:11,861 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+13:31:13,164 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1921
+13:31:13,275 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1921, ciudad=bogota, direccion=aqui, nombre=hola]
+13:31:13,286 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+13:31:13,304 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+13:31:13,304 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:31:13,309 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:31:13,309 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:31:13,312 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:31:13,313 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+13:31:13,316 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+13:31:13,316 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:31:13,320 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:31:13,322 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 123
+13:31:13,439 (AWT-EventQueue-0) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_COMPRA(idCompra, fecha, cantidad, totalPagado, productoSucursal, cliente, factura) values (?, ?, ?, ?, ?, ?, ?)".
+ORA-01858: se ha encontrado un carácter no numérico donde se esperaba uno numérico
+
+13:31:13,442 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: null
+13:31:14,953 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+13:31:14,967 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1921
+13:31:14,971 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1921, ciudad=bogota, direccion=aqui, nombre=hola]
+13:31:14,972 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+13:31:14,983 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+13:31:14,984 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:31:14,987 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:31:14,987 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:31:14,990 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:31:14,990 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+13:31:14,994 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+13:31:14,994 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:31:14,997 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:31:14,998 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 123
+13:31:15,002 (AWT-EventQueue-0) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_COMPRA(idCompra, fecha, cantidad, totalPagado, productoSucursal, cliente, factura) values (?, ?, ?, ?, ?, ?, ?)".
+ORA-01858: se ha encontrado un carácter no numérico donde se esperaba uno numérico
+
+13:31:15,003 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: null
+13:32:30,510 (main) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+13:32:38,780 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+13:32:40,064 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1921
+13:32:40,172 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1921, ciudad=bogota, direccion=aqui, nombre=hola]
+13:32:40,182 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+13:32:40,200 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+13:32:40,200 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:32:40,204 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:32:40,204 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:32:40,208 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:32:40,208 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+13:32:40,211 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+13:32:40,211 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:32:40,215 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:32:40,216 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 123
+13:32:40,334 (AWT-EventQueue-0) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_COMPRA(idCompra, fecha, cantidad, totalPagado, productoSucursal, cliente, factura) values (?, ?, ?, ?, ?, ?, ?)".
+ORA-01858: se ha encontrado un carácter no numérico donde se esperaba uno numérico
+
+13:32:40,337 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: null
+13:32:42,075 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+13:32:42,089 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 1921
+13:32:42,093 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=1921, ciudad=bogota, direccion=aqui, nombre=hola]
+13:32:42,094 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+13:32:42,105 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 4 productosSucursal existentes
+13:32:42,105 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:32:42,108 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:32:42,108 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:32:42,112 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:32:42,112 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1934
+13:32:42,115 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1934, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=3, sucursal=1932]
+13:32:42,115 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 1927
+13:32:42,118 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=1927, volumen=12.0, peso=12.0, tipo=Albarrotes, nivelAprovisionamiento=4, sucursal=1921]
+13:32:42,119 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: 123
+13:32:42,123 (AWT-EventQueue-0) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_COMPRA(idCompra, fecha, cantidad, totalPagado, productoSucursal, cliente, factura) values (?, ?, ?, ?, ?, ?, ?)".
+ORA-01858: se ha encontrado un carácter no numérico donde se esperaba uno numérico
+
+13:32:42,125 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando compra: null

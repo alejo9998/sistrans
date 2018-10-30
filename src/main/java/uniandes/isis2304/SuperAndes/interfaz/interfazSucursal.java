@@ -50,6 +50,8 @@ public class interfazSucursal extends JFrame
 		add(botonesIzquierda,BorderLayout.WEST);
 		add(botonesDerecha,BorderLayout.EAST);
 		add(btonProductos,BorderLayout.CENTER);
+//		 String pCantidad, String pIdProduSucu, String pIdCliente, String pidFactura, String pTotal 
+		inter.agregarCompra("1","123","1931","12","1");
 	}
 	public InterfazAdministrador darInterfazAdministrados()
 	{

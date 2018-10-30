@@ -413,8 +413,10 @@ public class InterfazAdministrador extends JFrame
 				}
 				else
 				{
-					VOCompra a =superAndes.adicionarCompra("(Select current_date from dual)", cant,tot, idProd, idClie, idFac);
+					VOCompra a =superAndes.adicionarCompra("to_date (Select current_date from dual)", cant,tot, idProd, idClie, idFac);
+
 					String mensaje =a.toString();
+
 					panelDatos.actualizarInterfaz(mensaje);
 				}
 			}
