@@ -10233,3 +10233,68 @@ ORA-02290: restricción de control (ISIS2304C281820.CK_TOTALPAGADO) violada
 18:08:37,052 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
 18:08:37,200 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
 18:08:37,200 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:21:47,319 (main) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontrÃ³ un archivo de configuraciÃ³n vÃ¡lido: Tablas BD
+18:22:13,041 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : Rojas
+18:22:13,379 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=1898, ciudad=Zipaquira, direccion=Cra 6 # 1-39, nombre=Rojas]
+18:24:25,643 (main) INFO  [uniandes.isis2304.SuperAndes.test.ClienteTest] - Probando la unicidad sobre Cliente
+18:24:25,697 (main) INFO  [uniandes.isis2304.SuperAndes.test.ClienteTest] - Se encontró un archivo de configuración de tablas válido
+18:24:27,506 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:24:27,913 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:24:27,915 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:24:27,915 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de clientes
+18:24:27,968 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Clientes: 0 clientes existentes
+18:24:27,968 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+18:24:28,046 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1899, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=null]
+18:24:28,046 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de clientesIndividuos
+18:24:28,085 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ClientesIndividuo: 1 clientesIndividuo existentes
+18:24:28,085 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+18:24:28,120 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_CLIENTE) violada
+
+18:24:28,143 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: null
+18:24:28,143 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : Alejandro
+18:24:28,217 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : Cliente [identificacion=1900, nombre=Alejandro, correo=chonal77@hotmail.com, direccion=Cra6#1-39]
+18:24:28,217 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de clientesEmpresa
+18:24:28,255 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ClientesEmpresa: 1 clientesEmpresa existentes
+18:24:28,255 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : Gran via
+18:24:28,280 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-00001: restricción única (ISIS2304C281820.A_CLIENTE) violada
+
+18:24:28,301 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : null
+18:24:28,301 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:24:28,462 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:24:28,462 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:24:28,488 (main) INFO  [uniandes.isis2304.SuperAndes.test.ClienteTest] - Probando RESTRICCIONES DE CHEQUEO sobre Cliente
+18:24:28,489 (main) INFO  [uniandes.isis2304.SuperAndes.test.ClienteTest] - Se encontró un archivo de configuración de tablas válido
+18:24:28,839 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:24:29,161 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:24:29,161 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+18:24:29,161 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de clientes
+18:24:29,195 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Clientes: 0 clientes existentes
+18:24:29,195 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : Alejandro
+18:24:29,267 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: Cliente [identificacion=1901, nombre=Alejandro, correo=chonal@hotmail.com, direccion=null]
+18:24:29,267 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de clientesIndividuos
+18:24:29,302 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de ClientesIndividuo: 1 clientesIndividuo existentes
+18:24:29,302 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : null
+18:24:29,361 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_CLIENTE"."NOMBRE")
+
+18:24:29,382 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: null
+18:24:29,382 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo : melaPela
+18:24:29,442 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_CLIENTE"."CORREO")
+
+18:24:29,463 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteIndividuo: null
+18:24:29,463 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : null
+18:24:29,520 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_CLIENTE"."NOMBRE")
+
+18:24:29,541 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : null
+18:24:29,541 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : melaPela
+18:24:29,598 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CLIENTE(identificacion, nombre, correo, direccion) values (?, ?, ?, ?)".
+ORA-01400: no se puede realizar una inserción NULL en ("ISIS2304C281820"."A_CLIENTE"."CORREO")
+
+18:24:29,618 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando clienteEmpresa : null
+18:24:29,618 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+18:24:29,768 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+18:24:29,768 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
