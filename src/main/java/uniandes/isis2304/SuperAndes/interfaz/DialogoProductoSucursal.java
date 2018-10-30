@@ -73,6 +73,8 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 
 	private Bodega[] bodegas; 
 	private final static String actualiza="ACTUALIZAR";
+	
+	private BotonProductos a ;
 
 	public DialogoProductoSucursal(interfazSucursal inter) 
 	{
@@ -298,8 +300,10 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 			String idBod = (String)bodega.getSelectedItem();
 			String  idest = (String)estante.getSelectedItem();
 			
+			
 			inte.agregarProductoSucursal(nom, mar, pres, cantiPres, unidMed, volEmp, pesoEmp, codBarr, cat, tip, fech, 
 					nvlreord, prcUni, cantBod, cantEst, precUnMed, idProm, idest, idBod);
+			inte.btonProductos.actalizar();
 
 
 			dispose();

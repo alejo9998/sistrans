@@ -3,6 +3,7 @@ package uniandes.isis2304.SuperAndes.interfaz;
 import java.awt.BorderLayout;
 import java.awt.List;
 import java.io.FileReader;
+import java.sql.Date;
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
@@ -15,6 +16,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.stream.JsonReader;
 
+import oracle.sql.DATE;
 import uniandes.isis2304.SuperAndes.negocio.Bodega;
 import uniandes.isis2304.SuperAndes.negocio.Estante;
 import uniandes.isis2304.SuperAndes.negocio.Sucursal;
@@ -347,8 +349,8 @@ public class InterfazAdministrador extends JFrame
 			long idEst=0L;
 			long idPromocion=0L;
 
-			try
-			{
+//			try
+//			{
 
 				cantPresentacion =Double.parseDouble(cantidadPresentacion);
 				volEmpaque =Double.parseDouble(VolumenEmpaquetado);
@@ -361,7 +363,10 @@ public class InterfazAdministrador extends JFrame
 				precioUnidadMedida=Double.parseDouble(pPrecioUnidadMedida);
 				idBod= Long.parseLong(idBodega);
 				idEst=Long.parseLong(idEstante);
-				idPromocion=Long.parseLong(idProm);
+				idPromocion=Long.parseLong("0");
+				System.out.println(pNombre+" "+ pMarca+" "+ pPresentacion+" "+ cantPresentacion+" "+ unidadmedida+" "+ volEmpaque+" "+ pesoEmpaque+" "+
+							codigoBarras+" "+ pCategoria+" "+ pTipo+" "+ pFechaVencimiento+" "+nivelReorden+" "+ precioUnitario+" "+ cantidadBodega+" "+ cantidadEstante+" "+ precioUnidadMedida+" "+
+							idBod+" "+ idEst+" "+ idPromocion);
 				if(cantPresentacion<0||volEmpaque<0||pesoEmpaque<0||codigoBarras<0||nivelReorden<0||precioUnitario<0||cantidadBodega<0
 						||cantidadEstante<0||precioUnidadMedida<0||idBod<0||idEst<0||idPromocion<0)
 				{
@@ -372,14 +377,15 @@ public class InterfazAdministrador extends JFrame
 					VOProductoSucursal a=superAndes.adicionarProductoSucursal(pNombre, pMarca, pPresentacion, cantPresentacion, unidadmedida, volEmpaque, pesoEmpaque,
 							codigoBarras, pCategoria, pTipo, pFechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida,
 							idBod, idEst, idPromocion);
+					System.out.println(a);
 					String mensaje =a.toString();
 					panelDatos.actualizarInterfaz(mensaje);
 				}
-			}
-			catch (Exception e)
-			{
-				JOptionPane.showMessageDialog(null, "Introduzca Valores Validos", "SuperAndes",JOptionPane.ERROR_MESSAGE);
-			}
+//			}
+//			catch (Exception e)
+//			{
+//				JOptionPane.showMessageDialog(null, "Introduzca Valores Validos", "SuperAndes",JOptionPane.ERROR_MESSAGE);
+//			}
 		}
 
 	}
@@ -413,8 +419,12 @@ public class InterfazAdministrador extends JFrame
 				}
 				else
 				{
-					VOCompra a =superAndes.adicionarCompra("to_date (Select current_date from dual)", cant,tot, idProd, idClie, idFac);
+					
+					System.out.println(cant+" " + tot + " "+ idProd +" " + idClie +" "+ idFac);
 
+					VOCompra a =superAndes.adicionarCompra("30/10/2018", cant,tot, idProd, idClie, idFac);
+					System.out.println(a);
+					
 					String mensaje =a.toString();
 
 					panelDatos.actualizarInterfaz(mensaje);
@@ -499,7 +509,7 @@ public class InterfazAdministrador extends JFrame
 				Long idPro =0L;
 				int cant =0;
 				double preci = 0.0;
-				Double calif= Double.parseDouble(cali);
+				double calif= Double.parseDouble(cali);
 				int entergado = 0;
 				if(entre.equalsIgnoreCase(DialogoOrdenPedido.ENTREGADO))
 				{
@@ -513,11 +523,13 @@ public class InterfazAdministrador extends JFrame
 
 				if(idsuc<0||idPro<0||cant<0||preci<0)
 				{
+					
 					JOptionPane.showMessageDialog(null, "Introduzca Valores Validos", "SuperAndes",JOptionPane.ERROR_MESSAGE);
 				}
 				else
 				{
 					VOOrdenPedido a = superAndes.adicionarOrdenPedido(preci, fechEntrega, fechEsp, calif, entergado, cant, idPro, idsuc);
+					System.out.println(a);
 					String mensaje =a.toString();
 					panelDatos.actualizarInterfaz(mensaje);
 

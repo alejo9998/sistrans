@@ -69,7 +69,7 @@ public class BotonProductos extends JPanel implements ActionListener
 		}
 		lista.setListData(productos.toArray());
 	}
-	private void actalizar()
+	public void actalizar()
 	{
 		datos();
 	}
@@ -82,7 +82,7 @@ public class BotonProductos extends JPanel implements ActionListener
 		{
 			dp= new DialogoProductoSucursal(inter);
 			dp.setVisible(true);
-			actalizar();
+			
 		}
 
 	}
