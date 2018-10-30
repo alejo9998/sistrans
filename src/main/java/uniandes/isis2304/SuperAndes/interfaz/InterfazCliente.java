@@ -14,6 +14,8 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
 import uniandes.isis2304.SuperAndes.negocio.Cliente;
+import uniandes.isis2304.SuperAndes.negocio.Estante;
+import uniandes.isis2304.SuperAndes.negocio.ProductoSucursal;
 
 public class InterfazCliente extends JFrame implements ActionListener,ListSelectionListener
 {
@@ -40,17 +42,22 @@ public class InterfazCliente extends JFrame implements ActionListener,ListSelect
 	private final static String RECOGERPRODUCTOS="RECOGERPRODUCTOS";
 
 	private JLabel total;
-	private JTextField totalVal;
+	private JLabel totalVal;
 
-	private ArrayList<String> car;
+	private ArrayList<ProductoSucursal> car;
+	private ArrayList<ProductoSucursal> productosLista;
 
 	private String [] f;
-	
+
 	private long id;
 
-	public InterfazCliente(Cliente clie) 
+	private DialogoCompra dc;
+
+	public InterfazCliente(Cliente clie,DialogoCompra pDc) 
 	{
-		car= new ArrayList<String>();
+		dc=pDc;
+		productosLista= new ArrayList<>();
+		car= new ArrayList<ProductoSucursal>();
 		id = clie.getIdentificacion();
 		setSize(620,600);
 		setLocationRelativeTo(null);
@@ -83,8 +90,8 @@ public class InterfazCliente extends JFrame implements ActionListener,ListSelect
 		scrollProductos= new JScrollPane(productos);
 		scrollProductos.setVerticalScrollBarPolicy( javax.swing.JScrollPane.VERTICAL_SCROLLBAR_ALWAYS );
 		scrollProductos.setHorizontalScrollBarPolicy( javax.swing.JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS );
-		String[] a ={"Prod 1","Prod 2","Prod 3"};
-		productos.setListData(a);
+		datos();
+
 		agregar= new JButton("Agregar al Carrito");
 		agregar.setActionCommand(AGREGAR);
 		agregar.addActionListener(this);
@@ -108,8 +115,11 @@ public class InterfazCliente extends JFrame implements ActionListener,ListSelect
 
 		total = new JLabel("Total :");
 		total.setEnabled(false);
-		totalVal= new JTextField();
-		totalVal.setEditable(false);
+		totalVal= new JLabel();
+
+
+		totalVal.setText("0.00");
+
 		eliminar= new JButton("Eliminar del carrito");
 		eliminar.addActionListener(this);
 		eliminar.setActionCommand(ELIMINAR);
@@ -151,6 +161,32 @@ public class InterfazCliente extends JFrame implements ActionListener,ListSelect
 
 
 	}
+	public void datos()
+	{
+		Object[] aux =dc.darInterSucursal().inter.darPorudctos();
+		ArrayList<String>produ = new ArrayList<String>();
+
+		Long a = Long.parseLong(dc.darInterSucursal().id);
+		for(int i=0; i<aux.length;i++)
+		{
+			ProductoSucursal aux2 = (ProductoSucursal) aux[i];
+			if(dc.darInterSucursal().inter.darEstante(aux2.getEstante()).getSucursal()== a)
+			{
+				produ.add(aux2.getNombre() +"-----------------  " +aux2.getPrecioUnitario());
+				productosLista.add(aux2);
+			}
+
+		}
+
+		String[] prod= new String [produ.size()]; 
+		for(int i =0 ;i<produ.size();i++)
+		{
+			prod[i]= produ.get(i);
+		}
+
+		productos.setListData(prod);
+	}
+
 	public void desactivar()
 	{
 		carrito.setEnabled(false);
@@ -164,25 +200,38 @@ public class InterfazCliente extends JFrame implements ActionListener,ListSelect
 	public void valueChanged(ListSelectionEvent arg0) 
 	{
 		// TODO Auto-generated method stub
-
+		
 	}
 
-	public void add(String e)
+	public void add(ProductoSucursal e)
 	{
-		car.add(e);
+		try
+		{
+			car.add(e);	
+		}
+		catch(Exception t)
+
+		{
+			JOptionPane.showMessageDialog(null,"Seleccione algun producto","SuperAndes",JOptionPane.ERROR_MESSAGE);
+		}
+
 
 	}
 	public void actualizar()
 	{
 		f = new String [car.size()];
+		double monto = 0;
 		for (int i =0; i<car.size();i++)
 		{
-			f[i]=car.get(i);
+			f[i]=car.get(i).getNombre();
+			monto= monto + car.get(i).getPrecioUnitario();
 		}
+
+		totalVal.setText("$ " + monto);
 		carrito.setListData(f);
 	}
 
-	public void Delete(int e)
+	public void Delete(ProductoSucursal e)
 	{
 		car.remove(e);
 	}
@@ -193,13 +242,34 @@ public class InterfazCliente extends JFrame implements ActionListener,ListSelect
 		// TODO Auto-generated method stub
 		if(e.getActionCommand().equals(AGREGAR))
 		{
-			add((String)productos.getSelectedValue());	
+			try
+			{	add(productosLista.get(productos.getSelectedIndex()));
 			actualizar();
+			}
+			catch(Exception t)
+			{
+				JOptionPane.showMessageDialog(null,"Seleccione algun producto","SuperAndes",JOptionPane.ERROR_MESSAGE);
+			}
+
 		}
 		else if(e.getActionCommand().equals(ELIMINAR))
 		{
-			Delete((int) carrito.getSelectedIndex());
-			actualizar();			
+			try
+			{
+				Delete(car.get( carrito.getSelectedIndex()));
+				actualizar();
+			}
+			catch(Exception t)
+			{
+				if(car.size()==0)
+				{
+					JOptionPane.showMessageDialog(null,"No hay productos en el carrito","SuperAndes",JOptionPane.ERROR_MESSAGE);
+				}
+				else
+				{
+				JOptionPane.showMessageDialog(null,"Seleccione algun producto","SuperAndes",JOptionPane.ERROR_MESSAGE);
+				}
+			}
 		}
 		else if(e.getActionCommand().equals(SOLICITARCARRITO))
 		{

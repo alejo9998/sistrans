@@ -33,6 +33,8 @@ public class DialogoPromocion extends JDialog implements ActionListener
 
 	private JButton cancelar;
 	private final static String CANCELAR="CANCELAR";
+	
+	private final static int PAGUENLLEVEM=1;
 
 
 	public DialogoPromocion(interfazSucursal inter) 

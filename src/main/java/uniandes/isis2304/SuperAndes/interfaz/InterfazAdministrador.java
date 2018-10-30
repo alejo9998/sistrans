@@ -91,7 +91,7 @@ public class InterfazAdministrador extends JFrame
 
 	public void agregarCliente(String pNombre, String pCorreo, String pDireccion)
 	{
-		
+
 		if(pNombre.equalsIgnoreCase("")|| pCorreo.equalsIgnoreCase(""))
 		{
 			JOptionPane.showMessageDialog(null, "Los campos nombre y correo no pueden ser vacios", "SuperAndes",JOptionPane.ERROR_MESSAGE);
@@ -110,7 +110,7 @@ public class InterfazAdministrador extends JFrame
 				String mensaje =a.toString();
 				panelDatos.actualizarInterfaz(mensaje);
 			}
-			
+
 		}
 	}
 
@@ -137,32 +137,32 @@ public class InterfazAdministrador extends JFrame
 		else
 		{
 			VOSucursal a =superAndes.adicionarSucursal(pCiudad, pDireccion, pnombre);
-			
+
 			String mensaje =a.toString();
 			panelDatos.actualizarInterfaz(mensaje);
 		}
 	}
-	
+
 	public void verificarSucursal(String id) throws Exception
 	{
 		System.out.println(id);
 		Long idV =0L;
 		idV= Long.parseLong(id);
 		Sucursal esta = superAndes.darSucursalPorId(idV);
-		
-		
-		
+
+
+
 		if(esta == null)
 		{
 			throw new Exception("No hay una sucursal con ese id");
 		}
-		
+
 	}
 	public Object[] darPorudctos()
 	{
 		return superAndes.darProductosSucursal().toArray();
 	}
-	
+
 	public Object[] darCliente()
 	{
 		return superAndes.darClientes().toArray();
@@ -179,7 +179,7 @@ public class InterfazAdministrador extends JFrame
 		}
 		else
 		{
-			
+
 			VOProveedor a =superAndes.adicionarProveedor(pnombre);
 			String mensaje =a.toString();
 			panelDatos.actualizarInterfaz(mensaje);
@@ -259,8 +259,8 @@ public class InterfazAdministrador extends JFrame
 
 				volum = Double.parseDouble(pVol);
 
-				idSucu = Long.parseLong("1538");
-				
+				idSucu = Long.parseLong(idSuc);
+
 
 				if(peso<0||volum<0||idSucu<0)
 				{
@@ -268,17 +268,17 @@ public class InterfazAdministrador extends JFrame
 				}
 				else
 				{
-					
+
 					VOBodega a =superAndes.adicionarBodega(volum, peso, pTipo, idSucu);
 					String mensaje =a.toString();
 					panelDatos.actualizarInterfaz(mensaje);
-					
+
 				}
 			}
 			catch(Exception e)
 			{
 				System.out.println(e.getMessage());
-				
+
 				JOptionPane.showMessageDialog(null, "Introduzca Valores Validos", "SuperAndes",JOptionPane.ERROR_MESSAGE);
 			}
 
@@ -303,7 +303,7 @@ public class InterfazAdministrador extends JFrame
 				volumen = Double.parseDouble(volum);
 				peso = Double.parseDouble(pPeso);
 				niveApr = Integer.parseInt(nivAprovi);
-				idSucu =Long.parseLong("1538");
+				idSucu =Long.parseLong(idSuc);
 				if(volumen<0|| peso<0||niveApr<0||idSucu<0)
 				{
 					JOptionPane.showMessageDialog(null, "Los valores deben ser mayor a 0", "SuperAndes",JOptionPane.ERROR_MESSAGE);
@@ -503,7 +503,7 @@ public class InterfazAdministrador extends JFrame
 				{
 					entergado=1;
 				}
-				
+
 				idsuc=Long.parseLong(idSucu);
 				idPro=Long.parseLong(idProv);
 				cant = Integer.parseInt(cantid);
@@ -515,10 +515,10 @@ public class InterfazAdministrador extends JFrame
 				}
 				else
 				{
-				VOOrdenPedido a = superAndes.adicionarOrdenPedido(preci, fechEntrega, fechEsp, calif, entergado, cant, idPro, idsuc);
-				String mensaje =a.toString();
-				panelDatos.actualizarInterfaz(mensaje);
-		
+					VOOrdenPedido a = superAndes.adicionarOrdenPedido(preci, fechEntrega, fechEsp, calif, entergado, cant, idPro, idsuc);
+					String mensaje =a.toString();
+					panelDatos.actualizarInterfaz(mensaje);
+
 				}
 			}
 			catch (Exception e)
@@ -528,38 +528,84 @@ public class InterfazAdministrador extends JFrame
 		}
 
 	}
-	
+
 	public void estantes()
 	{
-		 String nombre = JOptionPane.showInputDialog( this, "Introduzca el id de la sucursal", "Dar los estantes de una sucursal", JOptionPane.INFORMATION_MESSAGE );
-		 Long idS= Long.parseLong(nombre);
-		 Object[]a =superAndes.darEstantes().toArray();
-		 String mensaje = "Los estantes son:";
-		 for(int i=0;i<a.length;i++)
-		 {
-			 Estante d = (Estante)a[i];
-			 if(idS==d.getSucursal())
-			 {
-				 mensaje= mensaje +"\n"+ d.getIdEstante();
-			 }
-		 }
-		 JOptionPane.showMessageDialog( this, mensaje, "Dar los estantes de una sucursal", JOptionPane.INFORMATION_MESSAGE);
+		String nombre = JOptionPane.showInputDialog( this, "Introduzca el id de la sucursal", "Dar los estantes de una sucursal", JOptionPane.INFORMATION_MESSAGE );
+		Long idS= Long.parseLong(nombre);
+		Object[]a =superAndes.darEstantes().toArray();
+		String mensaje = "Los estantes son:";
+		for(int i=0;i<a.length;i++)
+		{
+			Estante d = (Estante)a[i];
+			if(idS==d.getSucursal())
+			{
+				mensaje= mensaje +"\n"+ d.getIdEstante();
+			}
+		}
+		JOptionPane.showMessageDialog( this, mensaje, "Dar los estantes de una sucursal", JOptionPane.INFORMATION_MESSAGE);
+	}
+	
+	public Bodega[] darBodegas(Long idS)
+	{
+
+
+		Object[]a =superAndes.darBodegas().toArray();
+		ArrayList<Bodega> b = new ArrayList<>();
+		for(int i=0;i<a.length;i++)
+		{
+			Bodega d = (Bodega)a[i];
+			if(idS==d.getSucursal())
+			{
+				b.add( d);
+			}
+		}
+
+		Bodega [] bod= new Bodega[b.size()];
+		for(int i=0; i<b.size();i++)
+		{
+			bod[i]=b.get(i);
+		}
+		return bod;
+	}
+	
+	public Estante[] darEstantes(Long idS)
+	{
+
+
+		Object[]a =superAndes.darEstantes().toArray();
+		ArrayList<Estante> b = new ArrayList<>();
+		for(int i=0;i<a.length;i++)
+		{
+			Estante d = (Estante)a[i];
+			if(idS==d.getSucursal())
+			{
+				b.add( d);
+			}
+		}
+
+		Estante [] est= new Estante[b.size()];
+		for(int i=0; i<b.size();i++)
+		{
+			est[i]=b.get(i);
+		}
+		return est;
 	}
 	public void bodegas()
 	{
-		 String nombre = JOptionPane.showInputDialog( this, "Introduzca el id de la sucursal", "Dar las Bodegas de una sucursal", JOptionPane.INFORMATION_MESSAGE );
-		 Long idS= Long.parseLong(nombre);
-		 Object[]a =superAndes.darBodegas().toArray();
-		 String mensaje = "Las Bodegas son:";
-		 for(int i=0;i<a.length;i++)
-		 {
-			 Bodega d = (Bodega)a[i];
-			 if(idS==d.getSucursal())
-			 {
-				 mensaje= mensaje +"\n"+ d.getIdBodega();
-			 }
-		 }
-		 JOptionPane.showMessageDialog( this, mensaje, "Dar las Bodegas de una sucursal", JOptionPane.INFORMATION_MESSAGE);
+		String nombre = JOptionPane.showInputDialog( this, "Introduzca el id de la sucursal", "Dar las Bodegas de una sucursal", JOptionPane.INFORMATION_MESSAGE );
+		Long idS= Long.parseLong(nombre);
+		Object[]a =superAndes.darBodegas().toArray();
+		String mensaje = "Las Bodegas son:";
+		for(int i=0;i<a.length;i++)
+		{
+			Bodega d = (Bodega)a[i];
+			if(idS==d.getSucursal())
+			{
+				mensaje= mensaje +"\n"+ d.getIdBodega();
+			}
+		}
+		JOptionPane.showMessageDialog( this, mensaje, "Dar las Bodegas de una sucursal", JOptionPane.INFORMATION_MESSAGE);
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

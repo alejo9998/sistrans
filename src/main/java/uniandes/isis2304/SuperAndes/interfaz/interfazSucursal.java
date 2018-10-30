@@ -22,7 +22,7 @@ public class interfazSucursal extends JFrame
 	
 	private BotonProductos btonProductos;
 	
-	private InterfazAdministrador inter;
+	public InterfazAdministrador inter;
 	
 	public String id;
 	

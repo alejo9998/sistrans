@@ -62,6 +62,10 @@ public class botoneraImplementos extends JPanel implements ActionListener
 		add(agregarEstante);
 		add(agregarVenta);
 	}
+	public Object[] darProductos()
+	{
+		return inter.darInterfazAdministrados().darPorudctos();
+	}
 
 	@Override
 	public void actionPerformed(ActionEvent e)

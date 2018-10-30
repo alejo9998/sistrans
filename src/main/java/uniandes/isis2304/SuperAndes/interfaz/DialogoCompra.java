@@ -101,7 +101,10 @@ public class DialogoCompra extends JDialog implements ActionListener
 		add(clientes);
 		add(campos);
 	}
-	
+	public interfazSucursal darInterSucursal()
+	{
+		return inte;
+	}
 
 	public void datos()
 	{
@@ -129,7 +132,7 @@ public class DialogoCompra extends JDialog implements ActionListener
 		{
 			int a = clientes.getSelectedIndex();
 			Cliente aux =(Cliente) inte.darCliente()[a];
-			InterfazCliente interf= new InterfazCliente(aux);
+			InterfazCliente interf= new InterfazCliente(aux,this);
 			interf.setVisible(true);
 			dispose();
 		}

@@ -55,12 +55,15 @@ public class BotonProductos extends JPanel implements ActionListener
 		
 		ArrayList<String> productos = new ArrayList<String>();
 		Object[] a =inter.darInterfazAdministrados().darPorudctos();
+		
 		for(int i =0;i<a.length;i++)
 		{
+			
 			ProductoSucursal aux = (ProductoSucursal) a[i];
 			Estante aux2 = inter.darInterfazAdministrados().darEstante(aux.getEstante());
 			if(aux2.getSucursal()==inter.daridSucursal())
 			{
+				
 				productos.add(aux.getNombre());
 			}
 		}

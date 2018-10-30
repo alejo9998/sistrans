@@ -16,6 +16,9 @@ import javax.swing.border.EmptyBorder;
 
 import com.toedter.calendar.JDateChooser;
 
+import uniandes.isis2304.SuperAndes.negocio.Bodega;
+import uniandes.isis2304.SuperAndes.negocio.Estante;
+
 public class DialogoProductoSucursal extends JDialog implements ActionListener
 {
 
@@ -56,9 +59,9 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 
 	private JTextField promocion;
 
-	private JTextField bodega;
+	private JComboBox<String> bodega;
 
-	private JTextField estante;
+	private JComboBox<String> estante;
 
 	private JButton aceptar;
 	private final static String ACEPTAR="ACEPTAR";
@@ -66,7 +69,9 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 	private JButton cancelar;
 	private final static String CANCELAR="CANCELAR";
 
+	private Estante[] estantes; 
 
+	private Bodega[] bodegas; 
 	private final static String actualiza="ACTUALIZAR";
 
 	public DialogoProductoSucursal(interfazSucursal inter) 
@@ -141,9 +146,11 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 
 		promocion= new JTextField();
 
-		bodega= new JTextField();
+		bodega= new JComboBox<>();
+		bodega();
 
-		estante = new JTextField();
+		estante = new JComboBox<>();
+		estante();
 
 		aceptar = new JButton("Aceptar");
 		aceptar.addActionListener(this);
@@ -238,6 +245,30 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 			
 		}
 	}
+	
+	public void bodega()
+	{
+		bodegas =inte.darInterfazAdministrados().darBodegas(inte.daridSucursal());
+		System.out.println(bodegas.toString());
+		for(int i=0;i<bodegas.length;i++)
+		{
+			Long a = bodegas[i].getIdBodega();
+			bodega.addItem(a.toString());
+		}
+		
+	}
+
+	public void estante()
+	{
+		estantes =inte.darInterfazAdministrados().darEstantes(inte.daridSucursal());
+		
+		for(int i=0;i<estantes.length;i++)
+		{
+			Long a = estantes[i].getIdEstante();
+			estante.addItem(a.toString());
+		}
+		
+	}
 
 	@Override
 	public void actionPerformed(ActionEvent e)
@@ -264,8 +295,8 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 			String cantEst = cantidadEstante.getText();
 			String precUnMed = precioUnidadMedida.getText();
 			String idProm = promocion.getText();
-			String idBod = bodega.getText();
-			String  idest = estante.getText();
+			String idBod = (String)bodega.getSelectedItem();
+			String  idest = (String)estante.getSelectedItem();
 			
 			inte.agregarProductoSucursal(nom, mar, pres, cantiPres, unidMed, volEmp, pesoEmp, codBarr, cat, tip, fech, 
 					nvlreord, prcUni, cantBod, cantEst, precUnMed, idProm, idest, idBod);
