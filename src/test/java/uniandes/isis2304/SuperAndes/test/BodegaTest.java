@@ -73,7 +73,7 @@ public class BodegaTest {
 			VOSucursal sucursal1 = superAndes.adicionarSucursal(ciudad1, direccion1, nombre1);
 
 			// Lectura de los tipos de bebida con un tipo de bebida adicionado
-			String tipo1 = "CARNE";
+			String tipo1 = "carne";
 			double peso1 = 1;
 			double volumen1 = 2.6;
 			VOBodega bodega1 = superAndes.adicionarBodega(volumen1, peso1, tipo1 ,sucursal1.getIdSucursal());
@@ -133,7 +133,7 @@ public class BodegaTest {
 			VOSucursal sucursal1 = superAndes.adicionarSucursal(ciudad1, direccion1, nombre1);
 
 			// Lectura de los tipos de bebida con un tipo de bebida adicionado
-			String tipo1 = "CARNE";
+			String tipo1 = "carne";
 			double peso1 = 1;
 			double volumen1 = 2.6;
 			VOBodega bodega1 = superAndes.adicionarBodega(volumen1, peso1, tipo1 ,sucursal1.getIdSucursal());

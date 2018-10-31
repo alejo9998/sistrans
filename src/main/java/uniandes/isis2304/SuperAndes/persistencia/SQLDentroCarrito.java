@@ -38,9 +38,16 @@ class SQLDentroCarrito {
 	
 	public List<DentroCarrito> darDentroCarritoPorIdCarrito ( PersistenceManager pm, long idCarrito){
 		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaCarrito() + " WHERE idCarrito = ?");
-		q.setResultClass(Carrito.class);
+		q.setResultClass(DentroCarrito.class);
 		q.setParameters(idCarrito);
 		return (List<DentroCarrito>) q.executeList();
+	}
+	
+	public DentroCarrito darDentroCarritoPorIds (PersistenceManager pm, long idCarrito, long idProductoSucursal) {
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaDentroCarrito() + " WHERE idCarrito = ? AND idProductoSucursal = ?");
+		q.setResultClass(DentroCarrito.class);
+		q.setParameters(idCarrito, idProductoSucursal);
+		return (DentroCarrito) q.executeUnique();
 	}
 	
 	/**

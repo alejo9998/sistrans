@@ -79,12 +79,12 @@ public class ProductoSucursalTest {
 			
 			double volumenBodega = 5000;
 			double pesoBodega = 5000;
-			String tipoBodega = "Carne";
+			String tipoBodega = "carne";
 			VOBodega bodega = superAndes.adicionarBodega(volumenBodega, pesoBodega, tipoBodega, idSucursal);
 			
 			double volumenEstante = 2500;
 			double pesoEstante = 2500;
-			String tipoEstante = "Carne";
+			String tipoEstante = "carne";
 			int nivelAprovisionamiento = 1000;
 			VOEstante estante = superAndes.adicionarEstante(volumenEstante, pesoEstante, tipoEstante, nivelAprovisionamiento, idSucursal);
 			
@@ -104,8 +104,8 @@ public class ProductoSucursalTest {
 			double volumenEmpaque = 20;
 			double pesoEmpaque = 1000;
 			long codigoBarras = 13515;
-			String categoria = "PERECEDERO";
-			String tipo = "CARNE";
+			String categoria = "perecedero";
+			String tipo = "carne";
 			String fechaVencimiento = "15/12/2018";
 			int nivelReorden = 50;
 			double precioUnitario = 5000;
@@ -181,12 +181,12 @@ public class ProductoSucursalTest {
 			
 			double volumenBodega = 5000;
 			double pesoBodega = 5000;
-			String tipoBodega = "Carne";
+			String tipoBodega = "carne";
 			VOBodega bodega = superAndes.adicionarBodega(volumenBodega, pesoBodega, tipoBodega, idSucursal);
 			
 			double volumenEstante = 2500;
 			double pesoEstante = 2500;
-			String tipoEstante = "Carne";
+			String tipoEstante = "carne";
 			int nivelAprovisionamiento = 1000;
 			VOEstante estante = superAndes.adicionarEstante(volumenEstante, pesoEstante, tipoEstante, nivelAprovisionamiento, idSucursal);
 			
@@ -206,8 +206,8 @@ public class ProductoSucursalTest {
 			double volumenEmpaque = 20;
 			double pesoEmpaque = 1000;
 			long codigoBarras = 13515;
-			String categoria = "PERECEDERO";
-			String tipo = "CARNE";
+			String categoria = "perecedero";
+			String tipo = "carne";
 			String fechaVencimiento = "15/12/2018";
 			int nivelReorden = 50;
 			double precioUnitario = 5000;

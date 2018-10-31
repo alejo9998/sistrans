@@ -82,8 +82,8 @@ public class OrdenPedidoTest {
 			double volumenEmpaque = 300.5;
 			double pesoEmpaque = 1000;
 			long codigoBarras = 13515;
-			String categoria = "PERECEDERO";
-			String tipo = "PAQUETE";
+			String categoria = "perecedero";
+			String tipo = "carne";
 			String fechaVencimiento = "15/12/2018";
 			double calidad = 3;
 			double precio = 8000;
@@ -176,8 +176,8 @@ public class OrdenPedidoTest {
 			double volumenEmpaque = 300.5;
 			double pesoEmpaque = 1000;
 			long codigoBarras = 13515;
-			String categoria = "PERECEDERO";
-			String tipo = "PAQUETE";
+			String categoria = "perecedero";
+			String tipo = "carne";
 			String fechaVencimiento = "15/12/2018";
 			double calidad = 3;
 			double precio = 8000;

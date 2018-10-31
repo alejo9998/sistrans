@@ -73,7 +73,7 @@ public class EstanteTest {
 			VOSucursal sucursal1 = superAndes.adicionarSucursal(ciudad1, direccion1, nombre1);
 
 			// Lectura de los tipos de bebida con un tipo de bebida adicionado
-			String tipo1 = "CARNE";
+			String tipo1 = "carne";
 			double peso1 = 1;
 			double volumen1 = 2.6;
 			int nivelAprovisionamiento1 = 50;
@@ -135,7 +135,7 @@ public class EstanteTest {
 			VOSucursal sucursal1 = superAndes.adicionarSucursal(ciudad1, direccion1, nombre1);
 
 			// Lectura de los tipos de bebida con un tipo de bebida adicionado
-			String tipo1 = "CARNE";
+			String tipo1 = "carne";
 			double peso1 = 1;
 			double volumen1 = 2.6;
 			int nivelAprovisionamiento1 = 50;

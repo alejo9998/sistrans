@@ -74,16 +74,16 @@ public class ProductoProveedorTest {
 			VOProveedor proveedor1 = superAndes.adicionarProveedor(nombreProveedor1);
 
 			// Lectura de los tipos de bebida con un tipo de bebida adicionado
-			String nombre = "Papas fritas";
-			String marca = "SuperRicas";
+			String nombre = "Oreo";
+			String marca = "Colombina";
 			String presentacion = "paqueton de 5 paquetes de 200 gr. cada uno";
 			double cantidadPresentacion = 1000;
 			String unidadMedida = "gramos";
 			double volumenEmpaque = 300.5;
 			double pesoEmpaque = 1000;
 			long codigoBarras = 13515;
-			String categoria = "PERECEDERO";
-			String tipo = "PAQUETE";
+			String categoria = "perecedero";
+			String tipo = "galleta";
 			String fechaVencimiento = "15/12/2018";
 			double calidad = 3;
 			double precio = 8000;
@@ -155,8 +155,8 @@ public class ProductoProveedorTest {
 			double volumenEmpaque = 300.5;
 			double pesoEmpaque = 1000;
 			long codigoBarras = 13515;
-			String categoria = "PERECEDERO";
-			String tipo = "PAQUETE";
+			String categoria = "perecedero";
+			String tipo = "carne";
 			String fechaVencimiento = "15/12/2018";
 			double calidad = 3;
 			double precio = 8000;

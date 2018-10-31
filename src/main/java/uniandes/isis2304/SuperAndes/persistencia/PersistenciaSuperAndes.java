@@ -1712,6 +1712,10 @@ public class PersistenciaSuperAndes {
 		return sqlDentroCarrito.darDentroCarrito(pmf.getPersistenceManager());
 	}
 	
+	public DentroCarrito darDentroCarritosPorIds(long idCarrito, long idProductoSucursal) {
+		return sqlDentroCarrito.darDentroCarritoPorIds(pmf.getPersistenceManager(), idCarrito, idProductoSucursal);
+	}
+	
 	public List<DentroCarrito> darDentroCarritoPorIdCarrito(long idCarrito){
 		return sqlDentroCarrito.darDentroCarritoPorIdCarrito(pmf.getPersistenceManager(), idCarrito);
 	}

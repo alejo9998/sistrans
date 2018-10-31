@@ -1,6 +1,7 @@
 package uniandes.isis2304.SuperAndes.negocio;
 
 
+import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -259,6 +260,134 @@ public class SuperAndes {
 		return null;
 
 
+	}
+	
+	/* ********************************************************************
+	 *         METODOS REQUERIMIENTOS FUNCIONALES SEGUNDA ITERACION
+	 **********************************************************************/
+	public Carrito solicitarCarritoRF12 () throws Exception{
+		List<Carrito> carritosLibres = darCarritosLibres();
+		if (carritosLibres.size() == 0) {
+			throw new Exception ("No hay carritos libres");
+		}
+		else {
+			Carrito retornado = carritosLibres.get(0);
+			modificarEstadoOcupacionCarrito(retornado.getIdCarrito(), 1);
+			return retornado;
+		}
+	}
+	
+	public void adicionarProductoAlCarritoRF13 (long idCarrito, long idProductoSucursal, int cantidad) throws Exception{
+		ProductoSucursal productoSucursal = darProductoSucursalPorId(idProductoSucursal);
+		int cantidadEnEstante = productoSucursal.getCantidadEstante();
+		if ( cantidad > cantidadEnEstante) {
+			throw new Exception ("No se puede retirar una cantidad mayor de productos a los que hay en estante");
+		}
+		else {
+			disminuirCantidadEstanteProductoSucursal(idProductoSucursal, cantidad);
+			if (darDentroCarritosPorIds(idCarrito, idProductoSucursal) != null ) {
+				modificarCantidadDentroCarrito(idCarrito, idProductoSucursal, cantidad);
+			}
+			else {
+				adicionarDentroCarrito(idCarrito, idProductoSucursal, cantidad);
+			}
+		}
+	}
+	
+	public void devolverProductoDelCarritoRF14 (long idCarrito, long idProductoSucursal, int cantidad) throws Exception {
+		DentroCarrito dentroCarrito = darDentroCarritosPorIds(idCarrito, idProductoSucursal);
+		int cantidadDentroCarrito = dentroCarrito.getCantidad();
+		if ( cantidad > cantidadDentroCarrito) {
+			throw new Exception ("No de pueden retirar mas productos de los que existen en el carrito");
+		}
+		else {
+			if ( cantidad == cantidadDentroCarrito) {
+				aumentarCantidadEstanteProductoSucursal(idProductoSucursal, cantidad);
+				eliminarDentroCarrito(idCarrito, idProductoSucursal);
+			}
+			else {
+				aumentarCantidadEstanteProductoSucursal(idProductoSucursal, cantidad);
+				modificarCantidadDentroCarrito(idCarrito, idProductoSucursal, -cantidad);
+			}
+		}
+	}
+	
+	/**
+	 * Retorna el total que tuvo que pagar el cliente por la compra de los productos que tenia en el carrito
+	 * Tambien verifica que el nivel de Reorden de Estante se mantenga despues de la compra
+	 * Tambien hace un OrdenPedido si es necesario
+	 * @param idCarrito
+	 * @param idCliente
+	 * @return
+	 * @throws Exception
+	 */
+	public double pagarCompraRF15 (long idCarrito, long idCliente) throws Exception{
+		List<DentroCarrito> dentroCarritoPagar = darDentroCarritoPorIdCarrito(idCarrito);
+		if ( dentroCarritoPagar.size() == 0) {
+			throw new Exception ("El carrito que solicito para pagar los productos esta vacio");
+		}
+		else {
+			double retornado = 0;
+			String factura = "";
+			Calendar c = Calendar.getInstance();
+			int dia = c.get(Calendar.DATE);
+			int mes = c.get(Calendar.MONTH) + 1;
+			int año = c.get(Calendar.YEAR);
+			String fecha = dia + "/" + mes + "/" + año;
+			String fechaEsperadaEntrega;
+			if ( mes == 12) {
+				fechaEsperadaEntrega = dia + "/" + "01" + "/" + año+1;
+			}
+			else {
+				fechaEsperadaEntrega = dia + "/" + mes+1 + "/" + año;
+			}
+			for ( int i = 0 ; i<dentroCarritoPagar.size(); i++) {
+				DentroCarrito car = dentroCarritoPagar.get(i);
+				ProductoSucursal pro = darProductoSucursalPorId(car.getIdProductoSucursal());
+				Estante es = darEstantePorId(pro.getEstante());
+				if ( es.getNivelAprovisionamiento() > pro.getCantidadEstante() && pro.getCantidadBodega() > 0) {
+					int diferencia = es.getNivelAprovisionamiento() - pro.getCantidadEstante();
+					if (pro.getCantidadBodega() > diferencia) {
+						aumentarCantidadEstanteProductoSucursal(pro.getIdProductoSucursal(), diferencia);
+						disminuirCantidadBodegaProductoSucursal(pro.getIdProductoSucursal(), diferencia);
+					}
+				}
+				if (pro.getNivelReorden() < pro.getCantidadBodega() + pro.getCantidadEstante()) {
+					List<ProductoProveedor> productosProveedor = darProductosProveedorPorCodigoBarras(pro.getCodigoBarras());
+					int numeroAleatorio = (int) (Math.random() * productosProveedor.size());
+					ProductoProveedor productoProveedorElegido = productosProveedor.get(numeroAleatorio);
+					double totalPagoOrdenPedido = productoProveedorElegido.getPrecio() * pro.getNivelReorden();
+					adicionarOrdenPedido(totalPagoOrdenPedido, null, fechaEsperadaEntrega, null, 0, pro.getNivelReorden(), productoProveedorElegido.getIdProductoProveedor(), es.getSucursal());
+				}
+				double precioUnitario = darProductoSucursalPorId(car.getIdProductoSucursal()).getPrecioUnitario();
+				double totalPago = car.getCantidad() * precioUnitario;
+				retornado += totalPago;
+				factura += "Producto Pagado: " + pro.getNombre() + '\n' + 
+						"cantidad: " + car.getCantidad() + '\n' + 
+						"TotalPagado: " + totalPago;
+				Factura fac = adicionarFactura(factura);
+				adicionarCompra(fecha, car.getCantidad(), totalPago, car.getIdProductoSucursal(), idCliente, fac.getIdFactura());			
+			}
+			return retornado;
+		}
+	}
+	
+	public void abandonarCarritoRF16 (long idCarrito) {
+		modificarEstadoOcupacionCarrito(idCarrito, -1);
+	}
+	
+	public void recolectarProductosAbandonadosRF17() {
+		List<Carrito> carritosAbandonados = darCarritosAbandonados();
+		for ( int i = 0; i<carritosAbandonados.size(); i++) {
+			long idCarrito = carritosAbandonados.get(i).getIdCarrito();
+			List<DentroCarrito> dentroCarrito = darDentroCarritoPorIdCarrito(idCarrito);
+			for ( int j = 0; j<dentroCarrito.size(); j++) {
+				DentroCarrito car = dentroCarrito.get(j);
+				aumentarCantidadEstanteProductoSucursal(car.getIdProductoSucursal(), car.getCantidad());
+				eliminarDentroCarrito(car.getIdCarrito(), car.getIdProductoSucursal());
+			}
+			modificarEstadoOcupacionCarrito(idCarrito, 0);
+		}
 	}
 
 
@@ -1197,6 +1326,13 @@ public class SuperAndes {
 		}
 		log.info("Generenado los VO de DentroCarrito por idCarrito: " + voDentroCarrito.size() + " DentroCarritos existentes");
 		return voDentroCarrito;
+	}
+	
+	public DentroCarrito darDentroCarritosPorIds(long idCarrito, long idProductoSucursal) {
+		log.info("Generando la informacion de dentro carrito por los ids carrito y productoSucursal: " + idCarrito + ", " + idProductoSucursal);
+		DentroCarrito dentroCarrito = pp.darDentroCarritosPorIds(idCarrito, idProductoSucursal);
+		log.info("Generando dentroCarrito por ids: " + dentroCarrito);
+		return dentroCarrito;
 	}
 	
 	public long modificarCantidadDentroCarrito(long idCarrito, long idProductoSucursal, int cantidad) {
