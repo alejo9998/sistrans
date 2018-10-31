@@ -59,5 +59,11 @@ class SQLCarrito {
 		q.setResultClass(Carrito.class);
 		return (List<Carrito>) q.executeList();
 	}
+	
+	public long modificarEstadoOcupacionCarrito (PersistenceManager pm, long idCarrito, int ocupado) {
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaCarrito() + " SET ocupado = ? WHERE idCarrito = ?");
+		q.setParameters(ocupado, idCarrito);
+		return (long) q.executeUnique();
+	}
 
 }

@@ -1044,6 +1044,167 @@ public class SuperAndes {
 		log.info("Buscando compra por id: " + compra != null ? compra : "NO EXISTE");
 		return compra;
 	}
+	
+	/* ****************************************************************************
+	 *              Metodos para manejar Carrito
+	 *  ***************************************************************************/
+	public Carrito adicionarCarrito(int ocupado) {
+		log.info("Adicionando carrito");
+		Carrito resp = pp.adicionarCarrito(ocupado);
+		log.info("Adicionando carrito: " + resp + " tuplasInsertadas");
+		return resp;
+	}
+	
+	public long eiminarCarrito ( long idCarrito) {
+		log.info("Eliminando carrito");
+		long resp = pp.eliminarCarritoPorId(idCarrito);
+		log.info("Eliminando carrito: " + resp + "tulplas eliminadas");
+		return resp;
+	}
+	
+	public List<Carrito> darCarritos (){
+		log.info("Listando Carritos");
+		List<Carrito> carritos = pp.darCarritos();
+		log.info("Listando Carritos: Listo!");
+		return carritos;
+	}
+	
+	public List<VOCarrito> darVOCarritos()
+	{
+		log.info("Generando los VO de Carritos");
+		List<VOCarrito> voCarritos = new LinkedList<VOCarrito>();
+		for (VOCarrito car : pp.darCarritos()) {
+			voCarritos.add(car);
+		}
+		log.info("Generando los VO de Carrito: " + voCarritos.size() + " Carrtios existentes");
+		return voCarritos;
+	}
+	
+	public Carrito darCarritoPorId(long idCarrito) {
+		log.info("Dar informacion de un Carrito por id: " + idCarrito);
+		Carrito carrito = pp.darCarritoPorId(idCarrito);
+		log.info("Buscando carrito por id: " + carrito != null ? carrito : "NO EXISTE");
+		return carrito;
+	}
+	
+	public long modificarEstadoOcupacionCarrito (long idCarrito, int ocupado) {
+		log.info("Modificando el estado de ocupacion del carrito : " + idCarrito);
+		long resp = pp.modificarEstadoOcupacionCarrito(idCarrito, ocupado);
+		log.info("Terminando de modificar el estado de ocupacion del carrito: nuevoEstado = " + ocupado);
+		return resp;
+	}
+	
+	public List<Carrito> darCarritosLibres (){
+		log.info("Listando CarritosLibres");
+		List<Carrito> carritos = pp.darCarritosLibres();
+		log.info("Listando CarritosLibres: Listo!");
+		return carritos;
+	}
+	
+	public List<VOCarrito> darVOCarritosLibres()
+	{
+		log.info("Generando los VO de CarritosLibres");
+		List<VOCarrito> voCarritos = new LinkedList<VOCarrito>();
+		for (VOCarrito car : pp.darCarritosLibres()) {
+			voCarritos.add(car);
+		}
+		log.info("Generando los VO de CarritosLibres: " + voCarritos.size() + " Carrtios existentes");
+		return voCarritos;
+	}
+	
+	public List<Carrito> darCarritosOcupados (){
+		log.info("Listando CarritosOcupados");
+		List<Carrito> carritos = pp.darCarritosOcupados();
+		log.info("Listando CarritosOcupados: Listo!");
+		return carritos;
+	}
+	
+	public List<VOCarrito> darVOCarritosOcupados()
+	{
+		log.info("Generando los VO de CarritosOcupados");
+		List<VOCarrito> voCarritos = new LinkedList<VOCarrito>();
+		for (VOCarrito car : pp.darCarritosOcupados()) {
+			voCarritos.add(car);
+		}
+		log.info("Generando los VO de CarritosOcupados: " + voCarritos.size() + " Carrtios existentes");
+		return voCarritos;
+	}
+	
+	public List<Carrito> darCarritosAbandonados (){
+		log.info("Listando CarritosAbandonados");
+		List<Carrito> carritos = pp.darCarritosAbandonados();
+		log.info("Listando CarritosAbandonados: Listo!");
+		return carritos;
+	}
+	
+	public List<VOCarrito> darVOCarritosAbandonados()
+	{
+		log.info("Generando los VO de CarritosAbandonados");
+		List<VOCarrito> voCarritos = new LinkedList<VOCarrito>();
+		for (VOCarrito car : pp.darCarritosAbandonados()) {
+			voCarritos.add(car);
+		}
+		log.info("Generando los VO de CarritosAbandonados: " + voCarritos.size() + " Carrtios existentes");
+		return voCarritos;
+	}
+	
+	/* ****************************************************************************
+	 *              Metodos para manejar DentroCarrito
+	 *  ***************************************************************************/
+	public DentroCarrito adicionarDentroCarrito (long idCarrito, long idProductoSucursal, int cantidad) {
+		log.info("Adicionando dentroCarrito: [" + idCarrito + " , " + idProductoSucursal + "]");
+		DentroCarrito resp = pp.adicionarDentroCarrito(idCarrito, idProductoSucursal, cantidad);
+		log.info("Adicionando DentroCarrito: " + resp + " tuplas insertadas");
+		return resp;
+	}
+	
+	public long eliminarDentroCarrito (long idCarrito, long idProductoSucursal) {
+		log.info("Eliminando DentroCarrito");
+		long resp = pp.eliminarDentroCarrito(idCarrito, idProductoSucursal);
+		log.info("Eliminando DentroCarrito: " + resp + " tuplas eliminadas");
+		return resp;
+	}
+	
+	public List<DentroCarrito> darDentroCarrito (){
+		log.info("Listando DentroCarrito");
+		List<DentroCarrito> dentroCarrito = pp.darDentroCarrito();
+		log.info("Listando DentroCarrito: " + dentroCarrito.size() + " dentroCarrito existentes");
+		return dentroCarrito;
+	} 
+	
+	public List<VODentroCarrito> darVODentroCarrito(){
+		log.info("Generando los VO de DentroCarrito");
+		List<VODentroCarrito> voDentroCarrito = new LinkedList<VODentroCarrito>();
+		for ( VODentroCarrito car : pp.darDentroCarrito()) {
+			voDentroCarrito.add(car);
+		}
+		log.info("Generando los VO de dnetroCarrito: " + voDentroCarrito.size() + " DentroCarrito existentes");
+		return voDentroCarrito;
+	}
+	
+	public List<DentroCarrito> darDentroCarritoPorIdCarrito ( long idCarrito){
+		log.info("Listando Dentro carrito por IdCarrito");
+		List<DentroCarrito> dentroCarrito = pp.darDentroCarritoPorIdCarrito(idCarrito);
+		log.info("Listando dentroCarrito por idCarrito: " + dentroCarrito.size() + " dentroCarritos existentes");
+		return dentroCarrito;
+	}
+	
+	public List<VODentroCarrito> darVODentroCarritoPorIdCarrito (long idCarrito){
+		log.info("Generando los VO de DentroCarrito por idCarrito: " + idCarrito);
+		List<VODentroCarrito> voDentroCarrito = new LinkedList<VODentroCarrito>();
+		for (VODentroCarrito car : pp.darDentroCarritoPorIdCarrito(idCarrito)) {
+			voDentroCarrito.add(car);
+		}
+		log.info("Generenado los VO de DentroCarrito por idCarrito: " + voDentroCarrito.size() + " DentroCarritos existentes");
+		return voDentroCarrito;
+	}
+	
+	public long modificarCantidadDentroCarrito(long idCarrito, long idProductoSucursal, int cantidad) {
+		log.info("Modificando la cantidad de DentroCarrito: [" + idCarrito + ", " + idProductoSucursal + "]");
+		long resp = pp.modificarCantidadDentroCarrito(idCarrito, idProductoSucursal, cantidad);
+		log.info("Terminando de modificar DentroCarrito adicionandole la cantidad: " + cantidad);
+		return resp;
+	}
 
 	/* ****************************************************************
 	 * 			Métodos para administración

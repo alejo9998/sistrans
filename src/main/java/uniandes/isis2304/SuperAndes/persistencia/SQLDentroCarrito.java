@@ -5,6 +5,7 @@ import java.util.List;
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 
+import uniandes.isis2304.SuperAndes.negocio.Carrito;
 import uniandes.isis2304.SuperAndes.negocio.DentroCarrito;
 
 class SQLDentroCarrito {
@@ -32,6 +33,13 @@ class SQLDentroCarrito {
 	public List<DentroCarrito> darDentroCarrito (PersistenceManager pm ){
 		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaDentroCarrito());
 		q.setResultClass(DentroCarrito.class);
+		return (List<DentroCarrito>) q.executeList();
+	}
+	
+	public List<DentroCarrito> darDentroCarritoPorIdCarrito ( PersistenceManager pm, long idCarrito){
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaCarrito() + " WHERE idCarrito = ?");
+		q.setResultClass(Carrito.class);
+		q.setParameters(idCarrito);
 		return (List<DentroCarrito>) q.executeList();
 	}
 	

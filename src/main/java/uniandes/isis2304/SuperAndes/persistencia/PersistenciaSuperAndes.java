@@ -1599,6 +1599,37 @@ public class PersistenciaSuperAndes {
 			pm.close();
 		}
 	}
+	
+	public long modificarEstadoOcupacionCarrito(long idCarrito, int ocupado) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+        Transaction tx=pm.currentTransaction();
+        try
+        {
+            tx.begin();
+            long resp = sqlCarrito.modificarEstadoOcupacionCarrito(pm, idCarrito, ocupado);
+            tx.commit();
+
+            return resp;
+        }
+        catch (Exception e)
+        {
+//        	e.printStackTrace();
+        	log.error ("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+            return -1;
+        }
+        finally
+        {
+            if (tx.isActive())
+            {
+                tx.rollback();
+            }
+            pm.close();
+        }
+	}
+	
+	public Carrito darCarritoPorId(long idCarrito) {
+		return sqlCarrito.darCarritoPorId(pmf.getPersistenceManager(), idCarrito);
+	}
 
 	public List<Carrito> darCarritos(){
 		return sqlCarrito.darCarritos(pmf.getPersistenceManager());
@@ -1647,5 +1678,68 @@ public class PersistenciaSuperAndes {
 			}
 			pm.close();
 		}
+	}
+
+	public long eliminarDentroCarrito (long idCarrito, long idProductoSucursal) 
+	{
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx=pm.currentTransaction();
+		try
+		{
+			tx.begin();
+			long resp = sqlDentroCarrito.eliminarDentroCarrito (pm, idCarrito, idProductoSucursal);	            
+			tx.commit();
+
+			return resp;
+		}
+		catch (Exception e)
+		{
+			//	        	e.printStackTrace();
+			log.error ("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+			return -1;
+		}
+		finally
+		{
+			if (tx.isActive())
+			{
+				tx.rollback();
+			}
+			pm.close();
+		}
+	}
+	
+	public List<DentroCarrito> darDentroCarrito (){
+		return sqlDentroCarrito.darDentroCarrito(pmf.getPersistenceManager());
+	}
+	
+	public List<DentroCarrito> darDentroCarritoPorIdCarrito(long idCarrito){
+		return sqlDentroCarrito.darDentroCarritoPorIdCarrito(pmf.getPersistenceManager(), idCarrito);
+	}
+	
+	public long modificarCantidadDentroCarrito(long idCarrito, long idProductoSucursal, int cantidad) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+        Transaction tx=pm.currentTransaction();
+        try
+        {
+            tx.begin();
+            long resp = sqlDentroCarrito.modificarCantidadDentroCarrito(pm, idCarrito, idProductoSucursal, cantidad);
+            tx.commit();
+
+            return resp;
+        }
+        catch (Exception e)
+        {
+//        	e.printStackTrace();
+        	log.error ("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+            return -1;
+        }
+        finally
+        {
+            if (tx.isActive())
+            {
+                tx.rollback();
+            }
+            pm.close();
+        }
 	}
 }
