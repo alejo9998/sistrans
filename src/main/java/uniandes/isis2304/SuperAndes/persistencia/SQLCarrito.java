@@ -17,9 +17,9 @@ class SQLCarrito {
 		this.pp = pp;
 	}
 	
-	public long adicionarCarrito (PersistenceManager pm, long idCarrito, int ocupado) {
-		Query q = pm.newQuery(SQL, "INSERT INTO " + pp.darTablaCarrito() + "(idCarrito, ocupado) values (?, ?)");
-		q.setParameters(idCarrito, ocupado);
+	public long adicionarCarrito (PersistenceManager pm, long idCarrito, int ocupado, long idSucursal) {
+		Query q = pm.newQuery(SQL, "INSERT INTO " + pp.darTablaCarrito() + "(idCarrito, ocupado, sucursal) values (?, ?, ?)");
+		q.setParameters(idCarrito, ocupado, idSucursal);
 		return (long) q.executeUnique();
 	}
 	
@@ -42,21 +42,24 @@ class SQLCarrito {
 		return (List<Carrito>) q.executeList();
 	}
 	
-	public List<Carrito> darCarritosOcupados (PersistenceManager pm){
-		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaCarrito() + " WHERE ocupado = 1");
+	public List<Carrito> darCarritosOcupadosSucursal (PersistenceManager pm, long idSucursal){
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaCarrito() + " WHERE ocupado = 1 AND sucursal = ?");
 		q.setResultClass(Carrito.class);
+		q.setParameters(idSucursal);
 		return (List<Carrito>) q.executeList();
 	}
 	
-	public List<Carrito> darCarritosLibres (PersistenceManager pm){
-		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaCarrito() + " WHERE ocupado = 0");
+	public List<Carrito> darCarritosLibresSucursal (PersistenceManager pm, long idSucursal){
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaCarrito() + " WHERE ocupado = 0 AND sucursal = ?");
 		q.setResultClass(Carrito.class);
+		q.setParameters(idSucursal);
 		return (List<Carrito>) q.executeList();
 	}
 	
-	public List<Carrito> darCarritosAbandonados (PersistenceManager pm){
-		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaCarrito() + " WHERE ocupado = -1");
+	public List<Carrito> darCarritosAbandonadosSucursal (PersistenceManager pm, long idSucursal){
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaCarrito() + " WHERE ocupado = -1 AND sucursal = ?");
 		q.setResultClass(Carrito.class);
+		q.setParameters(idSucursal);
 		return (List<Carrito>) q.executeList();
 	}
 	

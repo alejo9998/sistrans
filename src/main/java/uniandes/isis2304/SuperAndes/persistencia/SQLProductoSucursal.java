@@ -91,5 +91,11 @@ class SQLProductoSucursal {
 		return (long) q.executeUnique();
 	}
 	
+	public long modificarFechaVencimientoProductoSucursal (PersistenceManager pm, long idProductoSucursal, String fechaVencimientoNueva) {
+		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaProductoSucursal() + " SET fechaVencimiento = ? WHERE idProductoSucursal = ?");
+		q.setParameters(fechaVencimientoNueva, idProductoSucursal);
+		return (long) q.executeUnique();
+	}
+	
 
 }

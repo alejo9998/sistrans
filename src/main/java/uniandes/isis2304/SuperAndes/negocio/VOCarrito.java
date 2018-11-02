@@ -18,6 +18,8 @@ public interface VOCarrito {
 	 */
 	public int getOcupado();
 	
+	public long getSucursal();
+	
 	@Override
 	public String toString();
 

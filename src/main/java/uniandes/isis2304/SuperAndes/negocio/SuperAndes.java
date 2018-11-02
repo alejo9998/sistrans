@@ -49,106 +49,50 @@ public class SuperAndes {
 	}
 
 	/* ****************************************************************
-	 * 			Métodos para manejar los REQUERIMIENTOS FUNCIONALES
+	 * Métodos para manejar los REQUERIMIENTOS FUNCIONALES ITEARACION1
 	 *****************************************************************/
-	public Proveedor req1RegistrarProveedores(String nombre) {
+	public Proveedor registrarProveedoresRF1(String nombre) {
 		return this.adicionarProveedor(nombre);
 	}
 
-	public ProductoSucursal req2RegistrarProductoSucursal(String nombre, String marca, String presentacion, double cantidadPresentacion, String unidadMedida,
+	public ProductoSucursal registrarProductoSucursalRF2(String nombre, String marca, String presentacion, double cantidadPresentacion, String unidadMedida,
 			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , int nivelReorden, double precioUnitario, int cantidadBodega, int cantidadEstante, double precioUnidadMedida
 			, long idBodega, long idEstante, long idPromocion) throws Exception{
-		if ( this.darBodegaPorId(idBodega) == null ) {
-			throw new Exception ("La bodega con el " + idBodega + " no existe");
-		}
-		else if (this.darEstantePorId(idEstante) == null) {
-			throw new Exception ("El Estante con el " + idEstante + " no existe");
-		}else {
-
-			if (categoria.equalsIgnoreCase(CATEGORIA_PERECEDERO)) {
-				if(tipo.equalsIgnoreCase(TIPO_CARNE) || tipo.equalsIgnoreCase(TIPO_FRUTA) || tipo.equalsIgnoreCase(TIPO_GALLETA) || tipo.equals(TIPO_TUBERCULO)) {
-					return this.adicionarProductoSucursal(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, idBodega, idEstante, idPromocion);
-				}
-			}
-			else if (categoria.equalsIgnoreCase(CATEGORA_ALBARROTE)) {
-				if(tipo.equalsIgnoreCase(TIPO_ESCOBA) || tipo.equalsIgnoreCase(TIPO_TRAPEADOR) || tipo.equalsIgnoreCase(TIPO_BALDE) || tipo.equals(TIPO_BRILLADOR)) {
-					return this.adicionarProductoSucursal(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, idBodega, idEstante, idPromocion);
-				}
-			}
-			else if (categoria.equalsIgnoreCase(CATEGORIA_ASEOPERSONAL)) {
-				if(tipo.equalsIgnoreCase(TIPO_CEPILLO) || tipo.equalsIgnoreCase(TIPO_DESODORANTE) || tipo.equalsIgnoreCase(TIPO_CREMA) || tipo.equals(TIPO_CERA)) {
-					return this.adicionarProductoSucursal(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, idBodega, idEstante, idPromocion);
-				}
-			}
-		}
-		throw new Exception ("La categoria del productoSucursal no coincide con un tipo valido; Categoria: " + categoria + " tipo: " + tipo);
+		return this.adicionarProductoSucursal(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, idBodega, idEstante, idPromocion);
 	}
 
-	public ProductoProveedor req2RegistrarProductoProveedor(String nombre, String marca, String presentacion, double cantidadPresentacion, String unidadMedida,
+	public ProductoProveedor registrarProductoProveedorRF2(String nombre, String marca, String presentacion, double cantidadPresentacion, String unidadMedida,
 			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , double calidad, double precio, int numeroCalificaciones, double sumaCalificaciones, long idProveedor) throws Exception {
-		if ( this.darProveedorPorNit(idProveedor) == null)  {
-			throw new Exception ("El proveedor con nit " + idProveedor + " no existe");
-		}
-		else if ( calidad < 0 || calidad > 5) {
-			throw new Exception ("la calidad es invalidad: 0<=calidad<=5, y la calidad fue: " + calidad);
-		}
-		else {
-			if (categoria.equalsIgnoreCase(CATEGORIA_PERECEDERO)) {
-				if(tipo.equalsIgnoreCase(TIPO_CARNE) || tipo.equalsIgnoreCase(TIPO_FRUTA) || tipo.equalsIgnoreCase(TIPO_GALLETA) || tipo.equals(TIPO_TUBERCULO)) {
-					return this.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
-				}
-			}
-			else if (categoria.equalsIgnoreCase(CATEGORA_ALBARROTE)) {
-				if(tipo.equalsIgnoreCase(TIPO_ESCOBA) || tipo.equalsIgnoreCase(TIPO_TRAPEADOR) || tipo.equalsIgnoreCase(TIPO_BALDE) || tipo.equals(TIPO_BRILLADOR)) {
-					return this.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
-				}
-			}
-			else if (categoria.equalsIgnoreCase(CATEGORIA_ASEOPERSONAL)) {
-				if(tipo.equalsIgnoreCase(TIPO_CEPILLO) || tipo.equalsIgnoreCase(TIPO_DESODORANTE) || tipo.equalsIgnoreCase(TIPO_CREMA) || tipo.equals(TIPO_CERA)) {
-					return this.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
-				}
-			}
-		}
-		throw new Exception ("La categoria del productoProveedor no coincide con un tipo valido; Categoria: " + categoria + " tipo: " + tipo);
+		return this.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
 	}
 
-	public Cliente req3RegistrarClienteIndividuo(String nombre, String correo) {
-		return this.adicionarClienteIndividuo(nombre, correo);
+	public Cliente registrarClienteIndividuoRF3(long identificacion,String nombre, String correo) {
+		return this.adicionarClienteIndividuo2(identificacion, nombre, correo);
 	}
 
-	public Cliente req3RegistrarClienteEmpresa(String nombre, String correo, String direccion) {
-		return this.adicionarClienteEmpresa(nombre, correo, direccion);
+	public Cliente registrarClienteEmpresaRF3(long identificacion,String nombre, String correo, String direccion) {
+		return this.adicionarClienteEmpresa2(identificacion,nombre, correo, direccion);
 	}
 
-	public Sucursal req4RegistrarSucursal(String ciudad, String direccion, String nombre) {
+	public Sucursal registrarSucursalRF4(String ciudad, String direccion, String nombre) {
 		return this.adicionarSucursal(ciudad, direccion, nombre);
 	}
 
-	public Bodega req5RegistrarBodegaASucursal (double volumen, double peso, String tipo, long sucursal) throws Exception {
+	public Bodega registrarBodegaASucursalRF5 (double volumen, double peso, String tipo, long sucursal) throws Exception {
 		if (this.darSucursalPorId(sucursal) == null ) {
 			throw new Exception ("La sucursal con id: " + sucursal + " no existe");
 		}
 		else {
-			if (tipo.equalsIgnoreCase(TIPO_BALDE) || tipo.equalsIgnoreCase(TIPO_BRILLADOR) || tipo.equalsIgnoreCase(TIPO_CARNE) || tipo.equalsIgnoreCase(TIPO_CEPILLO) || tipo.equalsIgnoreCase(TIPO_CERA) || tipo.equalsIgnoreCase(TIPO_CREMA) || tipo.equalsIgnoreCase(TIPO_DESODORANTE) || tipo.equalsIgnoreCase(TIPO_ESCOBA) || tipo.equalsIgnoreCase(TIPO_FRUTA) || tipo.equalsIgnoreCase(TIPO_GALLETA) || tipo.equalsIgnoreCase(TIPO_TRAPEADOR) || tipo.equalsIgnoreCase(TIPO_TUBERCULO) ) {
-				return this.adicionarBodega(volumen, peso, tipo, sucursal);
-			}
-			else {
-				throw new Exception ("El tipo de la bodega no es valido");
-			}
+			return this.adicionarBodega(volumen, peso, tipo, sucursal);
 		}
 	}
 
-	public Estante req6RegistrarEstanteASucursal(double volumen, double peso, String tipo,int nivelAprovisionamiento, long sucursal) throws Exception  {
+	public Estante registrarEstanteASucursalRF6(double volumen, double peso, String tipo,int nivelAprovisionamiento, long sucursal) throws Exception  {
 		if (this.darSucursalPorId(sucursal) == null ) {
 			throw new Exception ("La sucursal con id: " + sucursal + " no existe");
 		}
 		else {
-			if (tipo.equalsIgnoreCase(TIPO_BALDE) || tipo.equalsIgnoreCase(TIPO_BRILLADOR) || tipo.equalsIgnoreCase(TIPO_CARNE) || tipo.equalsIgnoreCase(TIPO_CEPILLO) || tipo.equalsIgnoreCase(TIPO_CERA) || tipo.equalsIgnoreCase(TIPO_CREMA) || tipo.equalsIgnoreCase(TIPO_DESODORANTE) || tipo.equalsIgnoreCase(TIPO_ESCOBA) || tipo.equalsIgnoreCase(TIPO_FRUTA) || tipo.equalsIgnoreCase(TIPO_GALLETA) || tipo.equalsIgnoreCase(TIPO_TRAPEADOR) || tipo.equalsIgnoreCase(TIPO_TUBERCULO) ) {
-				return this.adicionarEstante(volumen, peso, tipo, nivelAprovisionamiento, sucursal);
-			}
-			else {
-				throw new Exception ("El tipo de la estante no es valido");
-			}
+			return this.adicionarEstante(volumen, peso, tipo, nivelAprovisionamiento, sucursal);
 		}
 	}
 
@@ -224,6 +168,44 @@ public class SuperAndes {
 		this.calificarOrdenPedido(idOrdenPedido, calificacion);
 		this.recibirFechaOrdenPedido(idOrdenPedido);
 		this.recibirEntregadoOrdenPedido(idOrdenPedido);
+		long codigoBarrasProve = producto.getCodigoBarras();
+		List<ProductoSucursal> productosSucursal = this.darProductosSucursalPorCodigoBarras(codigoBarrasProve);
+		ProductoSucursal elegido = null;
+		boolean encontre = false;
+		for (int i = 0; i<productosSucursal.size() && !encontre; i++) {
+			Bodega bodegaPertenece = darBodegaPorId(productosSucursal.get(i).getBodega());
+			if ( bodegaPertenece.getSucursal() == orden.getSucursal()) {
+				elegido = productosSucursal.get(i);
+				encontre = true;
+			}
+		}
+		if ( elegido == null) {
+			throw new Exception ("No se encontro un ProductoSucursal relacionado");
+		}
+		else {
+			long idElegido = elegido.getIdProductoSucursal();
+			Estante estanteElegido =  this.darEstantePorId(elegido.getEstante());
+			Calendar c = Calendar.getInstance();
+			int dia = c.get(Calendar.DATE);
+			int mes = c.get(Calendar.MONTH) + 1;
+			int año = c.get(Calendar.YEAR);
+			if (mes == 12) {
+				mes = 02;
+				año++;
+			}
+			else if ( mes == 11) {
+				mes = 01;
+				año++;
+			}
+			else {
+				mes+=mes+2;
+			}
+			String fecha = dia + "/" + mes + "/" + año;
+			this.modificarFechaVencimientoProductoSucursal(idElegido, fecha);
+			if ( estanteElegido.getNivelAprovisionamiento() > elegido.getCantidadEstante()) {
+				int diferencia = estanteElegido.getNivelAprovisionamiento() - elegido.getCantidadEstante();
+			}
+		}
 	}
 
 	public Compra req11RegistrarUnaVentaDeUnProducto(String fecha, int cantidad, long idProductoSucursal, long idCliente, long idFactura) throws Exception {
@@ -265,8 +247,8 @@ public class SuperAndes {
 	/* ********************************************************************
 	 *         METODOS REQUERIMIENTOS FUNCIONALES SEGUNDA ITERACION
 	 **********************************************************************/
-	public Carrito solicitarCarritoRF12 () throws Exception{
-		List<Carrito> carritosLibres = darCarritosLibres();
+	public Carrito solicitarCarritoRF12 (long idSucursal) throws Exception{
+		List<Carrito> carritosLibres = darCarritosLibresSucursal(idSucursal);
 		if (carritosLibres.size() == 0) {
 			throw new Exception ("No hay carritos libres");
 		}
@@ -366,8 +348,10 @@ public class SuperAndes {
 						"cantidad: " + car.getCantidad() + '\n' + 
 						"TotalPagado: " + totalPago;
 				Factura fac = adicionarFactura(factura);
-				adicionarCompra(fecha, car.getCantidad(), totalPago, car.getIdProductoSucursal(), idCliente, fac.getIdFactura());			
+				adicionarCompra(fecha, car.getCantidad(), totalPago, car.getIdProductoSucursal(), idCliente, fac.getIdFactura());	
+				this.eliminarDentroCarrito(car.getIdCarrito(), car.getIdProductoSucursal());
 			}
+			modificarEstadoOcupacionCarrito(idCarrito, 0);
 			return retornado;
 		}
 	}
@@ -376,8 +360,8 @@ public class SuperAndes {
 		modificarEstadoOcupacionCarrito(idCarrito, -1);
 	}
 	
-	public void recolectarProductosAbandonadosRF17() {
-		List<Carrito> carritosAbandonados = darCarritosAbandonados();
+	public void recolectarProductosAbandonadosRF17(long idSucursal) {
+		List<Carrito> carritosAbandonados = darCarritosAbandonadosSucursal(idSucursal);
 		for ( int i = 0; i<carritosAbandonados.size(); i++) {
 			long idCarrito = carritosAbandonados.get(i).getIdCarrito();
 			List<DentroCarrito> dentroCarrito = darDentroCarritoPorIdCarrito(idCarrito);
@@ -739,6 +723,7 @@ public class SuperAndes {
 		long cambios = pp.modificarFechaVencimientoProductoProveedor(idProductoProveedor, fecha);
 		return cambios;
 	}
+	
 
 	/* ****************************************************************
 	 * 			Métodos para manejar el OrdenPedido
@@ -1038,6 +1023,12 @@ public class SuperAndes {
 		long cambios = pp.disminuirCantidadEstanteProductoSucursal(idProductoSucursal, cantidad);
 		return cambios;
 	}
+	
+	public long modificarFechaVencimientoProductoSucursal(long idProductoSucursal, String fechaVencimientoNueva) {
+		log.info("Modificando la fecha de vencimiento del productoSucursal con id: " + idProductoSucursal);
+		long cambios = pp.modificarFechaVencimientoProductoSucursal(idProductoSucursal, fechaVencimientoNueva);
+		return cambios;
+	}
 
 	/* ****************************************************************
 	 * 			Métodos para manejar las PROMOCIONES
@@ -1177,9 +1168,9 @@ public class SuperAndes {
 	/* ****************************************************************************
 	 *              Metodos para manejar Carrito
 	 *  ***************************************************************************/
-	public Carrito adicionarCarrito(int ocupado) {
+	public Carrito adicionarCarrito(int ocupado, long idSucursal) {
 		log.info("Adicionando carrito");
-		Carrito resp = pp.adicionarCarrito(ocupado);
+		Carrito resp = pp.adicionarCarrito(ocupado, idSucursal);
 		log.info("Adicionando carrito: " + resp + " tuplasInsertadas");
 		return resp;
 	}
@@ -1223,54 +1214,54 @@ public class SuperAndes {
 		return resp;
 	}
 	
-	public List<Carrito> darCarritosLibres (){
+	public List<Carrito> darCarritosLibresSucursal (long idSucursal){
 		log.info("Listando CarritosLibres");
-		List<Carrito> carritos = pp.darCarritosLibres();
+		List<Carrito> carritos = pp.darCarritosLibresSucursal(idSucursal);
 		log.info("Listando CarritosLibres: Listo!");
 		return carritos;
 	}
 	
-	public List<VOCarrito> darVOCarritosLibres()
+	public List<VOCarrito> darVOCarritosLibresSucursal(long idSucursal)
 	{
 		log.info("Generando los VO de CarritosLibres");
 		List<VOCarrito> voCarritos = new LinkedList<VOCarrito>();
-		for (VOCarrito car : pp.darCarritosLibres()) {
+		for (VOCarrito car : pp.darCarritosLibresSucursal(idSucursal)) {
 			voCarritos.add(car);
 		}
 		log.info("Generando los VO de CarritosLibres: " + voCarritos.size() + " Carrtios existentes");
 		return voCarritos;
 	}
 	
-	public List<Carrito> darCarritosOcupados (){
+	public List<Carrito> darCarritosOcupadosSucursal (long idSucursal){
 		log.info("Listando CarritosOcupados");
-		List<Carrito> carritos = pp.darCarritosOcupados();
+		List<Carrito> carritos = pp.darCarritosOcupadosSucursal(idSucursal);
 		log.info("Listando CarritosOcupados: Listo!");
 		return carritos;
 	}
 	
-	public List<VOCarrito> darVOCarritosOcupados()
+	public List<VOCarrito> darVOCarritosOcupadosSucursal(long idSucursal)
 	{
 		log.info("Generando los VO de CarritosOcupados");
 		List<VOCarrito> voCarritos = new LinkedList<VOCarrito>();
-		for (VOCarrito car : pp.darCarritosOcupados()) {
+		for (VOCarrito car : pp.darCarritosOcupadosSucursal(idSucursal)) {
 			voCarritos.add(car);
 		}
 		log.info("Generando los VO de CarritosOcupados: " + voCarritos.size() + " Carrtios existentes");
 		return voCarritos;
 	}
 	
-	public List<Carrito> darCarritosAbandonados (){
+	public List<Carrito> darCarritosAbandonadosSucursal (long idSucursal){
 		log.info("Listando CarritosAbandonados");
-		List<Carrito> carritos = pp.darCarritosAbandonados();
+		List<Carrito> carritos = pp.darCarritosAbandonadosSucursal(idSucursal);
 		log.info("Listando CarritosAbandonados: Listo!");
 		return carritos;
 	}
 	
-	public List<VOCarrito> darVOCarritosAbandonados()
+	public List<VOCarrito> darVOCarritosAbandonadosSucursal(long idSucursal)
 	{
 		log.info("Generando los VO de CarritosAbandonados");
 		List<VOCarrito> voCarritos = new LinkedList<VOCarrito>();
-		for (VOCarrito car : pp.darCarritosAbandonados()) {
+		for (VOCarrito car : pp.darCarritosAbandonadosSucursal(idSucursal)) {
 			voCarritos.add(car);
 		}
 		log.info("Generando los VO de CarritosAbandonados: " + voCarritos.size() + " Carrtios existentes");

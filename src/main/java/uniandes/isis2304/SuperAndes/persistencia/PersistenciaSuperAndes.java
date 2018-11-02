@@ -1349,6 +1349,34 @@ public class PersistenciaSuperAndes {
 			pm.close();
 		}
 	}
+	
+	public long modificarFechaVencimientoProductoSucursal (long idProductoSucursal, String fechaVencimientoNueva)
+	{
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx=pm.currentTransaction();
+		try
+		{
+			tx.begin();
+			long resp = sqlProductoSucursal.modificarFechaVencimientoProductoSucursal(pm, idProductoSucursal, fechaVencimientoNueva);
+			tx.commit();
+
+			return resp;
+		}
+		catch (Exception e)
+		{
+			//        	e.printStackTrace();
+			log.error ("Exception : " + e.getMessage() + "\n" + darDetalleException(e));
+			return -1;
+		}
+		finally
+		{
+			if (tx.isActive())
+			{
+				tx.rollback();
+			}
+			pm.close();
+		}
+	}
 
 	/* ****************************************************************
 	 * 			Métodos para manejar las PROMOCIONES
@@ -1544,19 +1572,19 @@ public class PersistenciaSuperAndes {
 	//------------------------------------------------------------
 	//----------METODOS CARRITO-----------------------------------
 	//------------------------------------------------------------
-	public Carrito adicionarCarrito (int ocupado) {
+	public Carrito adicionarCarrito (int ocupado, long idSucursal) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx=pm.currentTransaction();
 		try
 		{
 			tx.begin();
 			long idCarrito = nextval ();
-			long tuplasInsertadas = sqlCarrito.adicionarCarrito(pm, idCarrito, ocupado);
+			long tuplasInsertadas = sqlCarrito.adicionarCarrito(pm, idCarrito, ocupado, idSucursal);
 			tx.commit();
 
 			log.trace ("Inserción de carrito: " + idCarrito + ": " + tuplasInsertadas + " tuplas insertadas");
 
-			return new Carrito (idCarrito, ocupado);
+			return new Carrito (idCarrito, ocupado, idSucursal);
 		}
 		catch (Exception e)
 		{
@@ -1635,16 +1663,16 @@ public class PersistenciaSuperAndes {
 		return sqlCarrito.darCarritos(pmf.getPersistenceManager());
 	}
 
-	public List<Carrito> darCarritosLibres(){
-		return sqlCarrito.darCarritosLibres(pmf.getPersistenceManager());
+	public List<Carrito> darCarritosLibresSucursal(long idSucursal){
+		return sqlCarrito.darCarritosLibresSucursal(pmf.getPersistenceManager(), idSucursal);
 	}
 
-	public List<Carrito> darCarritosOcupados(){
-		return sqlCarrito.darCarritosOcupados(pmf.getPersistenceManager());
+	public List<Carrito> darCarritosOcupadosSucursal(long idSucursal){
+		return sqlCarrito.darCarritosOcupadosSucursal(pmf.getPersistenceManager(), idSucursal);
 	}
 
-	public List<Carrito> darCarritosAbandonados(){
-		return sqlCarrito.darCarritosAbandonados(pmf.getPersistenceManager());
+	public List<Carrito> darCarritosAbandonadosSucursal(long idSucursal){
+		return sqlCarrito.darCarritosAbandonadosSucursal(pmf.getPersistenceManager(), idSucursal);
 	}
 
 	//------------------------------------------------------------------
