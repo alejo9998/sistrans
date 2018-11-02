@@ -10,7 +10,9 @@ import javax.swing.JOptionPane;
 import javax.swing.border.TitledBorder;
 
 import javafx.scene.layout.Border;
+import uniandes.isis2304.SuperAndes.negocio.Carrito;
 import uniandes.isis2304.SuperAndes.negocio.Estante;
+import uniandes.isis2304.SuperAndes.negocio.SuperAndes;
 
 public class interfazSucursal extends JFrame 
 {
@@ -26,6 +28,7 @@ public class interfazSucursal extends JFrame
 	
 	public String id;
 	
+	public ArrayList<Carrito> c;
 
 	
 	public interfazSucursal(String pId) throws Exception
@@ -35,6 +38,7 @@ public class interfazSucursal extends JFrame
 		inter.verificarSucursal(pId);
 		id=pId;
 		
+		c= new ArrayList<>();
 		setTitle("Sucursal " + id );
 		baner = new bannerSucursal();
 		
@@ -51,7 +55,7 @@ public class interfazSucursal extends JFrame
 		add(botonesDerecha,BorderLayout.EAST);
 		add(btonProductos,BorderLayout.CENTER);
 		  
-//		inter.agregarCompra("1","123","2028","12","1");
+	
 	}
 	public InterfazAdministrador darInterfazAdministrados()
 	{
@@ -80,10 +84,89 @@ public class interfazSucursal extends JFrame
 			throw new Exception(e.getMessage());
 		}
 	}
-
+	public ArrayList<Carrito> darCarritos()
+	{
+		long idSuc= Long.parseLong(id);
+		c=inter.darCarritos(idSuc);
+		return c;
+	}
+	public void dentroCarrito(long idCarrito,long idProductoSucursal,int cantidad)
+	{
+		inter.dentroCarrito(idCarrito, idProductoSucursal, cantidad);
+	}
+	
+	public Object[] darProductoProveedor()
+	{
+		return inter.darProductosProveedor();
+	}
+	public void eliminarCarrito()
+	{
+		try
+		{
+		long idSucursal= Long.parseLong(id);
+		Long carrito =c.get(btonProductos.darItemSeleccionado()).getIdCarrito();
+		inter.eliminarCarrito(carrito,idSucursal);
+		btonProductos.actalizar();
+		}
+		catch(Exception e)
+		{
+			JOptionPane.showMessageDialog(null, "Seleccione algun carrito", "SuperAndes",JOptionPane.ERROR_MESSAGE);
+		}
+	}
+	
+	
+	public Carrito darCarritoLibre()
+	{
+		
+		Carrito aux = null;
+		boolean encontra=false;
+		for (int i =0; i<c.size()&&!encontra;i++)
+		{
+			if(c.get(i).getOcupado()==0)
+			{
+				aux=c.get(i);
+				encontra=true;
+				inter.ocuparCarro(aux.getIdCarrito());
+				
+				btonProductos.actalizar();
+			}
+		}
+		
+		
+		if(!encontra)
+		{
+			
+			JOptionPane.showMessageDialog(null, "No hay carritos disponibles carrito", "SuperAndes",JOptionPane.ERROR_MESSAGE);
+		}
+		return aux;
+	}
+	public void recolectarProductos()
+	{
+		long idSuc = Long.parseLong(id);
+		inter.recogerProductos(idSuc);
+		actualizar();
+	}
+	public void actualizar()
+	{
+		btonProductos.actalizar();
+	}
+	
+	public void agergarCarrito()
+	{
+		long idSuc= Long.parseLong(id);
+		inter.agregarCarrito(idSuc);
+		actualizar();
+	}
+	public void abandonarCarrito(long idCarrito)
+	{
+		inter.abandonarCarrito(idCarrito);
+		actualizar();
+	}
+	
 	public void agregarBodega(String pTipo,String pVol,String pPeso)
 	{
 		inter.agregarBodega(pTipo, pVol, pPeso, id);
+		
 	}
 	
 	public void agregarCliente(String pNombre,String pCorreo,String pDireccion,String identificacion)

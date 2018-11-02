@@ -88,7 +88,7 @@ public class DialogoBodega extends JDialog implements ActionListener
 		peso= new JTextField();
 		volumen = new JTextField();
 	
-		String [] g ={"Albarrotes","Perecederos","Aseo Personal"};
+		String [] g ={"carne", "galleta", "fruta", "tuberculo", "escoba", "balde", "trapeador", "brillador", "cepillo", "desodorante", "crema", "cera"};
 		tipo = new JComboBox<>(g);
 
 		aceptar = new JButton("Aceptar");

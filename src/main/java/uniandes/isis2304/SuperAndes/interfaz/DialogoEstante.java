@@ -54,7 +54,7 @@ public class DialogoEstante extends JDialog implements ActionListener
         peso= new JTextField();
         volumen = new JTextField();
         nivelReaprovisionamiento = new JTextField();
-        String [] g ={"Albarrotes","Perecederos","Aseo Personal"};
+        String [] g ={"carne", "galleta", "fruta", "tuberculo", "escoba", "balde", "trapeador", "brillador", "cepillo", "desodorante", "crema", "cera"};
         tipo = new JComboBox<String>(g);
         
         aceptar = new JButton("Aceptar");

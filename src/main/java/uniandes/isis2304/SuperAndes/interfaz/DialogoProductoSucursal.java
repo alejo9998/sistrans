@@ -1,51 +1,59 @@
 package uniandes.isis2304.SuperAndes.interfaz;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Graphics;
 import java.awt.GridLayout;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 
+import javax.swing.*;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
+import javax.swing.border.TitledBorder;
 
 import com.toedter.calendar.JDateChooser;
 
 import uniandes.isis2304.SuperAndes.negocio.Bodega;
 import uniandes.isis2304.SuperAndes.negocio.Estante;
+import uniandes.isis2304.SuperAndes.negocio.ProductoProveedor;
 
 public class DialogoProductoSucursal extends JDialog implements ActionListener
 {
 
 	private interfazSucursal inte;
 
-	private JTextField nombre;
+	private JComboBox<String> nombre;
 
+	private JLabel marca;
 
-	private JTextField marca;
+	private JLabel presentacion;
 
-	private JTextField presentacion;
+	private JLabel cantidadPresentacion;
 
-	private JTextField cantidadPresentacion;
+	private JLabel unidadMedida;
 
-	private JTextField unidadMedida;
+	private JLabel volumenEmpaque;
 
-	private JTextField volumenEmpaque;
+	private JLabel pesoEmpaque;
 
-	private JTextField pesoEmpaque;
+	private JLabel codigoDeBarras;
 
-	private JTextField codigoDeBarras;
+	private JLabel categoria;
 
-	private JComboBox<String> categoria;
+	private JLabel tipo;
 
-	private JComboBox<String> tipo;
-
-	private JDateChooser fechadeVencimiento;
+	private JLabel fechadeVencimiento;
 
 	private JTextField nivelReorden;
 
@@ -73,11 +81,13 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 
 	private Bodega[] bodegas; 
 	private final static String actualiza="ACTUALIZAR";
-	
-	private BotonProductos a ;
+
+	private Object[] productosProveedor;
 
 	public DialogoProductoSucursal(interfazSucursal inter) 
 	{
+
+
 		inte= inter;
 		setTitle("Agregar Producto Sucursal");
 		setLayout(new BorderLayout());
@@ -110,32 +120,43 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 		JLabel est = new JLabel("Id Estante: ");
 
 
-		nombre= new JTextField();
+		nombre= new JComboBox<>();
+		datos();
+		nombre.addActionListener(this);
+		nombre.setActionCommand(actualiza);
+		Border border = BorderFactory.createLineBorder(Color.black,1);
 
-		marca= new JTextField();
+		marca= new JLabel();
+		marca.setBorder(border);
 
-		presentacion= new JTextField();
+		presentacion= new JLabel();
+		presentacion.setBorder(border);
 
-		cantidadPresentacion= new JTextField();
+		cantidadPresentacion= new JLabel();
+		cantidadPresentacion.setBorder(border);
 
-		unidadMedida= new JTextField();
+		unidadMedida= new JLabel();
+		unidadMedida.setBorder(border);
 
-		volumenEmpaque= new JTextField();
+		volumenEmpaque= new JLabel();
+		volumenEmpaque.setBorder(border);
 
-		pesoEmpaque= new JTextField();
+		pesoEmpaque= new JLabel();
+		pesoEmpaque.setBorder(border);
 
-		codigoDeBarras= new JTextField();
+		codigoDeBarras= new JLabel();
+		codigoDeBarras.setBorder(border);
 
-		String [] categorias={"Albarrotes","Perecederos","Aseo Personal"};
-		categoria= new JComboBox<>(categorias);
-		categoria.addActionListener(this);
-		categoria.setActionCommand(actualiza);
 
-		fechadeVencimiento = new JDateChooser();
+		categoria= new JLabel();
+		categoria.setBorder(border);
 
-		tipo = new JComboBox<>();
-		
-				
+		fechadeVencimiento = new JLabel();
+		fechadeVencimiento.setBorder(border);
+
+		tipo = new JLabel();
+		tipo.setBorder(border);
+
 		nivelReorden= new JTextField();
 
 		precioUnitario= new JTextField();
@@ -214,62 +235,61 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 		campos.add(vacio2);
 
 	}
-	
-	public void crearTipo()
+
+	public void datos()
 	{
-		if(((String)categoria.getSelectedItem()).equalsIgnoreCase("Albarrotes"))
+		productosProveedor = inte.darProductoProveedor();
+
+		for(int i =0;i<productosProveedor.length;i++)
 		{
-			tipo.removeAllItems();
-			tipo.addItem("Escoba");
-			tipo.addItem("Trapeador");
-			tipo.addItem("balde");
-			tipo.addItem("brillador");
-			
-		}
-		else if(((String)categoria.getSelectedItem()).equalsIgnoreCase("Aseo Personal"))
-		{
-		
-			tipo.removeAllItems();
-			tipo.addItem("Cepillo");
-			tipo.addItem("Desodorante");
-			tipo.addItem("Crema");
-			tipo.addItem("Cera");
-					
-		}
-		else if(((String)categoria.getSelectedItem()).equalsIgnoreCase("Perecederos"))
-		{
-			tipo.removeAllItems();
-			tipo.addItem("Carne");
-			tipo.addItem("Galleta");
-			tipo.addItem("Fruta");
-			tipo.addItem("Tuberculo");
-			
-			
+			ProductoProveedor a = (ProductoProveedor) productosProveedor[i];
+			nombre.addItem(a.getNombre());
 		}
 	}
-	
+
+	public void actualizar()
+	{
+		ProductoProveedor a = (ProductoProveedor)productosProveedor[nombre.getSelectedIndex()];
+
+		marca.setText(a.getMarca());
+		presentacion.setText(a.getPresentacion());
+		Double b =a.getCantidadPresentacion();
+		cantidadPresentacion.setText(b.toString());
+		unidadMedida.setText(a.getUnidadMedida());
+		Double c=a.getVolumenEmpaque();
+		volumenEmpaque.setText(c.toString());
+		Double d = a.getPesoEmpaque();
+		pesoEmpaque.setText(d.toString());
+		Long e =a.getCodigoBarras();
+		codigoDeBarras.setText(e.toString());
+		categoria.setText(a.getCategoria());
+		tipo.setText(a.getTipo());
+		fechadeVencimiento.setText(a.getFechaVencimiento());
+	}
+
+
 	public void bodega()
 	{
 		bodegas =inte.darInterfazAdministrados().darBodegas(inte.daridSucursal());
-		System.out.println(bodegas.toString());
+
 		for(int i=0;i<bodegas.length;i++)
 		{
 			Long a = bodegas[i].getIdBodega();
 			bodega.addItem(a.toString());
 		}
-		
+
 	}
 
 	public void estante()
 	{
 		estantes =inte.darInterfazAdministrados().darEstantes(inte.daridSucursal());
-		
+
 		for(int i=0;i<estantes.length;i++)
 		{
 			Long a = estantes[i].getIdEstante();
 			estante.addItem(a.toString());
 		}
-		
+
 	}
 
 	@Override
@@ -278,32 +298,32 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 		String mensaje = e.getActionCommand();
 		if(mensaje.equalsIgnoreCase(ACEPTAR))
 		{
-			String nom = nombre.getText();
-			String mar = marca.getText();
-			String pres = presentacion.getText();
-			String cantiPres = cantidadPresentacion.getText();
-			String unidMed = unidadMedida.getText();
-			String volEmp= volumenEmpaque.getText();
-			String pesoEmp = pesoEmpaque.getText();
-			String codBarr = codigoDeBarras.getText();
-			String cat = (String)categoria.getSelectedItem();
-			SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yy");
-			String fech = formato.format(fechadeVencimiento.getDate());
-			
-			String tip = (String)tipo.getSelectedItem();
-			String nvlreord = nivelReorden.getText();
-			String prcUni = precioUnitario.getText();
-			String cantBod = cantidadBodega.getText();
-			String cantEst = cantidadEstante.getText();
-			String precUnMed = precioUnidadMedida.getText();
-			String idProm = promocion.getText();
-			String idBod = (String)bodega.getSelectedItem();
-			String  idest = (String)estante.getSelectedItem();
-			
-			
-			inte.agregarProductoSucursal(nom, mar, pres, cantiPres, unidMed, volEmp, pesoEmp, codBarr, cat, tip, fech, 
-					nvlreord, prcUni, cantBod, cantEst, precUnMed, idProm, idest, idBod);
-			inte.btonProductos.actalizar();
+			//			String nom = nombre.get
+			//			String mar = marca.getText();
+			//			String pres = presentacion.getText();
+			//			String cantiPres = cantidadPresentacion.getText();
+			//			String unidMed = unidadMedida.getText();
+			//			String volEmp= volumenEmpaque.getText();
+			//			String pesoEmp = pesoEmpaque.getText();
+			//			String codBarr = codigoDeBarras.getText();
+			//			String cat = (String)categoria.getSelectedItem();
+			//			SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yy");
+			//			String fech = formato.format(fechadeVencimiento.getDate());
+			//			
+			//			String tip = (String)tipo.getSelectedItem();
+			//			String nvlreord = nivelReorden.getText();
+			//			String prcUni = precioUnitario.getText();
+			//			String cantBod = cantidadBodega.getText();
+			//			String cantEst = cantidadEstante.getText();
+			//			String precUnMed = precioUnidadMedida.getText();
+			//			String idProm = promocion.getText();
+			//			String idBod = (String)bodega.getSelectedItem();
+			//			String  idest = (String)estante.getSelectedItem();
+			//			
+			//			
+			//			inte.agregarProductoSucursal(nom, mar, pres, cantiPres, unidMed, volEmp, pesoEmp, codBarr, cat, tip, fech, 
+			//					nvlreord, prcUni, cantBod, cantEst, precUnMed, idProm, idest, idBod);
+			//			inte.btonProductos.actalizar();
 
 
 			dispose();
@@ -314,9 +334,9 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 		}
 		else if ( mensaje.equals(actualiza))
 		{
-			
-			crearTipo();
-		
+			System.out.println("llego");
+			actualizar();
+
 		}
 
 	}

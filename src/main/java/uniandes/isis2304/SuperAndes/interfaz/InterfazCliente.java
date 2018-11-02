@@ -13,6 +13,7 @@ import javax.swing.border.TitledBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
+import uniandes.isis2304.SuperAndes.negocio.Carrito;
 import uniandes.isis2304.SuperAndes.negocio.Cliente;
 import uniandes.isis2304.SuperAndes.negocio.Estante;
 import uniandes.isis2304.SuperAndes.negocio.ProductoSucursal;
@@ -46,15 +47,20 @@ public class InterfazCliente extends JFrame implements ActionListener,ListSelect
 
 	private ArrayList<ProductoSucursal> car;
 	private ArrayList<ProductoSucursal> productosLista;
-
+	
+	private Carrito carritoDeCompras;
+	
 	private String [] f;
 
 	private long id;
 
+	private JLabel dir;
+	
 	private DialogoCompra dc;
 
 	public InterfazCliente(Cliente clie,DialogoCompra pDc) 
 	{
+		
 		dc=pDc;
 		productosLista= new ArrayList<>();
 		car= new ArrayList<ProductoSucursal>();
@@ -63,7 +69,9 @@ public class InterfazCliente extends JFrame implements ActionListener,ListSelect
 		setLocationRelativeTo(null);
 		setLayout(new BorderLayout());
 		setTitle("Carrito del cliente");
-
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		
+			
 		JPanel aux = new JPanel();
 		aux.setLayout(new GridLayout(2, 2));
 		JLabel Encabezado = new JLabel("Cliente numero: "+id);
@@ -72,7 +80,7 @@ public class InterfazCliente extends JFrame implements ActionListener,ListSelect
 		Nom.setHorizontalAlignment(JLabel.CENTER);
 		JLabel cor= new JLabel("Correo: " + clie.getCorreo());
 		cor.setHorizontalAlignment(JLabel.CENTER);
-		JLabel dir = new JLabel("Direccion: "+ clie.getDireccion());
+		dir = new JLabel();
 		dir.setHorizontalAlignment(JLabel.CENTER);
 		aux.add( Nom);
 		aux.add(cor);
@@ -186,7 +194,18 @@ public class InterfazCliente extends JFrame implements ActionListener,ListSelect
 
 		productos.setListData(prod);
 	}
-
+	public void dispose()
+	{
+		try
+		{
+		dc.darInterSucursal().abandonarCarrito(carritoDeCompras.getIdCarrito());
+		super.dispose();
+		}
+		catch(Exception e)
+		{
+		super.dispose();
+		}
+	}
 	public void desactivar()
 	{
 		carrito.setEnabled(false);
@@ -239,12 +258,13 @@ public class InterfazCliente extends JFrame implements ActionListener,ListSelect
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
-		// TODO Auto-generated method stub
+		
 		if(e.getActionCommand().equals(AGREGAR))
 		{
 			try
 			{	add(productosLista.get(productos.getSelectedIndex()));
-			actualizar();
+			 	dc.darInterSucursal().dentroCarrito(carritoDeCompras.getIdCarrito(), productosLista.get(productos.getSelectedIndex()).getIdProductoSucursal(), 1);
+				actualizar();
 			}
 			catch(Exception t)
 			{
@@ -273,6 +293,9 @@ public class InterfazCliente extends JFrame implements ActionListener,ListSelect
 		}
 		else if(e.getActionCommand().equals(SOLICITARCARRITO))
 		{
+			carritoDeCompras= dc.solicitarCarrito();
+			dir.setText("Carrito id: "+ carritoDeCompras.getIdCarrito());
+			dc.darInterSucursal().actualizar();
 			carrito.setEnabled(true);
 			pagar.setEnabled(true);
 			eliminar.setEnabled(true);
@@ -284,11 +307,15 @@ public class InterfazCliente extends JFrame implements ActionListener,ListSelect
 			car= new ArrayList<>();
 			actualizar();
 			desactivar();
+			dc.darInterSucursal().abandonarCarrito(carritoDeCompras.getIdCarrito());
+			
 		}
 		else if(e.getActionCommand().equals(RECOGERPRODUCTOS))
 		{	
 			car= new ArrayList<>();
 			actualizar();
+			
+			dc.darInterSucursal().recolectarProductos();
 
 		}
 

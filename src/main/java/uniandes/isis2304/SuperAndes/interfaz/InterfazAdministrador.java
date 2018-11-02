@@ -18,10 +18,12 @@ import com.google.gson.stream.JsonReader;
 
 import oracle.sql.DATE;
 import uniandes.isis2304.SuperAndes.negocio.Bodega;
+import uniandes.isis2304.SuperAndes.negocio.Carrito;
 import uniandes.isis2304.SuperAndes.negocio.Estante;
 import uniandes.isis2304.SuperAndes.negocio.Sucursal;
 import uniandes.isis2304.SuperAndes.negocio.SuperAndes;
 import uniandes.isis2304.SuperAndes.negocio.VOBodega;
+import uniandes.isis2304.SuperAndes.negocio.VOCarrito;
 import uniandes.isis2304.SuperAndes.negocio.VOCliente;
 import uniandes.isis2304.SuperAndes.negocio.VOCompra;
 import uniandes.isis2304.SuperAndes.negocio.VOEstante;
@@ -90,6 +92,63 @@ public class InterfazAdministrador extends JFrame
 		}	
 		return config;
 	}
+	public Object[] darOcupados(long idSucursal)
+	{
+		return superAndes.darCarritosOcupadosSucursal(idSucursal).toArray();
+	}
+	public Object[] darAbandonados(long idSucursal)
+	{
+		return superAndes.darCarritosAbandonadosSucursal(idSucursal).toArray();
+	}
+	
+	public void eliminarCarrito(Long idCarrito,long idSucursal)
+	{
+		superAndes.recolectarProductosAbandonadosRF17(idSucursal);
+		superAndes.eiminarCarrito(idCarrito);
+	}
+	
+	public void ocuparCarro(long idCarrito)
+	{
+		superAndes.modificarEstadoOcupacionCarrito(idCarrito, 1);
+	}
+	
+	public ArrayList<Carrito> darCarritos (Long idsuc)
+	{
+		ArrayList<Carrito> x = new ArrayList<>();
+		Object[] aux = superAndes.darCarritos().toArray();
+		for (int i =0; i<aux.length;i++)
+		{
+			Carrito aux2 = (Carrito) aux[i];
+			if(aux2.getSucursal()==idsuc)
+			{
+				x.add(aux2);
+			}
+		}
+		return x;
+	}
+	
+	public ArrayList<Carrito> darCarritoLibre(long idSucursal)
+	{
+		ArrayList<Carrito> x = new ArrayList<>();
+		Object[] aux = superAndes.darCarritosLibresSucursal(idSucursal).toArray();
+		for (int i =0; i<aux.length;i++)
+		{
+			Carrito aux2 = (Carrito) aux[i];
+			if(aux2.getSucursal()==idSucursal)
+			{
+				x.add(aux2);
+			}
+		}
+		return x;
+		
+	}
+	
+	public void agregarCarrito(Long idSucursal)
+	{
+		VOCarrito a =superAndes.adicionarCarrito(0, idSucursal);
+		String mensaje = a.toString();
+		panelDatos.actualizarInterfaz(mensaje);
+	}
 
 	public void agregarCliente(String pNombre, String pCorreo, String pDireccion)
 	{
@@ -152,14 +211,18 @@ public class InterfazAdministrador extends JFrame
 		idV= Long.parseLong(id);
 		Sucursal esta = superAndes.darSucursalPorId(idV);
 
-
-
 		if(esta == null)
 		{
 			throw new Exception("No hay una sucursal con ese id");
 		}
 
 	}
+	
+	public Object[] darProductosProveedor()
+	{
+		return superAndes.darProductosProveedor().toArray();
+	}
+	
 	public Object[] darPorudctos()
 	{
 		return superAndes.darProductosSucursal().toArray();
@@ -241,12 +304,26 @@ public class InterfazAdministrador extends JFrame
 
 		}
 	}
-
+	
+	public void dentroCarrito(long idCarrito,long idProductoSucursal, int cantidad)
+	{
+		superAndes.adicionarDentroCarrito(idCarrito, idProductoSucursal, cantidad);
+	}
+	public void abandonarCarrito(long idCarrito)
+	{
+		superAndes.abandonarCarritoRF16(idCarrito);
+	}
+	public void recogerProductos(long idSucursal)
+	{
+		
+		superAndes.recolectarProductosAbandonadosRF17(idSucursal);
+	}
 	public void agregarBodega(String pTipo, String pVol,String pPeso,String idSuc)
 	{
 
 		if(pTipo.equalsIgnoreCase("")|| pVol.equalsIgnoreCase("") || pPeso.equalsIgnoreCase("") || idSuc.equalsIgnoreCase(""))
 		{
+			
 			JOptionPane.showMessageDialog(null, "Los campos no pueden ser vacios", "SuperAndes",JOptionPane.ERROR_MESSAGE);
 		}
 		else
@@ -271,7 +348,8 @@ public class InterfazAdministrador extends JFrame
 				else
 				{
 
-					VOBodega a =superAndes.adicionarBodega(volum, peso, pTipo, idSucu);
+					System.out.println(volum +" "+peso+" "+" "+pTipo+" "+idSucu);
+					VOBodega a =superAndes.registrarBodegaASucursalRF5(volum, peso, pTipo, idSucu);
 					String mensaje =a.toString();
 					panelDatos.actualizarInterfaz(mensaje);
 
@@ -329,7 +407,7 @@ public class InterfazAdministrador extends JFrame
 	{
 		if(pNombre.equalsIgnoreCase("")|| pMarca.equalsIgnoreCase("")|| pPresentacion.equalsIgnoreCase("")|| cantidadPresentacion.equalsIgnoreCase("")|| unidadmedida.equalsIgnoreCase("")|| VolumenEmpaquetado.equalsIgnoreCase("")||
 				pPesoEmpaquetado.equalsIgnoreCase("")|| pCodBarras.equalsIgnoreCase("")||pCategoria.equalsIgnoreCase("")||pTipo.equalsIgnoreCase("")||pFechaVencimiento.equalsIgnoreCase("")||pNivelReorden.equalsIgnoreCase("")||pPrecioUnitario.equalsIgnoreCase("")||cantiBodega.equalsIgnoreCase("")|| cantEstante.equalsIgnoreCase("")||
-				pPrecioUnidadMedida.equalsIgnoreCase("")||idProm.equalsIgnoreCase("")|| idEstante.equalsIgnoreCase("") || idBodega.equalsIgnoreCase(""))
+				pPrecioUnidadMedida.equalsIgnoreCase("")|| idEstante.equalsIgnoreCase("") || idBodega.equalsIgnoreCase(""))
 		{
 
 			JOptionPane.showMessageDialog(null, "Los campos no pueden ser vacios", "SuperAndes",JOptionPane.ERROR_MESSAGE);
@@ -347,7 +425,7 @@ public class InterfazAdministrador extends JFrame
 			double precioUnidadMedida= 0.0;
 			long idBod =0L;
 			long idEst=0L;
-			long idPromocion=0L;
+			Long idPromocion=0L;
 
 //			try
 //			{
@@ -363,12 +441,20 @@ public class InterfazAdministrador extends JFrame
 				precioUnidadMedida=Double.parseDouble(pPrecioUnidadMedida);
 				idBod= Long.parseLong(idBodega);
 				idEst=Long.parseLong(idEstante);
-				idPromocion=Long.parseLong("0");
+				if(idProm.equals(""))
+				{
+					idPromocion=null;
+					
+				}
+				else
+				{
+				idPromocion=Long.parseLong(idProm);
+				}
 				System.out.println(pNombre+" "+ pMarca+" "+ pPresentacion+" "+ cantPresentacion+" "+ unidadmedida+" "+ volEmpaque+" "+ pesoEmpaque+" "+
 							codigoBarras+" "+ pCategoria+" "+ pTipo+" "+ pFechaVencimiento+" "+nivelReorden+" "+ precioUnitario+" "+ cantidadBodega+" "+ cantidadEstante+" "+ precioUnidadMedida+" "+
 							idBod+" "+ idEst+" "+ idPromocion);
 				if(cantPresentacion<0||volEmpaque<0||pesoEmpaque<0||codigoBarras<0||nivelReorden<0||precioUnitario<0||cantidadBodega<0
-						||cantidadEstante<0||precioUnidadMedida<0||idBod<0||idEst<0||idPromocion<0)
+						||cantidadEstante<0||precioUnidadMedida<0||idBod<0||idEst<0)
 				{
 					JOptionPane.showMessageDialog(null, "Los valores tienen que ser mayor a 0", "SuperAndes",JOptionPane.ERROR_MESSAGE);
 				}

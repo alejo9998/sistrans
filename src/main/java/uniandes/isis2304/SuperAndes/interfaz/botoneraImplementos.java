@@ -10,6 +10,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 
+import uniandes.isis2304.SuperAndes.negocio.Carrito;
+
 public class botoneraImplementos extends JPanel implements ActionListener
 {
 	private JButton agregarCliente;
@@ -24,7 +26,9 @@ public class botoneraImplementos extends JPanel implements ActionListener
 	private JButton agregarVenta;
 	private final static String AA_VENTA="AGREGARVENTA";
 	
-
+	private JButton agregarCarrito;
+	private final static String AA_CARRITO="AGREGARCARRITO";
+	
 	private DialogoBodega db;
 	private DialogoCliente dc;	
 	private DialogoEstante de;
@@ -39,7 +43,7 @@ public class botoneraImplementos extends JPanel implements ActionListener
 		
 		setBorder(new TitledBorder("Implementos"));
 
-		setLayout(new GridLayout(4, 1, 30, 30));
+		setLayout(new GridLayout(5, 1, 30, 30));
 		
 		agregarBodega= new JButton("Agregar Bodega");
 		agregarBodega.addActionListener(this);
@@ -57,10 +61,15 @@ public class botoneraImplementos extends JPanel implements ActionListener
 		agregarVenta.addActionListener(this);
 		agregarVenta.setActionCommand(AA_VENTA);
 		
+		agregarCarrito = new JButton("Agregar Carrito");
+		agregarCarrito.addActionListener(this);
+		agregarCarrito.setActionCommand(AA_CARRITO);
+		
 		add(agregarCliente);
 		add(agregarBodega);
 		add(agregarEstante);
 		add(agregarVenta);
+		add(agregarCarrito);
 	}
 	public Object[] darProductos()
 	{
@@ -89,10 +98,17 @@ public class botoneraImplementos extends JPanel implements ActionListener
 		}
 		else if (d.equals(AA_VENTA))
 		{
+			
 			dv = new DialogoCompra(inter);
 			dv.setVisible(true);
+			
 		}
-		// TODO Auto-generated method stub
+		else if(d.equals(AA_CARRITO))
+		{
+			inter.agergarCarrito();
+			inter.actualizar();
+		}
+		
 		
 	}
 }

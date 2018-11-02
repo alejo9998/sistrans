@@ -16,11 +16,13 @@ public class BotonesOrdenes extends JPanel implements ActionListener
 	private JButton agregarPromocion;
 	private JButton finalizarPromocion;
 	private JButton registrarPedido;
-
+	private JButton eliminarCarrito;
+	
 	private final static String REGPEDIDO="REGISTRARPEDIDO";
 	private final static String AGREGARPROM="AGREGARPROMOCION";
 	private final static String FINALIZARPROM="FINALIZARPROM";
 	private final static String ORDENARPEDIDO="ORDENARPEDIDO";
+	private final static String ELIMINARCARRITO="ELIMINARCARRITO";
 
 	private DialogoPromocion dp;
 	private DialogoOrdenPedido dop;
@@ -33,7 +35,7 @@ public class BotonesOrdenes extends JPanel implements ActionListener
 		inter=inte;
 		pedidosPendients = new ArrayList<String>();
 		setBorder(new TitledBorder("Ordenes"));
-		setLayout(new GridLayout( 4, 1, 30 ,30));
+		setLayout(new GridLayout( 5, 1, 30 ,30));
 
 		ordenarPedido = new JButton("Ordenar pedido");
 		ordenarPedido.addActionListener(this);
@@ -51,11 +53,16 @@ public class BotonesOrdenes extends JPanel implements ActionListener
 		registrarPedido.addActionListener(this);
 		registrarPedido.setActionCommand(REGPEDIDO);
 
-
+		eliminarCarrito= new JButton("Eliminar carrito");
+		eliminarCarrito.setActionCommand(ELIMINARCARRITO);
+		eliminarCarrito.addActionListener(this);
+		
+		
 		add(agregarPromocion);
 		add(finalizarPromocion);
 		add(ordenarPedido);	
 		add(registrarPedido);
+		add(eliminarCarrito);
 	}
 	public void agregarPedido(String pedido)
 	{
@@ -78,6 +85,10 @@ public class BotonesOrdenes extends JPanel implements ActionListener
 		{
 			drp = new DialogoRegistrarPedido(inter,pedidosPendients);
 			drp.setVisible(true);
+		}
+		else if (e.getActionCommand().equals(ELIMINARCARRITO))
+		{
+			inter.eliminarCarrito();
 		}
 
 	}

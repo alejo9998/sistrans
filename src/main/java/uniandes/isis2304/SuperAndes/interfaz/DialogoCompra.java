@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import uniandes.isis2304.SuperAndes.negocio.Carrito;
 import uniandes.isis2304.SuperAndes.negocio.Cliente;
 
 public class DialogoCompra extends JDialog implements ActionListener
@@ -68,6 +69,8 @@ public class DialogoCompra extends JDialog implements ActionListener
 	
 	private String [] items;
 	
+	
+	
 	/**
 	 * Dialogo de comprar
 	 * @param inter interfaz
@@ -75,6 +78,7 @@ public class DialogoCompra extends JDialog implements ActionListener
 	public DialogoCompra(interfazSucursal inter) 
 	{
 		inte= inter;
+		
 		setTitle("Agregar Compra");
 		setLayout(new BorderLayout());
 		setSize(200,150);
@@ -113,8 +117,7 @@ public class DialogoCompra extends JDialog implements ActionListener
 		for(int i=0;i<a.length;i++)
 		{
 			
-			Cliente aux= (Cliente)a[i];
-//			
+			Cliente aux= (Cliente)a[i];		
 			items[i]=(String)aux.getNombre();
 		}
 		
@@ -140,6 +143,10 @@ public class DialogoCompra extends JDialog implements ActionListener
 		{
 			dispose();
 		}
+	}
+	public Carrito solicitarCarrito()
+	{
+		return inte.darCarritoLibre();
 	}
 
 }
