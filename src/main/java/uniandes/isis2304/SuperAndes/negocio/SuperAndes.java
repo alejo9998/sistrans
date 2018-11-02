@@ -202,12 +202,20 @@ public class SuperAndes {
 			}
 			String fecha = dia + "/" + mes + "/" + año;
 			this.modificarFechaVencimientoProductoSucursal(idElegido, fecha);
+			this.aumentarCantidadBodegaProductoSucursal(idElegido, orden.getCantidad());
+			elegido = this.darProductoSucursalPorId(idElegido);
+			VOBodega bodegaElegida = this.darBodegaPorId(elegido.getBodega());
 			if ( estanteElegido.getNivelAprovisionamiento() > elegido.getCantidadEstante()) {
 				int diferencia = estanteElegido.getNivelAprovisionamiento() - elegido.getCantidadEstante();
+				int diferenciaBodegaEstante = elegido.getCantidadBodega() - estanteElegido.getNivelAprovisionamiento();
+				int abs = Math.abs(diferenciaBodegaEstante);
+				int sumaAgregar = abs + diferencia;
+				this.aumentarCantidadEstanteProductoSucursal(idElegido, sumaAgregar);
+				this.disminuirCantidadBodegaProductoSucursal(idElegido, sumaAgregar);
 			}
 		}
 	}
-
+/**
 	public Compra req11RegistrarUnaVentaDeUnProducto(String fecha, int cantidad, long idProductoSucursal, long idCliente, long idFactura) throws Exception {
 		if ( this.darProductoSucursalPorId(idProductoSucursal) == null) {
 			throw new Exception ("El producto que intenta comprar no existe");
@@ -236,14 +244,15 @@ public class SuperAndes {
 			this.disminuirCantidadBodegaProductoSucursal(idProductoSucursal, sobrante);
 			this.aumentarCantidadEstanteProductoSucursal(idProductoSucursal, sobrante);
 			this.disminuirCantidadEstanteProductoSucursal(idProductoSucursal, cantidad);
-			
-			
+
+
 		}
 		return null;
 
 
 	}
-	
+	*/
+
 	/* ********************************************************************
 	 *         METODOS REQUERIMIENTOS FUNCIONALES SEGUNDA ITERACION
 	 **********************************************************************/
@@ -258,7 +267,7 @@ public class SuperAndes {
 			return retornado;
 		}
 	}
-	
+
 	public void adicionarProductoAlCarritoRF13 (long idCarrito, long idProductoSucursal, int cantidad) throws Exception{
 		ProductoSucursal productoSucursal = darProductoSucursalPorId(idProductoSucursal);
 		int cantidadEnEstante = productoSucursal.getCantidadEstante();
@@ -275,7 +284,7 @@ public class SuperAndes {
 			}
 		}
 	}
-	
+
 	public void devolverProductoDelCarritoRF14 (long idCarrito, long idProductoSucursal, int cantidad) throws Exception {
 		DentroCarrito dentroCarrito = darDentroCarritosPorIds(idCarrito, idProductoSucursal);
 		int cantidadDentroCarrito = dentroCarrito.getCantidad();
@@ -293,7 +302,7 @@ public class SuperAndes {
 			}
 		}
 	}
-	
+
 	/**
 	 * Retorna el total que tuvo que pagar el cliente por la compra de los productos que tenia en el carrito
 	 * Tambien verifica que el nivel de Reorden de Estante se mantenga despues de la compra
@@ -329,17 +338,18 @@ public class SuperAndes {
 				Estante es = darEstantePorId(pro.getEstante());
 				if ( es.getNivelAprovisionamiento() > pro.getCantidadEstante() && pro.getCantidadBodega() > 0) {
 					int diferencia = es.getNivelAprovisionamiento() - pro.getCantidadEstante();
-					if (pro.getCantidadBodega() > diferencia) {
-						aumentarCantidadEstanteProductoSucursal(pro.getIdProductoSucursal(), diferencia);
-						disminuirCantidadBodegaProductoSucursal(pro.getIdProductoSucursal(), diferencia);
-					}
+					int diferenciaBodegaSucursal = pro.getCantidadBodega() - es.getNivelAprovisionamiento();
+					int abs = Math.abs(diferenciaBodegaSucursal);
+					aumentarCantidadEstanteProductoSucursal(pro.getIdProductoSucursal(), abs+diferencia);
+					disminuirCantidadBodegaProductoSucursal(pro.getIdProductoSucursal(), abs+diferencia);
 				}
 				if (pro.getNivelReorden() < pro.getCantidadBodega() + pro.getCantidadEstante()) {
 					List<ProductoProveedor> productosProveedor = darProductosProveedorPorCodigoBarras(pro.getCodigoBarras());
 					int numeroAleatorio = (int) (Math.random() * productosProveedor.size());
 					ProductoProveedor productoProveedorElegido = productosProveedor.get(numeroAleatorio);
-					double totalPagoOrdenPedido = productoProveedorElegido.getPrecio() * pro.getNivelReorden();
-					adicionarOrdenPedido(totalPagoOrdenPedido, null, fechaEsperadaEntrega, null, 0, pro.getNivelReorden(), productoProveedorElegido.getIdProductoProveedor(), es.getSucursal());
+					this.req9RegistrarPedidoDeUnProductoAProveedorParaSucursal(fechaEsperadaEntrega, pro.getNivelReorden(), productoProveedorElegido.getIdProductoProveedor(), es.getSucursal());
+					//double totalPagoOrdenPedido = productoProveedorElegido.getPrecio() * pro.getNivelReorden();
+					//adicionarOrdenPedido(totalPagoOrdenPedido, null, fechaEsperadaEntrega, null, 0, pro.getNivelReorden(), productoProveedorElegido.getIdProductoProveedor(), es.getSucursal());
 				}
 				double precioUnitario = darProductoSucursalPorId(car.getIdProductoSucursal()).getPrecioUnitario();
 				double totalPago = car.getCantidad() * precioUnitario;
@@ -355,11 +365,11 @@ public class SuperAndes {
 			return retornado;
 		}
 	}
-	
+
 	public void abandonarCarritoRF16 (long idCarrito) {
 		modificarEstadoOcupacionCarrito(idCarrito, -1);
 	}
-	
+
 	public void recolectarProductosAbandonadosRF17(long idSucursal) {
 		List<Carrito> carritosAbandonados = darCarritosAbandonadosSucursal(idSucursal);
 		for ( int i = 0; i<carritosAbandonados.size(); i++) {
@@ -385,7 +395,7 @@ public class SuperAndes {
 		log.info("Adicionando Proveedor: " + proveedor);
 		return proveedor;
 	}
-	
+
 	public Proveedor adicionarProveedor2(long nit, String nombre) {
 		log.info("Adicionando Proveedor: " + nombre);
 		Proveedor proveedor = pp.adicionarProveedor2(nit, nombre);
@@ -406,7 +416,7 @@ public class SuperAndes {
 		log.info("Buscando proveedor por nit : " + nit != null ? proveedor : "NO EXISTE");
 		return proveedor;
 	}
-	
+
 	public long eliminarProveedrPorNit(long nit) {
 		return pp.eliminarProveedorPorNit(nit);
 	}
@@ -438,7 +448,7 @@ public class SuperAndes {
 		log.info("Adicionando sucursal: " + sucursal);
 		return sucursal;
 	}
-	
+
 	public Sucursal adicionarSucursal2(long idSucursal, String ciudad, String direccion, String nombre) {
 		log.info("Adicionando sucursal : " + nombre);
 		Sucursal sucursal = pp.adicionarSucursal2(idSucursal,ciudad, direccion, nombre);
@@ -481,7 +491,7 @@ public class SuperAndes {
 		log.info("Adicionando clienteIndividuo: " + clienteIndividuo);
 		return clienteIndividuo;
 	}
-	
+
 	public Cliente adicionarClienteIndividuo2 (long identificacion, String nombre, String correo ) {
 		log.info("Adicionando clienteIndividuo : " + nombre);
 		Cliente clienteIndividuo = pp.adicionarClienteIndividuo2(identificacion, nombre, correo);
@@ -495,7 +505,7 @@ public class SuperAndes {
 		log.info("Adicionando clienteEmpresa : " + clienteEmpresa);
 		return clienteEmpresa;
 	}
-	
+
 	public Cliente adicionarClienteEmpresa2(long identificacion, String nombre, String correo, String direccion) {
 		log.info("Adicionando clienteEmpresa : " + nombre);
 		Cliente clienteEmpresa = pp.adicionarClienteEmpresa2(identificacion, nombre, correo, direccion);
@@ -571,7 +581,7 @@ public class SuperAndes {
 		log.info("Adicionando factura: " + factura);
 		return factura;
 	}
-	
+
 	public Factura adicionarFactura2 (long idFactura, String descripcion ) {
 		log.info("Adicionando Factura: "+ descripcion);
 		Factura factura = pp.adicionarFactura2(idFactura, descripcion);
@@ -613,7 +623,7 @@ public class SuperAndes {
 		log.info("Adicionando productoProveedor: " + productoProveedor);
 		return productoProveedor;
 	}
-	
+
 	public ProductoProveedor adicionarProductoProveedor2(long idProductoProveedor, String nombre, String marca, String presentacion, double cantidadPresentacion, String unidadMedida,
 			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , double calidad, double precio, int numeroCalificaciones, double sumaCalificaciones, long idProveedor) {
 		log.info("Adicionando ProductoProveedor: " + nombre);
@@ -658,14 +668,14 @@ public class SuperAndes {
 		log.info("Generando los VO de ProductosProveedor por categoria: " + voProductosProveedor.size() + " ProductosProveedor existentes que pertenecen a la categoria");
 		return voProductosProveedor;
 	}
-	
+
 	public List<ProductoProveedor> darProductosProveedorPorCodigoBarras(long codigoBarras){
 		log.info("Dar informacion de productosProveedor por codigoBarras: " + codigoBarras);
 		List<ProductoProveedor> productosProveedor = pp.darProductosProveedorPorCodigoBarras(codigoBarras);
 		log.info("Dar informacion de productosPorveedor por codigoBarras: " + productosProveedor.size() + " productosProveedor que cumplen con el codigoBarras");
 		return productosProveedor;
 	}
-	
+
 	public List<VOProductoProveedor> darVOProductosProveedorPorCodigoBarras(long codigoBarras){
 		log.info("Generando los VO de ProductosProveedor por codigoBarras");
 		List<VOProductoProveedor> voProductosProveedor = new LinkedList<VOProductoProveedor>();
@@ -723,7 +733,7 @@ public class SuperAndes {
 		long cambios = pp.modificarFechaVencimientoProductoProveedor(idProductoProveedor, fecha);
 		return cambios;
 	}
-	
+
 
 	/* ****************************************************************
 	 * 			Métodos para manejar el OrdenPedido
@@ -735,7 +745,7 @@ public class SuperAndes {
 		log.info("Adicionando OrdenPedido: " + ordenPedido);
 		return ordenPedido;
 	}
-	
+
 	public OrdenPedido adicionarOrdenPedido2(long idOrdenPedido, double precio, String fechaEntrega, String fechaEsperadaEntrega,Double calificacion, int entregado, int cantidad, long idProductoProveedor, long idSucursal) {
 		log.info("Adicionando OrdenPedido: " + idProductoProveedor);
 		OrdenPedido ordenPedido = pp.adicionarOrdenPedido2(idOrdenPedido ,precio, fechaEntrega, fechaEsperadaEntrega, calificacion, entregado, cantidad, idProductoProveedor, idSucursal);
@@ -795,7 +805,7 @@ public class SuperAndes {
 		log.info("Adicionando bodega: " + bodega);
 		return bodega;
 	}
-	
+
 	public Bodega adicionarBodega2(long idBodega, double volumen, double peso, String tipo, long sucursal) {
 		log.info("Adicionando Bodega: " + tipo);
 		Bodega bodega = pp.adicionarBodega2(idBodega, volumen, peso, tipo, sucursal);
@@ -854,7 +864,7 @@ public class SuperAndes {
 		log.info("Adicionando Estante: " + estante);
 		return estante;
 	}
-	
+
 	public Estante adicionarEstante2(long idEstante, double volumen, double peso, String tipo,int nivelAprovisionamiento, long sucursal) {
 		log.info("Adicionando Estante: " + tipo);
 		Estante estante = pp.adicionarEstante2(idEstante, volumen, peso, tipo,nivelAprovisionamiento,sucursal);
@@ -915,7 +925,7 @@ public class SuperAndes {
 		log.info("Adicionando productoSucursal: " + productoSucursal);
 		return productoSucursal;
 	}
-	
+
 	public ProductoSucursal adicionarProductoSucursal2(long idProductoSucursal, String nombre, String marca, String presentacion, double cantidadPresentacion, String unidadMedida,
 			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , int nivelReorden, double precioUnitario, int cantidadBodega, int cantidadEstante, double precioUnidadMedida
 			, long idBodega, long idEstante, Long idPromocion) {
@@ -958,14 +968,14 @@ public class SuperAndes {
 		log.info("Generando los VO de ProductosSucursal por categoria: " + voProductosSucursal.size() + " ProductosSucursal existentes que pertenecen a la categoria");
 		return voProductosSucursal;
 	}
-	
+
 	public List<ProductoSucursal> darProductosSucursalPorCodigoBarras(long codigoBarras){
 		log.info("Dar informacion de productosSucursal por codigoBarras: " + codigoBarras);
 		List<ProductoSucursal> productosSucursal = pp.darProductosSucursalPorCodigoBarras(codigoBarras);
 		log.info("Dar informacion de productosSucursal por codigoBarras: " + productosSucursal.size() + " productosSucursal que cumplen con el codigoBarras");
 		return productosSucursal;
 	}
-	
+
 	public List<VOProductoSucursal> darVOProductosSucursalrPorCodigoBarras(long codigoBarras){
 		log.info("Generando los VO de ProductosSucursal por codigoBarras");
 		List<VOProductoSucursal> voProductosSucursal = new LinkedList<VOProductoSucursal>();
@@ -1023,7 +1033,7 @@ public class SuperAndes {
 		long cambios = pp.disminuirCantidadEstanteProductoSucursal(idProductoSucursal, cantidad);
 		return cambios;
 	}
-	
+
 	public long modificarFechaVencimientoProductoSucursal(long idProductoSucursal, String fechaVencimientoNueva) {
 		log.info("Modificando la fecha de vencimiento del productoSucursal con id: " + idProductoSucursal);
 		long cambios = pp.modificarFechaVencimientoProductoSucursal(idProductoSucursal, fechaVencimientoNueva);
@@ -1040,7 +1050,7 @@ public class SuperAndes {
 		log.info("Adicionando promocion: " + promocion);
 		return promocion;
 	}
-	
+
 	public Promocion adicionarPromocion2(long idPromocion, int tipo, double n, double m, String fechaCaducidad) {
 		log.info("Adicionando promocion: " + tipo);
 		Promocion promocion = pp.adicionarPromocion2(idPromocion, tipo, n, m, fechaCaducidad);
@@ -1099,7 +1109,7 @@ public class SuperAndes {
 		log.info("Adicionando compra: " + compra);
 		return compra;
 	}
-	
+
 	public Compra adicionarCompra2(long idCompra, String fecha, int cantidad, double totalPagado, long idProductoSucursal, long idCliente, long idFactura) {
 		log.info("Adicionando compra: " + idProductoSucursal );
 		Compra compra = pp.adicionarCompra2(idCompra, fecha, cantidad, totalPagado, idProductoSucursal, idCliente, idFactura);
@@ -1164,7 +1174,7 @@ public class SuperAndes {
 		log.info("Buscando compra por id: " + compra != null ? compra : "NO EXISTE");
 		return compra;
 	}
-	
+
 	/* ****************************************************************************
 	 *              Metodos para manejar Carrito
 	 *  ***************************************************************************/
@@ -1174,21 +1184,21 @@ public class SuperAndes {
 		log.info("Adicionando carrito: " + resp + " tuplasInsertadas");
 		return resp;
 	}
-	
+
 	public long eiminarCarrito ( long idCarrito) {
 		log.info("Eliminando carrito");
 		long resp = pp.eliminarCarritoPorId(idCarrito);
 		log.info("Eliminando carrito: " + resp + "tulplas eliminadas");
 		return resp;
 	}
-	
+
 	public List<Carrito> darCarritos (){
 		log.info("Listando Carritos");
 		List<Carrito> carritos = pp.darCarritos();
 		log.info("Listando Carritos: Listo!");
 		return carritos;
 	}
-	
+
 	public List<VOCarrito> darVOCarritos()
 	{
 		log.info("Generando los VO de Carritos");
@@ -1199,28 +1209,28 @@ public class SuperAndes {
 		log.info("Generando los VO de Carrito: " + voCarritos.size() + " Carrtios existentes");
 		return voCarritos;
 	}
-	
+
 	public Carrito darCarritoPorId(long idCarrito) {
 		log.info("Dar informacion de un Carrito por id: " + idCarrito);
 		Carrito carrito = pp.darCarritoPorId(idCarrito);
 		log.info("Buscando carrito por id: " + carrito != null ? carrito : "NO EXISTE");
 		return carrito;
 	}
-	
+
 	public long modificarEstadoOcupacionCarrito (long idCarrito, int ocupado) {
 		log.info("Modificando el estado de ocupacion del carrito : " + idCarrito);
 		long resp = pp.modificarEstadoOcupacionCarrito(idCarrito, ocupado);
 		log.info("Terminando de modificar el estado de ocupacion del carrito: nuevoEstado = " + ocupado);
 		return resp;
 	}
-	
+
 	public List<Carrito> darCarritosLibresSucursal (long idSucursal){
 		log.info("Listando CarritosLibres");
 		List<Carrito> carritos = pp.darCarritosLibresSucursal(idSucursal);
 		log.info("Listando CarritosLibres: Listo!");
 		return carritos;
 	}
-	
+
 	public List<VOCarrito> darVOCarritosLibresSucursal(long idSucursal)
 	{
 		log.info("Generando los VO de CarritosLibres");
@@ -1231,14 +1241,14 @@ public class SuperAndes {
 		log.info("Generando los VO de CarritosLibres: " + voCarritos.size() + " Carrtios existentes");
 		return voCarritos;
 	}
-	
+
 	public List<Carrito> darCarritosOcupadosSucursal (long idSucursal){
 		log.info("Listando CarritosOcupados");
 		List<Carrito> carritos = pp.darCarritosOcupadosSucursal(idSucursal);
 		log.info("Listando CarritosOcupados: Listo!");
 		return carritos;
 	}
-	
+
 	public List<VOCarrito> darVOCarritosOcupadosSucursal(long idSucursal)
 	{
 		log.info("Generando los VO de CarritosOcupados");
@@ -1249,14 +1259,14 @@ public class SuperAndes {
 		log.info("Generando los VO de CarritosOcupados: " + voCarritos.size() + " Carrtios existentes");
 		return voCarritos;
 	}
-	
+
 	public List<Carrito> darCarritosAbandonadosSucursal (long idSucursal){
 		log.info("Listando CarritosAbandonados");
 		List<Carrito> carritos = pp.darCarritosAbandonadosSucursal(idSucursal);
 		log.info("Listando CarritosAbandonados: Listo!");
 		return carritos;
 	}
-	
+
 	public List<VOCarrito> darVOCarritosAbandonadosSucursal(long idSucursal)
 	{
 		log.info("Generando los VO de CarritosAbandonados");
@@ -1267,7 +1277,7 @@ public class SuperAndes {
 		log.info("Generando los VO de CarritosAbandonados: " + voCarritos.size() + " Carrtios existentes");
 		return voCarritos;
 	}
-	
+
 	/* ****************************************************************************
 	 *              Metodos para manejar DentroCarrito
 	 *  ***************************************************************************/
@@ -1277,21 +1287,21 @@ public class SuperAndes {
 		log.info("Adicionando DentroCarrito: " + resp + " tuplas insertadas");
 		return resp;
 	}
-	
+
 	public long eliminarDentroCarrito (long idCarrito, long idProductoSucursal) {
 		log.info("Eliminando DentroCarrito");
 		long resp = pp.eliminarDentroCarrito(idCarrito, idProductoSucursal);
 		log.info("Eliminando DentroCarrito: " + resp + " tuplas eliminadas");
 		return resp;
 	}
-	
+
 	public List<DentroCarrito> darDentroCarrito (){
 		log.info("Listando DentroCarrito");
 		List<DentroCarrito> dentroCarrito = pp.darDentroCarrito();
 		log.info("Listando DentroCarrito: " + dentroCarrito.size() + " dentroCarrito existentes");
 		return dentroCarrito;
 	} 
-	
+
 	public List<VODentroCarrito> darVODentroCarrito(){
 		log.info("Generando los VO de DentroCarrito");
 		List<VODentroCarrito> voDentroCarrito = new LinkedList<VODentroCarrito>();
@@ -1301,14 +1311,14 @@ public class SuperAndes {
 		log.info("Generando los VO de dnetroCarrito: " + voDentroCarrito.size() + " DentroCarrito existentes");
 		return voDentroCarrito;
 	}
-	
+
 	public List<DentroCarrito> darDentroCarritoPorIdCarrito ( long idCarrito){
 		log.info("Listando Dentro carrito por IdCarrito");
 		List<DentroCarrito> dentroCarrito = pp.darDentroCarritoPorIdCarrito(idCarrito);
 		log.info("Listando dentroCarrito por idCarrito: " + dentroCarrito.size() + " dentroCarritos existentes");
 		return dentroCarrito;
 	}
-	
+
 	public List<VODentroCarrito> darVODentroCarritoPorIdCarrito (long idCarrito){
 		log.info("Generando los VO de DentroCarrito por idCarrito: " + idCarrito);
 		List<VODentroCarrito> voDentroCarrito = new LinkedList<VODentroCarrito>();
@@ -1318,14 +1328,14 @@ public class SuperAndes {
 		log.info("Generenado los VO de DentroCarrito por idCarrito: " + voDentroCarrito.size() + " DentroCarritos existentes");
 		return voDentroCarrito;
 	}
-	
+
 	public DentroCarrito darDentroCarritosPorIds(long idCarrito, long idProductoSucursal) {
 		log.info("Generando la informacion de dentro carrito por los ids carrito y productoSucursal: " + idCarrito + ", " + idProductoSucursal);
 		DentroCarrito dentroCarrito = pp.darDentroCarritosPorIds(idCarrito, idProductoSucursal);
 		log.info("Generando dentroCarrito por ids: " + dentroCarrito);
 		return dentroCarrito;
 	}
-	
+
 	public long modificarCantidadDentroCarrito(long idCarrito, long idProductoSucursal, int cantidad) {
 		log.info("Modificando la cantidad de DentroCarrito: [" + idCarrito + ", " + idProductoSucursal + "]");
 		long resp = pp.modificarCantidadDentroCarrito(idCarrito, idProductoSucursal, cantidad);
