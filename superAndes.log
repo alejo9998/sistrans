@@ -16101,3 +16101,338 @@ ORA-02290: restricción de control (ISIS2304C281820.CK_TOTALPAGADO) violada
 11:58:15,044 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
 11:58:15,104 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
 11:58:15,104 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+11:01:54,435 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre Carrito
+11:01:54,509 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+11:01:57,794 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:02:28,605 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre Carrito
+11:02:28,663 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+11:02:30,540 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:02:59,091 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre Carrito
+11:02:59,149 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+11:03:01,472 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:03:26,439 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre Carrito
+11:03:26,486 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+11:03:28,748 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:03:55,732 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre Carrito
+11:03:55,777 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+11:03:57,496 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:04:15,088 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre Carrito
+11:04:15,138 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+11:04:17,258 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:05:48,898 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre Carrito
+11:05:48,960 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+11:05:50,642 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:06:20,506 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre Carrito
+11:06:20,553 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+11:06:22,070 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:07:05,767 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre Carrito
+11:07:05,817 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+11:07:08,065 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:07:55,014 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre Carrito
+11:07:55,060 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+11:07:56,669 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:07:56,850 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
+ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
+11:07:56,852 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+11:07:56,852 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Carritos
+11:07:56,967 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Carrito: 4 Carrtios existentes
+11:07:56,967 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:07:57,112 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
+ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
+11:07:57,112 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+11:09:05,987 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre Carrito
+11:09:06,035 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+11:09:07,374 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Prueba de Unicidad e Integridad de Carrito incompleta. No se pudo conectar a la base de datos !!. La excepción generada es: javax.jdo.JDOFatalUserException
+11:09:07,375 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - La causa es: javax.jdo.JDOFatalDataStoreException: ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
+NestedThrowables:
+java.sql.SQLException: ORA-02391: exceeded simultaneous SESSIONS_PER_USER limit
+
+11:19:21,812 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre Carrito
+11:19:21,877 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+11:19:23,465 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:19:23,821 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+11:19:23,822 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+11:19:23,822 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Carritos
+11:19:23,861 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Carrito: 0 Carrtios existentes
+11:19:23,861 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+11:19:23,900 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=2659, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+11:19:23,900 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: carne
+11:19:23,925 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=2660, volumen=5000.0, peso=5000.0, tipo=carne, sucursal=2659]
+11:19:23,925 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: carne
+11:19:23,960 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=2661, volumen=2500.0, peso=2500.0, tipo=carne, nivelAprovisionamiento=1000, sucursal=2659]
+11:19:23,960 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 2
+11:19:23,988 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: Promocion [idPromocion=2662, tipo=2, n=20.0, m=20.0, fechaCaducidad=12/12/2018]
+11:19:23,988 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+11:19:24,021 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=2663, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=perecedero, tipo=carne, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=2660, estante=2661, promocion=null]
+11:19:24,021 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito
+11:19:24,069 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito: Carrito [idCarrito= 2664, ocupado= 0, sucursal=2659] tuplasInsertadas
+11:19:24,069 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Carritos
+11:19:24,081 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Carrito: 1 Carrtios existentes
+11:19:24,082 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de CarritosLibres
+11:19:24,158 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de CarritosLibres: 1 Carrtios existentes
+11:19:24,158 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Modificando el estado de ocupacion del carrito : 2664
+11:19:24,252 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Terminando de modificar el estado de ocupacion del carrito: nuevoEstado = 1
+11:19:24,252 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de CarritosOcupados
+11:19:24,299 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de CarritosOcupados: 1 Carrtios existentes
+11:19:24,300 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Modificando el estado de ocupacion del carrito : 2664
+11:19:24,314 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Terminando de modificar el estado de ocupacion del carrito: nuevoEstado = -1
+11:19:24,315 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de CarritosAbandonados
+11:19:24,328 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de CarritosAbandonados: 1 Carrtios existentes
+11:19:24,328 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito
+11:19:24,368 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CARRITO(idCarrito, ocupado, sucursal) values (?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_SUCURSALCARRITO) violada - clave principal no encontrada
+
+11:19:24,411 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito: null tuplasInsertadas
+11:19:24,411 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:19:24,511 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+11:19:24,511 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+11:20:10,184 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre Carrito
+11:20:10,244 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+11:20:12,161 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:20:12,392 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+11:20:12,393 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+11:20:12,393 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Carritos
+11:20:12,432 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Carrito: 0 Carrtios existentes
+11:20:12,433 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+11:20:12,493 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=2666, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+11:20:12,494 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: carne
+11:20:12,518 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=2667, volumen=5000.0, peso=5000.0, tipo=carne, sucursal=2666]
+11:20:12,518 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: carne
+11:20:12,542 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=2668, volumen=2500.0, peso=2500.0, tipo=carne, nivelAprovisionamiento=1000, sucursal=2666]
+11:20:12,542 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 2
+11:20:12,576 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: Promocion [idPromocion=2669, tipo=2, n=20.0, m=20.0, fechaCaducidad=12/12/2018]
+11:20:12,576 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+11:20:12,625 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=2670, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=perecedero, tipo=carne, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=2667, estante=2668, promocion=null]
+11:20:12,625 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito
+11:20:12,694 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito: Carrito [idCarrito= 2671, ocupado= 0, sucursal=2666] tuplasInsertadas
+11:20:12,694 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Carritos
+11:20:12,718 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Carrito: 1 Carrtios existentes
+11:20:12,718 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de CarritosLibres
+11:20:12,734 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de CarritosLibres: 1 Carrtios existentes
+11:20:12,734 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Modificando el estado de ocupacion del carrito : 2671
+11:20:12,747 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Terminando de modificar el estado de ocupacion del carrito: nuevoEstado = 1
+11:20:12,747 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de CarritosOcupados
+11:20:12,764 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de CarritosOcupados: 1 Carrtios existentes
+11:20:12,764 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Modificando el estado de ocupacion del carrito : 2671
+11:20:12,783 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Terminando de modificar el estado de ocupacion del carrito: nuevoEstado = -1
+11:20:12,783 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de CarritosAbandonados
+11:20:12,792 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de CarritosAbandonados: 1 Carrtios existentes
+11:20:12,792 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito
+11:20:12,820 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CARRITO(idCarrito, ocupado, sucursal) values (?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_SUCURSALCARRITO) violada - clave principal no encontrada
+
+11:20:12,827 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito: null tuplasInsertadas
+11:20:12,827 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:20:12,906 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+11:20:12,906 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+11:24:14,820 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre Carrito
+11:24:14,889 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+11:24:17,824 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:24:18,099 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+11:24:18,100 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+11:24:18,100 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Carritos
+11:24:18,179 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Carrito: 0 Carrtios existentes
+11:24:18,179 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+11:24:18,237 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=2673, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+11:24:18,237 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: carne
+11:24:18,271 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=2674, volumen=5000.0, peso=5000.0, tipo=carne, sucursal=2673]
+11:24:18,272 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: carne
+11:24:18,296 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=2675, volumen=2500.0, peso=2500.0, tipo=carne, nivelAprovisionamiento=1000, sucursal=2673]
+11:24:18,297 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 2
+11:24:18,355 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: Promocion [idPromocion=2676, tipo=2, n=20.0, m=20.0, fechaCaducidad=12/12/2018]
+11:24:18,355 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+11:24:18,393 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=2677, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=perecedero, tipo=carne, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=2674, estante=2675, promocion=null]
+11:24:18,393 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito
+11:24:18,422 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito: Carrito [idCarrito= 2678, ocupado= 0, sucursal=2673] tuplasInsertadas
+11:24:18,422 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Carritos
+11:24:18,441 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Carrito: 1 Carrtios existentes
+11:24:18,441 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de CarritosLibres
+11:24:18,456 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de CarritosLibres: 1 Carrtios existentes
+11:24:18,456 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Modificando el estado de ocupacion del carrito : 2678
+11:24:18,475 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Terminando de modificar el estado de ocupacion del carrito: nuevoEstado = 1
+11:24:18,475 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de CarritosOcupados
+11:24:18,490 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de CarritosOcupados: 1 Carrtios existentes
+11:24:18,490 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Modificando el estado de ocupacion del carrito : 2678
+11:24:18,505 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Terminando de modificar el estado de ocupacion del carrito: nuevoEstado = -1
+11:24:18,505 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de CarritosAbandonados
+11:24:18,514 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de CarritosAbandonados: 1 Carrtios existentes
+11:24:18,514 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito
+11:24:18,551 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CARRITO(idCarrito, ocupado, sucursal) values (?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_SUCURSALCARRITO) violada - clave principal no encontrada
+
+11:24:18,557 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito: null tuplasInsertadas
+11:24:18,557 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:24:18,628 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+11:24:18,628 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+11:24:18,639 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando RESTRICCIONES DE CHEQUEO sobre Carrito
+11:24:18,640 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+11:24:18,768 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:24:18,922 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+11:24:18,922 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+11:24:18,922 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Carritos
+11:24:18,929 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Carrito: 0 Carrtios existentes
+11:24:18,929 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+11:24:18,950 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=2680, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+11:24:18,950 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: carne
+11:24:18,974 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=2681, volumen=5000.0, peso=5000.0, tipo=carne, sucursal=2680]
+11:24:18,974 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: carne
+11:24:18,996 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=2682, volumen=2500.0, peso=2500.0, tipo=carne, nivelAprovisionamiento=1000, sucursal=2680]
+11:24:18,996 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 2
+11:24:19,018 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: Promocion [idPromocion=2683, tipo=2, n=20.0, m=20.0, fechaCaducidad=12/12/2018]
+11:24:19,018 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Papas fritas
+11:24:19,045 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=2684, nombre=Papas fritas, marca=SuperRicas, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=perecedero, tipo=carne, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=80, cantidadEstante=20, precioUnidadMedida=5.0, bodega=2681, estante=2682, promocion=null]
+11:24:19,045 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito
+11:24:19,076 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito: Carrito [idCarrito= 2685, ocupado= 0, sucursal=2680] tuplasInsertadas
+11:24:19,076 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Carritos
+11:24:19,089 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de Carrito: 1 Carrtios existentes
+11:24:19,089 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito
+11:24:19,116 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_CARRITO(idCarrito, ocupado, sucursal) values (?, ?, ?)".
+ORA-02290: restricción de control (ISIS2304C281820.CK_OCUPADOCARRITO) violada
+
+11:24:19,130 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito: null tuplasInsertadas
+11:24:19,130 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:24:19,199 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+11:24:19,199 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+11:52:44,210 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre DentroCarrito
+11:52:44,271 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+11:52:46,355 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:52:46,612 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+11:52:46,613 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+11:52:46,613 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de DentroCarrito
+11:52:46,645 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de dnetroCarrito: 0 DentroCarrito existentes
+11:52:46,645 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+11:52:46,706 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=2692, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+11:52:46,706 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: carne
+11:52:46,729 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=2693, volumen=5000.0, peso=5000.0, tipo=carne, sucursal=2692]
+11:52:46,729 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: galleta
+11:52:46,764 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=2694, volumen=5000.0, peso=5000.0, tipo=galleta, sucursal=2692]
+11:52:46,764 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: carne
+11:52:46,827 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=2695, volumen=2500.0, peso=2500.0, tipo=carne, nivelAprovisionamiento=15, sucursal=2692]
+11:52:46,827 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: galleta
+11:52:46,903 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=2696, volumen=2500.0, peso=2500.0, tipo=galleta, nivelAprovisionamiento=20, sucursal=2692]
+11:52:46,903 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 2
+11:52:46,957 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: Promocion [idPromocion=2697, tipo=2, n=20.0, m=20.0, fechaCaducidad=12/12/2018]
+11:52:46,957 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Carne de Res
+11:52:46,997 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=2698, nombre=Carne de Res, marca=SuperVaca, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=perecedero, tipo=carne, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=50, cantidadEstante=20, precioUnidadMedida=5.0, bodega=2693, estante=2695, promocion=null]
+11:52:46,997 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Galletas
+11:52:47,024 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=2699, nombre=Galletas, marca=Oreo, presentacion=6 paquetes de 100 gr cada uno, cantidadPresentacion=600.0, unidadMedida=gramos, volumenEmpaque=300.0, pesoEmpaque=600.0, codigoBarras=13516, categoria=perecedero, tipo=galleta, fechaVencimiento=15/12/2018, nivelReorden=40, precioUnitario=2500.0, cantidadBodega=40, cantidadEstante=30, precioUnidadMedida=4.16, bodega=2694, estante=2696, promocion=null]
+11:52:47,024 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito
+11:52:47,056 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito: Carrito [idCarrito= 2700, ocupado= 0, sucursal=2692] tuplasInsertadas
+11:52:47,056 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando dentroCarrito: [2700 , 2698]
+11:52:47,082 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando DentroCarrito: Carrito [idCarrito= 2700, idProductoSucursal=2698, cantidad=3] tuplas insertadas
+11:52:47,082 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de DentroCarrito
+11:52:47,095 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de dnetroCarrito: 1 DentroCarrito existentes
+11:52:47,095 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando dentroCarrito: [2700 , 2699]
+11:52:47,107 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando DentroCarrito: Carrito [idCarrito= 2700, idProductoSucursal=2699, cantidad=6] tuplas insertadas
+11:52:47,107 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de DentroCarrito
+11:52:47,119 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de dnetroCarrito: 2 DentroCarrito existentes
+11:52:47,119 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Modificando la cantidad de DentroCarrito: [2700, 2698]
+11:52:47,132 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Terminando de modificar DentroCarrito adicionandole la cantidad: -2
+11:52:47,132 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando la informacion de dentro carrito por los ids carrito y productoSucursal: 2700, 2698
+11:52:47,146 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando dentroCarrito por ids: Carrito [idCarrito= 2700, idProductoSucursal=2698, cantidad=1]
+11:52:47,146 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:52:47,218 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+11:52:47,218 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+11:54:43,979 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre DentroCarrito
+11:54:44,039 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+11:54:46,048 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:54:46,383 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+11:54:46,384 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+11:54:46,384 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de DentroCarrito
+11:54:46,417 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de dnetroCarrito: 0 DentroCarrito existentes
+11:54:46,417 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+11:54:46,456 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=2701, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+11:54:46,456 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: carne
+11:54:46,478 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=2702, volumen=5000.0, peso=5000.0, tipo=carne, sucursal=2701]
+11:54:46,478 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: galleta
+11:54:46,510 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=2703, volumen=5000.0, peso=5000.0, tipo=galleta, sucursal=2701]
+11:54:46,510 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: carne
+11:54:46,560 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=2704, volumen=2500.0, peso=2500.0, tipo=carne, nivelAprovisionamiento=15, sucursal=2701]
+11:54:46,561 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: galleta
+11:54:46,582 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=2705, volumen=2500.0, peso=2500.0, tipo=galleta, nivelAprovisionamiento=20, sucursal=2701]
+11:54:46,582 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 2
+11:54:46,610 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: Promocion [idPromocion=2706, tipo=2, n=20.0, m=20.0, fechaCaducidad=12/12/2018]
+11:54:46,610 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Carne de Res
+11:54:46,633 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=2707, nombre=Carne de Res, marca=SuperVaca, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=perecedero, tipo=carne, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=50, cantidadEstante=20, precioUnidadMedida=5.0, bodega=2702, estante=2704, promocion=null]
+11:54:46,633 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Galletas
+11:54:46,660 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=2708, nombre=Galletas, marca=Oreo, presentacion=6 paquetes de 100 gr cada uno, cantidadPresentacion=600.0, unidadMedida=gramos, volumenEmpaque=300.0, pesoEmpaque=600.0, codigoBarras=13516, categoria=perecedero, tipo=galleta, fechaVencimiento=15/12/2018, nivelReorden=40, precioUnitario=2500.0, cantidadBodega=40, cantidadEstante=30, precioUnidadMedida=4.16, bodega=2703, estante=2705, promocion=null]
+11:54:46,660 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito
+11:54:46,688 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito: Carrito [idCarrito= 2709, ocupado= 0, sucursal=2701] tuplasInsertadas
+11:54:46,688 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando dentroCarrito: [2709 , 2707]
+11:54:46,706 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando DentroCarrito: Carrito [idCarrito= 2709, idProductoSucursal=2707, cantidad=3] tuplas insertadas
+11:54:46,706 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de DentroCarrito
+11:54:46,716 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de dnetroCarrito: 1 DentroCarrito existentes
+11:54:46,716 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando dentroCarrito: [2709 , 2708]
+11:54:46,730 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando DentroCarrito: Carrito [idCarrito= 2709, idProductoSucursal=2708, cantidad=6] tuplas insertadas
+11:54:46,730 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de DentroCarrito
+11:54:46,748 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de dnetroCarrito: 2 DentroCarrito existentes
+11:54:46,748 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Modificando la cantidad de DentroCarrito: [2709, 2707]
+11:54:46,759 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Terminando de modificar DentroCarrito adicionandole la cantidad: -2
+11:54:46,759 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando la informacion de dentro carrito por los ids carrito y productoSucursal: 2709, 2707
+11:54:46,768 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando dentroCarrito por ids: Carrito [idCarrito= 2709, idProductoSucursal=2707, cantidad=1]
+11:54:46,768 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Modificando la cantidad de DentroCarrito: [2709, 2708]
+11:54:46,783 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Terminando de modificar DentroCarrito adicionandole la cantidad: 2
+11:54:46,783 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando la informacion de dentro carrito por los ids carrito y productoSucursal: 2709, 2708
+11:54:46,892 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando dentroCarrito por ids: Carrito [idCarrito= 2709, idProductoSucursal=2708, cantidad=8]
+11:54:46,892 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:54:46,982 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+11:54:46,982 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+11:58:28,627 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Probando la unicidad e integridad sobre DentroCarrito
+11:58:28,679 (main) INFO  [uniandes.isis2304.SuperAndes.test.ProductoProveedorTest] - Se encontró un archivo de configuración de tablas válido
+11:58:30,929 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:58:31,502 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+11:58:31,503 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
+11:58:31,503 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de DentroCarrito
+11:58:31,554 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de dnetroCarrito: 0 DentroCarrito existentes
+11:58:31,554 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal : ZipaAndes
+11:58:31,605 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando sucursal: Sucursal [idSucursal=2710, ciudad=Zipaquira, direccion=Cra 6#1-39, nombre=ZipaAndes]
+11:58:31,605 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: carne
+11:58:31,825 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=2711, volumen=5000.0, peso=5000.0, tipo=carne, sucursal=2710]
+11:58:31,826 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Bodega: galleta
+11:58:31,975 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando bodega: Bodega [idBodega=2712, volumen=5000.0, peso=5000.0, tipo=galleta, sucursal=2710]
+11:58:31,975 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: carne
+11:58:32,033 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=2713, volumen=2500.0, peso=2500.0, tipo=carne, nivelAprovisionamiento=15, sucursal=2710]
+11:58:32,033 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: galleta
+11:58:32,186 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando Estante: Estante [idEstante=2714, volumen=2500.0, peso=2500.0, tipo=galleta, nivelAprovisionamiento=20, sucursal=2710]
+11:58:32,186 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: 2
+11:58:32,365 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando promocion: Promocion [idPromocion=2715, tipo=2, n=20.0, m=20.0, fechaCaducidad=12/12/2018]
+11:58:32,365 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Carne de Res
+11:58:32,415 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=2716, nombre=Carne de Res, marca=SuperVaca, presentacion=paqueton de 5 paquetes de 200 gr. cada uno, cantidadPresentacion=1000.0, unidadMedida=gramos, volumenEmpaque=20.0, pesoEmpaque=1000.0, codigoBarras=13515, categoria=perecedero, tipo=carne, fechaVencimiento=15/12/2018, nivelReorden=50, precioUnitario=5000.0, cantidadBodega=50, cantidadEstante=20, precioUnidadMedida=5.0, bodega=2711, estante=2713, promocion=null]
+11:58:32,415 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando ProductoSucursal: Galletas
+11:58:32,451 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando productoSucursal: ProductoSucursal [idProductoSucursal=2717, nombre=Galletas, marca=Oreo, presentacion=6 paquetes de 100 gr cada uno, cantidadPresentacion=600.0, unidadMedida=gramos, volumenEmpaque=300.0, pesoEmpaque=600.0, codigoBarras=13516, categoria=perecedero, tipo=galleta, fechaVencimiento=15/12/2018, nivelReorden=40, precioUnitario=2500.0, cantidadBodega=40, cantidadEstante=30, precioUnidadMedida=4.16, bodega=2712, estante=2714, promocion=null]
+11:58:32,451 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito
+11:58:32,505 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito: Carrito [idCarrito= 2718, ocupado= 0, sucursal=2710] tuplasInsertadas
+11:58:32,506 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando dentroCarrito: [2718 , 2716]
+11:58:32,516 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando DentroCarrito: Carrito [idCarrito= 2718, idProductoSucursal=2716, cantidad=3] tuplas insertadas
+11:58:32,516 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de DentroCarrito
+11:58:32,525 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de dnetroCarrito: 1 DentroCarrito existentes
+11:58:32,525 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando dentroCarrito: [2718 , 2717]
+11:58:32,542 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando DentroCarrito: Carrito [idCarrito= 2718, idProductoSucursal=2717, cantidad=6] tuplas insertadas
+11:58:32,542 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de DentroCarrito
+11:58:32,556 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando los VO de dnetroCarrito: 2 DentroCarrito existentes
+11:58:32,556 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Modificando la cantidad de DentroCarrito: [2718, 2716]
+11:58:32,585 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Terminando de modificar DentroCarrito adicionandole la cantidad: -2
+11:58:32,586 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando la informacion de dentro carrito por los ids carrito y productoSucursal: 2718, 2716
+11:58:32,607 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando dentroCarrito por ids: Carrito [idCarrito= 2718, idProductoSucursal=2716, cantidad=1]
+11:58:32,607 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Modificando la cantidad de DentroCarrito: [2718, 2717]
+11:58:32,629 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Terminando de modificar DentroCarrito adicionandole la cantidad: 2
+11:58:32,629 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando la informacion de dentro carrito por los ids carrito y productoSucursal: 2718, 2717
+11:58:32,641 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Generando dentroCarrito por ids: Carrito [idCarrito= 2718, idProductoSucursal=2717, cantidad=8]
+11:58:32,641 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando dentroCarrito: [2720 , 2717]
+11:58:32,700 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_DENTROCARRITO(idCarrito, idProductoSucursal, cantidad) values (?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_CARRITODENTROCARRITO) violada - clave principal no encontrada
+
+11:58:32,701 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando DentroCarrito: null tuplas insertadas
+11:58:32,701 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando dentroCarrito: [2718 , 2729]
+11:58:32,783 (main) ERROR [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Exception : Error con la ejecucion de Query de SQL "INSERT INTO A_DENTROCARRITO(idCarrito, idProductoSucursal, cantidad) values (?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304C281820.FK_PRODUCDENTROCARRITO) violada - clave principal no encontrada
+
+11:58:32,784 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando DentroCarrito: null tuplas insertadas
+11:58:32,784 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de SuperAndes
+11:58:32,960 (main) INFO  [uniandes.isis2304.SuperAndes.persistencia.PersistenciaSuperAndes] - Borrada la base de datos
+11:58:32,960 (main) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Limpiando la BD de Parranderos: Listo!
