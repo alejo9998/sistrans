@@ -21197,3 +21197,127 @@ TotalPagado: 4.0]
 14:20:08,800 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=3179, volumen=30.0, peso=30.0, tipo=carne, nivelAprovisionamiento=40, sucursal=3171]
 14:20:08,800 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos
 14:20:08,802 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos: Listo!
+14:53:19,716 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando clientes
+14:53:19,720 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando clientes 1 clientes existentes
+14:53:20,602 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando clientes
+14:53:20,605 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando clientes 1 clientes existentes
+14:53:20,606 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+14:53:20,610 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 1 productosSucursal existentes
+14:53:20,610 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 3179
+14:53:20,613 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=3179, volumen=30.0, peso=30.0, tipo=carne, nivelAprovisionamiento=40, sucursal=3171]
+14:53:33,836 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito
+14:53:33,844 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Adicionando carrito: Carrito [idCarrito= 3201, ocupado= 0, sucursal=3171] tuplasInsertadas
+14:53:33,845 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+14:53:33,853 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 1 productosSucursal existentes
+14:53:33,853 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 3179
+14:53:33,856 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=3179, volumen=30.0, peso=30.0, tipo=carne, nivelAprovisionamiento=40, sucursal=3171]
+14:53:33,856 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos
+14:53:33,859 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos: Listo!
+14:53:33,859 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+14:53:33,897 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 1 productosSucursal existentes
+14:53:33,897 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 3179
+14:53:33,901 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=3179, volumen=30.0, peso=30.0, tipo=carne, nivelAprovisionamiento=40, sucursal=3171]
+14:53:33,901 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos
+14:53:33,903 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos: Listo!
+14:53:37,499 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Modificando el estado de ocupacion del carrito : 3201
+14:53:37,503 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Terminando de modificar el estado de ocupacion del carrito: nuevoEstado = 1
+14:53:37,503 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+14:53:37,507 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 1 productosSucursal existentes
+14:53:37,507 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 3179
+14:53:37,510 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=3179, volumen=30.0, peso=30.0, tipo=carne, nivelAprovisionamiento=40, sucursal=3171]
+14:53:37,510 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos
+14:53:37,513 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos: Listo!
+14:53:37,513 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+14:53:37,517 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 1 productosSucursal existentes
+14:53:37,517 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 3179
+14:53:37,520 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=3179, volumen=30.0, peso=30.0, tipo=carne, nivelAprovisionamiento=40, sucursal=3171]
+14:53:37,520 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos
+14:53:37,522 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos: Listo!
+14:54:04,586 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Modificando el estado de ocupacion del carrito : 3201
+14:54:04,590 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Terminando de modificar el estado de ocupacion del carrito: nuevoEstado = -1
+14:54:04,590 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+14:54:04,596 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 1 productosSucursal existentes
+14:54:04,596 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 3179
+14:54:04,599 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=3179, volumen=30.0, peso=30.0, tipo=carne, nivelAprovisionamiento=40, sucursal=3171]
+14:54:04,599 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos
+14:54:04,603 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos: Listo!
+14:54:07,154 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando CarritosAbandonados
+14:54:07,157 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando CarritosAbandonados: Listo!
+14:54:07,157 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Dentro carrito por IdCarrito
+14:54:07,159 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando dentroCarrito por idCarrito: 0 dentroCarritos existentes
+14:54:07,159 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Modificando el estado de ocupacion del carrito : 3201
+14:54:07,162 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Terminando de modificar el estado de ocupacion del carrito: nuevoEstado = 0
+14:54:07,162 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+14:54:07,167 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 1 productosSucursal existentes
+14:54:07,167 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 3179
+14:54:07,169 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=3179, volumen=30.0, peso=30.0, tipo=carne, nivelAprovisionamiento=40, sucursal=3171]
+14:54:07,170 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos
+14:54:07,172 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos: Listo!
+14:54:09,418 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando clientes
+14:54:09,422 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando clientes 1 clientes existentes
+15:25:15,701 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:25:17,080 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 3171
+15:25:17,186 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=3171, ciudad=aqui, direccion=aqui, nombre=aqui]
+15:25:17,199 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosProveedor
+15:25:17,208 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosProveedor: 1 productosProveedor existentes
+15:25:17,209 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+15:25:17,219 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 1 productosSucursal existentes
+15:25:17,219 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 3179
+15:25:17,224 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=3179, volumen=30.0, peso=30.0, tipo=carne, nivelAprovisionamiento=40, sucursal=3171]
+15:25:17,225 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos
+15:25:17,228 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos: Listo!
+15:25:17,231 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:25:17,246 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 3171
+15:25:17,249 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=3171, ciudad=aqui, direccion=aqui, nombre=aqui]
+15:25:17,250 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosProveedor
+15:25:17,255 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosProveedor: 1 productosProveedor existentes
+15:25:17,256 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+15:25:17,262 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 1 productosSucursal existentes
+15:25:17,262 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 3179
+15:25:17,266 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=3179, volumen=30.0, peso=30.0, tipo=carne, nivelAprovisionamiento=40, sucursal=3171]
+15:25:17,266 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos
+15:25:17,270 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos: Listo!
+15:29:17,674 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:29:19,041 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 3171
+15:29:19,148 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=3171, ciudad=aqui, direccion=aqui, nombre=aqui]
+15:29:19,161 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosProveedor
+15:29:19,169 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosProveedor: 1 productosProveedor existentes
+15:29:19,170 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+15:29:19,180 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 1 productosSucursal existentes
+15:29:19,180 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 3179
+15:29:19,184 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=3179, volumen=30.0, peso=30.0, tipo=carne, nivelAprovisionamiento=40, sucursal=3171]
+15:29:19,186 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos
+15:29:19,190 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos: Listo!
+15:29:19,192 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:29:19,206 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 3171
+15:29:19,209 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=3171, ciudad=aqui, direccion=aqui, nombre=aqui]
+15:29:19,211 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosProveedor
+15:29:19,216 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosProveedor: 1 productosProveedor existentes
+15:29:19,217 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+15:29:19,223 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 1 productosSucursal existentes
+15:29:19,223 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 3179
+15:29:19,226 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=3179, volumen=30.0, peso=30.0, tipo=carne, nivelAprovisionamiento=40, sucursal=3171]
+15:29:19,227 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos
+15:29:19,230 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos: Listo!
+15:50:53,763 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:50:55,136 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 3171
+15:50:55,241 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=3171, ciudad=aqui, direccion=aqui, nombre=aqui]
+15:50:55,257 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosProveedor
+15:50:55,269 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosProveedor: 1 productosProveedor existentes
+15:50:55,269 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+15:50:55,278 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 1 productosSucursal existentes
+15:50:55,278 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 3179
+15:50:55,282 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=3179, volumen=30.0, peso=30.0, tipo=carne, nivelAprovisionamiento=40, sucursal=3171]
+15:50:55,283 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos
+15:50:55,287 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos: Listo!
+15:50:55,289 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.interfaz.InterfazAdministrador] - Se encontró un archivo de configuración válido: Tablas BD
+15:50:55,303 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion completa de una sucursal por id: 3171
+15:50:55,307 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Sucursal [idSucursal=3171, ciudad=aqui, direccion=aqui, nombre=aqui]
+15:50:55,308 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosProveedor
+15:50:55,313 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosProveedor: 1 productosProveedor existentes
+15:50:55,314 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando productosSucursal
+15:50:55,320 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando ProductosSucursal: 1 productosSucursal existentes
+15:50:55,320 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Dar informacion de una Estante por id: 3179
+15:50:55,323 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Estante [idEstante=3179, volumen=30.0, peso=30.0, tipo=carne, nivelAprovisionamiento=40, sucursal=3171]
+15:50:55,324 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos
+15:50:55,327 (AWT-EventQueue-0) INFO  [uniandes.isis2304.SuperAndes.negocio.SuperAndes] - Listando Carritos: Listo!

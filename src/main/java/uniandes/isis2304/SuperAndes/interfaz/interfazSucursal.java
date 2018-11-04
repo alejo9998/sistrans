@@ -177,7 +177,7 @@ public class interfazSucursal extends JFrame
 	
 	public void agregarCliente(String pNombre,String pCorreo,String pDireccion,String identificacion)
 	{
-		inter.agregarCliente(pNombre, pCorreo, pDireccion);
+		inter.agregarCliente(identificacion,pNombre, pCorreo, pDireccion);
 	}
 	public void agregarEstante(String pTipo,String pPeso,String volum,String nivAprovi)
 	{

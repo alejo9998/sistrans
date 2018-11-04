@@ -158,9 +158,9 @@ public class InterfazAdministrador extends JFrame
 		panelDatos.actualizarInterfaz(mensaje);
 	}
 
-	public void agregarCliente(String pNombre, String pCorreo, String pDireccion)
+	public void agregarCliente(String pNombre, String pCorreo, String pDireccion,String iden)
 	{
-
+		long identificacion = Long.parseLong(iden);
 		if(pNombre.equalsIgnoreCase("")|| pCorreo.equalsIgnoreCase(""))
 		{
 			JOptionPane.showMessageDialog(null, "Los campos nombre y correo no pueden ser vacios", "SuperAndes",JOptionPane.ERROR_MESSAGE);
@@ -169,13 +169,13 @@ public class InterfazAdministrador extends JFrame
 		{
 			if(pDireccion.equalsIgnoreCase(""))
 			{
-				VOCliente a =superAndes.adicionarClienteIndividuo(pNombre, pCorreo);
+				VOCliente a =superAndes.adicionarClienteIndividuo2(identificacion, pNombre, pCorreo);
 				String mensaje =a.toString();
 				panelDatos.actualizarInterfaz(mensaje);
 			}
 			else
 			{
-				VOCliente a = superAndes.adicionarClienteEmpresa(pNombre, pCorreo, pDireccion);
+				VOCliente a = superAndes.adicionarClienteEmpresa2(identificacion,pNombre, pCorreo, pDireccion);
 				String mensaje =a.toString();
 				panelDatos.actualizarInterfaz(mensaje);
 			}

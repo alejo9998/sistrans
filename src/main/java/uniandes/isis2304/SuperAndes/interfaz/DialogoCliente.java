@@ -6,9 +6,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
@@ -54,6 +56,11 @@ public class DialogoCliente extends JDialog implements ActionListener
 	 */
 	private final static String CANCELAR="CANCELAR";
 	
+	private final static String EMPRESA="EMPRESA";
+	
+	
+	private JCheckBox emrpesa;
+	
 	/**
 	 * Interfaz del dialogo
 	 * @param inter
@@ -64,22 +71,28 @@ public class DialogoCliente extends JDialog implements ActionListener
 		
 		setTitle("Agregar Cliente");
 		setLayout(new BorderLayout());
-		setSize(300,200);
+		setSize(320,200);
 		setLocationRelativeTo(null);
 		
         JPanel campos = new JPanel( );
-        campos.setLayout( new GridLayout( 5, 2, 3, 3 ) );
+        campos.setLayout( new GridLayout( 6, 2, 3, 3 ) );
         campos.setBorder( new EmptyBorder( 15, 15, 15, 15 ) );
         add( campos, BorderLayout.CENTER );
 		
+        JLabel empres = new JLabel("Es empresa: ");
 		JLabel nombre = new JLabel("Nombre: ");
 		JLabel identi = new JLabel("Identificaion: ");
 		JLabel correo = new JLabel("Correo");
 		JLabel dir = new JLabel("Dirección: ");
 		
+		emrpesa = new JCheckBox();
+		emrpesa.setActionCommand(EMPRESA);
+		emrpesa.addActionListener(this);
+		emrpesa.setSelected(false);
 		txtnombre = new JTextField();
 		txtCorreo = new JTextField();
 		txtDireccion = new JTextField();
+		txtDireccion.setEnabled(false);
 		txtIdetificacion= new JTextField();
 		
 		aceptar = new JButton("Aceptar");
@@ -89,6 +102,8 @@ public class DialogoCliente extends JDialog implements ActionListener
 		cancelar.addActionListener(this);
 		cancelar.setActionCommand(CANCELAR);
 		
+		campos.add(empres);
+		campos.add(emrpesa);
 		campos.add(nombre);
 		campos.add(txtnombre);
 		campos.add(correo);
@@ -123,6 +138,18 @@ public class DialogoCliente extends JDialog implements ActionListener
 		else if(mensaje.equalsIgnoreCase(CANCELAR))
 		{
 			dispose();
+		}
+		else if (mensaje.equalsIgnoreCase(EMPRESA))
+		{
+			if( emrpesa.isSelected())
+			{
+				txtDireccion.enable(true);
+			}
+			else
+			{
+				txtDireccion.setText("");
+				txtDireccion.enable(false);
+			}
 		}
 		
 	}
