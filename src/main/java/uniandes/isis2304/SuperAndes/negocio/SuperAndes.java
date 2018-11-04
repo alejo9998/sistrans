@@ -1,6 +1,8 @@
 package uniandes.isis2304.SuperAndes.negocio;
 
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
@@ -215,7 +217,7 @@ public class SuperAndes {
 			}
 		}
 	}
-/**
+	/**
 	public Compra req11RegistrarUnaVentaDeUnProducto(String fecha, int cantidad, long idProductoSucursal, long idCliente, long idFactura) throws Exception {
 		if ( this.darProductoSucursalPorId(idProductoSucursal) == null) {
 			throw new Exception ("El producto que intenta comprar no existe");
@@ -251,7 +253,7 @@ public class SuperAndes {
 
 
 	}
-	*/
+	 */
 
 	/* ********************************************************************
 	 *         METODOS REQUERIMIENTOS FUNCIONALES SEGUNDA ITERACION
@@ -314,7 +316,9 @@ public class SuperAndes {
 	 */
 	public double pagarCompraRF15 (long idCarrito, long idCliente) throws Exception{
 		List<DentroCarrito> dentroCarritoPagar = darDentroCarritoPorIdCarrito(idCarrito);
+		System.out.println();
 		if ( dentroCarritoPagar.size() == 0) {
+			
 			throw new Exception ("El carrito que solicito para pagar los productos esta vacio");
 		}
 		else {
@@ -619,7 +623,8 @@ public class SuperAndes {
 	public ProductoProveedor adicionarProductoProveedor(String nombre, String marca, String presentacion, double cantidadPresentacion, String unidadMedida,
 			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , double calidad, double precio, int numeroCalificaciones, double sumaCalificaciones, long idProveedor) {
 		log.info("Adicionando ProductoProveedor: " + nombre);
-		ProductoProveedor productoProveedor = pp.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
+		Timestamp fecha = this.pasarFechaStringATimestamp(fechaVencimiento);
+		ProductoProveedor productoProveedor = pp.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fecha, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
 		log.info("Adicionando productoProveedor: " + productoProveedor);
 		return productoProveedor;
 	}
@@ -627,7 +632,8 @@ public class SuperAndes {
 	public ProductoProveedor adicionarProductoProveedor2(long idProductoProveedor, String nombre, String marca, String presentacion, double cantidadPresentacion, String unidadMedida,
 			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , double calidad, double precio, int numeroCalificaciones, double sumaCalificaciones, long idProveedor) {
 		log.info("Adicionando ProductoProveedor: " + nombre);
-		ProductoProveedor productoProveedor = pp.adicionarProductoProveedor2(idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
+		Timestamp fecha = this.pasarFechaStringATimestamp(fechaVencimiento);
+		ProductoProveedor productoProveedor = pp.adicionarProductoProveedor2(idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fecha, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
 		log.info("Adicionando productoProveedor: " + productoProveedor);
 		return productoProveedor;
 	}
@@ -730,7 +736,8 @@ public class SuperAndes {
 
 	public long modificarFechaVencimientoProductoProvedor(long idProductoProveedor, String fecha) {
 		log.info("Modificando la fecha de un ProductoProveedor por id: " + idProductoProveedor);
-		long cambios = pp.modificarFechaVencimientoProductoProveedor(idProductoProveedor, fecha);
+		Timestamp fecha2 = this.pasarFechaStringATimestamp(fecha);
+		long cambios = pp.modificarFechaVencimientoProductoProveedor(idProductoProveedor, fecha2);
 		return cambios;
 	}
 
@@ -741,14 +748,18 @@ public class SuperAndes {
 
 	public OrdenPedido adicionarOrdenPedido(double precio, String fechaEntrega, String fechaEsperadaEntrega,Double calificacion, int entregado, int cantidad, long idProductoProveedor, long idSucursal) {
 		log.info("Adicionando OrdenPedido: " + idProductoProveedor);
-		OrdenPedido ordenPedido = pp.adicionarOrdenPedido(precio, fechaEntrega, fechaEsperadaEntrega, calificacion, entregado, cantidad, idProductoProveedor, idSucursal);
+		Timestamp fechaEntrega2 = this.pasarFechaStringATimestamp(fechaEntrega);
+		Timestamp fechaEsperadaEntrega2 = this.pasarFechaStringATimestamp(fechaEsperadaEntrega);
+		OrdenPedido ordenPedido = pp.adicionarOrdenPedido(precio, fechaEntrega2, fechaEsperadaEntrega2, calificacion, entregado, cantidad, idProductoProveedor, idSucursal);
 		log.info("Adicionando OrdenPedido: " + ordenPedido);
 		return ordenPedido;
 	}
 
 	public OrdenPedido adicionarOrdenPedido2(long idOrdenPedido, double precio, String fechaEntrega, String fechaEsperadaEntrega,Double calificacion, int entregado, int cantidad, long idProductoProveedor, long idSucursal) {
 		log.info("Adicionando OrdenPedido: " + idProductoProveedor);
-		OrdenPedido ordenPedido = pp.adicionarOrdenPedido2(idOrdenPedido ,precio, fechaEntrega, fechaEsperadaEntrega, calificacion, entregado, cantidad, idProductoProveedor, idSucursal);
+		Timestamp fechaEntrega2 = this.pasarFechaStringATimestamp(fechaEntrega);
+		Timestamp fechaEsperadaEntrega2 = this.pasarFechaStringATimestamp(fechaEsperadaEntrega);
+		OrdenPedido ordenPedido = pp.adicionarOrdenPedido2(idOrdenPedido ,precio, fechaEntrega2, fechaEsperadaEntrega2, calificacion, entregado, cantidad, idProductoProveedor, idSucursal);
 		log.info("Adicionando OrdenPedido: " + ordenPedido);
 		return ordenPedido;
 	}
@@ -921,7 +932,8 @@ public class SuperAndes {
 			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , int nivelReorden, double precioUnitario, int cantidadBodega, int cantidadEstante, double precioUnidadMedida
 			, long idBodega, long idEstante, Long idPromocion) {
 		log.info("Adicionando ProductoSucursal: " + nombre);
-		ProductoSucursal productoSucursal = pp.adicionarProductoSucursal(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, idBodega, idEstante, idPromocion);
+		Timestamp fecha = this.pasarFechaStringATimestamp(fechaVencimiento);
+		ProductoSucursal productoSucursal = pp.adicionarProductoSucursal(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fecha, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, idBodega, idEstante, idPromocion);
 		log.info("Adicionando productoSucursal: " + productoSucursal);
 		return productoSucursal;
 	}
@@ -930,7 +942,8 @@ public class SuperAndes {
 			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , int nivelReorden, double precioUnitario, int cantidadBodega, int cantidadEstante, double precioUnidadMedida
 			, long idBodega, long idEstante, Long idPromocion) {
 		log.info("Adicionando ProductoSucursal: " + nombre);
-		ProductoSucursal productoSucursal = pp.adicionarProductoSucursal2(idProductoSucursal,nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, idBodega, idEstante, idPromocion);
+		Timestamp fecha = this.pasarFechaStringATimestamp(fechaVencimiento);
+		ProductoSucursal productoSucursal = pp.adicionarProductoSucursal2(idProductoSucursal,nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fecha, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, idBodega, idEstante, idPromocion);
 		log.info("Adicionando productoSucursal: " + productoSucursal);
 		return productoSucursal;
 	}
@@ -1036,7 +1049,8 @@ public class SuperAndes {
 
 	public long modificarFechaVencimientoProductoSucursal(long idProductoSucursal, String fechaVencimientoNueva) {
 		log.info("Modificando la fecha de vencimiento del productoSucursal con id: " + idProductoSucursal);
-		long cambios = pp.modificarFechaVencimientoProductoSucursal(idProductoSucursal, fechaVencimientoNueva);
+		Timestamp fechaVencimientoNueva2 = this.pasarFechaStringATimestamp(fechaVencimientoNueva);
+		long cambios = pp.modificarFechaVencimientoProductoSucursal(idProductoSucursal, fechaVencimientoNueva2);
 		return cambios;
 	}
 
@@ -1046,14 +1060,16 @@ public class SuperAndes {
 
 	public Promocion adicionarPromocion(int tipo, double n, double m, String fechaCaducidad) {
 		log.info("Adicionando promocion: " + tipo);
-		Promocion promocion = pp.adicionarPromocion(tipo, n, m, fechaCaducidad);
+		Timestamp fechaCaducidad2 = this.pasarFechaStringATimestamp(fechaCaducidad);
+		Promocion promocion = pp.adicionarPromocion(tipo, n, m, fechaCaducidad2);
 		log.info("Adicionando promocion: " + promocion);
 		return promocion;
 	}
 
 	public Promocion adicionarPromocion2(long idPromocion, int tipo, double n, double m, String fechaCaducidad) {
 		log.info("Adicionando promocion: " + tipo);
-		Promocion promocion = pp.adicionarPromocion2(idPromocion, tipo, n, m, fechaCaducidad);
+		Timestamp fechaCaducidad2 = this.pasarFechaStringATimestamp(fechaCaducidad);
+		Promocion promocion = pp.adicionarPromocion2(idPromocion, tipo, n, m, fechaCaducidad2);
 		log.info("Adicionando promocion: " + promocion);
 		return promocion;
 	}
@@ -1105,14 +1121,16 @@ public class SuperAndes {
 
 	public Compra adicionarCompra(String fecha, int cantidad, double totalPagado, long idProductoSucursal, long idCliente, long idFactura) {
 		log.info("Adicionando compra: " + idProductoSucursal );
-		Compra compra = pp.adicionarCompra(fecha, cantidad, totalPagado, idProductoSucursal, idCliente, idFactura);
+		Timestamp fecha2 = this.pasarFechaStringATimestamp(fecha);
+		Compra compra = pp.adicionarCompra(fecha2, cantidad, totalPagado, idProductoSucursal, idCliente, idFactura);
 		log.info("Adicionando compra: " + compra);
 		return compra;
 	}
 
 	public Compra adicionarCompra2(long idCompra, String fecha, int cantidad, double totalPagado, long idProductoSucursal, long idCliente, long idFactura) {
 		log.info("Adicionando compra: " + idProductoSucursal );
-		Compra compra = pp.adicionarCompra2(idCompra, fecha, cantidad, totalPagado, idProductoSucursal, idCliente, idFactura);
+		Timestamp fecha2 = this.pasarFechaStringATimestamp(fecha);
+		Compra compra = pp.adicionarCompra2(idCompra, fecha2, cantidad, totalPagado, idProductoSucursal, idCliente, idFactura);
 		log.info("Adicionando compra: " + compra);
 		return compra;
 	}
@@ -1353,6 +1371,27 @@ public class SuperAndes {
 		long [] borrrados = pp.limpiarSuperAndes();	
 		log.info ("Limpiando la BD de Parranderos: Listo!");
 		return borrrados;
+	}
+
+	/* ************************************************************
+	 *                    METODOS LOGICOS PARA SIMPLIFICAR
+	 ******************************************************************/
+
+	public Timestamp pasarFechaStringATimestamp(String fecha) {
+		if ( fecha == null) {
+			return null;
+		}
+		else {
+			String[] fechis = fecha.split("/");
+			int ano = Integer.parseInt(fechis[2]);
+			int mes = Integer.parseInt(fechis[1]);
+			int dia = Integer.parseInt(fechis[0]);
+			Calendar c = Calendar.getInstance();
+			c.set(ano, mes-1, dia);
+			long time = c.getTimeInMillis();
+			Timestamp fecha2 = new Timestamp(time);
+			return fecha2;
+		}
 	}
 
 

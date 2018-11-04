@@ -1,4 +1,5 @@
 package uniandes.isis2304.SuperAndes.persistencia;
+import java.sql.Timestamp;
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
@@ -17,7 +18,7 @@ class SQLCompra {
 		this.pp=pp;
 	}
 	
-	public long adicionarCompra (PersistenceManager pm, long idCompra, String fecha, int cantidad, double totalPagado, long idProductoSucursal, long idCliente, long idFactura ) {
+	public long adicionarCompra (PersistenceManager pm, long idCompra, Timestamp fecha, int cantidad, double totalPagado, long idProductoSucursal, long idCliente, long idFactura ) {
 		Query q = pm.newQuery(SQL , "INSERT INTO " + pp.darTablaCompra() + "(idCompra, fecha, cantidad, totalPagado, productoSucursal, cliente, factura) values (?, ?, ?, ?, ?, ?, ?)" );
 		q.setParameters(idCompra, fecha, cantidad, totalPagado, idProductoSucursal, idCliente, idFactura );
 		return (long) q.executeUnique();

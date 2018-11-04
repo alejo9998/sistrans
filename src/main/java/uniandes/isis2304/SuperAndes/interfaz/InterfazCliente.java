@@ -203,7 +203,7 @@ public class InterfazCliente extends JFrame implements ActionListener,ListSelect
 		}
 		catch(Exception e)
 		{
-		super.dispose();
+			super.dispose();
 		}
 	}
 	public void desactivar()
@@ -262,9 +262,12 @@ public class InterfazCliente extends JFrame implements ActionListener,ListSelect
 		if(e.getActionCommand().equals(AGREGAR))
 		{
 			try
-			{	add(productosLista.get(productos.getSelectedIndex()));
+			{
+				
+				add(productosLista.get(productos.getSelectedIndex()));
 			 	dc.darInterSucursal().dentroCarrito(carritoDeCompras.getIdCarrito(), productosLista.get(productos.getSelectedIndex()).getIdProductoSucursal(), 1);
-				actualizar();
+				System.out.println(carritoDeCompras.getIdCarrito() +" "+productosLista.get(productos.getSelectedIndex()).getIdProductoSucursal() +" "+ 1);
+			 	actualizar();
 			}
 			catch(Exception t)
 			{
@@ -277,6 +280,7 @@ public class InterfazCliente extends JFrame implements ActionListener,ListSelect
 			try
 			{
 				Delete(car.get( carrito.getSelectedIndex()));
+				dc.darInterSucursal().eliminarProducto(carritoDeCompras.getIdCarrito(), productosLista.get(productos.getSelectedIndex()).getIdProductoSucursal());
 				actualizar();
 			}
 			catch(Exception t)

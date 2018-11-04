@@ -1,5 +1,6 @@
 package uniandes.isis2304.SuperAndes.persistencia;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +20,7 @@ class SQLProductoSucursal {
 	}
 	
 	public long adicionarProductoSucursal (PersistenceManager pm , long idProductoSucursal, String nombre, String marca, String presentacion, double cantidadPresentacion, String unidadMedida,
-			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , int nivelReorden, double precioUnitario, int cantidadBodega, int cantidadEstante, double precioUnidadMedida, long idBodega, long idEstante, Long idPromocion)
+			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, Timestamp fechaVencimiento , int nivelReorden, double precioUnitario, int cantidadBodega, int cantidadEstante, double precioUnidadMedida, long idBodega, long idEstante, Long idPromocion)
 	{
 		Query q = pm.newQuery(SQL, "INSERT INTO " + pp.darTablaProductoSucursal() + " (idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, bodega, estante, promocion) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 		q.setParameters(idProductoSucursal, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, idBodega, idEstante, idPromocion);
@@ -91,7 +92,7 @@ class SQLProductoSucursal {
 		return (long) q.executeUnique();
 	}
 	
-	public long modificarFechaVencimientoProductoSucursal (PersistenceManager pm, long idProductoSucursal, String fechaVencimientoNueva) {
+	public long modificarFechaVencimientoProductoSucursal (PersistenceManager pm, long idProductoSucursal, Timestamp fechaVencimientoNueva) {
 		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaProductoSucursal() + " SET fechaVencimiento = ? WHERE idProductoSucursal = ?");
 		q.setParameters(fechaVencimientoNueva, idProductoSucursal);
 		return (long) q.executeUnique();

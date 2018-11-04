@@ -1,4 +1,5 @@
 package uniandes.isis2304.SuperAndes.persistencia;
+import java.sql.Timestamp;
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
@@ -16,7 +17,7 @@ class SQLPromocion {
 		this.pp = pp;
 	}
 	
-	public long adicionarPromocion (PersistenceManager pm, long idPromocion, int tipo, double n, double m, String fechaCaducidad ) {
+	public long adicionarPromocion (PersistenceManager pm, long idPromocion, int tipo, double n, double m, Timestamp fechaCaducidad ) {
 		Query q = pm.newQuery(SQL, "INSERT INTO " + pp.darTablaPromocion() + "(idPromocion, tipo, n, m, fechaCaducidad) values (?, ?, ?, ?, ?)");
 		q.setParameters(idPromocion, tipo, n, m, fechaCaducidad);
 		return (long) q.executeUnique();

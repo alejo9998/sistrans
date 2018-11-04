@@ -284,7 +284,7 @@ public class InterfazAdministrador extends JFrame
 					String mensaje =a.toString();
 					panelDatos.actualizarInterfaz(mensaje);
 				}
-				else
+				else if (ptipo==2 && !(p.equals(llev)))
 				{
 					JOptionPane.showMessageDialog(null, "Lleve y pague tiene que ser iguales para aplicar descuento", "SuperAndes",JOptionPane.ERROR_MESSAGE);
 				}
@@ -316,7 +316,13 @@ public class InterfazAdministrador extends JFrame
 	public void dentroCarrito(long idCarrito,long idProductoSucursal, int cantidad)
 	{
 		superAndes.adicionarDentroCarrito(idCarrito, idProductoSucursal, cantidad);
+		
 	}
+	public void eliminarDentroCarrito(long idCarrito,long idProductoSucursal)
+	{
+		superAndes.eliminarDentroCarrito(idCarrito, idProductoSucursal);
+	}
+	
 	public void abandonarCarrito(long idCarrito)
 	{
 		superAndes.abandonarCarritoRF16(idCarrito);
@@ -449,8 +455,9 @@ public class InterfazAdministrador extends JFrame
 				precioUnidadMedida=Double.parseDouble(pPrecioUnidadMedida);
 				idBod= Long.parseLong(idBodega);
 				idEst=Long.parseLong(idEstante);
-				if(idProm.equals(""))
+				if(idProm.equalsIgnoreCase(""))
 				{
+					System.out.println("null de promocion");
 					idPromocion=null;
 
 				}
@@ -470,7 +477,8 @@ public class InterfazAdministrador extends JFrame
 				{
 					VOProductoSucursal a=superAndes.registrarProductoSucursalRF2(pNombre, pMarca, pPresentacion, cantPresentacion, unidadmedida, volEmpaque, pesoEmpaque,
 							codigoBarras, pCategoria, pTipo, pFechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida,
-							idBod, idEst, idPromocion);
+							idBod, idEst,
+							idPromocion);
 					System.out.println(a);
 					String mensaje =a.toString();
 					panelDatos.actualizarInterfaz(mensaje);
@@ -478,6 +486,7 @@ public class InterfazAdministrador extends JFrame
 			}
 			catch (Exception e)
 			{
+				e.printStackTrace();
 				JOptionPane.showMessageDialog(null, e.getMessage(), "SuperAndes",JOptionPane.ERROR_MESSAGE);
 			}
 		}
@@ -559,6 +568,7 @@ public class InterfazAdministrador extends JFrame
 					VOProductoProveedor a= superAndes.registrarProductoProveedorRF2(pNombre, pMarca, pPresentacion, cantPresentacion,
 							unidadmedida, volEmpaque, pesoEmpaque, codigoBarras, pCategoria, pTipo, pFechaVencimiento,
 							calidad, precio, numeroDeCalificiaciones, sumaCalificaciones, idProveedor);
+					System.out.println(a);
 					String mensaje =a.toString();
 					panelDatos.actualizarInterfaz(mensaje);
 				}
@@ -566,7 +576,8 @@ public class InterfazAdministrador extends JFrame
 			}
 			catch(Exception e)
 			{
-				JOptionPane.showMessageDialog(null, "Introduzca Valores Validos", "SuperAndes",JOptionPane.ERROR_MESSAGE);
+				
+				JOptionPane.showMessageDialog(null, "Introduzca Valores Validos" + e.getMessage(), "SuperAndes",JOptionPane.ERROR_MESSAGE);
 			}
 		}
 	}

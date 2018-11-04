@@ -264,7 +264,10 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 		codigoDeBarras.setText(e.toString());
 		categoria.setText(a.getCategoria());
 		tipo.setText(a.getTipo());
-		fechadeVencimiento.setText(a.getFechaVencimiento().toString());
+		String[] t = a.getFechaVencimiento().toString().split("-");
+		String[] f = t[2].split(" ");
+		fechadeVencimiento.setText(f[0]+"/"+t[1]+"/"+t[0]);
+		
 		System.out.println(a.getFechaVencimiento());
 	}
 
@@ -308,8 +311,8 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 						String pesoEmp = pesoEmpaque.getText();
 						String codBarr = codigoDeBarras.getText();
 						String cat = categoria.getText();
-						SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yy");
-						String fech = formato.format(fechadeVencimiento.getText());
+//						SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yy");
+						String fech = fechadeVencimiento.getText();
 						
 						String tip = tipo.getText();
 						String nvlreord = nivelReorden.getText();

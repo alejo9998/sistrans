@@ -1,5 +1,7 @@
 package uniandes.isis2304.SuperAndes.negocio;
 
+import java.sql.Timestamp;
+
 public class Promocion implements VOPromocion{
 	
 	public static final int TIPO_L = 1;
@@ -15,17 +17,17 @@ public class Promocion implements VOPromocion{
 	
 	private double m;
 	
-	private String fechaCaducidad;
+	private Timestamp fechaCaducidad;
 	
 	public Promocion() {
 		this.idPromocion = 0;
 		this.tipo = 0;
 		this.n = 0;
 		this.m = 0;
-		this.fechaCaducidad = "";
+		this.fechaCaducidad = null;
 	}
 
-	public Promocion(long idPromocion, int tipo, double n, double m, String fechaCaducidad) {
+	public Promocion(long idPromocion, int tipo, double n, double m, Timestamp fechaCaducidad) {
 		this.idPromocion = idPromocion;
 		this.tipo = tipo;
 		this.n = n;
@@ -65,11 +67,11 @@ public class Promocion implements VOPromocion{
 		this.m = m;
 	}
 
-	public String getFechaCaducidad() {
+	public Timestamp getFechaCaducidad() {
 		return fechaCaducidad;
 	}
 
-	public void setFechaCaducidad(String fechaCaducidad) {
+	public void setFechaCaducidad(Timestamp fechaCaducidad) {
 		this.fechaCaducidad = fechaCaducidad;
 	}
 	

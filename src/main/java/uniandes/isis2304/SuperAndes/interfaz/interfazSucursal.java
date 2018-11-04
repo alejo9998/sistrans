@@ -93,6 +93,12 @@ public class interfazSucursal extends JFrame
 	public void dentroCarrito(long idCarrito,long idProductoSucursal,int cantidad)
 	{
 		inter.dentroCarrito(idCarrito, idProductoSucursal, cantidad);
+		
+	}
+	
+	public void eliminarProducto(long idCarrito,long idProductoSucursal)
+	{
+		inter.eliminarDentroCarrito(idCarrito, idProductoSucursal);
 	}
 	
 	public Object[] darProductoProveedor()

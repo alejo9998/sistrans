@@ -37,7 +37,7 @@ class SQLDentroCarrito {
 	}
 	
 	public List<DentroCarrito> darDentroCarritoPorIdCarrito ( PersistenceManager pm, long idCarrito){
-		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaCarrito() + " WHERE idCarrito = ?");
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaDentroCarrito() + " WHERE idCarrito = ?");
 		q.setResultClass(DentroCarrito.class);
 		q.setParameters(idCarrito);
 		return (List<DentroCarrito>) q.executeList();

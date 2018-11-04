@@ -1,5 +1,7 @@
 package uniandes.isis2304.SuperAndes.negocio;
 
+import java.sql.Timestamp;
+
 public class ProductoSucursal implements VOProductoSucursal {
 
 	private int nivelReorden;
@@ -29,7 +31,7 @@ public class ProductoSucursal implements VOProductoSucursal {
 	private long codigoBarras;
 	private String categoria;
 	private String tipo;
-	private String fechaVencimiento;
+	private Timestamp fechaVencimiento;
 
 	public ProductoSucursal() {		
 		this.idProductoSucursal = 0;
@@ -43,7 +45,7 @@ public class ProductoSucursal implements VOProductoSucursal {
 		this.codigoBarras = 0;
 		this.categoria = "";
 		this.tipo = "";
-		this.fechaVencimiento = "";
+		this.fechaVencimiento = null;
 		this.nivelReorden = 0;
 		this.precioUnitario = 0;
 		this.cantidadBodega = 0;
@@ -57,7 +59,7 @@ public class ProductoSucursal implements VOProductoSucursal {
 
 	public ProductoSucursal(long idProductoSucursal, String nombre, String marca, String presentacion, double cantidadPresentacion,
 			String unidadMedida, double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria,
-			String tipo, String fechaVencimiento,int nivelReorden, double precioUnitario, int cantidadBodega, int cantidadEstante,
+			String tipo, Timestamp fechaVencimiento,int nivelReorden, double precioUnitario, int cantidadBodega, int cantidadEstante,
 			double precioUnidadMedida, long bodega, long estante, Long promocion) {
 		this.idProductoSucursal = idProductoSucursal;
 		this.nombre = nombre;
@@ -234,11 +236,11 @@ public class ProductoSucursal implements VOProductoSucursal {
 		this.tipo = tipo;
 	}
 
-	public String getFechaVencimiento() {
+	public Timestamp getFechaVencimiento() {
 		return fechaVencimiento;
 	}
 
-	public void setFechaVencimiento(String fechaVencimiento) {
+	public void setFechaVencimiento(Timestamp fechaVencimiento) {
 		this.fechaVencimiento = fechaVencimiento;
 	}
 
