@@ -116,7 +116,12 @@ public class MenuBarra extends JMenuBar implements ActionListener
 		mantenimiento.add(darEstantesPorSucursal);
 	
 	}
-
+	
+	public Object[] darProveedores()
+	{
+		return prinCipal.darProveedores();
+	}
+	
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{

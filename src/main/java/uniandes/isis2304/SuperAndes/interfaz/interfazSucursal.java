@@ -135,8 +135,8 @@ public class interfazSucursal extends JFrame
 		
 		if(!encontra)
 		{
+			JOptionPane.showMessageDialog(null, "No hay carritos disponibles", "SuperAndes",JOptionPane.ERROR_MESSAGE);
 			
-			JOptionPane.showMessageDialog(null, "No hay carritos disponibles carrito", "SuperAndes",JOptionPane.ERROR_MESSAGE);
 		}
 		return aux;
 	}
@@ -177,9 +177,11 @@ public class interfazSucursal extends JFrame
 	{
 		inter.agregarEstante(pTipo, pPeso, volum, nivAprovi, id);
 	}
-	public void agregarCompra(String pCantidad, String pIdProduSucu,String pIdCliente,String pidFactura,String pTotal)
+	public void agregarCompra( String pIdCarrito,String pIdCliente)
 	{
-		inter.agregarCompra( pCantidad, pIdProduSucu, pIdCliente, pidFactura, pTotal);
+		long idCliente = Long.parseLong(pIdCliente);
+		long idCarrito = Long.parseLong(pIdCarrito);
+		inter.agregarCompra(idCliente, idCarrito);
 	}
 	public void agregarProductoSucursal(String pNombre,String pMarca,String pPresentacion,String cantidadPresentacion,String unidadmedida,String VolumenEmpaquetado,String pPesoEmpaquetado,String pCodBarras,String pCategoria,String pTipo,String pFechaVencimiento,String pNivelReorden,String pPrecioUnitario,String cantiBodega,String cantEstante,String pPrecioUnidadMedida,String idProm,String idEstante,String idBodega)
 	{
@@ -192,6 +194,10 @@ public class interfazSucursal extends JFrame
 	public void agregarPromocion(int ptipo,String p,String lleve,String fechaCad)
 	{
 		inter.agregarPromocion(ptipo, p, lleve, fechaCad);
+	}
+	public void pagar(long idCarrito,long idCliente)
+	{
+		inter.pagar(idCarrito, idCliente);
 	}
 
 }

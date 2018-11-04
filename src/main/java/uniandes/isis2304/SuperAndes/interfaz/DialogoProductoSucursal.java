@@ -264,7 +264,8 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 		codigoDeBarras.setText(e.toString());
 		categoria.setText(a.getCategoria());
 		tipo.setText(a.getTipo());
-		fechadeVencimiento.setText(a.getFechaVencimiento());
+		fechadeVencimiento.setText(a.getFechaVencimiento().toString());
+		System.out.println(a.getFechaVencimiento());
 	}
 
 
@@ -298,32 +299,32 @@ public class DialogoProductoSucursal extends JDialog implements ActionListener
 		String mensaje = e.getActionCommand();
 		if(mensaje.equalsIgnoreCase(ACEPTAR))
 		{
-			//			String nom = nombre.get
-			//			String mar = marca.getText();
-			//			String pres = presentacion.getText();
-			//			String cantiPres = cantidadPresentacion.getText();
-			//			String unidMed = unidadMedida.getText();
-			//			String volEmp= volumenEmpaque.getText();
-			//			String pesoEmp = pesoEmpaque.getText();
-			//			String codBarr = codigoDeBarras.getText();
-			//			String cat = (String)categoria.getSelectedItem();
-			//			SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yy");
-			//			String fech = formato.format(fechadeVencimiento.getDate());
-			//			
-			//			String tip = (String)tipo.getSelectedItem();
-			//			String nvlreord = nivelReorden.getText();
-			//			String prcUni = precioUnitario.getText();
-			//			String cantBod = cantidadBodega.getText();
-			//			String cantEst = cantidadEstante.getText();
-			//			String precUnMed = precioUnidadMedida.getText();
-			//			String idProm = promocion.getText();
-			//			String idBod = (String)bodega.getSelectedItem();
-			//			String  idest = (String)estante.getSelectedItem();
-			//			
-			//			
-			//			inte.agregarProductoSucursal(nom, mar, pres, cantiPres, unidMed, volEmp, pesoEmp, codBarr, cat, tip, fech, 
-			//					nvlreord, prcUni, cantBod, cantEst, precUnMed, idProm, idest, idBod);
-			//			inte.btonProductos.actalizar();
+						String nom = (String)nombre.getSelectedItem();
+						String mar = marca.getText();
+						String pres = presentacion.getText();
+						String cantiPres = cantidadPresentacion.getText();
+						String unidMed = unidadMedida.getText();
+						String volEmp= volumenEmpaque.getText();
+						String pesoEmp = pesoEmpaque.getText();
+						String codBarr = codigoDeBarras.getText();
+						String cat = categoria.getText();
+						SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yy");
+						String fech = formato.format(fechadeVencimiento.getText());
+						
+						String tip = tipo.getText();
+						String nvlreord = nivelReorden.getText();
+						String prcUni = precioUnitario.getText();
+						String cantBod = cantidadBodega.getText();
+						String cantEst = cantidadEstante.getText();
+						String precUnMed = precioUnidadMedida.getText();
+						String idProm = promocion.getText();
+						String idBod = (String)bodega.getSelectedItem();
+						String  idest = (String)estante.getSelectedItem();
+						
+						
+						inte.agregarProductoSucursal(nom, mar, pres, cantiPres, unidMed, volEmp, pesoEmp, codBarr, cat, tip, fech, 
+								nvlreord, prcUni, cantBod, cantEst, precUnMed, idProm, idest, idBod);
+						inte.btonProductos.actalizar();
 
 
 			dispose();

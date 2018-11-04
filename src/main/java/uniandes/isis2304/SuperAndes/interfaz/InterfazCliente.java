@@ -293,6 +293,8 @@ public class InterfazCliente extends JFrame implements ActionListener,ListSelect
 		}
 		else if(e.getActionCommand().equals(SOLICITARCARRITO))
 		{
+			try
+			{
 			carritoDeCompras= dc.solicitarCarrito();
 			dir.setText("Carrito id: "+ carritoDeCompras.getIdCarrito());
 			dc.darInterSucursal().actualizar();
@@ -302,21 +304,24 @@ public class InterfazCliente extends JFrame implements ActionListener,ListSelect
 			RecogerProductos.setEnabled(true);
 			abandonarCarrito.setEnabled(true);
 			agregar.setEnabled(true);
+			}
+			catch(Exception t)
+			{
+				
+			}
 		}
-		else if (e.getActionCommand().equals(ABANDONARCARRITO)){
+		else if (e.getActionCommand().equals(ABANDONARCARRITO))
+		{
 			car= new ArrayList<>();
 			actualizar();
 			desactivar();
 			dc.darInterSucursal().abandonarCarrito(carritoDeCompras.getIdCarrito());
 			
 		}
-		else if(e.getActionCommand().equals(RECOGERPRODUCTOS))
-		{	
-			car= new ArrayList<>();
-			actualizar();
+		else if(e.getActionCommand().equals(PAGAR))
+		{
 			
-			dc.darInterSucursal().recolectarProductos();
-
+			dc.darInterSucursal().pagar(carritoDeCompras.getIdCarrito(), id);
 		}
 
 	}

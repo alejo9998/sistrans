@@ -86,12 +86,17 @@ public class InterfazAdministrador extends JFrame
 		} 
 		catch (Exception e)
 		{
-			//				e.printStackTrace ();
 			log.info ("NO se encontró un archivo de configuración válido");			
 			JOptionPane.showMessageDialog(null, "No se encontró un archivo de configuración de interfaz válido: " + tipo, "SuperAndes App", JOptionPane.ERROR_MESSAGE);
 		}	
 		return config;
 	}
+	public Object[] darProveedores()
+	{
+		
+		 return superAndes.darProveedores().toArray();
+	}
+	
 	public Object[] darOcupados(long idSucursal)
 	{
 		return superAndes.darCarritosOcupadosSucursal(idSucursal).toArray();
@@ -100,18 +105,21 @@ public class InterfazAdministrador extends JFrame
 	{
 		return superAndes.darCarritosAbandonadosSucursal(idSucursal).toArray();
 	}
-	
+	public void requerimientoConsulta1() 
+	{
+		
+	}
 	public void eliminarCarrito(Long idCarrito,long idSucursal)
 	{
 		superAndes.recolectarProductosAbandonadosRF17(idSucursal);
 		superAndes.eiminarCarrito(idCarrito);
 	}
-	
+
 	public void ocuparCarro(long idCarrito)
 	{
 		superAndes.modificarEstadoOcupacionCarrito(idCarrito, 1);
 	}
-	
+
 	public ArrayList<Carrito> darCarritos (Long idsuc)
 	{
 		ArrayList<Carrito> x = new ArrayList<>();
@@ -126,7 +134,7 @@ public class InterfazAdministrador extends JFrame
 		}
 		return x;
 	}
-	
+
 	public ArrayList<Carrito> darCarritoLibre(long idSucursal)
 	{
 		ArrayList<Carrito> x = new ArrayList<>();
@@ -140,9 +148,9 @@ public class InterfazAdministrador extends JFrame
 			}
 		}
 		return x;
-		
+
 	}
-	
+
 	public void agregarCarrito(Long idSucursal)
 	{
 		VOCarrito a =superAndes.adicionarCarrito(0, idSucursal);
@@ -217,12 +225,12 @@ public class InterfazAdministrador extends JFrame
 		}
 
 	}
-	
+
 	public Object[] darProductosProveedor()
 	{
 		return superAndes.darProductosProveedor().toArray();
 	}
-	
+
 	public Object[] darPorudctos()
 	{
 		return superAndes.darProductosSucursal().toArray();
@@ -245,7 +253,7 @@ public class InterfazAdministrador extends JFrame
 		else
 		{
 
-			VOProveedor a =superAndes.adicionarProveedor(pnombre);
+			VOProveedor a =superAndes.registrarProveedoresRF1(pnombre);
 			String mensaje =a.toString();
 			panelDatos.actualizarInterfaz(mensaje);
 		}
@@ -291,7 +299,7 @@ public class InterfazAdministrador extends JFrame
 				}
 				else
 				{
-					VOPromocion a = superAndes.adicionarPromocion(ptipo, pague, llev, fechaCad);
+					VOPromocion a = superAndes.req7RegistrarPromocion(ptipo, pague, llev, fechaCad);
 					String mensaje =a.toString();
 					panelDatos.actualizarInterfaz(mensaje);
 				}
@@ -304,7 +312,7 @@ public class InterfazAdministrador extends JFrame
 
 		}
 	}
-	
+
 	public void dentroCarrito(long idCarrito,long idProductoSucursal, int cantidad)
 	{
 		superAndes.adicionarDentroCarrito(idCarrito, idProductoSucursal, cantidad);
@@ -315,7 +323,7 @@ public class InterfazAdministrador extends JFrame
 	}
 	public void recogerProductos(long idSucursal)
 	{
-		
+
 		superAndes.recolectarProductosAbandonadosRF17(idSucursal);
 	}
 	public void agregarBodega(String pTipo, String pVol,String pPeso,String idSuc)
@@ -323,7 +331,7 @@ public class InterfazAdministrador extends JFrame
 
 		if(pTipo.equalsIgnoreCase("")|| pVol.equalsIgnoreCase("") || pPeso.equalsIgnoreCase("") || idSuc.equalsIgnoreCase(""))
 		{
-			
+
 			JOptionPane.showMessageDialog(null, "Los campos no pueden ser vacios", "SuperAndes",JOptionPane.ERROR_MESSAGE);
 		}
 		else
@@ -390,7 +398,7 @@ public class InterfazAdministrador extends JFrame
 				}
 				else
 				{
-					VOEstante a=superAndes.adicionarEstante(volumen, peso, pTipo, niveApr, idSucu);
+					VOEstante a=superAndes.registrarEstanteASucursalRF6(volumen, peso, pTipo, niveApr, idSucu);
 					String mensaje =a.toString();
 					panelDatos.actualizarInterfaz(mensaje);
 				}
@@ -427,8 +435,8 @@ public class InterfazAdministrador extends JFrame
 			long idEst=0L;
 			Long idPromocion=0L;
 
-//			try
-//			{
+			try
+			{
 
 				cantPresentacion =Double.parseDouble(cantidadPresentacion);
 				volEmpaque =Double.parseDouble(VolumenEmpaquetado);
@@ -444,15 +452,15 @@ public class InterfazAdministrador extends JFrame
 				if(idProm.equals(""))
 				{
 					idPromocion=null;
-					
+
 				}
 				else
 				{
-				idPromocion=Long.parseLong(idProm);
+					idPromocion=Long.parseLong(idProm);
 				}
 				System.out.println(pNombre+" "+ pMarca+" "+ pPresentacion+" "+ cantPresentacion+" "+ unidadmedida+" "+ volEmpaque+" "+ pesoEmpaque+" "+
-							codigoBarras+" "+ pCategoria+" "+ pTipo+" "+ pFechaVencimiento+" "+nivelReorden+" "+ precioUnitario+" "+ cantidadBodega+" "+ cantidadEstante+" "+ precioUnidadMedida+" "+
-							idBod+" "+ idEst+" "+ idPromocion);
+						codigoBarras+" "+ pCategoria+" "+ pTipo+" "+ pFechaVencimiento+" "+nivelReorden+" "+ precioUnitario+" "+ cantidadBodega+" "+ cantidadEstante+" "+ precioUnidadMedida+" "+
+						idBod+" "+ idEst+" "+ idPromocion);
 				if(cantPresentacion<0||volEmpaque<0||pesoEmpaque<0||codigoBarras<0||nivelReorden<0||precioUnitario<0||cantidadBodega<0
 						||cantidadEstante<0||precioUnidadMedida<0||idBod<0||idEst<0)
 				{
@@ -460,67 +468,48 @@ public class InterfazAdministrador extends JFrame
 				}
 				else
 				{
-					VOProductoSucursal a=superAndes.adicionarProductoSucursal(pNombre, pMarca, pPresentacion, cantPresentacion, unidadmedida, volEmpaque, pesoEmpaque,
+					VOProductoSucursal a=superAndes.registrarProductoSucursalRF2(pNombre, pMarca, pPresentacion, cantPresentacion, unidadmedida, volEmpaque, pesoEmpaque,
 							codigoBarras, pCategoria, pTipo, pFechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida,
 							idBod, idEst, idPromocion);
 					System.out.println(a);
 					String mensaje =a.toString();
 					panelDatos.actualizarInterfaz(mensaje);
 				}
-//			}
-//			catch (Exception e)
-//			{
-//				JOptionPane.showMessageDialog(null, "Introduzca Valores Validos", "SuperAndes",JOptionPane.ERROR_MESSAGE);
-//			}
+			}
+			catch (Exception e)
+			{
+				JOptionPane.showMessageDialog(null, e.getMessage(), "SuperAndes",JOptionPane.ERROR_MESSAGE);
+			}
 		}
 
 	}
-
-	public void agregarCompra( String pCantidad, String pIdProduSucu, String pIdCliente, String pidFactura, String pTotal  )
+	
+	public void pagar(long idCarrito,long idCliente)
 	{
-		if( pCantidad.equalsIgnoreCase("")|| pIdProduSucu.equalsIgnoreCase("")||pIdCliente.equalsIgnoreCase("") || pidFactura.equalsIgnoreCase("")|| pTotal.equalsIgnoreCase(""))
+		try
 		{
-			JOptionPane.showMessageDialog(null, "Los campos no pueden ser vacios", "SuperAndes",JOptionPane.ERROR_MESSAGE);
+			superAndes.pagarCompraRF15(idCarrito, idCliente);	
+		}
+		catch(Exception e)
+		{
+			JOptionPane.showMessageDialog(null, e.getMessage(), "SuperAndes",JOptionPane.ERROR_MESSAGE);	
+		}
+		
+	}
+
+	public void agregarCompra( long idCliente,long idCarrito )
+	{
+
+		try
+		{
+			superAndes.pagarCompraRF15(idCarrito, idCliente);
 		}
 
-		else
+		catch(Exception e)
 		{
-			try
-			{
-
-				int cant=0;
-				Long idProd =0L;
-				Long idClie=0L;
-				Long idFac=0L;
-				Double tot=0.0;
-				cant=Integer.parseInt(pCantidad);
-				idProd=Long.parseLong(pIdProduSucu);
-				idClie=Long.parseLong(pIdCliente);
-				idFac=Long.parseLong(pidFactura);
-				tot= Double.parseDouble(pTotal);
-
-				if(tot<=0||cant<0||idProd<0||idClie<0||idFac<0)
-				{
-					JOptionPane.showMessageDialog(null, "El precio no puede ser menor o igual a 0", "SuperAndes",JOptionPane.ERROR_MESSAGE);
-				}
-				else
-				{
-					
-					System.out.println(cant+" " + tot + " "+ idProd +" " + idClie +" "+ idFac);
-
-					VOCompra a =superAndes.adicionarCompra("30/10/2018", cant,tot, idProd, idClie, idFac);
-					System.out.println(a);
-					
-					String mensaje =a.toString();
-
-					panelDatos.actualizarInterfaz(mensaje);
-				}
-			}
-			catch(Exception e)
-			{
-				JOptionPane.showMessageDialog(null, "Introduzca Valores Validos", "SuperAndes",JOptionPane.ERROR_MESSAGE);
-			}
+			JOptionPane.showMessageDialog(null, "Introduzca Valores Validos", "SuperAndes",JOptionPane.ERROR_MESSAGE);
 		}
+
 
 	}
 
@@ -567,7 +556,7 @@ public class InterfazAdministrador extends JFrame
 				}
 				else
 				{
-					VOProductoProveedor a= superAndes.adicionarProductoProveedor(pNombre, pMarca, pPresentacion, cantPresentacion,
+					VOProductoProveedor a= superAndes.registrarProductoProveedorRF2(pNombre, pMarca, pPresentacion, cantPresentacion,
 							unidadmedida, volEmpaque, pesoEmpaque, codigoBarras, pCategoria, pTipo, pFechaVencimiento,
 							calidad, precio, numeroDeCalificiaciones, sumaCalificaciones, idProveedor);
 					String mensaje =a.toString();
@@ -609,12 +598,12 @@ public class InterfazAdministrador extends JFrame
 
 				if(idsuc<0||idPro<0||cant<0||preci<0)
 				{
-					
+
 					JOptionPane.showMessageDialog(null, "Introduzca Valores Validos", "SuperAndes",JOptionPane.ERROR_MESSAGE);
 				}
 				else
 				{
-					VOOrdenPedido a = superAndes.adicionarOrdenPedido(preci, fechEntrega, fechEsp, calif, entergado, cant, idPro, idsuc);
+					VOOrdenPedido a = superAndes.req9RegistrarPedidoDeUnProductoAProveedorParaSucursal(fechEntrega, cant, idPro, idsuc);
 					System.out.println(a);
 					String mensaje =a.toString();
 					panelDatos.actualizarInterfaz(mensaje);
@@ -645,7 +634,7 @@ public class InterfazAdministrador extends JFrame
 		}
 		JOptionPane.showMessageDialog( this, mensaje, "Dar los estantes de una sucursal", JOptionPane.INFORMATION_MESSAGE);
 	}
-	
+
 	public Bodega[] darBodegas(Long idS)
 	{
 
@@ -668,7 +657,7 @@ public class InterfazAdministrador extends JFrame
 		}
 		return bod;
 	}
-	
+
 	public Estante[] darEstantes(Long idS)
 	{
 

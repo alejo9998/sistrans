@@ -63,7 +63,7 @@ public class interfazSucursalPrincipal extends JFrame implements ActionListener{
 			catch( Exception t)
 			{
 				t.printStackTrace();
-				JOptionPane.showMessageDialog(null,t.getMessage(),"SuperAndes",JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(null,t.getMessage()+": " + idSuc.getText(),"SuperAndes",JOptionPane.ERROR_MESSAGE);
 			}
 		}
 	}

@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -12,6 +13,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+
+import com.toedter.calendar.JDateChooser;
+
+import uniandes.isis2304.SuperAndes.negocio.*;
 
 public class DialogoProductoProveedor extends JDialog implements ActionListener
 {
@@ -39,7 +44,7 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
 	
 	private JComboBox<String> tipo;
 	
-	private JTextField fechadeVencimiento;
+	private JDateChooser fechadeVencimiento;
 
 	private JComboBox<String> calidad;
 
@@ -49,7 +54,7 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
 	
 	private JTextField SumaDeCalificaciones;
 	
-	private JTextField Proveedor;
+	private JComboBox<String> provedores;
 	
 	private JButton aceptar;
 	private final static String ACEPTAR="ACEPTAR";
@@ -59,6 +64,8 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
 	
 
 	private final static String actualiza="ACTUALIZAR";
+	
+	private Object[] proveedoresDatos;
 	
 	public DialogoProductoProveedor(InterfazAdministrador inter) 
 	{
@@ -109,16 +116,16 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
     	codigoDeBarras= new JTextField();
 
     	
-    	String [] categorias={"Albarrotes","Perecederos","Aseo Personal"};
+    	String [] categorias={"albarrotes","perecederos","aseo personal"};
     	categoria= new JComboBox<>(categorias);
     	categoria.addActionListener(this);
 		categoria.setActionCommand(actualiza);
     	
     	tipo = new JComboBox<>();
     	
-    	fechadeVencimiento= new JTextField();
+    	fechadeVencimiento= new JDateChooser();
     	
-    	String[] calificacion ={"1","2","3","4","5"} ;
+    	String[] calificacion ={"0","1","2","3","4","5"} ;
     	calidad = new JComboBox<>(calificacion);
     	
     	precio = new JTextField();
@@ -127,7 +134,8 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
     	
     	SumaDeCalificaciones = new JTextField();
     	
-    	Proveedor = new JTextField();
+    	provedores = new JComboBox<String>();
+    	datos();
     	
     	aceptar = new JButton("Aceptar");
  		aceptar.addActionListener(this);
@@ -172,7 +180,7 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
 		campos.add(sumCal);
 		campos.add(SumaDeCalificaciones);
 		campos.add(prov);
-		campos.add(Proveedor);
+		campos.add(provedores);
 		campos.add(vacio1);
 		campos.add(aceptar);
 		campos.add(cancelar);
@@ -183,11 +191,11 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
 	}
 	public void crearTipo()
 	{
-		if(((String)categoria.getSelectedItem()).equalsIgnoreCase("Albarrotes"))
+		if(((String)categoria.getSelectedItem()).equalsIgnoreCase("albarrotes"))
 		{
 			tipo.removeAllItems();
-			tipo.addItem("Escoba");
-			tipo.addItem("Trapeador");
+			tipo.addItem("escoba");
+			tipo.addItem("trapeador");
 			tipo.addItem("balde");
 			tipo.addItem("brillador");
 			
@@ -196,21 +204,30 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
 		{
 		
 			tipo.removeAllItems();
-			tipo.addItem("Cepillo");
-			tipo.addItem("Desodorante");
-			tipo.addItem("Crema");
-			tipo.addItem("Cera");
+			tipo.addItem("cepillo");
+			tipo.addItem("desodorante");
+			tipo.addItem("crema");
+			tipo.addItem("cera");
 					
 		}
 		else if(((String)categoria.getSelectedItem()).equalsIgnoreCase("Perecederos"))
 		{
 			tipo.removeAllItems();
-			tipo.addItem("Carne");
-			tipo.addItem("Galleta");
-			tipo.addItem("Fruta");
-			tipo.addItem("Tuberculo");
+			tipo.addItem("carne");
+			tipo.addItem("galleta");
+			tipo.addItem("fruta");
+			tipo.addItem("tuberculo");
 			
 			
+		}
+	}
+	public void datos()
+	{
+		proveedoresDatos = inte.darProveedores();
+		for(int i =0; i<proveedoresDatos.length;i++)
+		{
+			Proveedor aux2=(Proveedor) proveedoresDatos[i];
+			provedores.addItem(aux2.getNombre());
 		}
 	}
 
@@ -230,14 +247,21 @@ public class DialogoProductoProveedor extends JDialog implements ActionListener
 			String codBarr = codigoDeBarras.getText();
 			String cat = (String)categoria.getSelectedItem();
 			String tip = (String)tipo.getSelectedItem();
-			String fech = fechadeVencimiento.getText();
+		
+			
+			SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+			
+			
+			String fechLleg = formato.format(fechadeVencimiento.getDate());
 			String calid = (String)calidad.getSelectedItem();
 			String pr = precio.getText();
 			String numCal = numeroDeCalificaciones.getText();
 			String sumCal = SumaDeCalificaciones.getText();
-			String provee = Proveedor.getText();
-			inte.agergarProductoProveedor(nom, mar, pres, cantiPres, unidMed, volEmp, pesoEmp, codBarr, cat, tip, fech, calid, pr,
-					numCal, sumCal, provee);
+			int provee = provedores.getSelectedIndex();
+			Proveedor aux = (Proveedor)proveedoresDatos[provee];
+			String s = String.valueOf(aux.getNit());
+			inte.agergarProductoProveedor(nom, mar, pres, cantiPres, unidMed, volEmp, pesoEmp, codBarr, cat, tip, fechLleg, calid, pr,
+					numCal, sumCal, s);
 
 			dispose();
 		}
