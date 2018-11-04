@@ -3,6 +3,7 @@ package uniandes.isis2304.SuperAndes.persistencia;
 import javax.jdo.PersistenceManagerFactory;
 
 import java.math.BigDecimal;
+import java.sql.Date;
 import java.sql.Timestamp;
 import java.util.LinkedList;
 import java.util.List;
@@ -623,7 +624,7 @@ public class PersistenciaSuperAndes {
 	 * 			Métodos para manejar el productoProveedor
 	 *****************************************************************/
 	public ProductoProveedor adicionarProductoProveedor(String nombre, String marca, String presentacion, double cantidadPresentacion, String unidadMedida,
-			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , double calidad, double precio, int numeroCalificaciones, double sumaCalificaciones, long idProveedor) {
+			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, Timestamp fechaVencimiento , double calidad, double precio, int numeroCalificaciones, double sumaCalificaciones, long idProveedor) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx=pm.currentTransaction();
 		try
@@ -656,7 +657,7 @@ public class PersistenciaSuperAndes {
 	}
 
 	public ProductoProveedor adicionarProductoProveedor2(long idProductoProveedor,String nombre, String marca, String presentacion, double cantidadPresentacion, String unidadMedida,
-			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , double calidad, double precio, int numeroCalificaciones, double sumaCalificaciones, long idProveedor) {
+			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, Timestamp fechaVencimiento , double calidad, double precio, int numeroCalificaciones, double sumaCalificaciones, long idProveedor) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx=pm.currentTransaction();
 		try
@@ -795,7 +796,7 @@ public class PersistenciaSuperAndes {
 		}
 	}
 
-	public long modificarFechaVencimientoProductoProveedor (long idProductoProveedor, String fecha)
+	public long modificarFechaVencimientoProductoProveedor (long idProductoProveedor, Timestamp fecha)
 	{
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx=pm.currentTransaction();
@@ -827,7 +828,7 @@ public class PersistenciaSuperAndes {
 	 * 			Métodos para manejar el OrdenPedido
 	 *****************************************************************/
 
-	public OrdenPedido adicionarOrdenPedido(double precio, String fechaEntrega, String fechaEsperadaEntrega,Double calificacion, int entregado, int cantidad, long idProductoProveedor, long idSucursal) 
+	public OrdenPedido adicionarOrdenPedido(double precio, Timestamp fechaEntrega, Timestamp fechaEsperadaEntrega,Double calificacion, int entregado, int cantidad, long idProductoProveedor, long idSucursal) 
 	{
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx=pm.currentTransaction();
@@ -858,7 +859,7 @@ public class PersistenciaSuperAndes {
 		}
 	}
 
-	public OrdenPedido adicionarOrdenPedido2(long idOrdenPedido, double precio, String fechaEntrega, String fechaEsperadaEntrega,Double calificacion, int entregado, int cantidad, long idProductoProveedor, long idSucursal) 
+	public OrdenPedido adicionarOrdenPedido2(long idOrdenPedido, double precio, Timestamp fechaEntrega, Timestamp fechaEsperadaEntrega,Double calificacion, int entregado, int cantidad, long idProductoProveedor, long idSucursal) 
 	{
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx=pm.currentTransaction();
@@ -1147,7 +1148,7 @@ public class PersistenciaSuperAndes {
 	 * 			Métodos para manejar ProductoSucursal
 	 *****************************************************************/
 	public ProductoSucursal adicionarProductoSucursal(String nombre, String marca, String presentacion, double cantidadPresentacion, String unidadMedida,
-			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , int nivelReorden, double precioUnitario, int cantidadBodega, int cantidadEstante, double precioUnidadMedida
+			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, Timestamp fechaVencimiento , int nivelReorden, double precioUnitario, int cantidadBodega, int cantidadEstante, double precioUnidadMedida
 			, long idBodega, long idEstante, Long idPromocion) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx=pm.currentTransaction();
@@ -1182,7 +1183,7 @@ public class PersistenciaSuperAndes {
 
 
 	public ProductoSucursal adicionarProductoSucursal2(long idProductoSucursal, String nombre, String marca, String presentacion, double cantidadPresentacion, String unidadMedida,
-			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , int nivelReorden, double precioUnitario, int cantidadBodega, int cantidadEstante, double precioUnidadMedida
+			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, Timestamp fechaVencimiento , int nivelReorden, double precioUnitario, int cantidadBodega, int cantidadEstante, double precioUnidadMedida
 			, long idBodega, long idEstante, Long idPromocion) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx=pm.currentTransaction();
@@ -1350,7 +1351,7 @@ public class PersistenciaSuperAndes {
 		}
 	}
 	
-	public long modificarFechaVencimientoProductoSucursal (long idProductoSucursal, String fechaVencimientoNueva)
+	public long modificarFechaVencimientoProductoSucursal (long idProductoSucursal, Timestamp fechaVencimientoNueva)
 	{
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx=pm.currentTransaction();
@@ -1381,7 +1382,7 @@ public class PersistenciaSuperAndes {
 	/* ****************************************************************
 	 * 			Métodos para manejar las PROMOCIONES
 	 *****************************************************************/
-	public Promocion adicionarPromocion(int tipo, double n, double m, String fechaCaducidad) 
+	public Promocion adicionarPromocion(int tipo, double n, double m, Timestamp fechaCaducidad) 
 	{
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx=pm.currentTransaction();
@@ -1412,7 +1413,7 @@ public class PersistenciaSuperAndes {
 		}
 	}
 
-	public Promocion adicionarPromocion2(long idPromocion, int tipo, double n, double m, String fechaCaducidad) 
+	public Promocion adicionarPromocion2(long idPromocion, int tipo, double n, double m, Timestamp fechaCaducidad) 
 	{
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx=pm.currentTransaction();
@@ -1460,7 +1461,7 @@ public class PersistenciaSuperAndes {
 	/* ****************************************************************
 	 * 			Métodos para manejar las VENTAS
 	 *****************************************************************/
-	public Compra adicionarCompra(String fecha, int cantidad, double totalPagado, long idProductoSucursal, long idCliente, long idFactura) 
+	public Compra adicionarCompra(Timestamp fecha, int cantidad, double totalPagado, long idProductoSucursal, long idCliente, long idFactura) 
 	{
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx=pm.currentTransaction();
@@ -1491,7 +1492,7 @@ public class PersistenciaSuperAndes {
 		}
 	}
 
-	public Compra adicionarCompra2(long idCompra, String fecha, int cantidad, double totalPagado, long idProductoSucursal, long idCliente, long idFactura) 
+	public Compra adicionarCompra2(long idCompra, Timestamp fecha, int cantidad, double totalPagado, long idProductoSucursal, long idCliente, long idFactura) 
 	{
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx=pm.currentTransaction();

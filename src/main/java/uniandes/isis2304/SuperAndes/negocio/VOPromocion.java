@@ -1,5 +1,7 @@
 package uniandes.isis2304.SuperAndes.negocio;
 
+import java.sql.Timestamp;
+
 public interface VOPromocion {
 	
 	public long getIdPromocion();
@@ -10,7 +12,7 @@ public interface VOPromocion {
 	
 	public double getM();
 	
-	public String getFechaCaducidad();
+	public Timestamp getFechaCaducidad();
 	
 	@Override
 	public String toString();

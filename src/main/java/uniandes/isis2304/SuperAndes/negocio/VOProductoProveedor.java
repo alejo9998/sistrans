@@ -1,5 +1,8 @@
 package uniandes.isis2304.SuperAndes.negocio;
 
+import java.sql.Date;
+import java.sql.Timestamp;
+
 public interface VOProductoProveedor {
 
 	public long getIdProductoProveedor();
@@ -24,7 +27,7 @@ public interface VOProductoProveedor {
 
 	public String getTipo();
 
-	public String getFechaVencimiento();
+	public Timestamp getFechaVencimiento();
 
 	public double getCalidad();
 

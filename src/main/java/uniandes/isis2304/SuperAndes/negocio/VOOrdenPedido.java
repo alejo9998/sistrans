@@ -1,14 +1,16 @@
 package uniandes.isis2304.SuperAndes.negocio;
 
+import java.sql.Timestamp;
+
 public interface VOOrdenPedido {
 	
 	public long getIdOrdenPedido();
 	
 	public double getPrecio();
 	
-	public String getFechaEntrega();
+	public Timestamp getFechaEntrega();
 	
-	public String getFechaEsperadaEntrega();
+	public Timestamp getFechaEsperadaEntrega();
 	
 	public Double getCalificacion();
 	

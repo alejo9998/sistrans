@@ -1,4 +1,5 @@
 package uniandes.isis2304.SuperAndes.persistencia;
+import java.sql.Timestamp;
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
@@ -16,7 +17,7 @@ class SQLProductoProveedor {
 	}
 	
 	public long adicionarProductoProveedor (PersistenceManager pm , long idProductoProveedor, String nombre, String marca, String presentacion, double cantidadPresentacion, String unidadMedida,
-			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , double calidad, double precio, int numeroCalificaciones, double sumaCalificaciones, long idProveedor)
+			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, Timestamp fechaVencimiento , double calidad, double precio, int numeroCalificaciones, double sumaCalificaciones, long idProveedor)
 	{
 		Query q = pm.newQuery(SQL, "INSERT INTO " + pp.darTablaProductoProveedor() + " (idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, proveedor) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 		q.setParameters(idProductoProveedor, nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
@@ -81,7 +82,7 @@ class SQLProductoProveedor {
 		return (long) q.executeUnique();
 	}
 	
-	public long modificarFechaVencimiento (PersistenceManager pm, long idProductoProveedor, String fecha) {
+	public long modificarFechaVencimiento (PersistenceManager pm, long idProductoProveedor, Timestamp fecha) {
 		Query q = pm.newQuery(SQL ,"UPDATE " + pp.darTablaProductoProveedor() + " SET fechaVencimiento = " + fecha + " WHERE idProductoProveedor = ?");
 		q.setParameters(idProductoProveedor);
 		return (long) q.executeUnique(); 

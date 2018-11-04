@@ -1,21 +1,24 @@
 package uniandes.isis2304.SuperAndes.negocio;
+import java.sql.Date;
+import java.sql.Timestamp;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 
 public class ProductoProveedor implements VOProductoProveedor {
-	
+
 	private double calidad;
-	
+
 	private double precio;
-	
+
 	private int numeroCalificaciones;
-	
+
 	private double sumaCalificaciones;
-	
+
 	private long proveedor;
-	
+
 	private long idProductoProveedor;
 	private String nombre;
 	private String marca;
@@ -27,10 +30,10 @@ public class ProductoProveedor implements VOProductoProveedor {
 	private long codigoBarras;
 	private String categoria;
 	private String tipo;
-	private String fechaVencimiento;
+	private Timestamp fechaVencimiento;
 
 	public ProductoProveedor() {
-		
+
 		this.idProductoProveedor = 0;
 		this.nombre = "";
 		this.marca = "";
@@ -42,20 +45,20 @@ public class ProductoProveedor implements VOProductoProveedor {
 		this.codigoBarras = 0;
 		this.categoria = "";
 		this.tipo = "";
-		this.fechaVencimiento = "";
+		this.fechaVencimiento = null;
 		this.calidad = 0;
 		this.precio = 0;
 		this.numeroCalificaciones = 0;
 		this.sumaCalificaciones = 0;
 		proveedor = 0;
-		
+
 		// TODO Auto-generated constructor stub
 	}
-	
+
 
 	public ProductoProveedor(long id, String nombre, String marca, String presentacion, double cantidadPresentacion,
 			String unidadMedida, double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria,
-			String tipo, String fechaVencimiento,double calidad, double precio, int numeroCalificaciones, double sumaCalificaciones, long proveedor) {
+			String tipo,Timestamp fechaVencimiento,double calidad, double precio, int numeroCalificaciones, double sumaCalificaciones, long proveedor) {
 		this.idProductoProveedor = id;
 		this.nombre = nombre;
 		this.marca = marca;
@@ -74,7 +77,7 @@ public class ProductoProveedor implements VOProductoProveedor {
 		this.sumaCalificaciones = sumaCalificaciones;
 		this.proveedor = proveedor;
 	}
-	
+
 	public double getCalidad() {
 		return calidad;
 	}
@@ -203,11 +206,11 @@ public class ProductoProveedor implements VOProductoProveedor {
 		this.tipo = tipo;
 	}
 
-	public String getFechaVencimiento() {
+	public Timestamp getFechaVencimiento() {
 		return fechaVencimiento;
 	}
 
-	public void setFechaVencimiento(String fechaVencimiento) {
+	public void setFechaVencimiento(Timestamp fechaVencimiento) {
 		this.fechaVencimiento = fechaVencimiento;
 	}
 

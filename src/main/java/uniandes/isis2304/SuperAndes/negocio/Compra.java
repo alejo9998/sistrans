@@ -1,10 +1,12 @@
 package uniandes.isis2304.SuperAndes.negocio;
 
+import java.sql.Timestamp;
+
 public class Compra implements VOCompra{
 	
 	private long idCompra;
 	
-	private String fecha;
+	private Timestamp fecha;
 	
 	private int cantidad;
 	
@@ -18,7 +20,7 @@ public class Compra implements VOCompra{
 	
 	public Compra() {
 		this.idCompra = 0;
-		this.fecha = "";
+		this.fecha = null;
 		this.cantidad = 0;
 		this.totalPagado = 0;
 		this.productoSucursal = 0;
@@ -26,7 +28,7 @@ public class Compra implements VOCompra{
 		this.factura = 0;
 	}
 
-	public Compra(long idCompra, String fecha, int cantidad, double totalPagado, long productoSucursal, long cliente,
+	public Compra(long idCompra, Timestamp fecha, int cantidad, double totalPagado, long productoSucursal, long cliente,
 			long factura) {
 		this.idCompra = idCompra;
 		this.fecha = fecha;
@@ -45,11 +47,11 @@ public class Compra implements VOCompra{
 		this.idCompra = idCompra;
 	}
 
-	public String getFecha() {
+	public Timestamp getFecha() {
 		return fecha;
 	}
 
-	public void setFecha(String fecha) {
+	public void setFecha(Timestamp fecha) {
 		this.fecha = fecha;
 	}
 

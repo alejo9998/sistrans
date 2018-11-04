@@ -1,10 +1,12 @@
 package uniandes.isis2304.SuperAndes.negocio;
 
+import java.sql.Timestamp;
+
 public interface VOCompra {
 	
 	public long getIdCompra();
 	
-	public String getFecha();
+	public Timestamp getFecha();
 	
 	public int getCantidad();
 	

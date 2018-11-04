@@ -1,14 +1,16 @@
 package uniandes.isis2304.SuperAndes.negocio;
 
+import java.sql.Timestamp;
+
 public class OrdenPedido implements VOOrdenPedido{
 	
 	private long idOrdenPedido;
 	
 	private double precio;
 	
-	private String fechaEntrega;
+	private Timestamp fechaEntrega;
 	
-	private String fechaEsperadaEntrega;
+	private Timestamp fechaEsperadaEntrega;
 	
 	private Double calificacion;
 	
@@ -23,8 +25,8 @@ public class OrdenPedido implements VOOrdenPedido{
 	public OrdenPedido() {
 		this.idOrdenPedido = 0;
 		this.precio = 0;
-		this.fechaEntrega = "";
-		this.fechaEsperadaEntrega = "";
+		this.fechaEntrega = null;
+		this.fechaEsperadaEntrega = null;
 		this.calificacion = 0D;
 		this.entregado = 0;
 		this.cantidad = 0;
@@ -32,7 +34,7 @@ public class OrdenPedido implements VOOrdenPedido{
 		this.sucursal = 0;
 	}
 
-	public OrdenPedido(long idOrdenPedido, double precio, String fechaEntrega, String fechaEsperadaEntrega, Double calificacion,
+	public OrdenPedido(long idOrdenPedido, double precio, Timestamp fechaEntrega, Timestamp fechaEsperadaEntrega, Double calificacion,
 			int entregado, int cantidad, long productoProveedor, long sucursal) {
 		this.idOrdenPedido = idOrdenPedido;
 		this.precio = precio;
@@ -53,19 +55,19 @@ public class OrdenPedido implements VOOrdenPedido{
 		this.idOrdenPedido = idOrdenPedido;
 	}
 
-	public String getFechaEntrega() {
+	public Timestamp getFechaEntrega() {
 		return fechaEntrega;
 	}
 
-	public void setFechaEntrega(String fechaEntrega) {
+	public void setFechaEntrega(Timestamp fechaEntrega) {
 		this.fechaEntrega = fechaEntrega;
 	}
 
-	public String getFechaEsperadaEntrega() {
+	public Timestamp getFechaEsperadaEntrega() {
 		return fechaEsperadaEntrega;
 	}
 
-	public void setFechaEsperadaEntrega(String fechaEsperadaEntrega) {
+	public void setFechaEsperadaEntrega(Timestamp fechaEsperadaEntrega) {
 		this.fechaEsperadaEntrega = fechaEsperadaEntrega;
 	}
 

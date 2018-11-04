@@ -92,8 +92,9 @@ public class ProductoProveedorTest {
 			long idProveedor = proveedor1.getNit();
 			
 			VOProductoProveedor productoProveedor1 = superAndes.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
-			System.out.println(productoProveedor1);
+			//System.out.println(productoProveedor1);
 			lista = superAndes.darVOProductosProveedor();
+			System.out.println(lista.get(0));	
 			assertEquals ("Debe haber un ProductoProveedor creada!!", 1, lista.size ());
 
 			VOProductoProveedor productoProveedor2 = superAndes.adicionarProductoProveedor2(productoProveedor1.getIdProductoProveedor(),nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
@@ -165,7 +166,7 @@ public class ProductoProveedorTest {
 			long idProveedor = proveedor1.getNit();
 			
 			VOProductoProveedor productoProveedor1 = superAndes.adicionarProductoProveedor(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, calidad, precio, numeroCalificaciones, sumaCalificaciones, idProveedor);
-			System.out.println(productoProveedor1);
+			//System.out.println(productoProveedor1);
 			lista = superAndes.darVOProductosProveedor();
 			assertEquals ("Debe haber un ProductoProveedor creada!!", 1, lista.size ());
 
