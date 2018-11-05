@@ -59,7 +59,7 @@ public class SuperAndes {
 
 	public ProductoSucursal registrarProductoSucursalRF2(String nombre, String marca, String presentacion, double cantidadPresentacion, String unidadMedida,
 			double volumenEmpaque, double pesoEmpaque, long codigoBarras, String categoria, String tipo, String fechaVencimiento , int nivelReorden, double precioUnitario, int cantidadBodega, int cantidadEstante, double precioUnidadMedida
-			, long idBodega, long idEstante, long idPromocion) throws Exception{
+			, long idBodega, long idEstante, Long idPromocion) throws Exception{
 		return this.adicionarProductoSucursal(nombre, marca, presentacion, cantidadPresentacion, unidadMedida, volumenEmpaque, pesoEmpaque, codigoBarras, categoria, tipo, fechaVencimiento, nivelReorden, precioUnitario, cantidadBodega, cantidadEstante, precioUnidadMedida, idBodega, idEstante, idPromocion);
 	}
 
@@ -136,7 +136,9 @@ public class SuperAndes {
 		}
 	}
 
-	//REQ 8 HACE FALTA
+	public long req8TerminarPromocion(long idPromocion) {
+		return this.eliminarPromocion(idPromocion);
+	}
 
 	public OrdenPedido req9RegistrarPedidoDeUnProductoAProveedorParaSucursal ( String fechaEsperadaEntrega, int cantidad, long idProductoProveedor, long idSucursal) throws Exception {
 		if (cantidad <=0 ) {
@@ -265,8 +267,9 @@ public class SuperAndes {
 		}
 		else {
 			Carrito retornado = carritosLibres.get(0);
+			long idRetornado = retornado.getIdCarrito();
 			modificarEstadoOcupacionCarrito(retornado.getIdCarrito(), 1);
-			return retornado;
+			return this.darCarritoPorId(idRetornado);
 		}
 	}
 
@@ -1072,6 +1075,11 @@ public class SuperAndes {
 		Promocion promocion = pp.adicionarPromocion2(idPromocion, tipo, n, m, fechaCaducidad2);
 		log.info("Adicionando promocion: " + promocion);
 		return promocion;
+	}
+	
+	public long eliminarPromocion (long idPromocion) {
+		log.info("Eliminando promocion por id: "+ idPromocion);
+		return pp.eliminarPromocion(idPromocion);
 	}
 
 	public List<Promocion> darPromociones(){

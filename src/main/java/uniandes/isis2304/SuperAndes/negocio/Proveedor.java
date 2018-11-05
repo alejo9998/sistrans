@@ -36,10 +36,25 @@ public class Proveedor implements VOProveedor{
 	public String toString() {
 		return "Proveedor [nit=" + nit + ", nombre=" + nombre + "]";
 	}
-	
-	public boolean equals(Object proveedor) {
-		Proveedor p = (Proveedor) proveedor;
-		return nit == p.getNit() && nombre.equalsIgnoreCase(p.getNombre());
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Proveedor other = (Proveedor) obj;
+		if (nit != other.nit)
+			return false;
+		if (nombre == null) {
+			if (other.nombre != null)
+				return false;
+		} else if (!nombre.equals(other.nombre))
+			return false;
+		return true;
 	}
 	
 	

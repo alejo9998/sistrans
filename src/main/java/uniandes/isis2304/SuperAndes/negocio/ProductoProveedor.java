@@ -222,5 +222,69 @@ public class ProductoProveedor implements VOProductoProveedor {
 				", calidad=" + calidad + ", precio=" + precio + ", numeroCalificaciones=" + numeroCalificaciones + ", sumaCalificaciones=" + sumaCalificaciones + ", proveedor=" + proveedor
 				+ "]";
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ProductoProveedor other = (ProductoProveedor) obj;
+		if (Double.doubleToLongBits(calidad) != Double.doubleToLongBits(other.calidad))
+			return false;
+		if (Double.doubleToLongBits(cantidadPresentacion) != Double.doubleToLongBits(other.cantidadPresentacion))
+			return false;
+		if (categoria == null) {
+			if (other.categoria != null)
+				return false;
+		} else if (!categoria.equals(other.categoria))
+			return false;
+		if (codigoBarras != other.codigoBarras)
+			return false;
+		if (idProductoProveedor != other.idProductoProveedor)
+			return false;
+		if (marca == null) {
+			if (other.marca != null)
+				return false;
+		} else if (!marca.equals(other.marca))
+			return false;
+		if (nombre == null) {
+			if (other.nombre != null)
+				return false;
+		} else if (!nombre.equals(other.nombre))
+			return false;
+		if (numeroCalificaciones != other.numeroCalificaciones)
+			return false;
+		if (Double.doubleToLongBits(pesoEmpaque) != Double.doubleToLongBits(other.pesoEmpaque))
+			return false;
+		if (Double.doubleToLongBits(precio) != Double.doubleToLongBits(other.precio))
+			return false;
+		if (presentacion == null) {
+			if (other.presentacion != null)
+				return false;
+		} else if (!presentacion.equals(other.presentacion))
+			return false;
+		if (proveedor != other.proveedor)
+			return false;
+		if (Double.doubleToLongBits(sumaCalificaciones) != Double.doubleToLongBits(other.sumaCalificaciones))
+			return false;
+		if (tipo == null) {
+			if (other.tipo != null)
+				return false;
+		} else if (!tipo.equals(other.tipo))
+			return false;
+		if (unidadMedida == null) {
+			if (other.unidadMedida != null)
+				return false;
+		} else if (!unidadMedida.equals(other.unidadMedida))
+			return false;
+		if (Double.doubleToLongBits(volumenEmpaque) != Double.doubleToLongBits(other.volumenEmpaque))
+			return false;
+		return true;
+	}
+	
+	
 }
 

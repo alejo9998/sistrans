@@ -99,6 +99,37 @@ public class Compra implements VOCompra{
 	public String toString() {
 		return "Compra [idCompra=" + idCompra + ", fecha=" + fecha + ", cantidad=" + cantidad + ", totalPagado=" + totalPagado +", productoSucursal=" + productoSucursal + ", cliente=" + cliente + ", factura=" + factura + 
 				"]";
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Compra other = (Compra) obj;
+		if (cantidad != other.cantidad)
+			return false;
+		if (cliente != other.cliente)
+			return false;
+		if (factura != other.factura)
+			return false;
+		if (fecha == null) {
+			if (other.fecha != null)
+				return false;
+		} else if (!fecha.equals(other.fecha))
+			return false;
+		if (idCompra != other.idCompra)
+			return false;
+		if (productoSucursal != other.productoSucursal)
+			return false;
+		if (Double.doubleToLongBits(totalPagado) != Double.doubleToLongBits(other.totalPagado))
+			return false;
+		return true;
 	} 
+	
+	
 
 }

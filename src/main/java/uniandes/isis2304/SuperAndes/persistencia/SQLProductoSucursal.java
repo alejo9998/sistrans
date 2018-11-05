@@ -48,7 +48,7 @@ class SQLProductoSucursal {
 	}
 	
 	public List<ProductoSucursal> darProductosSucursalPorCodigoBarras(PersistenceManager pm, long barras){
-		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaProductoSucursal() + "WHERE codigoBarras = ?");
+		Query q = pm.newQuery(SQL, "SELECT * FROM " + pp.darTablaProductoSucursal() + " WHERE codigoBarras = ?");
 		q.setResultClass(ProductoSucursal.class);
 		q.setParameters(barras);
 		return (List<ProductoSucursal>) q.executeList();

@@ -1457,6 +1457,10 @@ public class PersistenciaSuperAndes {
 	{
 		return sqlPromocion.darPromocionPorId (pmf.getPersistenceManager(), idPromocion);
 	}
+	
+	public long eliminarPromocion ( long idPromocion) {
+		return sqlPromocion.eliminarPromocionPorId(pmf.getPersistenceManager(), idPromocion);
+	}
 
 	/* ****************************************************************
 	 * 			Métodos para manejar las VENTAS

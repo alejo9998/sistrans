@@ -80,6 +80,28 @@ public class Promocion implements VOPromocion{
 		return "Promocion [idPromocion=" + idPromocion + ", tipo=" + tipo + ", n=" + n + ", m=" + m + 
 				", fechaCaducidad=" + fechaCaducidad + "]";
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Promocion other = (Promocion) obj;
+		if (idPromocion != other.idPromocion)
+			return false;
+		if (Double.doubleToLongBits(m) != Double.doubleToLongBits(other.m))
+			return false;
+		if (Double.doubleToLongBits(n) != Double.doubleToLongBits(other.n))
+			return false;
+		if (tipo != other.tipo)
+			return false;
+		return true;
+	}
+	
+	
 	
 	
 

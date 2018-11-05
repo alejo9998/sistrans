@@ -125,5 +125,36 @@ public class OrdenPedido implements VOOrdenPedido{
 				", entregado=" + entregado + ", cantidad=" + cantidad + ", productoProveedor=" + productoProveedor + ", sucursal=" + sucursal + 
 				"]";
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		OrdenPedido other = (OrdenPedido) obj;
+		if (calificacion == null) {
+			if (other.calificacion != null)
+				return false;
+		} else if (!calificacion.equals(other.calificacion))
+			return false;
+		if (cantidad != other.cantidad)
+			return false;
+		if (entregado != other.entregado)
+			return false;
+		if (idOrdenPedido != other.idOrdenPedido)
+			return false;
+		if (Double.doubleToLongBits(precio) != Double.doubleToLongBits(other.precio))
+			return false;
+		if (productoProveedor != other.productoProveedor)
+			return false;
+		if (sucursal != other.sucursal)
+			return false;
+		return true;
+	}
+	
+	
 	
 }

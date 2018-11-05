@@ -37,4 +37,24 @@ public class Factura implements VOFactura{
 		return "Factura [idFactura=" + idFactura + ", descripcion=" + descripcion + "]";
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Factura other = (Factura) obj;
+		if (descripcion == null) {
+			if (other.descripcion != null)
+				return false;
+		} else if (!descripcion.equals(other.descripcion))
+			return false;
+		if (idFactura != other.idFactura)
+			return false;
+		return true;
+	}
+
+	
 }

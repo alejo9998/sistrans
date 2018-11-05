@@ -50,5 +50,25 @@ public class DentroCarrito implements VODentroCarrito {
 		return "Carrito [idCarrito= "+idCarrito+", idProductoSucursal=" + idProductoSucursal + ", cantidad=" + cantidad + "]";
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		DentroCarrito other = (DentroCarrito) obj;
+		if (cantidad != other.cantidad)
+			return false;
+		if (idCarrito != other.idCarrito)
+			return false;
+		if (idProductoSucursal != other.idProductoSucursal)
+			return false;
+		return true;
+	}
+	
+	
+
 
 }

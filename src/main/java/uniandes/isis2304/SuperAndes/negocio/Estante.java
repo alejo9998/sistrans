@@ -86,4 +86,33 @@ public class Estante implements VOEstante{
 				", nivelAprovisionamiento=" + nivelAprovisionamiento + ", sucursal=" + sucursal +  "]";
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Estante other = (Estante) obj;
+		if (idEstante != other.idEstante)
+			return false;
+		if (nivelAprovisionamiento != other.nivelAprovisionamiento)
+			return false;
+		if (Double.doubleToLongBits(peso) != Double.doubleToLongBits(other.peso))
+			return false;
+		if (sucursal != other.sucursal)
+			return false;
+		if (tipo == null) {
+			if (other.tipo != null)
+				return false;
+		} else if (!tipo.equals(other.tipo))
+			return false;
+		if (Double.doubleToLongBits(volumen) != Double.doubleToLongBits(other.volumen))
+			return false;
+		return true;
+	}
+	
+	
+
 }
