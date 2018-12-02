@@ -1368,6 +1368,17 @@ public class SuperAndes {
 		log.info("Terminando de modificar DentroCarrito adicionandole la cantidad: " + cantidad);
 		return resp;
 	}
+	
+	//-------------------------------------------------------
+	//-----------REQUERIMIENTOS CONSULTA ITERACION 3---------
+	//-------------------------------------------------------
+	
+	public List<RFC10Cliente> RF10ConsultarConsumoSuperAndes(long idProductoSucursal, String fechaInicial, String fechaFinal, String orderBy){
+		log.info("Listando RF10ConsultarConsumoSuperAndes");
+		List<RFC10Cliente> retornado = pp.RF10ConsultarConsumoSuperAndes(idProductoSucursal, fechaInicial, fechaFinal, orderBy);
+		log.info("Saliendo de listar RF10ConsultarConsumoSuperAndes");
+		return retornado;
+	}
 
 	/* ****************************************************************
 	 * 			Métodos para administración

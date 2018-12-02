@@ -31,6 +31,7 @@ import uniandes.isis2304.SuperAndes.negocio.ProductoProveedor;
 import uniandes.isis2304.SuperAndes.negocio.ProductoSucursal;
 import uniandes.isis2304.SuperAndes.negocio.Promocion;
 import uniandes.isis2304.SuperAndes.negocio.Proveedor;
+import uniandes.isis2304.SuperAndes.negocio.RFC10Cliente;
 import uniandes.isis2304.SuperAndes.negocio.Sucursal;
 
 public class PersistenciaSuperAndes {
@@ -77,6 +78,8 @@ public class PersistenciaSuperAndes {
 	 * sqlDentroCarrito
 	 */
 	private SQLDentroCarrito sqlDentroCarrito;
+	
+	private SQLRequerimientosCiclo3 sqlRequerimientosCiclo3;
 
 	private SQLUtil sqlUtil;
 
@@ -168,6 +171,7 @@ public class PersistenciaSuperAndes {
 		sqlPromocion = new SQLPromocion(this);
 		sqlCarrito = new SQLCarrito(this);
 		sqlDentroCarrito = new SQLDentroCarrito(this);
+		sqlRequerimientosCiclo3 = new SQLRequerimientosCiclo3(this);
 		sqlUtil = new SQLUtil(this);
 	}
 
@@ -1778,5 +1782,11 @@ public class PersistenciaSuperAndes {
             }
             pm.close();
         }
+	}
+	
+	//REQUERIMIENTOS CONSULTA ITERACION 3
+	
+	public List<RFC10Cliente> RF10ConsultarConsumoSuperAndes(long idProductoSucursal, String fechaInicial, String fechaFinal, String orderBy){
+		return sqlRequerimientosCiclo3.RF10CConsultarConsumoSuperAndes(pmf.getPersistenceManager(), idProductoSucursal, fechaInicial, fechaFinal, orderBy);
 	}
 }
